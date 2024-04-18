@@ -104,26 +104,27 @@ public class Main extends Application {
 	
 	private static String patchNotes = "";
 	
-	public static String disclaimer = "<h6 style='text-align: center; color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>You must read and agree to the following in order to play this game!</h6>"
+	public static String disclaimer = "<h6 style='text-align: center; color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>Чтобы играть в эту игру, вы должны прочитать и согласиться со следующим!</h6>"
 
-			+ "<p>This game is a <b>fictional</b> text-based erotic RPG. All content contained within this game forms part of a fictional universe that is not related to real-life places, people or events.<br/><br/>"
+			+ " Данная версия игры <b>МОДИФИЦИРОВАНА</b> для перевода игры на Русский Язык, <b>все права принадлежат правообладателям</b>, проект распостраняется на бесплатной основе."
+			+ "<p>Эта игра представляет собой <b>вымышленную </b> текстовую эротическую RPG. Весь контент, содержащийся в этой игре, является частью вымышленной вселенной, которая не имеет отношения к реальным местам, людям или событиям.<br/><br/>"
 
-			+ " All of the characters that appear in this story are fictional entities who have given their consent to appear and act in this story."
-			+ " If you find yourself concerned for the characters in the story then please be reassured that they are all consenting adults who are speaking lines from a script."
-			+ " None of the characters portrayed within this game were or are being harmed in any way during the construction or execution of this game."
-			+ " Every character in the game is at least 18 years of age (or is magically the legal age needed to appear in erotic literature in whatever country you are playing this)."
-			+  " No character in this game is blood-related to any other; once again, they are simply speaking lines from a script.<br/><br/>"
+			+ " Все персонажи, появляющиеся в этой истории, являются вымышленными лицами, которые дали свое согласие на появление и действия в этой истории."
+			+ " Если вы переживаете за героев этой истории, пожалуйста, успокойтесь, что все они - взрослые люди, говорящие по сценарию."
+			+ " Ни один из персонажей, изображенных в этой игре, не пострадал и не пострадает каким-либо образом во время создания или создания этой игры."
+			+ " Каждому персонажу в игре не менее 18 лет (или он волшебным образом достиг возраста, необходимого для появления в эротической литературе в той стране, где вы играете)."
+			+  " Ни один персонаж в этой игре не состоит в кровном родстве с другим; опять же, они просто произносят реплики из сценария.<br/><br/>"
 
-			+ "By agreeing to this disclaimer and playing this game you agree to be exposed to graphic sexual and adult content that is presented as part of the game's fictional universe."
-			+ " Such content consists of, but is not limited to; graphic depictions of sex, inter-species sex (with fantasy creatures), sexual transformation,"
-			+ " rape fantasy/implied lack of consent, mild physical violence, sexual violence, and drug use.<br/>"
-			+ "Extreme fetish content such as gore/extreme violence, scat, and under/questionable age, is <i>not</i> a part of this game.<br/><br/>"
+			+ " Соглашаясь с этим отказом от ответственности и играя в эту игру, вы соглашаетесь с тем, что вам будет показан графический сексуальный и взрослый контент, который представлен как часть вымышленной вселенной игры."
+			+ " Такое содержание включает в себя, но не ограничивается: графическое изображение секса, межвидовой секс (с фантастическими существами), сексуальное превращение,,"
+			+ " фантазии об изнасиловании/подразумеваемое отсутствие согласия, легкое физическое насилие, сексуальное насилие и употребление наркотиков.<br/>"
+			+ "Экстремальное фетиш-содержимое, такое как расчленение/экстремальное насилие, скат, и неопределенный/сомнительный возраст, <i>не</i> является частью этой игры.<br/><br/>"
 
-			+ "By agreeing to this disclaimer and playing this game you also agree that you are <b>at least 18 years of age</b>,"
-			+ " or at least the legal age for you to purchase and view pornographic material in your country if that age is over 18.<br/><br/>"
+			+ "Соглашаясь с этим отказом от ответственности и играя в эту игру, вы также соглашаетесь с тем, что вам <b>от 18 лет</b>,"
+			+ " или, по крайней мере, возраст, разрешающий вам приобретать и просматривать порнографические материалы в вашей стране, если этот возраст превышает 18 лет.<br/><br/>"
 
-			+ "As a final note, the creators of this game wish to stress that the content presented within is entirely fictional and does not reflect any of their personal views or opinions."
-			+ " This game has been made in the spirit of creating a piece of artistic interactive literature, and it is imperative that you maintain a clear distinction between reality and the fictional events depicted in this game.</p>";
+			+ "В заключение создатели этой игры хотели бы подчеркнуть, что представленный в ней контент является полностью вымышленным и не отражает их личных взглядов или мнений."
+			+ " Эта игра была создана в духе художественной интерактивной литературы, и крайне важно, чтобы вы проводили четкое различие между реальностью и вымышленными событиями, изображенными в этой игре.</p>";
 	
 	public static List<CreditsSlot> credits = new ArrayList<>();
 
@@ -518,12 +519,12 @@ public class Main extends Application {
 		if(!dir.exists()) {
 			
 			Alert a = new Alert(AlertType.ERROR,
-					"Unable to find the 'data' folder ("+dir.getAbsolutePath()+"). Saving and error logging is disabled."
-							+ "\nMake sure that you've extracted the game from the zip file, and that the file has write permissions."
-							+ "\n(Please read section 'MISSING FOLDERS' in the README.txt file.)"
-							+ "\nContinue?",
+					"Не найдена папка 'data' ("+dir.getAbsolutePath()+"). Сохранение и регистрация ошибок отключены."
+							+ "\nУбедитесь, что вы извлекли игру из zip-файла и что файл имеет права на запись."
+							+ "\n(Пожалуйста, прочитайте раздел 'MISSING FOLDERS' в файле README.txt.)"
+							+ "\nПродолжить?",
 					ButtonType.YES, ButtonType.NO);
-			System.err.println("Unable to find the 'data' folder ("+dir.getAbsolutePath()+").");
+			System.err.println("Не найдена папка 'data' ("+dir.getAbsolutePath()+").");
 			a.showAndWait().ifPresent(response -> {
 			     if (response == ButtonType.NO) {
 			         System.exit(1);
@@ -536,11 +537,11 @@ public class Main extends Application {
 		File dir = new File("res/");
 		if(!dir.exists()) {
 			Alert a = new Alert(AlertType.WARNING,
-					"Could not find the 'res' folder ("+dir.getAbsolutePath()+"). This WILL cause errors and present sections of missing text."
-							+ "\nMake sure that you've extracted the game from the zip file, and that the file has write permissions."
-							+ "\nIf you use the command line or a batch/script file to start the game, please try starting it in the game folder to prevent this error."
-							+ "\n(Please read section 'MISSING FOLDERS' in the README.txt file.)"
-							+ "\nContinue?",
+					"Не найдена папка 'res' ("+dir.getAbsolutePath()+"). Это ПРИВЕДЕТ к ошибкам и появлению участков с отсутствующим текстом."
+							+ "\nУбедитесь, что вы извлекли игру из zip-файла и что файл имеет права на запись."
+							+ "\nЕсли вы используете командную строку или пакетный/скриптовый файл для запуска игры, попробуйте запустить ее в папке с игрой, чтобы избежать этой ошибки."
+							+ "\n(Пожалуйста, прочитайте раздел 'MISSING FOLDERS' в файле README.txt.)"
+							+ "\nПродолжить?",
 					ButtonType.YES, ButtonType.NO);
 			System.err.println("Unable to find the 'res' folder ("+dir.getAbsolutePath()+").");
 			a.showAndWait().ifPresent(response -> {
@@ -552,10 +553,10 @@ public class Main extends Application {
 	}
 
 	/**
-	 * Attempts to load fallback fonts to make sure that they are available later. The size doesn't actually matter as
-	 * the WebEngine will reload other sizes as required. The files referenced must persist until application shutdown.
+	 * Пытается загрузить резервные шрифты, чтобы убедиться, что они будут доступны позже. Размер не имеет значения, поскольку
+	 * WebEngine будет перезагружать другие размеры по мере необходимости. Файлы, на которые ссылаются, должны сохраняться до закрытия приложения.
 	 *
-	 * Do not call Font.getFamilies() prior to this as additional fonts must be loaded before the list is cached.
+	 * Не вызывайте Font.getFamilies() до этого, так как дополнительные шрифты должны быть загружены до того, как список будет кэширован.
 	 */
 	protected void loadFonts() {
 		// Load fallback for Calibri
@@ -565,7 +566,7 @@ public class Main extends Application {
 			Font.loadFont(toUri("res/fonts/Carlito/Carlito-BoldItalic.ttf"), 11);
 			Font.loadFont(toUri("res/fonts/Carlito/Carlito-Italic.ttf"), 11);
 		} else {
-			System.err.println("Carlito font could not be loaded.");
+			System.err.println("Carlito шрифт не может быть загружен.");
 		}
 
 		// Load fallback for Verdana
@@ -576,7 +577,7 @@ public class Main extends Application {
 			Font.loadFont(toUri("res/fonts/DejaVu Sans/DejaVuSans-ExtraLight.ttf"), 12);
 			Font.loadFont(toUri("res/fonts/DejaVu Sans/DejaVuSans-Oblique.ttf"), 12);
 		} else {
-			System.err.println("DejaVu Sans font could not be loaded.");
+			System.err.println("DejaVu Sans шрифт не может быть загружен.");
 		}
 	}
 
@@ -666,7 +667,7 @@ public class Main extends Application {
 				System.err.println("Java: "+System.getProperty("java.version")+" ("+System.getProperty("java.vendor")+")");
 				System.err.println("OS: "+System.getProperty("os.name")+" ("+System.getProperty("os.arch")+")");
 				if (new File("res/mods").exists()) {
-					System.err.print("Mod folders present: ");
+					System.err.print("Присутствуют папки с модами: ");
 					int i=0;
 					for(File f : new File("res/mods").listFiles()) {
 						if(f.isDirectory()) {
@@ -807,19 +808,19 @@ public class Main extends Application {
 	
 	public static String getQuickSaveUnavailabilityDescription() {
 		if (!Main.game.isInNewWorld()) {
-			return "You cannot save the game during the character creation process or prologue!";
+			return "Вы не можете сохранить игру во время создания персонажа или пролога!";
 			
 		} else if (Main.game.isInCombat()) {
-			return "You cannot save the game while in combat!";
+			return "Вы не можете сохранить игру во время боя!";
 			
 		} else if (Main.game.isInSex()) {
-			return "You cannot save the game while in a sex scene!";
+			return "Вы не можете сохранить игру во время секс сцены!";
 			
 		} else if (Main.game.getCurrentDialogueNode().getDialogueNodeType()!=DialogueNodeType.NORMAL) {
-			return "You cannot save the game unless you are in a neutral scene!";
+			return "Вы не сможете сохранить игру, пока не окажетесь в нейтральной зоне!";
 			
 		} else if (!Main.game.isStarted() || !Main.game.isInNeutralDialogue()) {
-			return "You cannot save the game unless you are in a neutral scene!";
+			return "Вы не сможете сохранить игру, пока не окажетесь в нейтральной зоне!";
 		}
 		
 		return "";
