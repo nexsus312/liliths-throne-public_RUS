@@ -1,40 +1,40 @@
-<h3>Disclaimer</h3>
+<h3>Отказ от ответственности</h3>
 
-Lilith's Throne is a fictional text-based erotic RPG.
-All content in this game forms part of a fictional universe that is not related to real-life places, people or events.
+Lilith's Throne - это вымышленная текстовая эротическая ролевая игра.
+Все содержимое этой игры является частью вымышленной вселенной, которая не связана с реально существующими местами, людьми или событиями.
 
-All of the characters that appear in the game are fictional entities who have given their consent to appear and act in this story.
-If you find yourself concerned for the characters in the game then please be reassured that they are all consenting adults who are speaking lines from a script.
-None of the characters portrayed within this game were, or are, being harmed in any way during the construction or execution of the game.
-Regardless of how old they may be described as appearing, every character in the game is at least 18 years of age (or is magically the legal age required to appear in erotic media in whatever country you are in).
-No character in this game is blood-related to any other; once again, they are simply speaking lines from a script.
+Все персонажи, появляющиеся в игре, являются вымышленными лицами, которые дали свое согласие на появление и действие в этой истории.
+Если вы переживаете за персонажей игры, пожалуйста, успокойте себя тем, что все они - взрослые люди, говорящие реплики из сценария.
+Ни один из персонажей, изображенных в этой игре, не пострадал и не пострадает в процессе создания или создания игры.
+Независимо от того, насколько взрослыми они могут казаться, каждому персонажу в игре не менее 18 лет (или, как по волшебству, это возраст, необходимый для участия в эротической игре в любой стране, в которой вы находитесь).
+Ни один персонаж в этой игре не состоит в кровном родстве с другим; опять же, они просто произносят реплики из сценария.
 
-By choosing to play this game, or view this source code, you are agreeing to be exposed to graphic sexual and adult content that is presented as part of the game's fictional universe.
-Such content consists of, but is not limited to; graphic depictions of sex, inter-species sex (with fantasy sentient creatures), sexual transformation,
-rape fantasy/implied lack of consent, mild physical violence, sexual violence and drug use.
+Решив играть в эту игру или просматривать этот исходный код, вы соглашаетесь с тем, что будете подвержены графическому сексуальному и взрослому контенту, который представлен как часть вымышленной вселенной игры.
+Такой контент включает в себя, но не ограничивается: графическое изображение секса, межвидовой секс (с фантастическими разумными существами), сексуальное превращение,
+фантазии об изнасиловании/подразумеваемое отсутствие согласия, легкое физическое насилие, сексуальное насилие и употребление наркотиков.
 
-Extreme fetish content such as guro/extreme violence, scat, vore, and under/questionable age, is not, and will never be, a part of this game.
+Экстремальный фетиш-контент, такой как гуро/экстремальное насилие, скат, вор, а также возраст ниже/сомнительный возраст, не является и никогда не будет являться частью этой игры.
 
-By playing this game, or choosing to view this source code, you also agree that you are at least 18 years of age (or the legal age for you to purchase and view pornographic material in your country).
+Играя в эту игру или просматривая этот исходный код, вы также соглашаетесь с тем, что вам исполнилось 18 лет (или с тем, что в вашей стране разрешено покупать и просматривать порнографические материалы).
 
-This game has been made in the spirit of creating a piece of artistic interactive literature.
+Эта игра была сделана в духе художественной интерактивной литературы.
 
-If you do not wish to be exposed to such content as described above, please refrain from playing this game and do not read any of the source code.
-
-
---------------
-
-
-This software is provided 'as is' without warranty of any kind, either express or implied.
-
-In no event shall I be liable to you or any third parties for any special, punitive, incidental, indirect or consequential damages of any kind, or any damages whatsoever, including, without limitation, those resulting from loss of use, data or profits, and on any theory of liability, arising out of or in connection with the use of this software.
-
-The use of the software downloaded here is done at your own discretion and risk and with agreement that you will be solely responsible for any damage to your computer system or loss of data that results from such activities. No advice or information, obtained by you from me shall create any warranty for the software.
+Если вы не хотите подвергаться воздействию такого контента, как описано выше, пожалуйста, воздержитесь от игры и не читайте исходный код.
 
 
 --------------
 
 
-And in caps-lock, to be extra scary:
+Данное программное обеспечение предоставляется "как есть", без каких-либо гарантий, явных или подразумеваемых.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Ни при каких обстоятельствах я не несу ответственности перед вами или третьими лицами за любые специальные, штрафные, случайные, непрямые или косвенные убытки любого рода, а также за любые убытки, включая, без ограничений, убытки, вызванные потерей использования, данных или прибыли, и по любой теории ответственности, возникшие в результате или в связи с использованием данного программного обеспечения.
+
+Использование загруженного здесь программного обеспечения осуществляется на ваше собственное усмотрение и риск, и вы согласны нести полную ответственность за любой ущерб, нанесенный вашей компьютерной системе, или потерю данных в результате таких действий. Никакие советы или информация, полученные вами от меня, не создают никаких гарантий на программное обеспечение.
+
+
+--------------
+
+
+И жирным шрифтом, чтобы было страшнее:
+
+ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ "КАК ЕСТЬ", БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ГАРАНТИЯМИ ТОВАРНОГО СОСТОЯНИЯ, ПРИГОДНОСТИ ДЛЯ КОНКРЕТНОЙ ЦЕЛИ И НЕНАРУШЕНИЯ ПРАВ. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АВТОРЫ ИЛИ ПРАВООБЛАДАТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЕТЕНЗИИ, УБЫТКИ ИЛИ ДРУГИЕ ОБЯЗАТЕЛЬСТВА, БУДЬ ТО ДОГОВОРНЫЕ, ГРАЖДАНСКО-ПРАВОВЫЕ ИЛИ ИНЫЕ, ВОЗНИКАЮЩИЕ ИЗ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ЕГО ИСПОЛЬЗОВАНИЯ ИЛИ ДРУГИХ ОПЕРАЦИЙ С НИМ ИЛИ В СВЯЗИ С НИМИ.
