@@ -1,9 +1,11 @@
-<h3>Readme</h3>
+<h3>Прочти Меня</h3>
 
-This is the source code for Lilith's Throne.
+Это исходный код Lilith's Throne.
 
-You must agree to the terms of the attached disclaimer and abide by the terms of the license if you wish to view this source code.
+Вы должны согласиться с условиями прилагаемого отказа от ответственности и соблюдать условия лицензии, если хотите просмотреть этот исходный код.
 
-Dev-note: This project is relying on JavaFX which isn't included in the Openjdk, which is often the common choice for Linux enthusiasts. If you're using Linux, please make sure to use the Oracle JDK to build this project or install OpenJFX.
+Dev-note: Этот проект полагается на JavaFX, который не включен в Openjdk, что часто выбирают энтузиасты Linux. Если вы используете Linux, пожалуйста, убедитесь, что вы используете Oracle JDK для сборки этого проекта или установки OpenJFX.
 
-Copyright 2016 Innoxia (innoxia7@gmail.com) all rights reserved.
+Авторское право 2016 Innoxia (innoxia7@gmail.com) все права защищены.
+
+Попытка сделать перевод на русский язык. В будущем возможно исправление написания полов. Часть текста находится в папке res а остальное в коде.
