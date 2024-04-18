@@ -10,11 +10,11 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum ForcedFetishTendency {
 	
-	BOTTOM_HEAVY("Bottoming+", "Forced fetishes will almost always add bottoming and remove topping activities and behaviors.", PresetColour.BASE_PINK_LIGHT),
-	BOTTOM("Bottoming", "While NPC tastes still matter, forced fetishes will usually add bottoming and remove topping activities and behaviors.", PresetColour.BASE_PINK),
-	NEUTRAL("Neutral", "Forced fetishes will be determined solely by the tastes and whims of the controlling NPC, and the inherent randomness of the universe.", PresetColour.ANDROGYNOUS),
-	TOP ("Topping", "While NPC tastes still matter, forced fetishes will usually add topping and remove bottoming activities and behaviors.", PresetColour.BASE_PURPLE_LIGHT),
-	TOP_HEAVY("Topping+", "Forced fetishes will almost always add topping and remove bottoming activities and behaviors.", PresetColour.BASE_PURPLE);
+	BOTTOM_HEAVY("Дно+", "Принудительные фетиши почти всегда добавляют дно и убирают верхние деятельности и поведения.", PresetColour.BASE_PINK_LIGHT),
+	BOTTOM("Дно", "Вкусы NPC все еще имеют значение, принудительные фетиши часто добавляют дно и убирают верхние деятельности и поведения.", PresetColour.BASE_PINK),
+	NEUTRAL("Нейтрально", "Принудительные фетиши будут определяться исключительно вкусами и прихотями контролирующего NPC, а также присущей вселенной случайностью.", PresetColour.ANDROGYNOUS),
+	TOP ("Верх", "В то время как вкусы NPC все еще имеют значение, принудительные фетиши, как правило, добавляют верхние и убирают донные действия и поведение.", PresetColour.BASE_PURPLE_LIGHT),
+	TOP_HEAVY("Верх+", "Принудительные фетиши почти всегда будут добавлять к действиям и поведению верх и убирать дно.", PresetColour.BASE_PURPLE);
 
 	private final String name;
 	private final String description;
