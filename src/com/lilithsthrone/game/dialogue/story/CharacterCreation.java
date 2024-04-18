@@ -105,7 +105,7 @@ public class CharacterCreation {
 		return SpellSchool.FIRE;
 	}
 
-	public static final DialogueNode CHARACTER_CREATION_START = new DialogueNode("Disclaimer", "", true) {
+	public static final DialogueNode CHARACTER_CREATION_START = new DialogueNode("Отказ от ответственности", "", true) {
 
 		@Override
 		public String getContent() {
@@ -115,7 +115,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Agree", "You agree that you are the legal age to view pornographic material, and consent to being exposed to graphic content.", ALPHA_MESSAGE);
+				return new Response("Согласится", "Вы соглашаетесь с тем, что вы достигли возраста, позволяющего просматривать порнографические материалы, и даете согласие на просмотр графического контента.", ALPHA_MESSAGE);
 			} else {
 				return null;
 			}
@@ -137,7 +137,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Start", "Proceed to character creation.", CHOOSE_APPEARANCE){
+				return new Response("Начать", "Перейти к созданию персонажа.", CHOOSE_APPEARANCE){
 					@Override
 					public void effects() {
 						Main.game.clearTextStartStringBuilder();
@@ -152,14 +152,14 @@ public class CharacterCreation {
 						resetBodyAppearance();
 						
 						Main.game.setRenderAttributesSection(true);
-						Main.game.getPlayer().setName(new NameTriplet("Unknown", "Unknown", "Unknown"));
+						Main.game.getPlayer().setName(new NameTriplet("Неизвестен", "Неизвестено", "Неизвестена"));
 						Main.game.getPlayer().setSurname("");
 						BodyChanging.setTarget(Main.game.getPlayer());
 					}
 				};
 				
 			} else if (index == 2) {
-				return new Response("Start (Import)", "Import a character from a previous version to use on game start.", IMPORT_CHOOSE) {
+				return new Response("Начать (Импорт)", "Импортируйте персонажа из предыдущей версии, чтобы использовать его при старте игры.", IMPORT_CHOOSE) {
 					@Override
 					public void effects() {
 						Main.game.getPlayerCell().resetInventory();
@@ -578,19 +578,19 @@ public class CharacterCreation {
 		}
 	}
 	
-	public static final DialogueNode CHOOSE_APPEARANCE = new DialogueNode("A Night Out", "", true) {
+	public static final DialogueNode CHOOSE_APPEARANCE = new DialogueNode("Ночная прогулка", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<p>"
-						+ "By the time the taxi finally pulls up to the British Museum, you're already almost five minutes late."
-						+ " The whole reason you're visiting London is to attend your aunt Lily's opening evening for her new exhibition,"
-							+ " and as you hurriedly pay the driver his fare and step out of the car, you hope that she hasn't started her speech yet."
+						+ "К тому времени, когда такси наконец подъезжает к Британскому музею, вы уже опаздываете почти на пять минут."
+						+ " Вы приехали в Лондон, чтобы посетить вечер, посвященный открытию новой выставки вашей тети Лили,"
+							+ " торопливо расплачиваясь с водителем за проезд и выходя из машины, вы надеетесь, что она еще не начала свою речь."
 					+ "</p>"
 					+ "<p>"
-						+ "The street lights flicker into life as you rush over to the entrance, illuminating your surroundings with a dull orange glow."
-						+ " It only takes a moment before you're standing at the museum's front doors, where, much to your dismay, you see that a small queue has formed."
-						+ " Having no choice but to step in line and wait your turn, you briefly glance over at the large glass windows of the building's modern facade to see your blurry reflection in the glass..."
+						+ "Уличные фонари мерцают, когда вы спешите к входу, освещая окрестности тусклым оранжевым светом."
+						+ " Проходит совсем немного времени, и вы оказываетесь у входа в музей, где, к своему огорчению, видите, что образовалась небольшая очередь."
+						+ " Не имея другого выбора, кроме как встать в очередь и ждать, вы бросаете короткий взгляд на большие стеклянные окна современного фасада здания, чтобы увидеть свое размытое отражение в стекле..."
 					+ "</p>"
 					+ "<br/>"
 					
@@ -603,9 +603,9 @@ public class CharacterCreation {
 						+ CharacterModificationUtils.getFemininityChoiceDiv()
 						
 						+ "<div class='container-full-width' style='text-align:center;'>"
-							+ "You will be referred to as <span style='color:"+Main.game.getPlayer().getGender().getColour().toWebHexString()+";'>"
+							+ "К вам будут обращаться как к <span style='color:"+Main.game.getPlayer().getGender().getColour().toWebHexString()+";'>"
 								+UtilText.generateSingularDeterminer(Main.game.getPlayer().getGender().getName())+ " " + Main.game.getPlayer().getGender().getName()+"</span>.<br/>"
-							+ "<i>You can change all gender names in the options menu.</i>"
+							+ "<i>Вы можете изменить все имена полов в меню опций.</i>"
 						+ "</div>"
 
 						+ CharacterModificationUtils.getBirthdayChoiceDiv()
@@ -625,7 +625,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Wait your turn, and hope that the event hasn't started yet.", CHOOSE_NAME) {
+				return new Response("Продолжить", "Ждите своей очереди и надейтесь, что мероприятие еще не началось.", CHOOSE_NAME) {
 					@Override
 					public int getSecondsPassed() {
 						return TIME_TO_NAME;
@@ -633,46 +633,46 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "Return to the main menu.", OptionsDialogue.MENU);
+				return new Response("Назад", "Возврат в главное меню.", OptionsDialogue.MENU);
 			} else {
 				return null;
 			}
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_NAME = new DialogueNode("A Night Out", "", true) {
+	public static final DialogueNode CHOOSE_NAME = new DialogueNode("Ночная прогулка", "", true) {
 
 		boolean unsuitableName = false, unsuitableSurname = false;
 		
 		@Override
 		public String getHeaderContent() {
 			return "<p>"
-						+ "[npcMale.speech("+(Main.game.getPlayer().isFeminine()?"Miss":"Sir")+",)]"
-						+ " the doorman calls out to you, evidently having finished with the other people in the queue,"
-						+ " [npcMale.speech(do you have an invitation?)]"
+						+ "[npcMale.speech("+(Main.game.getPlayer().isFeminine()?"Мисс":"Сэр")+",)]"
+						+ " обращается к вам швейцар, очевидно, закончив с другими людьми в очереди,"
+						+ " [npcMale.speech(У вас есть приглашение?)]"
 					+ "</p>"
 					+ "<p>"
-						+ "You turn away from the glass and step forwards, smiling."
-						+ " [pc.speech(Yes, I have it right here... erm... hold on...)]"
+						+ "Вы отворачиваетесь от стекла и делаете шаг вперед, улыбаясь."
+						+ " [pc.speech(Да, он у меня прямо здесь... эээ... подождите...)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Reaching into your "+(Main.game.getPlayer().isFeminine()?"purse":"pocket")+", you feel your heart start to race as you discover that the invitation isn't in there."
-						+ " [pc.speech(No, no, no! I must have left it in the taxi!)]"
+						+ "Потянувшись к своему "+(Main.game.getPlayer().isFeminine()?"сумочка":"кошелек")+", вы чувствуете, как ваше сердце начинает колотиться, когда вы обнаруживаете, что внутри нет приглашения."
+						+ " [pc.speech(Нет, нет, нет! Я, наверное, оставил его в такси!)]"
 					+ "</p>"
 					+ "<p>"
-						+ "[npcMale.speech(Well, don't worry,)]"
-						+ " the man replies,"
-						+ " [npcMale.speech(if you give me your name, I can check to make sure that you're on the list.)]"
+						+ "[npcMale.speech(Не беспокойтесь,)]"
+						+ " отвечает мужчина,"
+						+ " [npcMale.speech(если вы сообщите мне свое имя, я смогу проверить, есть ли вы в списке.)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Breathing a sigh of relief, you tell the man your name..."
+						+ "Вздохнув с облегчением, вы называете мужчине свое имя..."
 					+ "</p>"
 					+"<br/>"
 					+ "<div class='container-full-width' style='text-align:center;'>"
 						+ "<div style='position:relative; display:inline-block; padding-bottom:0; margin 0 auto; vertical-align:middle; width:100%; text-align:center;'>"
 							+ "<i>"
-								+ "Your first name can be set as three values; your masculine name, androgynous name, and feminine name."
-								+ " Your name will automatically switch to the one which corresponds to your body femininity."
+								+ "Ваше имя может быть задано в трех значениях: мужчина, гермафродит, женщина."
+								+ " Ваше имя автоматически переключится на то, которое соответствует женственности вашего тела."
 							+ "</i>"
 							+ "<br/>"
 							+ "<p style='display:inline-block; padding:0; margin:0; height:32px; line-height:32px; width:100px;'>First name: </p>"
@@ -690,7 +690,7 @@ public class CharacterCreation {
 							+ "<form style='display:inline-block; padding:0; margin:0; text-align:center;'><input type='text' id='surnameInput' value='"+ UtilText.parseForHTMLDisplay(Main.game.getPlayer().getSurname())+ "'></form>"
 						+ "</div>"
 						+ "<br/>"
-						+ "<i>Your name must be between 2 and 32 characters long. You cannot use the square bracket characters or full stops. (Surname may be left blank.)</i>"
+						+ "<i>Длина вашего имени должна составлять от 2 до 32 символов. Нельзя использовать символы квадратных скобок или обычных. (Фамилию можно не заполнять.)</i>"
 						+ (unsuitableName ? "<p style='text-align:center;padding-top:0;'><b style=' color:"+ PresetColour.GENERIC_BAD.toWebHexString()+ ";'>Invalid name.</b></p>" : "")
 						+ (unsuitableSurname ? "<p style='text-align:center;padding-top:0;'><b style=' color:"+ PresetColour.GENERIC_BAD.toWebHexString()+ ";'>Invalid Surname.</b></p>" : "")
 					+ "</div>"
@@ -707,7 +707,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseEffectsOnly("Continue", "Use this name and continue to the next stage of the character creation screen."){
+				return new ResponseEffectsOnly("Продолжить", "Используя это имя, перейти к следующему этапу экрана создания персонажа."){
 					@Override
 					public int getSecondsPassed() {
 						if (unsuitableName || unsuitableSurname)  {
@@ -820,30 +820,30 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE = new DialogueNode("In the Museum", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE = new DialogueNode("В музее", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<p>"
 						+ "[pc.speech(It's "+(Main.game.getPlayer().getSurname().length()!=0?"[pc.surname], [pc.name] [pc.surname]":"[pc.name]")+",)]"
-						+ " you say, impatiently looking down at the man's clipboard as he scans through his list."
+						+ " говорите вы, нетерпеливо поглядывая на планшет, в котором он изучает свой список."
 					+ "</p>"
 					+ "<p>"
-						+ "Finally, you see his finger trace over your name, and with a smile, he steps to one side and beckons you forwards."
-						+ " [npcMale.speech(Have a good evening, "+(Main.game.getPlayer().getSurname().length()!=0
-								?(Main.game.getPlayer().isFeminine()?"Miss":"Mr.")+" [pc.surname]"
-								:(Main.game.getPlayer().isFeminine()?"Miss":"Sir"))+".)]"
+						+ "Наконец вы видите, как он проводит пальцем по вашему имени, и, улыбнувшись, отходит в сторону, приглашая вас пройти вперед."
+						+ " [npcMale.speech(Хорошего вечера, "+(Main.game.getPlayer().getSurname().length()!=0
+								?(Main.game.getPlayer().isFeminine()?"Мисс":"М-р.")+" [pc.surname]"
+								:(Main.game.getPlayer().isFeminine()?"Мисс":"Сэр"))+".)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Thanking him, you hurry through the entranceway, and within moments, find yourself stepping into the museum's enormous central lobby."
-						+ " Large banners have been hung from the upper floor's balconies; their bold font proudly declaring this to be the 'Akkadian Empire Exhibit: Opening Evening'."
-						+ " On the far side of the grand hall, you see throngs of people surrounding a large stage, and you breathe a sigh of relief as you notice that it's currently empty."
+						+ "Поблагодарив его, вы торопливо проходите через вход и через несколько мгновений оказываетесь в огромном центральном холле музея."
+						+ " На балконах верхнего этажа развешаны большие плакаты, на которых жирным шрифтом гордо заявлено, что это 'Выставка Аккадской империи: Вечер открытия'."
+						+ " В дальнем конце большого зала вы видите толпы людей, окружающих большую сцену, и облегченно вздыхаете, заметив, что сейчас она пуста."
 					+ "</p>"
 					+ "<p>"
-						+ "[pc.thought(Phew... I made it in time after all...)]"
+						+ "[pc.thought(Фух... Я все-таки успел вовремя...)]"
 					+ "</p>"
 					+ "<p>"
-						+ "As Lily's opening speech seems to be running just as late as you are, you decide to step over to a nearby mirror to make sure that you're looking presentable..."
+						+ "Поскольку вступительная речь Лили, похоже, опаздывает так же, как и вы, вы решаете подойти к ближайшему зеркалу, чтобы убедиться, что выглядите презентабельно..."
 					+ "</p>"
 					+ "<br/>"
 					+ "<div class='container-full-width'>"
@@ -852,7 +852,7 @@ public class CharacterCreation {
 					+ "</div>"
 					+ "<br/>"
 					+ "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>You can modify your appearance by entering each of the sub-menus below.</i>"
+						+ "<i>Вы можете изменить свой внешний вид, зайдя в каждое из подменю ниже.</i>"
 					+ "</div>";
 		}
 		
@@ -864,8 +864,8 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue",
-						"Your clothes are a little messy after rushing here. Tidy yourself up before proceeding to the main stage.",
+				return new Response("Продолжить",
+						"Ваша одежда немного грязновата после спешки. Приведите себя в порядок, прежде чем перейти к главной сцене.",
 						InventoryDialogue.INVENTORY_MENU) {
 					@Override
 					public int getSecondsPassed() {
@@ -881,37 +881,37 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Core", "Enter the customisation menu for all of your body's core aspects.", CHOOSE_ADVANCED_APPEARANCE_CORE);
+				return new Response("Основа", "Войдите в меню настройки для всех основных аспектов вашего тела.", CHOOSE_ADVANCED_APPEARANCE_CORE);
 				
 			} else if (index == 3) {
-				return new Response("Face", "Enter the customisation menu for aspects related to your face.", CHOOSE_ADVANCED_APPEARANCE_FACE);
+				return new Response("Лицо", "Войти в меню настроек связаных с вашим лицом.", CHOOSE_ADVANCED_APPEARANCE_FACE);
 				
 			} else if (index == 4) {
-				return new Response("Hair", "Enter the customisation menu for your hair.", CHOOSE_ADVANCED_APPEARANCE_HAIR);
+				return new Response("Волосы", "Войти в меню настроек связаных с вашими волосами.", CHOOSE_ADVANCED_APPEARANCE_HAIR);
 				
 			} else if (index == 5) {
-				return new Response("Breasts", "Enter the customisation menu for your breasts.", CHOOSE_ADVANCED_APPEARANCE_BREASTS);
+				return new Response("Грудь", "Войти в меню настроек связаных с вашей грудью.", CHOOSE_ADVANCED_APPEARANCE_BREASTS);
 				
 			} else if (index == 6) {
-				return new Response("Ass & Hips", "Enter the customisation menu for aspects related to your ass, hips, and anus.", CHOOSE_ADVANCED_APPEARANCE_ASS);
+				return new Response("Задница & Бедра", "Войти в меню настроек связаных с вашей задницей, бедрами и анусом.", CHOOSE_ADVANCED_APPEARANCE_ASS);
 				
 			} else if (index == 7) {
-				return new Response((Main.game.getPlayer().hasPenis()?"Penis":"Vagina"), "Enter the customisation menu for aspects related to your "+(Main.game.getPlayer().hasPenis()?"penis":"vagina")+".", CHOOSE_ADVANCED_APPEARANCE_GENITALS);
+				return new Response((Main.game.getPlayer().hasPenis()?"Пенис":"Вагина"), "Войти в меню настройки связанной с "+(Main.game.getPlayer().hasPenis()?"пенисом":"вагиной")+".", CHOOSE_ADVANCED_APPEARANCE_GENITALS);
 				
 			}  else if (index == 8) {
-				return new Response("Makeup", "Enter the customisation menu for makeup.", CHOOSE_ADVANCED_APPEARANCE_COSMETICS);
+				return new Response("Макияж", "ВВойти в меню настроек связаных с макияжем.", CHOOSE_ADVANCED_APPEARANCE_COSMETICS);
 				
 			} else if (index == 9) {
-				return new Response("Piercings", "Enter the customisation menu for body piercings.", CHOOSE_ADVANCED_APPEARANCE_PIERCINGS);
+				return new Response("Пирсинг", "Войти в меню настроек связаных с пирсингом.", CHOOSE_ADVANCED_APPEARANCE_PIERCINGS);
 				
 			} else if (index == 10) {
-				return new Response("Tattoos", "Enter the customisation menu for tattoos.", CHOOSE_ADVANCED_APPEARANCE_TATTOOS);
+				return new Response("Тату", "Войти в меню настроек связаных с тату", CHOOSE_ADVANCED_APPEARANCE_TATTOOS);
 				
 			} else if (index == 11) {
-				return new Response("Extra hair", "Enter the customisation menu for facial, pubic, and body hair.", CHOOSE_ADVANCED_APPEARANCE_BODY_HAIR);
+				return new Response("Дополнительные волосы", "Войти в меню настроек связаных с лицом, лобком и волосами на теле.", CHOOSE_ADVANCED_APPEARANCE_BODY_HAIR);
 				
 			} else if (index == 0) {
-				return new Response("Back", "Confirm your choices and return to the content preferences menu.", CHOOSE_NAME) {
+				return new Response("Вернутся", "Подтвердите свой выбор и вернитесь к настройкам.", CHOOSE_NAME) {
 					@Override
 					public int getSecondsPassed() {
 						return -TIME_TO_APPEARANCE;
@@ -928,17 +928,17 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_CORE = new DialogueNode("Core Body Appearance", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_CORE = new DialogueNode("Основа внешнего вида тела", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>На все эти параметры можно повлиять позже в игре.</i>"
 					+ "</div>"
 						
 					+ CharacterModificationUtils.getHeightChoiceDiv()
 					
-					+ CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.HUMAN, BodyCoveringType.HUMAN, "Skin Colour", "The colour of the skin that's covering your body.", true, false, false)
+					+ CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.HUMAN, BodyCoveringType.HUMAN, "Цвет кожи", "Цвет кожи, покрывающей ваше тело.", true, false, false)
 					
 					+ "<div class='cosmetics-container' style='background:transparent;'>"
 					
@@ -947,7 +947,7 @@ public class CharacterCreation {
 						+ CharacterModificationUtils.getMuscleChoiceDiv()
 						
 						+ "<div class='container-full-width' style='text-align:center;'>"
-							+ "Your muscle and body size values result in your appearance being:<br/>"
+							+ "Ваши мускулы и размер тела влияет на на ваш внешний вид:<br/>"
 							+ "<b style='color:"+Main.game.getPlayer().getBodyShape().toWebHexStringColour()+";'>"+Util.capitaliseSentence(Main.game.getPlayer().getBodyShape().getName(false))+"</b>"
 						+ "</div>"
 					
@@ -962,7 +962,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Confirm your choices and return to the content preferences menu.", CHOOSE_ADVANCED_APPEARANCE);
+				return new Response("Назад", "Подтвердите свой выбор и вернитесь к настройкам.", CHOOSE_ADVANCED_APPEARANCE);
 				
 			} else {
 				return null;
@@ -970,19 +970,19 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_FACE = new DialogueNode("Face Appearance", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_FACE = new DialogueNode("Внешний вид лица", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>На все эти параметры можно повлиять позже в игре.</i>"
 					+ "</div>"
 
 					+ CharacterModificationUtils.getLipSizeDiv()
 					
 					+ CharacterModificationUtils.getLipPuffynessDiv()
 
-					+ CharacterModificationUtils.getKatesDivCoveringsNew(false, Main.game.getPlayer().getEyeType().getRace(), BodyCoveringType.EYE_HUMAN, "Iris Colour", "The colour of your eye's irises.", true, false, false);
+					+ CharacterModificationUtils.getKatesDivCoveringsNew(false, Main.game.getPlayer().getEyeType().getRace(), BodyCoveringType.EYE_HUMAN, "Цвет радужки", "Цвет радужки вашего глаза.", true, false, false);
 		}
 		
 		@Override
@@ -993,7 +993,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Confirm your choices and return to the content preferences menu.", CHOOSE_ADVANCED_APPEARANCE);
+				return new Response("Назад", "Подтвердите свой выбор и вернитесь к настройкам.", CHOOSE_ADVANCED_APPEARANCE);
 				
 			} else {
 				return null;
@@ -1001,19 +1001,19 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_HAIR = new DialogueNode("Hair Appearance", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_HAIR = new DialogueNode("Внешний вид волос", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>На все эти параметры можно повлиять позже в игре.</i>"
 					+ "</div>"
 
-					+ CharacterModificationUtils.getKatesDivHairLengths(false, "Hair Length", "Choose how long your hair is.")
+					+ CharacterModificationUtils.getKatesDivHairLengths(false, "Длинна волос", "Выберите, какой длины у вас волосы.")
 					
-					+ CharacterModificationUtils.getKatesDivHairStyles(false, "Hair Style", "Choose your hair style. Certain hair styles are unavailable at shorter hair lengths.")
+					+ CharacterModificationUtils.getKatesDivHairStyles(false, "Стиль прически", "Выберите свой стиль прически. Некоторые прически недоступны при более короткой длине волос.")
 
-					+ CharacterModificationUtils.getKatesDivCoveringsNew(false, Main.game.getPlayer().getHairType().getRace(), BodyCoveringType.HAIR_HUMAN, "Hair Colour", "The colour of your hair.", true, false);
+					+ CharacterModificationUtils.getKatesDivCoveringsNew(false, Main.game.getPlayer().getHairType().getRace(), BodyCoveringType.HAIR_HUMAN, "Цвет волос", "Цвет ваших волос.", true, false);
 		}
 		
 		@Override
@@ -1024,7 +1024,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Confirm your choices and return to the content preferences menu.", CHOOSE_ADVANCED_APPEARANCE);
+				return new Response("Назад", "Подтвердите свой выбор и вернитесь к настройкам.", CHOOSE_ADVANCED_APPEARANCE);
 				
 			} else {
 				return null;
@@ -1032,12 +1032,12 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_BREASTS = new DialogueNode("Breasts Appearance", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_BREASTS = new DialogueNode("Внешний вид груди", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>На все эти параметры можно повлиять позже в игре.</i>"
 					+ "</div>"
 						
 					+ CharacterModificationUtils.getBreastSizeDiv()
@@ -1061,7 +1061,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Confirm your choices and return to the content preferences menu.", CHOOSE_ADVANCED_APPEARANCE);
+				return new Response("Назад", "Подтвердите свой выбор и вернитесь к настройкам.", CHOOSE_ADVANCED_APPEARANCE);
 				
 			} else {
 				return null;
@@ -1069,12 +1069,12 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_ASS = new DialogueNode("Ass Appearance", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_ASS = new DialogueNode("Внешний вид задницы", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>На все эти параметры можно повлиять позже в игре.</i>"
 					+ "</div>"
 						
 					+ CharacterModificationUtils.getAssSizeDiv()
@@ -1092,7 +1092,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Confirm your choices and return to the content preferences menu.", CHOOSE_ADVANCED_APPEARANCE);
+				return new Response("Назад", "Подтвердите свой выбор и вернитесь к настройкам.", CHOOSE_ADVANCED_APPEARANCE);
 				
 			} else {
 				return null;
@@ -1100,14 +1100,14 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_GENITALS = new DialogueNode("Genitals Appearance", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_GENITALS = new DialogueNode("Внешний вид гениталий", "", true) {
 		
 		@Override
 		public String getLabel() {
 			if(Main.game.getPlayer().hasPenis()) {
-				return "Penis Appearance";
+				return "Внешний вид пениса";
 			} else {
-				return "Vagina Appearance";
+				return "Внешний вид вагины";
 			}
 		}
 		
@@ -1115,7 +1115,7 @@ public class CharacterCreation {
 		public String getHeaderContent() {
 			if(Main.game.getPlayer().hasPenis()) {
 				return "<div class='container-full-width' style='text-align:center;'>"
-							+ "<i>All of these options can be influenced later on in the game.</i>"
+							+ "<i>На все эти параметры можно повлиять позже в игре.</i>"
 						+ "</div>"
 							
 							+ CharacterModificationUtils.getPenisSizeDiv()
@@ -1126,7 +1126,7 @@ public class CharacterCreation {
 				
 			} else {
 				return "<div class='container-full-width' style='text-align:center;'>"
-							+ "<i>All of these options can be influenced later on in the game.</i>"
+							+ "<i>На все эти параметры можно повлиять позже в игре.</i>"
 						+ "</div>"
 	
 							+ CharacterModificationUtils.getVaginaCapacityDiv()
@@ -1146,7 +1146,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Confirm your choices and return to the content preferences menu.", CHOOSE_ADVANCED_APPEARANCE);
+				return new Response("Назад", "Подтвердите свой выбор и вернитесь к настройкам.", CHOOSE_ADVANCED_APPEARANCE);
 				
 			} else {
 				return null;
@@ -1154,12 +1154,12 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_PIERCINGS = new DialogueNode("Piercings", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_PIERCINGS = new DialogueNode("Пирсинг", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>На все эти параметры можно повлиять позже в игре.</i>"
 					+ "</div>"
 						
 					+CharacterModificationUtils.getKatesDivPiercings(true);
@@ -1173,7 +1173,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Confirm your choices and return to the content preferences menu.", CHOOSE_ADVANCED_APPEARANCE);
+				return new Response("Назад", "Подтвердите свой выбор и вернитесь к настройкам.", CHOOSE_ADVANCED_APPEARANCE);
 				
 			} else {
 				return null;
@@ -1181,12 +1181,12 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_TATTOOS = new DialogueNode("Tattoos", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_TATTOOS = new DialogueNode("Тату", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>Later on in the game, you can get enchanted and glowing tattoos. For now, however, your tattoo choices are limited to more mundane options.</i>"
+						+ "<i>Позже в игре вы сможете делать зачарованные и светящиеся татуировки. Однако пока выбор татуировок ограничен более обыденными вариантами.</i>"
 					+ "</div>"
 					+CharacterModificationUtils.getKatesDivTattoos();
 		}
@@ -1199,7 +1199,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Confirm your choices and return to the content preferences menu.", CHOOSE_ADVANCED_APPEARANCE);
+				return new Response("Назад", "Подтвердите свой выбор и вернитесь к настройкам.", CHOOSE_ADVANCED_APPEARANCE);
 				
 			} else {
 				return null;
@@ -1207,11 +1207,11 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_TATTOOS_ADD = new DialogueNode("Succubi's Secrets", "-", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_TATTOOS_ADD = new DialogueNode("Секрет Суккубы", "-", true) {
 
 		@Override
 		public String getLabel() {
-			return "Add "+Util.capitaliseSentence(CharacterModificationUtils.tattooInventorySlot.getName()) +" Tattoo";
+			return "Add "+Util.capitaliseSentence(CharacterModificationUtils.tattooInventorySlot.getName()) +" Тату";
 		}
 		
 		@Override
@@ -1225,11 +1225,11 @@ public class CharacterCreation {
 				if(CharacterModificationUtils.tattoo.getType().equals(TattooType.getTattooTypeFromId("innoxia_misc_none"))
 						&& CharacterModificationUtils.tattoo.getWriting().getText().isEmpty()
 						&& CharacterModificationUtils.tattoo.getCounter().getType()==TattooCounterType.NONE) {
-					return new Response("Apply", "You need to select a tattoo type, add some writing, or add a counter in order to make a tattoo!", null);
+					return new Response("Применить", "Чтобы сделать татуировку, вам нужно выбрать ее тип, добавить надпись или счетчик!", null);
 					
 				} else {
-					return new Response("Apply", 
-							UtilText.parse(BodyChanging.getTarget(), "Add this tattoo."), CHOOSE_ADVANCED_APPEARANCE_TATTOOS) {
+					return new Response("Применить", 
+							UtilText.parse(BodyChanging.getTarget(), "Добавить это тату."), CHOOSE_ADVANCED_APPEARANCE_TATTOOS) {
 						@Override
 						public void effects() {
 							Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenPField').innerHTML=document.getElementById('tattoo_name').value;");
@@ -1241,7 +1241,7 @@ public class CharacterCreation {
 				}
 			
 			} else if(index==2) {
-				return new Response("Save/Load", "Save/Load tattoo presets.", CosmeticsDialogue.TATTOO_SAVE_LOAD) {
+				return new Response("Сохранить/Загрузить", "Сохранить/Загрузить пресеты тату.", CosmeticsDialogue.TATTOO_SAVE_LOAD) {
 					@Override
 					public void effects() {
 						CosmeticsDialogue.initTattooSaveLoadDialogue(CHOOSE_ADVANCED_APPEARANCE_TATTOOS_ADD);
@@ -1249,7 +1249,7 @@ public class CharacterCreation {
 				};
 			
 			} else if(index==0) {
-				return new Response("Back", "Decide not to get this tattoo and return to the main selection screen.", CHOOSE_ADVANCED_APPEARANCE_TATTOOS);
+				return new Response("Назад", "Решите не делать эту татуировку и вернитесь на главный экран выбора.", CHOOSE_ADVANCED_APPEARANCE_TATTOOS);
 			}
 			
 			return null;
@@ -1261,31 +1261,31 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_COSMETICS = new DialogueNode("Cosmetics", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_COSMETICS = new DialogueNode("Косметика", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>На все эти параметры можно повлиять позже в игре.</i>"
 					+ "</div>"
 							
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "Blusher", "Blusher (also called rouge) is used to colour the cheeks so as to provide a more youthful appearance, and to emphasise the cheekbones.", true, false)
+							false, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "Румяна", "Румяна (также называемые тенями) используются для окрашивания щек, чтобы придать им более молодой вид и подчеркнуть скулы.", true, false)
 					
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "Lipstick", "Lipstick is used to provide colour, texture, and protection to the wearer's lips.", true, false)
+							false, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "Губная помада", "Губная помада используется для придания цвета, текстуры и защиты губ.", true, false)
 
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "Eyeliner", "Eyeliner is applied around the contours of the eyes to help to define shape or highlight different features.", true, false)
+							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "Подводка для глаз", "Подводка для глаз наносится по контуру глаз, помогая определить форму или подчеркнуть различные черты.", true, false)
 
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "Eye shadow", "Eye shadow is used to make the wearer's eyes stand out or look more attractive.", true, false)
+							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "Тени для век", "Тени для век используются для того, чтобы выделить глаза или сделать их более привлекательными.", true, false)
 
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "Nail polish", "Nail polish is used to colour and protect the nails on your [pc.hands].", true, false)
+							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "Лак для ногтей", "Лак для ногтей используется для окрашивания и защиты ногтей на ваших [pc.hands].", true, false)
 
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "Toenail polish", "Toenail polish is used to colour and protect the nails on your [pc.feet].", true, false);
+							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "Лак для ногтей на ногах", "Лак для ногтей используется для окрашивания и защиты ногтей на ваших [pc.feet].", true, false);
 		}
 		
 		@Override
@@ -1296,7 +1296,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Confirm your choices and return to the content preferences menu.", CHOOSE_ADVANCED_APPEARANCE);
+				return new Response("Назад", "Подтвердите свой выбор и вернитесь к настройкам.", CHOOSE_ADVANCED_APPEARANCE);
 				
 			} else {
 				return null;
@@ -1304,60 +1304,60 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_BODY_HAIR = new DialogueNode("Body Hair", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_BODY_HAIR = new DialogueNode("Волосы на теле", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append("<div class='container-full-width' style='text-align:center;'>"
-												+ "<i>All of these options can be influenced later on in the game.</i>"
+												+ "<i>На все эти параметры можно повлиять позже в игре.</i>"
 											+ "</div>");
 			
 			if(Main.game.isPubicHairEnabled() || Main.game.isFacialHairEnabled() || Main.game.isBodyHairEnabled()) {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivCoveringsNew(
-						false, Race.NONE, Main.game.getPlayer().getBodyHairCoveringType(), "Body hair", "This is the hair that covers all areas other than the head.", false, false, false));
+						false, Race.NONE, Main.game.getPlayer().getBodyHairCoveringType(), "Волосы на теле", "Это волосы, которые покрывают все области, кроме головы.", false, false, false));
 			} else {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivGenericBodyHairDisabled(
-						"Body hair", "This is the hair that covers all areas other than the head.", "All extra body hair options are disabled. You will not see any extra hair content."));
+						"Волосы на теле", "Это волосы, которые покрывают все области, кроме головы.", "Все опции дополнительных волос на теле отключены. Вы не увидите никаких дополнительных волос."));
 				
 				return UtilText.nodeContentSB.toString();
 			}
 			
 			if(Main.game.isFacialHairEnabled()) {
 				if (Main.game.isFemaleFacialHairEnabled()) {
-					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivFacialHair(false, "Facial hair", "The body hair found on your face."));
+					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivFacialHair(false, "Волосы на лице", "Волосы на теле, расположенные на лице."));
 				} else {
-					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivFacialHair(false, "Facial hair", "The body hair found on your face. Feminine characters cannot grow facial hair."));
+					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivFacialHair(false, "Волосы на лице", "Волосы на теле, которые находятся на лице. Женские персонажи не могут отращивать волосы на лице."));
 				}
 			} else {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivGenericBodyHairDisabled(
-						"Facial hair", "The body hair found on your face. Feminine characters cannot grow facial hair.", "Facial hair is currently disabled in the options. You will not see any facial hair content while it is disabled."));
+						"Волосы на лице", "Волосы на теле, которые находятся на лице. Женские персонажи не могут отращивать волосы на лице.", "В настоящее время волосы на лице отключены в настройках. Пока волосы на лице отключены, вы не увидите никакого содержимого."));
 			}
 			
 			if(Main.game.isPubicHairEnabled()) {
-				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivPubicHair(false, "Pubic hair", "The body hair found in the genital area; located on and around your sex organs and crotch."));
+				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivPubicHair(false, "Лобковые волосы", "Волосы на теле в области гениталий; расположены на половых органах и вокруг них, а также в промежности."));
 				
 			} else {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivGenericBodyHairDisabled(
-						"Pubic hair", "The body hair found in the genital area; located on and around your sex organs and crotch.", "Pubic hair is currently disabled in the options. You will not see any pubic hair content while it is disabled."));
+						"Лобковые волосы", "Волосы на теле в области гениталий; расположены на половых органах и вокруг них, а также в промежности..", "Лобковые волосы в настоящее время отключены в настройках. Пока лобковые волосы отключены, вы не увидите никакого содержимого."));
 			}
 			
 			if(Main.game.isBodyHairEnabled()) {
 				UtilText.nodeContentSB.append(
-						CharacterModificationUtils.getKatesDivUnderarmHair(false, "Underarm hair", "The body hair found in your armpits."));
+						CharacterModificationUtils.getKatesDivUnderarmHair(false, "Волосы подмышками", "Волосы на теле, расположенные в подмышках."));
 				
 			} else {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivGenericBodyHairDisabled(
-						"Underarm hair", "The hair found in your armpits.", "Underarm hair is currently disabled in the options. You will not see any underarm hair content while it is disabled."));
+						"Волосы подмышками", "Волосы в подмышечных впадинах.", "Волосы подмышками в настоящее время отключены в настройках. Пока эта функция отключена, вы не увидите никакого содержимого подмышечных волос."));
 			}
 			
 			if(Main.game.isAssHairEnabled()) {
-				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivAssHair(false, "Ass hair", "The body hair found around your asshole."));
+				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivAssHair(false, "Волосы на заднице", "Волосы на теле, найденные вокруг вашей задницы."));
 				
 			} else {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivGenericBodyHairDisabled(
-						"Ass hair", "The body hair found around your asshole.", "Ass hair is currently disabled in the options. You will not see any ass hair content while it is disabled."));
+						"Волосы на заднице", "Волосы на теле, найденные вокруг вашей задницы.", "Волосы на заднице в настоящее время отключены в настройках. Вы не увидите никакого содержимого задницы, пока оно отключено."));
 			}
 			
 			return UtilText.nodeContentSB.toString();
@@ -1371,7 +1371,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Confirm your choices and return to the content preferences menu.", CHOOSE_ADVANCED_APPEARANCE);
+				return new Response("Назад", "Подтвердите свой выбор и вернитесь к настройкам.", CHOOSE_ADVANCED_APPEARANCE);
 				
 			} else {
 				return null;
@@ -1385,24 +1385,24 @@ public class CharacterCreation {
 		File dir = new File("res/");
 		if(!dir.exists()) {
 			sb.append("<p style='text-align:center;'>"
-						+ "[style.italicsBad(The game cannot read the 'res' folder, and as such, vital items of clothing will be missing! Please refer to the 'MISSING FOLDERS' section of the README.txt before continuing!)]"
+						+ "[style.italicsBad(Игра не может прочитать папку 'res', и поэтому жизненно важные предметы одежды будут отсутствовать! Пожалуйста, обратитесь к разделу 'MISSING FOLDERS' в README.txt, прежде чем продолжить!)]"
 					+ "</p>");
 		}
 		
 		sb.append("<div class='container-full-width' style='background:transparent;'>"
 					+ "<p>"
-						+ "There doesn't seem to be any sign of activity on the main stage, so, afforded a few more minutes, you decide to smarten up your clothes a little."
-						+ " After all, this is a big evening for Lily, and you want her to see that you've put some effort into your appearance."
+						+ "На главной сцене, кажется, нет никаких признаков деятельности, поэтому, получив еще несколько минут, вы решаете немного приукрасить свою одежду."
+						+ " В конце концов, это важный вечер для Лили, и вы хотите, чтобы она видела, что вы приложили некоторые усилия к своему внешнему виду."
 					+ "</p>"
 					+ "<p>"
-						+ "Turning this way and that to get a better look at yourself in the mirror, you begin to notice just how "+(Main.game.getPlayer().isFeminine()?"hot":"handsome")+" you're looking tonight..."
+						+ "Поворачиваясь то в одну, то в другую сторону, чтобы получше рассмотреть себя в зеркале, вы начинаете замечать, как "+(Main.game.getPlayer().isFeminine()?"горячо":"симпотично")+" вы выглядите сегодня вечером..."
 					+ "</p>"
 					+ "<p>"
-						+ "[pc.thought(Why am I feeling so horny all of a sudden?)]"
+						+ "[pc.thought(Почему я вдруг так возбужден?)]"
 					+ "</p>"
 					+ "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>Choose what you decided to wear to the museum.</i><br/>"
-						+ "<i>You'll need to be wearing some kind of footwear, as well as clothing that conceals your genitals and chest, before being able to proceed.</i>"
+						+ "<i>Выберите, что вы решили надеть в музей.</i><br/>"
+						+ "<i>Прежде чем продолжить, вам нужно будет надеть какую-нибудь обувь, а также одежду, скрывающую гениталии и грудь.</i>"
 					+ "</div>"
 				+ "</div>");
 		
@@ -1427,49 +1427,49 @@ public class CharacterCreation {
 		return Main.game.getPlayer().getSexualOrientation()==SexualOrientation.GYNEPHILIC || (Main.game.getPlayer().getSexualOrientation()==SexualOrientation.AMBIPHILIC && Main.game.getPlayer().hasPenis());
 	}
 	
-	public static final DialogueNode CHOOSE_BACKGROUND = new DialogueNode("In the Museum", "-", true) {
+	public static final DialogueNode CHOOSE_BACKGROUND = new DialogueNode("В музее", "-", true) {
 		
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append("<p>"
-						+ "Satisfied with your appearance, you turn away from the mirror and begin to walk towards the main stage."
-						+ " With each step you take, you inexplicably find yourself getting more and more turned on, and by the time you've barely covered half the distance to the bustling crowd of visitors,"
+						+ "Удовлетворенные своим внешним видом, вы отворачиваетесь от зеркала и начинаете идти к главной сцене."
+						+ " С каждым шагом вы необъяснимо заводитесь все больше и больше, и к тому моменту, когда вы преодолели половину расстояния до шумной толпы посетителей,"
 							+(Main.game.getPlayer().hasPenis()
-									?" you're struggling to keep yourself from getting an erection."
-									:" you can feel your pussy getting wet from arousal.")
+									?" вы изо всех сил пытаетесь удержать себя от эрекции."
+									:" Вы можете почувствовать, как ваша киска мокнет от возбуждения.")
 					+ "</p>"
 					+ "<p>"
-						+ "Ducking behind a nearby pillar, you shake your head to try and dislodge the dirty thoughts that are starting to seep into your mind."
-						+ " As you lean back against the cold stone and take a deep breath, a voice suddenly interrupts your thoughts,");
+						+ "Пригнувшись за ближайшей колонной, вы трясете головой, пытаясь отогнать грязные мысли, которые начинают просачиваться в ваш разум."
+						+ " Когда вы прислоняетесь спиной к холодному камню и делаете глубокий вдох, голос внезапно прерывает ваши мысли,");
 			
 			if(!femalePrologueNPC()) {
-				UtilText.nodeContentSB.append(" [prologueMale.speech(Taking a break from the crowds as well?)]"
+				UtilText.nodeContentSB.append(" [prologueMale.speech(Тоже хотите отдохнуть от толпы?)]"
 						+ "</p>"
 						+ "<p>"
-							+ "Turning around, you see a tall, handsome-looking man, who must be only a couple of years older than you, giving you the most charming smile you've ever seen."
-							+ " Before you know what you're doing, your eyes are travelling up and down every [unit.size] of his manly, muscular body, and you only just manage to stop yourself from letting out a desperate little whine."
+							+ "Обернувшись, вы видите высокого красивого мужчину, который, должно быть, всего на пару лет старше вас, одаривающего вас самой очаровательной улыбкой, которую вы когда-либо видели."
+							+ " Прежде чем вы осознаете, что делаете, ваши глаза путешествуют вверх и вниз по всем [unit.size] частям его мужественного, мускулистого тела, и вам удается удержаться от отчаянного стона."
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.thought(Focus, [pc.name], focus!)] you think, trying to act as casual as possible as you smile back at the stranger before you."
+							+ "[pc.thought(Сфокусируйся, [pc.name], Фокусируйся!)] вы стараетесь вести себя как можно непринужденнее, улыбаясь незнакомцу, стоящему перед вами."
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.speech(Actually,)] you say, [pc.speech(I've only just arrived. I thought I was going to be late, but it looks like nothing's started yet.)]"
+							+ "[pc.speech(На самом деле,)] говорите вы, [pc.speech(Я только что приехал. Я думал, что опоздаю, но, похоже, еще ничего не началось.)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[prologueMale.speech(Ah, you must have just missed the announcement,)] he replies, [prologueMale.speech(the opening speech is being delayed by half an hour."
-								+ " I tried hanging around in that crowd back there, but I'm no historian, and most of the conversation is pretty dry...)]"
+							+ "[prologueMale.speech(А, вы, должно быть, просто пропустили объявление,)] отвечает он, [prologueMale.speech(вступительная речь задерживается на полчаса."
+								+ " Я пробовал болтаться в этой толпе, но я не историк, и большинство разговоров довольно сухие...)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.speech(Haha,)]"
-							+ " you laugh, desperately trying not to imagine how he looks naked,"
-							+ " [pc.speech(I know <i>exactly</i> what you mean. My aunt is the lady giving the opening speech, and every time I meet her friends from the museum, I can never follow their conversations."
-									+ " Well, apart from Arthur that is. He's closer to our age, and is really easy-going and fun to talk to.)]"
+							+ "[pc.speech(Хаха,)]"
+							+ " вы смеетесь, отчаянно пытаясь не представлять, как он выглядит обнаженным,"
+							+ " [pc.speech(Я <i>очень</i> хорошо понимаю что ты имешь в виду. Моя тетя - дама, произносящая вступительную речь, и каждый раз, когда я встречаю ее друзей из музея, я никогда не могу уследить за их разговором."
+									+ " Ну, кроме Артура. Он ближе к нашему возрасту, и с ним очень легко и весело общаться.)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[prologueMale.speech(Hah! You know Arthur? I'm here by his invitation. He and I go way back,)]"
-							+ " the man cheerily replies, his smile causing your heart to race."
+							+ "[prologueMale.speech(Ха! Вы знаете Артура? Я здесь по его приглашению. Мы с ним давно знакомы,)]"
+							+ " весело отвечает мужчина, его улыбка заставляет ваше сердце учащенно биться."
 							+ " [prologueMale.speech(I'm [prologueMale.name] by the way, pleased to meet you "+(Main.game.getPlayer().isFeminine()?"Ms. ...?":"Mr. ...?")+")]"
 						+ "</p>"
 						+ "<p>"
