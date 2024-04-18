@@ -1,38 +1,38 @@
-You must read and agree to the attached disclaimer before viewing any part of this Project.
+Вы должны прочитать и согласиться с прилагаемым отказом от ответственности перед просмотром любой части этого проекта.
 
-Although this Project is publicly available, it is not open source software. All Content is under sole ownership and Copyright 2016 Innoxia (innoxia7@gmail.com) all rights reserved.
-
---------
-
-**Definitions:**
-
-"Project" shall be defined as the source code and/or modifications/alterations comprising the software package known as "Lilith's Throne"; its assets, source code, Content, and all associated repositories, tools, configuration, and archives.
-
-"Binaries" refers to the executable produced from the source code and/or modified/altered source code.
-
-"Content" shall be defined to include machine or programming code; text of any kind, including written narratives and descriptions, markup and formatting, and any other information that may be represented in the Unicode specification; images, drawings, video, animations, sound, or music; adjustments to Project settings, configuration, parameters, or environment; or any other tangible or intangible thing which the user voluntarily makes available to the Project creator(s) and/or maintainers.
-
-"Contribution" shall be defined as submitting any Content, idea, or suggestion available to the Project creator(s) and/or maintainers by any means, including e-mail, file transfer protocols of any kind, git pull requests, git pushes, or any other electronic or physical transfer of any kind which makes available to the project creator(s) and/or maintainers for inclusion in the Project.
-
+Несмотря на то, что данный проект находится в открытом доступе, он не является программным обеспечением с открытым исходным кодом. Все содержимое находится в исключительной собственности и является авторским правом 2016 Innoxia (innoxia7@gmail.com), все права защищены.
 
 --------
 
-**License:**
+**Определения:**
 
-Redistribution, use, and modification of the Project and its Content, with or without modification, are permitted provided that the following conditions are met:
-1. The Project must retain the above copyright notice and this license as is.
-2. The Binaries must reproduce the above copyright notice (i.e. leave Innoxia's name in the credits page).
-3. The Project, its Content, and Binaries:  
-3a. must carry prominent notices stating it is modified, and not endorsed by Innoxia, if applicable.  
-3b. must be available free of charge, if distributed.  
-3c. may not be used for commercial purposes.
+"Проект" определяется как исходный код и/или модификации/изменения, составляющие пакет программного обеспечения, известный как "Lilith's Throne"; его активы, исходный код, Содержание и все связанные с ним репозитории, инструменты, конфигурации и архивы.
 
-*Points 3b and 3c are to protect the player base from having to pay for modded copies of the game. I don't want modders to try and take advantage of players (by adding a paywall to their mods).*
+"Бинарные файлы" означают исполняемый файл, созданный на основе исходного кода и/или модифицированного/измененного исходного кода.
+
+Под "содержимым" понимается машинный или программный код; текст любого вида, включая письменные повествования и описания, разметку и форматирование, а также любую другую информацию, которая может быть представлена в спецификации Unicode; изображения, рисунки, видео, анимацию, звук или музыку; изменения настроек, конфигурации, параметров или среды проекта; или любые другие материальные или нематериальные вещи, которые пользователь добровольно предоставляет создателю(ям) и/или сопровождающим проекта.
+
+Под "вкладом" понимается предоставление любого Содержания, идеи или предложения создателю(ям) и/или сопровождающим Проекта любым способом, включая электронную почту, протоколы передачи файлов любого вида, git pull requests, git pushes, или любую другую электронную или физическую передачу любого вида, которая делает доступным создателю(ям) и/или сопровождающим Проект для включения в Проект.
+
 
 --------
 
-**On Content submissions and Contributions:**
+**Лицензия:**
 
-By making any Contribution to the Project, potential contributers agree to give the project creator(s) and/or maintainers a perpetual, unlimited, royalty-free license to reuse, incorporate, distribute, modify, or extend the aforementioned Contribution in any fashion they see fit.
+Распространение, использование и модификация Проекта и его Содержимого, с изменениями или без них, разрешены при соблюдении следующих условий:
+1. Проект должен сохранять вышеуказанное уведомление об авторских правах и настоящую лицензию как есть.
+2. Бинарные файлы должны воспроизводить вышеуказанное уведомление об авторских правах (т.е. оставить имя Innoxia на странице кредитов).
+3. Проект, его содержимое и двоичные файлы:
+3a. должны иметь заметные уведомления о том, что они модифицированы и не одобрены Innoxia, если это применимо.
+3b. должны быть доступны бесплатно, если они распространяются.
+3c. не может быть использована в коммерческих целях.
 
-*This is to prevent the case of someone submitting code or content to the game, then coming back at a later date and demanding removal unless certain conditions are met. I need to retain control over all of the game's content, and, while I will always do my very best to respect your submitted content's themes and intentions, I need to be able to have the final say in the event of any conflicts.*
+*Пункты 3b и 3c призваны защитить игроков от необходимости платить за модифицированные копии игры. Я не хочу, чтобы моддеры пытались использовать игроков в своих интересах (добавляя платные моды).*
+
+--------
+
+**О представлении материалов и вкладах:**
+
+Делая любой вклад в проект, потенциальные участники соглашаются предоставить создателю(ям) и/или сопровождающим проекта бессрочную, неограниченную, безвозмездную лицензию на повторное использование, включение, распространение, модификацию или расширение вышеупомянутого вклада любым способом, который они сочтут нужным.
+
+*Это необходимо для того, чтобы предотвратить случаи, когда кто-то отправляет код или контент в игру, а затем возвращается позже и требует удалить его, если не будут выполнены определенные условия. Я должен сохранять контроль над всем содержимым игры, и, хотя я всегда буду делать все возможное, чтобы уважать темы и намерения вашего контента, я должен иметь возможность иметь последнее слово в случае каких-либо конфликтов.*
