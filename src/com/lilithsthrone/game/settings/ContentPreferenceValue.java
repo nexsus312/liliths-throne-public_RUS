@@ -7,17 +7,17 @@ package com.lilithsthrone.game.settings;
  */
 public enum ContentPreferenceValue {
 
-	ZERO_NONE("off", 0),
+	ZERO_NONE("Без", 0),
 	
-	ONE_MINIMAL("minimal", 1),
+	ONE_MINIMAL("Минимум", 1),
 	
-	TWO_LOW("low", 5),
+	TWO_LOW("Мало", 5),
 	
-	THREE_AVERAGE("average", 10),
+	THREE_AVERAGE("Средне", 10),
 	
-	FOUR_HIGH("high", 20),
+	FOUR_HIGH("Много", 20),
 	
-	FIVE_ABUNDANT("abundant", 40);
+	FIVE_ABUNDANT("Очень Много", 40);
 
 	private String name;
 	private int value;
