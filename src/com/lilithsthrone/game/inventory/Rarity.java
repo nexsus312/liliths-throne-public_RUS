@@ -10,19 +10,19 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum Rarity {
 
-	COMMON("Распостраненный", PresetColour.RARITY_COMMON, PresetColour.RARITY_COMMON_BACKGROUND),
+	COMMON("Распостраненнон", PresetColour.RARITY_COMMON, PresetColour.RARITY_COMMON_BACKGROUND),
 	
-	UNCOMMON("Нераспостраненный", PresetColour.RARITY_UNCOMMON, PresetColour.RARITY_UNCOMMON_BACKGROUND),
+	UNCOMMON("Нераспостраненное", PresetColour.RARITY_UNCOMMON, PresetColour.RARITY_UNCOMMON_BACKGROUND),
 	
-	RARE("Редкий", PresetColour.RARITY_RARE, PresetColour.RARITY_RARE_BACKGROUND),
+	RARE("Редкое", PresetColour.RARITY_RARE, PresetColour.RARITY_RARE_BACKGROUND),
 	
-	EPIC("Эпический", PresetColour.RARITY_EPIC, PresetColour.RARITY_EPIC_BACKGROUND),
+	EPIC("Эпическое", PresetColour.RARITY_EPIC, PresetColour.RARITY_EPIC_BACKGROUND),
 	
-	LEGENDARY("Легендарный", PresetColour.RARITY_LEGENDARY, PresetColour.RARITY_LEGENDARY_BACKGROUND),
+	LEGENDARY("Легендарное", PresetColour.RARITY_LEGENDARY, PresetColour.RARITY_LEGENDARY_BACKGROUND),
 	
-	QUEST("Уникальный", PresetColour.RARITY_QUEST, PresetColour.RARITY_QUEST_BACKGROUND),
+	QUEST("Уникально", PresetColour.RARITY_QUEST, PresetColour.RARITY_QUEST_BACKGROUND),
 	
-	JINXED("Пагубный", PresetColour.RARITY_JINXED, PresetColour.RARITY_JINXED_BACKGROUND);
+	JINXED("Пагубное", PresetColour.RARITY_JINXED, PresetColour.RARITY_JINXED_BACKGROUND);
 
 	private String name;
 	private Colour colour;
