@@ -1470,52 +1470,52 @@ public class CharacterCreation {
 						+ "<p>"
 							+ "[prologueMale.speech(Ха! Вы знаете Артура? Я здесь по его приглашению. Мы с ним давно знакомы,)]"
 							+ " весело отвечает мужчина, его улыбка заставляет ваше сердце учащенно биться."
-							+ " [prologueMale.speech(I'm [prologueMale.name] by the way, pleased to meet you "+(Main.game.getPlayer().isFeminine()?"Ms. ...?":"Mr. ...?")+")]"
+							+ " [prologueMale.speech(Я [prologueMale.name] кстати, рад познакомиться с вами "+(Main.game.getPlayer().isFeminine()?"М-с. ...?":"М-р. ...?")+")]"
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.speech(Likewise,)] you respond, shaking his offered hand while trying not to think of how powerful and dominant his grip is. [pc.speech(I'm [pc.Name].)]"
+							+ "[pc.speech(Аналогично,)] вы отвечаете, пожимая предложенную им руку и стараясь не думать о том, насколько сильной и доминирующей является его хватка. [pc.speech(Я [pc.Name].)]"
 						+ "</p>"
 						+ "<p>"
-							+ "You and [prologueMale.name] continue talking with one another as you wait for the presentation to start."
-							+ " Before long, the subject shifts to work, and you find out that he's an airline pilot, based out of the airport on the city's outskirts."
-							+ " Conversation then moves on to what it is you do, and you end up talking about that for a little while..."
+							+ "Вы и [prologueMale.name] продолжаете разговаривать друг с другом, ожидая начала презентации."
+							+ " Вскоре тема разговора переходит на работу, и вы узнаете, что он - пилот авиакомпании, базирующейся в аэропорту на окраине города."
+							+ " Затем разговор переходит на то, чем вы занимаетесь, и в итоге вы еще некоторое время говорите об этом..."
 						+ "</p>");
 				
 			} else {
-				UtilText.nodeContentSB.append(" [prologueFemale.speech(Taking a break from the crowds as well?)]"
+				UtilText.nodeContentSB.append(" [prologueFemale.speech(Тоже хотите отдохнуть от толпы?)]"
 						+ "</p>"
 						+ "<p>"
-							+ "Turning around, you see a beautiful woman, who looks to be about the same age as you, giving you the most stunning smile you've ever seen."
-							+ " Before you know what you're doing, your eyes are travelling up and down every [unit.size] of her curvy, womanly body, and you only just manage to stop yourself from letting out a hungry groan."
+							+ "Обернувшись, вы видите красивую женщину примерно того же возраста, что и вы, которая дарит вам самую потрясающую улыбку, которую вы когда-либо видели."
+							+ " Прежде чем вы осознаете, что делаете, ваши глаза путешествуют вверх и вниз по каждому [unit.size] изгибу ее женского тела, и вы только успеваете сдерживать себя, чтобы не издать голодный стон."
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.thought(Focus [pc.name], focus!)] you think, trying to act as casual as possible as you smile back at the stranger before you."
+							+ "[pc.thought(Сфокусируйся [pc.name], Сфокусируйся!)] вы стараетесь вести себя как можно непринужденнее, улыбаясь незнакомцу, стоящему перед вами."
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.speech(Actually,)] you say, [pc.speech(I've only just arrived. I thought I was going to be late, but it looks like nothing's started yet.)]"
+							+ "[pc.speech(На самом деле,)] говорите вы, [pc.speech(Я только что приехал(а). Я думал(а), что опоздаю, но, похоже, еще ничего не началось.)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[prologueFemale.speech(Ah, you must have just missed the announcement,)] she replies, [prologueFemale.speech(the opening speech is being delayed by half an hour."
-								+ " I tried hanging around in that crowd back there, but I'm no historian, and most of the conversation is pretty dry...)]"
+							+ "[prologueFemale.speech(А, вы, должно быть, просто пропустили объявление,)] отвечает она, [prologueFemale.speech(вступительная речь задерживается на полчаса."
+								+ " Я пробовала потусоваться в той толпе, но я не историк, и большинство разговоров довольно сухие...)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.speech(Haha,)]"
-							+ " you laugh, desperately trying not to imagine how she looks naked,"
-							+ " [pc.speech(I know <i>exactly</i> what you mean. My aunt is the lady giving the opening speech, and every time I meet her friends from the museum, I can never follow their conversations."
-									+ " Well, apart from Arthur that is. He's closer to our age, and is really easy-going and fun to talk to.)]"
+							+ "[pc.speech(Хаха,)]"
+							+ " вы смеетесь, отчаянно пытаясь не представлять, как она выглядит обнаженной,"
+							+ " [pc.speech(Я <i>очень</i> хорошо понимаю что вы имеете в виду. Моя тетя выступает на открытии, и каждый раз, когда я встречаю ее друзей из музея, я не могу уследить за их разговором."
+									+ " Ну, кроме Артура. Он ближе к нашему возрасту, и с ним очень легко и весело общаться.)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[prologueFemale.speech(Oh! You know Arthur? I'm here by his invitation, actually. He and I go way back,)]"
-							+ " the woman cheerily replies, her smile causing your heart to race."
-							+ " [prologueFemale.speech(I'm [prologueFemale.name] by the way, pleased to meet you "+(Main.game.getPlayer().isFeminine()?"Ms. ...?":"Mr. ...?")+")]"
+							+ "[prologueFemale.speech(О! Вы знаете Артура? Я здесь по его приглашению, вообще-то. Мы с ним давно знакомы,)]"
+							+ " весело отвечает женщина, ее улыбка заставляет ваше сердце учащенно биться."
+							+ " [prologueFemale.speech(Я [prologueFemale.name] к слову, рада познакомиться с вами "+(Main.game.getPlayer().isFeminine()?"М-с. ...?":"М-р. ...?")+")]"
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.speech(Likewise,)] you respond, shaking her offered hand while trying not to think of how soft and delicate her skin is. [pc.speech(I'm [pc.Name].)]"
+							+ "[pc.speech(Аналогично,)] вы отвечаете, пожимая предложенную ей руку и стараясь не думать о том, какая мягкая и нежная у нее кожа. [pc.speech(Я [pc.Name].)]"
 						+ "</p>"
 						+ "<p>"
-							+ "You and [prologueFemale.name] continue talking with one another as you wait for the presentation to start."
-							+ " Before long, the subject shifts to work, and you find out that she's training to become a doctor, and is studying here at the city's university."
-							+ " Conversation then moves on to what it is you do, and you end up talking about that for a little while..."
+							+ "Вы и [prologueFemale.name] продолжайте общаться друг с другом в ожидании начала презентации."
+							+ " Вскоре тема разговора переходит на работу, и вы узнаете, что она готовится стать врачом и учится здесь, в городском университете."
+							+ " Затем разговор переходит на то, чем вы занимаетесь, и в итоге вы еще некоторое время говорите об этом..."
 						+ "</p>");
 			}
 			
@@ -1525,7 +1525,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new ResponseEffectsOnly("Back", "Return to clothing selection.") {
+				return new ResponseEffectsOnly("Назад", "Вернитесь к выбору одежды.") {
 					@Override
 					public int getSecondsPassed() {
 						return -TIME_TO_BACKGROUND;
@@ -1541,7 +1541,7 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 1) {
-				return new Response("Select Job", "Proceed to the job selection screen.", BACKGROUND_SELECTION_MENU) {
+				return new Response("Выбрать Работу", "Перейдите к экрану выбора работы.", BACKGROUND_SELECTION_MENU) {
 					@Override
 					public int getSecondsPassed() {
 						return TIME_TO_JOB;
@@ -1554,15 +1554,15 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode BACKGROUND_SELECTION_MENU = new DialogueNode("In the Museum", "-", true) {
+	public static final DialogueNode BACKGROUND_SELECTION_MENU = new DialogueNode("В музее", "-", true) {
 		
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append("<div class='container-full-width'>"
-									+ "<h6 style='text-align:center'>Job Selection</h6>"
-									+ "<p style='text-align:center'>Click on the icon next to the job that you'd like, and then choose 'Continue'.</p>"
+									+ "<h6 style='text-align:center'>Выбор работы</h6>"
+									+ "<p style='text-align:center'>Нажмите на значок рядом с желаемой работой, а затем нажмите 'Продолжить'.</p>"
 								+ "</div>");
 
 			UtilText.nodeContentSB.append("<div class='container-full-width'>");
@@ -1596,7 +1596,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Return to the previous screen.", CHOOSE_BACKGROUND) {
+				return new Response("Назад", "Возврат к предыдущему экрану.", CHOOSE_BACKGROUND) {
 					@Override
 					public int getSecondsPassed() {
 						return -TIME_TO_JOB;
@@ -1605,9 +1605,9 @@ public class CharacterCreation {
 				
 			} else if (index == 1) {
 				if(Main.game.getPlayer().getHistory().getAssociatedPerk()==null) {
-					return new Response("Continue", "You need to select a job before continuing!", null);
+					return new Response("Продолжить", "Прежде чем продолжить, необходимо выбрать работу!", null);
 				} else {
-					return new Response("Continue", femalePrologueNPC()?"Tell [prologueFemale.name] what it is you do for a living.":"Tell [prologueMale.name] what it is you do for a living.", CHOOSE_SEX_EXPERIENCE) {
+					return new Response("Продолжить", femalePrologueNPC()?"Сказать [prologueFemale.name] чем вы зарабатываете на жизнь.":"Сказать [prologueMale.name] чем вы зарабатываете на жизнь.", CHOOSE_SEX_EXPERIENCE) {
 						@Override
 						public int getSecondsPassed() {
 							return TIME_TO_SEX_EXPERIENCE;
@@ -1617,8 +1617,8 @@ public class CharacterCreation {
 							Main.game.getPlayer().getVirginityLossMap().replaceAll((k, v) ->
 								(Main.game.getPlayer().getSexualOrientation()==SexualOrientation.GYNEPHILIC
 									|| (Main.game.getPlayer().getSexualOrientation()==SexualOrientation.AMBIPHILIC && !Main.game.getPlayer().isFeminine()))
-									?new SimpleEntry<>("", "your girlfriend")
-									:new SimpleEntry<>("", "your boyfriend"));
+									?new SimpleEntry<>("", "ваша девушка")
+									:new SimpleEntry<>("", "ваш парень"));
 						}
 					};
 				}
@@ -1630,7 +1630,7 @@ public class CharacterCreation {
 	};
 	
 	
-	public static final DialogueNode CHOOSE_SEX_EXPERIENCE = new DialogueNode("Start", "", true) {
+	public static final DialogueNode CHOOSE_SEX_EXPERIENCE = new DialogueNode("Начать", "", true) {
 		
 		@Override
 		public String getContent() {
@@ -1640,87 +1640,87 @@ public class CharacterCreation {
 			switch(Main.game.getPlayer().getHistory()) {
 				case ATHLETE:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I'm a professional athlete,)]"
-							+ " you explain,"
-							+ " [pc.speech(and I spend most of my time training for and attending competitions.)]");
+							"[pc.speech(Я профессиональный атлет,)]"
+							+ " вы объясняете,"
+							+ " [pc.speech(и я провожу большую часть своего времени, тренируясь и посещая соревнования.)]");
 					break;
 				case BUTLER:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I work as the butler for a highly influential family here in the city,)]"
-							+ " you explain,"
-							+ " [pc.speech(but I took tonight off so I could attend Lily's presentation.)]");
+							"[pc.speech(Я работаю дворецким в одной очень влиятельной семье в этом городе,)]"
+							+ " вы объясняете,"
+							+ " [pc.speech(но я взял выходной, чтобы присутствовать на презентации Лили.)]");
 					break;
 				case CHEF:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I'm the head chef at a restaurant just around the corner from here,)]"
-							+ " you explain,"
-							+ " [pc.speech(but I took tonight off so I could attend Lily's presentation.)]");
+							"[pc.speech(Я шеф-повар в ресторане, расположенном за углом отсюда,)]"
+							+ " вы объясняете,"
+							+ " [pc.speech(но я взял(а) выходной, чтобы присутствовать на презентации Лили.)]");
 					break;
 				case CONSTRUCTION_WORKER:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I'm a construction worker,)]"
-							+ " you explain,"
-							+ " [pc.speech(and I'm currently managing a large project on the outskirts of the city.)]");
+							"[pc.speech(Я строитель,)]"
+							+ " вы объясняете,"
+							+ " [pc.speech(и сейчас я руковожу крупным проектом на окраине города.)]");
 					break;
 				case MAID:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I work as the head maid for a highly influential family here in the city,)]"
-							+ " you explain,"
-							+ " [pc.speech(but I took tonight off so I could attend Lily's presentation.)]");
+							"[pc.speech(Я работаю старшей горничной в одной очень влиятельной семье в этом городе,)]"
+							+ " вы объясняете,"
+							+ " [pc.speech(но я взяла выходной, чтобы присутствовать на презентации Лили.)]");
 					break;
 				case MUSICIAN:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I'm a member of the city orchestra,)]"
-							+ " you explain,"
-							+ " [pc.speech(and I also do private music tutoring.)]");
+							"[pc.speech(Я играю в городском оркестре,)]"
+							+ " вы объясняете,"
+							+ " [pc.speech(я также занимаюсь частным преподаванием музыки.)]");
 					break;
 				case OFFICE_WORKER:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I work in one of the corporate offices in the centre of the city,)]"
-							+ " you explain,"
-							+ " [pc.speech(mostly doing admin and paper work.)]");
+							"[pc.speech(Я работаю в одном из корпоративных офисов в центре города,)]"
+							+ " вы объясняете,"
+							+ " [pc.speech(в основном занимаюсь административной и бумажной работой.)]");
 					break;
 				case SOLDIER:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I'm in the army,)]"
-							+ " you explain,"
-							+ " [pc.speech(I'm on leave for the rest of the week, and then it's back to the barracks for me.)]");
+							"[pc.speech(Я служу в армии,)]"
+							+ " вы объясняете,"
+							+ " [pc.speech(я в отпуске до конца недели, а потом вернусь в казарму.)]");
 					break;
 				case STUDENT:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I'm a student at the city uni,)]"
-							+ " you explain,"
-							+ " [pc.speech(although I haven't quite decided what to take as my major yet.)]");
+							"[pc.speech(Я учусь в городском университете,)]"
+							+ " вы объясняете,"
+							+ " [pc.speech(хотя я еще не решил(а), что выбрать в качестве специализации.)]");
 					break;
 				case TEACHER:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I'm a teacher at a local secondary school,)]"
-							+ " you explain,"
-							+ " [pc.speech(but seeing as it's half-term, I get to take it easy this week.)]");
+							"[pc.speech(Я работаю учителем в местной средней школе,)]"
+							+ " вы объясняете,"
+							+ " [pc.speech(Но поскольку сейчас середина каникул, на этой неделе я могу не напрягаться.)]");
 					break;
 				case UNEMPLOYED:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I'm in-between jobs at the moment,)]"
-							+ " you explain,"
-							+ " [pc.speech(I've actually been thinking about applying to work here at the museum.)]");
+							"[pc.speech(Сейчас я нахожусь в перерыве от работы,)]"
+							+ " вы объясняете,"
+							+ " [pc.speech(Вообще-то я подумываю о том, чтобы поступить на работу в музей.)]");
 					break;
 				case WRITER:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I'm a professional author,)]" // I write erotic novels...
-							+ " you explain,"
-							+ " [pc.speech(and I'm currently waiting to hear back from my publisher about my latest novel.)]");
+							"[pc.speech(Я профессиональный автор,)]" // I write erotic novels...
+							+ " вы объясняете,"
+							+ " [pc.speech(и сейчас я жду ответа от своего издателя по поводу моего последнего романа.)]");
 					break;
 				case ARISTOCRAT:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I don't need to concern myself with working,)]"
-							+ " you explain,"
-							+ " [pc.speech(My family estate provides all the income I need, so I spend my time travelling and enjoying life.)]");
+							"[pc.speech(Мне не нужно беспокоиться о работе,)]"
+							+ " вы объясняете,"
+							+ " [pc.speech(Мое семейное поместье обеспечивает все необходимые мне доходы, поэтому я провожу время, путешествуя и наслаждаясь жизнью.)]");
 					break;
 				case TOURIST:
 					UtilText.nodeContentSB.append(
-							"[pc.speech(I'm here on vacation,)]"
-							+ " you explain,"
-							+ " [pc.speech(While I'm here in the UK, I don't want to be thinking about work.)]");
+							"[pc.speech(Я здесь в отпуске,)]"
+							+ " вы объясняете,"
+							+ " [pc.speech(Пока я нахожусь здесь, в Великобритании, я не хочу думать о работе.)]");
 					break;
 				default:
 					break;
@@ -1730,38 +1730,38 @@ public class CharacterCreation {
 			if(femalePrologueNPC()) {
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+ "As the two of you continue to talk, first about work, and then about more general subjects, you find yourself getting more and more turned on."
-							+ " What's more, you begin to notice that [prologueFemale.namePos] cheeks are starting to flush red, and she keeps on glancing hungrily down at your body when she thinks that you aren't looking."
+							+ "По мере того как вы двое продолжаете разговаривать, сначала о работе, а затем на более общие темы, вы все больше и больше заводитесь."
+							+ " Более того, вы стали замечать, что щеки [prologueFemale.namePos] начинают краснеть, а она продолжает жадно разглядывать ваше тело, когда думает, что вы не смотрите."
 						+ "</p>"
 						+ "<p>"
-							+ "As final evidence that she's getting just as turned on as you are, she starts openly talking about her sex life."
-							+ " To begin with, you're a little taken aback at her openness, but the more she talks, the more comfortable you find yourself with talking to this relative stranger about sex."
+							+ "В качестве последнего доказательства того, что она заводится так же, как и вы, она начинает открыто говорить о своей сексуальной жизни."
+							+ " Поначалу вас немного удивляет ее открытость, но чем больше она говорит, тем комфортнее вам становится говорить о сексе с этим относительно незнакомым человеком."
 						+ "</p>"
 						+ "<p>"
-							+ "And so, after talking with [prologueFemale.name] for no longer than ten minutes, you're telling her every little detail about your sexual experiences..."
+							+ "И вот, проговорив с [prologueFemale.name] не более десяти минут, вы рассказываете ей все подробности своего сексуального опыта..."
 						+ "</p>");
 				
 			} else {
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+ "As the two of you continue to talk, first about work, and then about more general subjects, you find yourself getting more and more turned on."
-							+ " What's more, you begin to notice that [prologueMale.namePos] cheeks are starting to flush red, and he keeps on glancing hungrily down at your body when he thinks that you aren't looking."
+							+ "По мере того как вы двое продолжаете разговаривать, сначала о работе, а затем на более общие темы, вы все больше и больше заводитесь."
+							+ " Более того, вы начинаете замечать, что щеки [prologueMale.namePos] начинают краснеть, а он все время бросает голодные взгляды на ваше тело, когда думает, что вы не смотрите."
 						+ "</p>"
 						+ "<p>"
-							+ "As final evidence that he's getting just as turned on as you are, he starts openly talking about his sex life."
-							+ " To begin with, you're a little taken aback at his openness, but the more he talks, the more comfortable you find yourself with talking to this relative stranger about sex."
+							+ "В качестве последнего доказательства того, что он заводится не меньше вас, он начнет открыто говорить о своей сексуальной жизни."
+							+ " Поначалу вас немного удивляет его открытость, но чем больше он говорит, тем комфортнее вам становится говорить о сексе с этим относительно незнакомым человеком."
 						+ "</p>"
 						+ "<p>"
-							+ "And so, after talking with [prologueMale.name] for no longer than ten minutes, you're telling him every little detail about your sexual experiences..."
+							+ "И вот, проговорив с [prologueMale.name] не более десяти минут, вы рассказываете ему все подробности своего сексуального опыта..."
 						+ "</p>");
 			}
 			
 			UtilText.nodeContentSB.append(
 						"<div class='container-full-width' style='text-align:center;'>"
-							+ "<i>More sexual experience will result in gaining more corruption. (You can see your corruption, along with your other attributes, in the character panel to the left of the screen.)"
+							+ "<i>При увеличении сексуального опыта вы получите больше испорченности. (Свою испорченность, как и другие атрибуты, вы можете увидеть на панели персонажа в левой части экрана).)"
 							+ "<br/>"
 							+ "Selecting '<span style='color:"+FetishDesire.FOUR_LOVE.getColour().toWebHexString()+";'>"+FetishDesire.FOUR_LOVE.getName()+"</span>'"
-								+ " for any fetish desire will result in your character starting the game with that fetish, while the other four desires simply determine your character's attitude towards that fetish.</i>"
+								+ " жажда фетиша приведет к тому, что ваш персонаж начнет игру с этим фетишем, в то время как остальные четыре желания просто определяют отношение персонажа к этому фетишу.</i>"
 						+ "</div>"
 						+CharacterModificationUtils.getSexualExperienceDiv()
 						+CharacterModificationUtils.getFetishChoiceDiv());
@@ -1772,7 +1772,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Once you're happy with your sexual experience, proceed to the final part of the character creation.", FINAL_CHECK) {
+				return new Response("Продолжить", "Когда вы будете довольны своим сексуальным опытом, переходите к заключительной части создания персонажа.", FINAL_CHECK) {
 					@Override
 					public int getSecondsPassed() {
 						return TIME_TO_FINAL_CHECK;
@@ -1802,7 +1802,7 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "Return to background selection.", BACKGROUND_SELECTION_MENU) {
+				return new Response("Назад", "Возврат к выбору фона.", BACKGROUND_SELECTION_MENU) {
 					@Override
 					public int getSecondsPassed() {
 						return -TIME_TO_SEX_EXPERIENCE;
@@ -1852,19 +1852,19 @@ public class CharacterCreation {
 		moveNPCOutOfPlayerTile();
 	}
 	
-	public static final DialogueNode FINAL_CHECK = new DialogueNode("Start", "", true) {
+	public static final DialogueNode FINAL_CHECK = new DialogueNode("Начать", "", true) {
 		
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
 			UtilText.nodeContentSB.append(
 				"<div class='container-full-width' style='text-align:center;'>"
-					+ "<i>Once you're happy with your appearance, press the 'Start Game' button to begin!<br/>"
-					+ "[style.colourGood(This is the end of character creation, so only proceed once you're happy with your choices!)]</i>"
+					+ "<i>Когда вы будете довольны своим внешним видом, нажмите кнопку "Начать игру", чтобы начать!<br/>"
+					+ "[style.colourGood(На этом создание персонажа закончено, поэтому продолжайте только после того, как будете довольны своим выбором!)]</i>"
 				+ "</div>"
 				+ "<br/>"
 				+ "<div class='container-full-width'>"
-					+ "<h5 style='text-align:center;'>Final Appearance</h5>"
+					+ "<h5 style='text-align:center;'>Окончательное обличие</h5>"
 					+ Main.game.getPlayer().getBodyDescription()
 				+ "</div>");
 			
@@ -1874,7 +1874,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Start Game", "Use this character and start the game at the very beginning, with trying to find Arthur in the museum.", PrologueDialogue.INTRO){
+				return new Response("Начать Игру", "Используйте этого персонажа и начните игру с самого начала, с попыток найти Артура в музее.", PrologueDialogue.INTRO){
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().startQuest(QuestLine.MAIN));
@@ -1884,7 +1884,7 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 2) {
-				return new ResponseEffectsOnly("Skip prologue", "Start the game and skip the prologue.<br/><br/><i style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Not recommended for first time playing!</i>"){
+				return new ResponseEffectsOnly("Пропустить пролог", "Начните игру и пропустите пролог.<br/><br/><i style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Не рекомендуется для тех, кто играет впервые!</i>"){
 					@Override
 					public int getSecondsPassed() {
 						return 60*60;
@@ -1948,7 +1948,7 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "Return to background selection.", CHOOSE_SEX_EXPERIENCE){
+				return new Response("Назад", "Возврат к выбору фона.", CHOOSE_SEX_EXPERIENCE){
 					@Override
 					public int getSecondsPassed() {
 						return -TIME_TO_FINAL_CHECK;
@@ -1968,26 +1968,26 @@ public class CharacterCreation {
 	
 	
 	private static StringBuilder importSB;
-	public static final DialogueNode IMPORT_CHOOSE = new DialogueNode("Import", "", true) {
+	public static final DialogueNode IMPORT_CHOOSE = new DialogueNode("Импорт", "", true) {
 		
 		@Override
 		public String getContent(){
 			importSB = new StringBuilder();
 
 			importSB.append("<p style='text-align:center;'>"
-					+ "These characters are being read from the 'data/characters' folder."
-					+ " If you want to import a character from a previous version, follow these steps:<br/><br/>"
-					+ "<b>1.</b> Open up the old game version, and export your old character (menu -> options -> export).<br/>"
-					+ "<b>2.</b> Copy the exported .xml file (in the old version's <i>data/characters</i> folder).<br/>"
-					+ "<b>3.</b> Paste it into this version's <i>data/characters</i> folder.<br/>"
-					+ "<b>4.</b> Press 'Refresh', and your old character file should show up in the list below!<br/><br/>"
+					+ "Эти персонажи считываются из папки 'data/characters'."
+					+ " Если вы хотите импортировать персонаж из предыдущей версии, выполните следующие действия:<br/><br/>"
+					+ "<b>1.</b> Откройте старую версию игры и экспортируйте своего старого персонажа (меню -> опции -> экспорт).<br/>"
+					+ "<b>2.</b> Скопируйте экспортированный файл .xml (в папке <i>data/characters</i> старой версии).<br/>"
+					+ "<b>3.</b> Вставьте его в папку <i>data/characters</i> этой версии.<br/>"
+					+ "<b>4.</b> Нажмите 'Обновить', и ваш старый файл персонажа должен появиться в списке ниже!<br/><br/>"
 //					+ "(If it doesn't work, please let me know as a comment on my blog, and I'll get it fixed ASAP!)"
 					+ "</p>"
 					+ "<p>"
 					+ "<table align='center'>"
 					+ "<tr>"
 					+ "<th></th>"
-					+ "<th>Name</th>"
+					+ "<th>Имя</th>"
 					+ "<th></th>"
 					+ "</tr>");
 			
@@ -2007,10 +2007,10 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Refresh", "Refresh this page.", IMPORT_CHOOSE);
+				return new Response("Обновить", "Обновить эту страницу.", IMPORT_CHOOSE);
 				
 			} else if (index == 0) {
-				return new Response("Back", "Return to main menu.", OptionsDialogue.MENU);
+				return new Response("Назад", "Вернутся в главное меню", OptionsDialogue.MENU);
 				
 			} else {
 				return null;
@@ -2029,32 +2029,32 @@ public class CharacterCreation {
 					+ baseName
 				+ "</td>"
 				+ "<td>"
-					+ "<div class='saveLoadButton' id='IMPORT_CHARACTER_" + identifier + "' style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Load</div>"
+					+ "<div class='saveLoadButton' id='IMPORT_CHARACTER_" + identifier + "' style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Загрузить</div>"
 				+ "</td>"
 				+ "</tr>";
 	}
 
 	private static boolean resetImportedCharacter = false;
 
-	public static final DialogueNode START_GAME_WITH_IMPORT = new DialogueNode("Start game", "", true) {
+	public static final DialogueNode START_GAME_WITH_IMPORT = new DialogueNode("Начать игру", "", true) {
 		
 		@Override
 		public String getLabel() {
-			return "Imported Character";
+			return "Импортированные персонажи";
 		}
 		
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "<b>TODO:</b> I will enable the ability to go through the full character creation with imported characters at some point!"
+						+ "<b>TODO:</b> Я включу возможность полного создания персонажа с импортированными персонажами в какой-то момент!"
 					+ "</p>"
 					+ "<br/>"
 					+"<details>"
-						+ "<summary class='quest-title' style='color:" + QuestType.MAIN.getColour().toWebHexString() + ";'>Import Log</summary>"
+						+ "<summary class='quest-title' style='color:" + QuestType.MAIN.getColour().toWebHexString() + ";'>Импортировать лог</summary>"
 						+ Main.game.getCharacterUtils().getCharacterImportLog()
 					+ "</details>"
 					+ "<div class='container-full-width'>"
-						+ "<h5 style='text-align:center;'>Appearance</h5>"
+						+ "<h5 style='text-align:center;'>Внешность</h5>"
 						+ Main.game.getPlayer().getBodyDescription()
 					+ "</div>";
 		}
@@ -2062,7 +2062,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Start", "Use this character and start the game at the very beginning.", INTRO_2_FROM_IMPORT){
+				return new Response("Начать", "Используйте этого персонажа и начните игру с самого начала.", INTRO_2_FROM_IMPORT){
 					@Override
 					public void effects() {
 						if(resetImportedCharacter){
@@ -2076,7 +2076,7 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 2) {
-				return new ResponseEffectsOnly("Skip prologue", "Start the game and skip the prologue.<br/><br/><i style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Not recommended for first time playing!</i>"){
+				return new ResponseEffectsOnly("Пропустить пролог", "Начните игру и пропустите пролог.<br/><br/><i style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Не рекомендуется для тех, кто играет впервые!</i>"){
 					@Override
 					public void effects() {
 						Main.game.setRenderMap(true);
@@ -2131,10 +2131,10 @@ public class CharacterCreation {
 
 			} else if (index == 5) {
 				return new ResponseEffectsOnly(resetImportedCharacter
-						?"Reset Character: <span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>ON</span>"
-						:"Reset Character: <span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>OFF</span>",
-						"Resets experience and flames to 0 and clears your entire inventory, except equipped clothing and weapons. " +
-								"Spells and spell perks are removed as well."){
+						?"Сброс персонажа: <span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Вкл</span>"
+						:"Сброс персонажа: <span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Выкл</span>",
+						"Сбросьте опыт и деньги до 0, очищает весь инвентарь, кроме экипированной одежды и оружия. " +
+								"Заклинания и перки заклинаний также удалены."){
 					@Override
 					public void effects(){
 						resetImportedCharacter = !resetImportedCharacter;
@@ -2163,7 +2163,7 @@ public class CharacterCreation {
 		player.resetPerksMap(false);
 	}
 
-	public static final DialogueNode INTRO_2_FROM_IMPORT = new DialogueNode("In the Museum", "", true) {
+	public static final DialogueNode INTRO_2_FROM_IMPORT = new DialogueNode("В музее", "", true) {
 
 		@Override
 		public int getSecondsPassed() {
