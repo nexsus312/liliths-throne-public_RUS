@@ -46,7 +46,7 @@ public class PrologueDialogue {
 		return CharacterCreation.femalePrologueNPC();
 	}
 	
-	public static final DialogueNode INTRO = new DialogueNode("В музее", "", true) {
+	public static final DialogueNode INTRO = new DialogueNode("В музей", "", true) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -92,7 +92,7 @@ public class PrologueDialogue {
 		}
 	};
 	
-	public static final DialogueNode INTRO_EMPTY_ROOM = new DialogueNode("В музее", "", true, true) {
+	public static final DialogueNode INTRO_EMPTY_ROOM = new DialogueNode("В музей", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -222,7 +222,7 @@ public class PrologueDialogue {
 	};
 	
 
-	public static final DialogueNode AFTER_SEX = new DialogueNode("В музее", "Теперь, когда вы повеселились, вам действительно стоит пойти и найти свою тетю Лили...", true) {
+	public static final DialogueNode AFTER_SEX = new DialogueNode("В музей", "Теперь, когда вы повеселились, вам действительно стоит пойти и найти свою тетю Лили...", true) {
 
 		@Override
 		public String getContent() {
@@ -267,7 +267,7 @@ public class PrologueDialogue {
 	};
 	
 	
-	public static final DialogueNode INTRO_SECOND_THOUGHTS = new DialogueNode("В музее", "", true, true) {
+	public static final DialogueNode INTRO_SECOND_THOUGHTS = new DialogueNode("В музей", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -305,7 +305,7 @@ public class PrologueDialogue {
 		}
 	};
 	
-	public static final DialogueNode INTRO_NO = new DialogueNode("В музее", "", true, true) {
+	public static final DialogueNode INTRO_NO = new DialogueNode("В музей", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -343,7 +343,7 @@ public class PrologueDialogue {
 		}
 	};
 
-	public static final DialogueNode INTRO_2 = new DialogueNode("В музее", "", true, true) {
+	public static final DialogueNode INTRO_2 = new DialogueNode("В музей", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
