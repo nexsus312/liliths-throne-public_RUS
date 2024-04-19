@@ -152,7 +152,7 @@ public class CharacterCreation {
 						resetBodyAppearance();
 						
 						Main.game.setRenderAttributesSection(true);
-						Main.game.getPlayer().setName(new NameTriplet("Неизвестен", "Неизвестено", "Неизвестена"));
+						Main.game.getPlayer().setName(new NameTriplet("Неизвестен", "Неизвестено", "Неизвестна"));
 						Main.game.getPlayer().setSurname("");
 						BodyChanging.setTarget(Main.game.getPlayer());
 					}
