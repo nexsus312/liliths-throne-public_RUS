@@ -1859,7 +1859,7 @@ public class CharacterCreation {
 			UtilText.nodeContentSB.setLength(0);
 			UtilText.nodeContentSB.append(
 				"<div class='container-full-width' style='text-align:center;'>"
-					+ "<i>Когда вы будете довольны своим внешним видом, нажмите кнопку "Начать игру", чтобы начать!<br/>"
+					+ "<i>Когда вы будете довольны своим внешним видом, нажмите кнопку `Начать игру`, чтобы начать!<br/>"
 					+ "[style.colourGood(На этом создание персонажа закончено, поэтому продолжайте только после того, как будете довольны своим выбором!)]</i>"
 				+ "</div>"
 				+ "<br/>"
