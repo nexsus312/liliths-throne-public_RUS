@@ -13,7 +13,7 @@ import com.lilithsthrone.game.character.GameCharacter;
  * @author Innoxia
  */
 public class SexFlags {
-
+	//На первый взгляд текста нет.
 	public static boolean selfActionsBlockedPlayer;
 	public static boolean selfActionsBlockedPartner;
 	
