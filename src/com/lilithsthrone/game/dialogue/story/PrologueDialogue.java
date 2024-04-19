@@ -66,7 +66,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Согласится", "Переполняемые возбуждением, вы решаете согласиться и пойти развлечься.", INTRO_EMPTY_ROOM) {
+				return new Response("Согласиться", "Переполняемые возбуждением, вы решаете согласиться и пойти развлечься.", INTRO_EMPTY_ROOM) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.MUSEUM, PlaceType.MUSEUM_OFFICE);
