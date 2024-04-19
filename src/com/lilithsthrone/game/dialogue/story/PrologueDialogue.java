@@ -841,7 +841,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Магия!", "Благодаря своей мощной ауре вы можете использовать магию!"., INTRO_NEW_WORLD_7){
+				return new Response("Магия!", "Благодаря своей мощной ауре вы можете использовать магию!", INTRO_NEW_WORLD_7){
 					@Override
 					public String getTitle() {
 						if (!Main.game.getPlayer().isFeminine())
