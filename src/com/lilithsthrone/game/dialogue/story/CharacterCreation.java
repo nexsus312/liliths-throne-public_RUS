@@ -115,7 +115,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Согласится", "Вы соглашаетесь с тем, что вы достигли возраста, позволяющего просматривать порнографические материалы, и даете согласие на просмотр графического контента.", ALPHA_MESSAGE);
+				return new Response("Согласиться", "Вы соглашаетесь с тем, что вы достигли возраста, позволяющего просматривать порнографические материалы, и даете согласие на просмотр графического контента.", ALPHA_MESSAGE);
 			} else {
 				return null;
 			}
