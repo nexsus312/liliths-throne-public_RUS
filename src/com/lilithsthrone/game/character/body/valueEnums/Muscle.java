@@ -11,11 +11,11 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum Muscle {
 	
-	ZERO_SOFT("soft", 0, 20, PresetColour.MUSCLE_ZERO),
-	ONE_LIGHTLY_MUSCLED("lightly muscled", 20, 40, PresetColour.MUSCLE_ONE),
-	TWO_TONED("toned", 40, 60, PresetColour.MUSCLE_TWO),
-	THREE_MUSCULAR("muscular", 60, 80, PresetColour.MUSCLE_THREE),
-	FOUR_RIPPED("ripped", 80, 100, PresetColour.MUSCLE_FOUR);
+	ZERO_SOFT("мягко", 0, 20, PresetColour.MUSCLE_ZERO),
+	ONE_LIGHTLY_MUSCLED("легкие мускулы", 20, 40, PresetColour.MUSCLE_ONE),
+	TWO_TONED("в форме", 40, 60, PresetColour.MUSCLE_TWO),
+	THREE_MUSCULAR("мускулы", 60, 80, PresetColour.MUSCLE_THREE),
+	FOUR_RIPPED("супер мускулы", 80, 100, PresetColour.MUSCLE_FOUR);
 
 	private String name;
 	private int minimumMuscle;
