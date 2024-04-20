@@ -12,21 +12,21 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum Wetness {
 
-	ZERO_DRY("dry", 0, 101, 101, PresetColour.GENERIC_WETNESS_ONE),
+	ZERO_DRY("сухо", 0, 101, 101, PresetColour.GENERIC_WETNESS_ONE),
 	
-	ONE_SLIGHTLY_MOIST("slightly moist", 1, 100, 100, PresetColour.GENERIC_WETNESS_TWO),
+	ONE_SLIGHTLY_MOIST("слегка влажно", 1, 100, 100, PresetColour.GENERIC_WETNESS_TWO),
 	
-	TWO_MOIST("moist", 2, 50, 50, PresetColour.GENERIC_WETNESS_THREE),
+	TWO_MOIST("влажно", 2, 50, 50, PresetColour.GENERIC_WETNESS_THREE),
 	
-	THREE_WET("wet", 3, 25, 25, PresetColour.GENERIC_WETNESS_FOUR),
+	THREE_WET("мокро", 3, 25, 25, PresetColour.GENERIC_WETNESS_FOUR),
 	
-	FOUR_SLIMY("slimy", 4, 0, 0, PresetColour.GENERIC_WETNESS_FIVE),
+	FOUR_SLIMY("склизко", 4, 0, 0, PresetColour.GENERIC_WETNESS_FIVE),
 	
-	FIVE_SLOPPY("sloppy", 5, 0, 0, PresetColour.GENERIC_WETNESS_SIX),
+	FIVE_SLOPPY("очень мокро", 5, 0, 0, PresetColour.GENERIC_WETNESS_SIX),
 	
-	SIX_SOPPING_WET("sopping wet", 6, 0, 0, PresetColour.GENERIC_WETNESS_SEVEN),
+	SIX_SOPPING_WET("промокло насквозь", 6, 0, 0, PresetColour.GENERIC_WETNESS_SEVEN),
 	
-	SEVEN_DROOLING("drooling", 7, 0, 0, PresetColour.GENERIC_WETNESS_EIGHT);
+	SEVEN_DROOLING("истекает соками", 7, 0, 0, PresetColour.GENERIC_WETNESS_EIGHT);
 	
 
 	private int wetness;
