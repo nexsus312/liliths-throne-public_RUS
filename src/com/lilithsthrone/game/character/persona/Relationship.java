@@ -12,22 +12,22 @@ import com.lilithsthrone.game.character.gender.PronounType;
 public enum Relationship {
 
 	/** For ovipositor egg incubation */
-    IncubatorParent("incubator-mother", "incubator-father", "incubator-parent", 0),
-    IncubatorChild("incubated-daughter", "incubated-son", "incubated-child", 0),
+    IncubatorParent("мать инкубатор", "отец инкубатор", "родитель инкубатор", 0),
+    IncubatorChild("инкубированная дочь", "инкубированный сын", "инкубированный ребенок", 0),
     
-    Parent("mother", "father", "parent", 0),
-    GrandParent("grand-mother", "grand-father", "grand-parent", 1),
-    GrandGrandParent("grand-grand-mother", "grand-grand-father", "grand-grand-parent", 2),
-    Child("daughter", "son", "child", 0),
-    GrandChild("grand-daughter", "grand-son", "grand-child", 1),
-    GrandGrandChild("grand-grand-daughter", "grand-grand-son", "grand-grand-child", 2),
-    Sibling("sister", "brother", "sibling", 0),
-    SiblingTwin("twin-sister", "twin-brother", "twin", 0),
-    HalfSibling("half-sister", "half-brother", "half-sibling", 1.25),
-    Cousin("cousin", 2),
-    Pibling("aunt", "uncle", "pibling", 1.5),
-    GrandPibling("grand-aunt", "grand-uncle", "grand-pibling", 2.5),
-    Nibling("niece", "nephew", "nibling", 1.5);
+    Parent("мать", "отец", "родитель", 0),
+    GrandParent("бабушка", "дедушка", "прародитель", 1),
+    GrandGrandParent("прабабушка", "прадедушка", "пра-прародитель", 2),
+    Child("дочь", "сые", "ребенок", 0),
+    GrandChild("внучка", "внук", "внук(чка)", 1),
+    GrandGrandChild("правнучка", "правнук", "пра-внук(чка)", 2),
+    Sibling("сестра", "брат", "родственник", 0),
+    SiblingTwin("Сестры-близнецы", "Братья-близнецы", "двойняшки", 0),
+    HalfSibling("сводная сестра", "сводный брат", "сводный родственник", 1.25),
+    Cousin("кузен/кузина", 2),
+    Pibling("тетя", "дядя", "тетя-дядя(без пола)", 1.5),
+    GrandPibling("пратетя", "прадядя", "пратетя-прадядя(без пола)", 2.5),
+    Nibling("племянница", "племянник", "племяшка", 1.5);
 
     private final String displayF;
     private final String displayM;
