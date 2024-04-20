@@ -11,13 +11,13 @@ import com.lilithsthrone.utils.colours.PresetColour;
 public enum AffectionLevelBasic {
 	
 	/** -100 to -30*/
-	DISLIKE("dislikes", -100, -30, PresetColour.AFFECTION_NEGATIVE_TWO),
+	DISLIKE("Не любит", -100, -30, PresetColour.AFFECTION_NEGATIVE_TWO),
 
 	/** -30 to 30*/
-	NEUTRAL("neutral", -30, 30, PresetColour.AFFECTION_POSITIVE_ONE),
+	NEUTRAL("Нейтрально", -30, 30, PresetColour.AFFECTION_POSITIVE_ONE),
 
 	/** 30 to 100*/
-	LIKE("likes", 30, 100, PresetColour.AFFECTION_POSITIVE_FIVE);
+	LIKE("Любит", 30, 100, PresetColour.AFFECTION_POSITIVE_FIVE);
 	
 	
 	private String name;
