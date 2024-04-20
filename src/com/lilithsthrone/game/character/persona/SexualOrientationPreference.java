@@ -13,12 +13,12 @@ import com.lilithsthrone.utils.Util;
  */
 public enum SexualOrientationPreference {
 
-	ZERO_NONE("off", 0),
-	ONE_MINIMAL("minimal", 1),
-	TWO_LOW("low", 5),
-	THREE_AVERAGE("average", 10),
-	FOUR_HIGH("high", 20),
-	FIVE_ABUNDANT("abundant", 40);
+	ZERO_NONE("Выкл", 0),
+	ONE_MINIMAL("Минимум", 1),
+	TWO_LOW("Мало", 5),
+	THREE_AVERAGE("Средне", 10),
+	FOUR_HIGH("Много", 20),
+	FIVE_ABUNDANT("Избыточно", 40);
 
 	private String name;
 	private int value;
