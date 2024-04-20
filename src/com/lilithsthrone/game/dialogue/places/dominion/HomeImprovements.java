@@ -40,7 +40,7 @@ public class HomeImprovements {
 		return characters.get(0);
 	}
 	
-	public static final DialogueNode OUTSIDE = new DialogueNode("Argus's DIY Depot", ".", false) {
+	public static final DialogueNode OUTSIDE = new DialogueNode("Склад `Сделай сам` Аргуса", ".", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 1*60;
@@ -53,14 +53,14 @@ public class HomeImprovements {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.isExtendedWorkTime()) {
-					return new Response("Enter", "Enter the warehouse signposted as being open to members of the public.", PlaceType.HOME_IMPROVEMENTS_ENTRANCE.getDialogue(false)) {
+					return new Response("Войти", "Зайдите на склад, указанный как открытый для посетителей.", PlaceType.HOME_IMPROVEMENTS_ENTRANCE.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.HOME_IMPROVEMENTS, PlaceType.HOME_IMPROVEMENTS_ENTRANCE, false);
 						}
 					};
 				} else {
-					return new Response("Enter", "The warehouse is quite clearly closed at the moment. You'll have to come back later if you want to get inside...", null);
+					return new Response("Войти", "Склад сейчас явно закрыт. Вам придется вернуться позже, если вы хотите попасть внутрь...", null);
 				}
 			}
 			return null;
@@ -79,7 +79,7 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Exit", "Exit the warehouse and head back out into Dominion.", PlaceType.DOMINION_HOME_IMPROVEMENT.getDialogue(false)){
+				return new Response("Выйти", "Выйдите из склада и отправляйтесь обратно в Доминион.", PlaceType.DOMINION_HOME_IMPROVEMENT.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_HOME_IMPROVEMENT, false);
@@ -146,12 +146,12 @@ public class HomeImprovements {
 					&& !Main.game.getPlayer().hasItemType(ItemType.PAINT_CAN)) {
 				if(index==1) {
 					if(Main.game.getPlayer().getMoney()<ItemType.PAINT_CAN_PREMIUM.getValue()) {
-						return new Response("Purchase ("+UtilText.formatAsMoneyUncoloured(ItemType.PAINT_CAN_PREMIUM.getValue(), "span")+")",
-								"Although this can of paint [style.colourGood(is the one Helena requested)], you [style.colourbad(cannot afford to buy it)]!",
+						return new Response("Купить ("+UtilText.formatAsMoneyUncoloured(ItemType.PAINT_CAN_PREMIUM.getValue(), "span")+")",
+								"Эта банка с краской [style.colourGood(та о которой просила Хелена.)], вы [style.colourbad(не может позволить себе купить это)]!",
 								null);
 					}
-					return new Response("Purchase ("+UtilText.formatAsMoney(ItemType.PAINT_CAN_PREMIUM.getValue(), "span")+")",
-							"Purchase a can of "+ItemType.PAINT_CAN_PREMIUM.getName(false)+", which [style.colourGood(is the one Helena requested)].",
+					return new Response("Купить ("+UtilText.formatAsMoney(ItemType.PAINT_CAN_PREMIUM.getValue(), "span")+")",
+							"Купить банку с краской "+ItemType.PAINT_CAN_PREMIUM.getName(false)+", которую [style.colourGood(просила Хелена)].",
 							PAINT_PURCHASED) {
 						@Override
 						public void effects() {
@@ -197,12 +197,12 @@ public class HomeImprovements {
 					&& !Main.game.getPlayer().hasItemType(ItemType.PAINT_CAN)) {
 				if(index==1) {
 					if(Main.game.getPlayer().getMoney()<ItemType.PAINT_CAN.getValue()) {
-						return new Response("Purchase ("+UtilText.formatAsMoneyUncoloured(ItemType.PAINT_CAN.getValue(), "span")+")",
-								"This can of paint [style.colourBad(is not the one Helena requested)], and even if you did want to purchase it, you [style.colourbad(cannot afford it)]!",
+						return new Response("Купить ("+UtilText.formatAsMoneyUncoloured(ItemType.PAINT_CAN.getValue(), "span")+")",
+								"Эта банка краски [style.colourBad(не так которую просила Хелена)], даже если бы вы хотели, вы [style.colourbad(не может позволить себе купить это)]!",
 								null);
 					}
-					return new Response("Purchase ("+UtilText.formatAsMoney(ItemType.PAINT_CAN.getValue(), "span")+")",
-							"Purchase a can of "+ItemType.PAINT_CAN.getName(false)+", which [style.colourBad(is not the one Helena requested)]!",
+					return new Response("Купить ("+UtilText.formatAsMoney(ItemType.PAINT_CAN.getValue(), "span")+")",
+							"Купить банку с краской "+ItemType.PAINT_CAN.getName(false)+", которая [style.colourBad(не та которую Хелена просила)]!",
 							PAINT_PURCHASED) {
 						@Override
 						public void effects() {
@@ -235,8 +235,8 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave",
-						"Now that you've got what you came here for, you may as well leave.",
+				return new Response("Уйти",
+						"Теперь, когда вы получили то, за чем пришли сюда, можете уходить.",
 						PlaceType.DOMINION_HOME_IMPROVEMENT.getDialogue(false)) {
 					@Override
 					public void effects() {
@@ -245,8 +245,8 @@ public class HomeImprovements {
 				};
 				
 			} else if(index==2) {
-				return new Response("Continue shopping",
-						"You could always stay and look around a little more before leaving.",
+				return new Response("Продолжить покупки",
+						"Вы всегда можете остаться и осмотреться еще немного, прежде чем уйти.",
 						ENTRANCE);
 			}
 			return null;
@@ -295,14 +295,14 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Toilet", "Use the toilet.", TOILETS_USE);
+				return new Response("Туалет", "Воспользуйтесь туалетом.", TOILETS_USE);
 				
 			} else if(index==2) {
 				List<InventorySlot> washSlots = Util.newArrayListOfValues(InventorySlot.HEAD, InventorySlot.EYES, InventorySlot.MOUTH, InventorySlot.NECK, InventorySlot.HAIR, InventorySlot.FINGER, InventorySlot.HAND, InventorySlot.WRIST);
-				return new Response("Wash",
-						"Use the sinks to wash your hands and face."
-							+ "<br/>[style.italicsGood(This will clean your "+Util.inventorySlotsToParsedStringList(washSlots, Main.game.getPlayer())+", as well as any clothing worn in these slots.)]"
-							+ "<br/>[style.italicsMinorBad(This does <b>not</b> clean companions.)]",
+				return new Response("Умыться",
+						"Используйте раковину, чтобы вымыть руки и лицо."
+							+ "<br/>[style.italicsGood(Это очистит ваши "+Util.inventorySlotsToParsedStringList(washSlots, Main.game.getPlayer())+", а также любую одежду, надеваемую в эти слоты.)]"
+							+ "<br/>[style.italicsMinorBad(Это <b>не</b> чистит компаньенов.)]",
 						TOILETS_WASH) {
 					@Override
 					public void effects() {
@@ -321,23 +321,23 @@ public class HomeImprovements {
 				boolean vaginaAvailable = Main.game.getPlayer().hasVagina() && Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true);
 				
 				if((penisAvailable && !Main.game.getPlayer().isTaur()) || vaginaAvailable) {
-					return new Response("Glory hole (use)",
-							"One of the toilet's stalls has a glory hole in it. Enter the stall and wait for someone on the other side to service you.",
+					return new Response("Glory hole (Использовать)",
+							"В одной из кабинок туалета есть отверстие. Зайдите в кабинку и подождите, пока кто-нибудь с другой стороны обслужит вас.",
 							TOILETS_GLORY_HOLE_DOM) {
 						@Override
 						public void effects() {
-							Main.game.spawnSubGloryHoleNPC("stranger");
+							Main.game.spawnSubGloryHoleNPC("незнакомец");
 						}
 					};
 					
 				} else if(penisAvailable && Main.game.getPlayer().isTaur()) {
-					return new Response("Glory hole (use)",
-							"Due to the shape of your [pc.legRace]'s body, you cannot get into a suitable position for using the glory hole...",
+					return new Response("Glory hole (Использовать)",
+							"Из-за формы [pc.legRace] тела, вы не можете принять позу для использования отверстия...",
 							null);
 					
 				} else {
-					return new Response("Glory hole (use)",
-							"You can't get access to your genitals, so can't get serviced at a glory hole.",
+					return new Response("Glory hole (Использовать)",
+							"У вас нет доступа к гениталиям, так что вы не можете использовать отверстие.",
 							null);
 				}
 				
@@ -345,19 +345,19 @@ public class HomeImprovements {
 				if((Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true))
 						|| (Main.game.getPlayer().hasVagina() && Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true))
 						|| (Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true))) {
-					return new Response("Glory hole (service)",
-							"One of the toilet's stalls has a glory hole in it. Enter the stall and wait to service someone on the other side.",
+					return new Response("Glory hole (Обслуживать)",
+							"В одной из кабинок туалета есть отверстие. Зайдите в кабинку и подождите кого нибудь с другой стороны.",
 							TOILETS_GLORY_HOLE_SUB) {
 						@Override
 						public void effects() {
-							Main.game.spawnDomGloryHoleNPC("stranger");
+							Main.game.spawnDomGloryHoleNPC("незнакомец");
 							getGloryHoleCharacter().setAreaKnownByCharacter(CoverableArea.PENIS, Main.game.getPlayer(), true);
 						}
 					};
 				
 				} else {
-					return new Response("Glory hole (service)",
-							"You can't get access to your mouth, genitals, or asshole, so can't service any strangers at the glory holes.",
+					return new Response("Glory hole (Обслуживать)",
+							"У вас нет доступа ко рту, гениталиям или анусу, так что вы не можете обслуживать незнакомцев через отверстие.",
 							null);
 				}
 			}
@@ -407,7 +407,7 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Leave", "On second thoughts, you don't really want some stranger having fun with your private parts...", TOILETS) {
+				return new Response("Уйти", "Немного подумав, вы решили что не хотите чтобы незнакомец касался ваших чувствительных частей...", TOILETS) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/homeImprovements/generic", "TOILETS_GLORY_HOLE_DOM_LEAVE", getGloryHoleCharacter()));
@@ -417,7 +417,7 @@ public class HomeImprovements {
 				
 			} else if(index==1) {
 				return new ResponseSex("Start",
-						UtilText.parse(getGloryHoleCharacter(), "Do as [npc.name] says and step up to the glory hole."),
+						UtilText.parse(getGloryHoleCharacter(), "Делать как [npc.name] говорит и подойдите к отверстию."),
 						true, false,
 						new SMGloryHole(
 								SexPosition.GLORY_HOLE,
@@ -437,7 +437,7 @@ public class HomeImprovements {
 		}
 	};
 	
-	public static final DialogueNode TOILETS_GLORY_HOLE_DOM_POST_SEX = new DialogueNode("Toilets", "The stranger quickly exits their stall, and heads back into the store, leaving you to do the same...", true) {
+	public static final DialogueNode TOILETS_GLORY_HOLE_DOM_POST_SEX = new DialogueNode("Туалеты", "Незнакомец быстро выходит из своей кабинки и направляется обратно в магазин, оставляя вас...", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -449,7 +449,7 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Walk out of the stall.", TOILETS) {
+				return new Response("Продолжить", "Выйдите из кабинки.", TOILETS) {
 					@Override
 					public void effects() {
 						Main.game.banishNPC((NPC) getGloryHoleCharacter());
@@ -460,7 +460,7 @@ public class HomeImprovements {
 		}
 	};
 	
-	public static final DialogueNode TOILETS_GLORY_HOLE_SUB = new DialogueNode("Toilets", "", true) {
+	public static final DialogueNode TOILETS_GLORY_HOLE_SUB = new DialogueNode("Туалеты", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -472,7 +472,7 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Leave", "On second thoughts, you don't really want to suck the cock of some random stranger...", TOILETS) {
+				return new Response("Выйти", "Немного подумав, вы не хотите сосать член какого-то незнакомца...", TOILETS) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/homeImprovements/generic", "TOILETS_GLORY_HOLE_SUB_LEAVE", getGloryHoleCharacter()));
@@ -481,8 +481,8 @@ public class HomeImprovements {
 				};
 				
 			} else if(index==1) {
-				return new ResponseSex("Start",
-						UtilText.parse(getGloryHoleCharacter(), "Do as [npc.name] says and get ready to service [npc.her] cock."),
+				return new ResponseSex("Начать",
+						UtilText.parse(getGloryHoleCharacter(), "Делать как [npc.name] говорит и начать обслуживать [npc.her] член."),
 						true, false,
 						new SMGloryHole(
 								SexPosition.GLORY_HOLE,
@@ -502,7 +502,7 @@ public class HomeImprovements {
 		}
 	};
 	
-	public static final DialogueNode TOILETS_GLORY_HOLE_SUB_POST_SEX = new DialogueNode("Toilets", "The stranger quickly exits their stall, and heads back into the store, leaving you to do the same...", true) {
+	public static final DialogueNode TOILETS_GLORY_HOLE_SUB_POST_SEX = new DialogueNode("Туалеты", "Незнакомец быстро покидает кабинку и уходит обратно в магазин, оставляя вас...", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -514,7 +514,7 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Walk out of the stall.", TOILETS) {
+				return new Response("Продолжить", "Покинуть кабинку.", TOILETS) {
 					@Override
 					public void effects() {
 						Main.game.banishNPC((NPC) getGloryHoleCharacter());
