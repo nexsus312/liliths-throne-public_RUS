@@ -10,7 +10,7 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum Rarity {
 
-	COMMON("Распостраненнон", PresetColour.RARITY_COMMON, PresetColour.RARITY_COMMON_BACKGROUND),
+	COMMON("Распостраненное", PresetColour.RARITY_COMMON, PresetColour.RARITY_COMMON_BACKGROUND),
 	
 	UNCOMMON("Нераспостраненное", PresetColour.RARITY_UNCOMMON, PresetColour.RARITY_UNCOMMON_BACKGROUND),
 	
