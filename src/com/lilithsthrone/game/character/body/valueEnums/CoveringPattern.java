@@ -11,15 +11,15 @@ import com.lilithsthrone.game.character.GameCharacter;
  * @author Innoxia
  */
 public enum CoveringPattern {
-	NONE(false, "plain"),
+	NONE(false, "просто"),
 	
-	FLUID(false, "fluid"),
+	FLUID(false, "жидкость"),
 	
-	ORIFICE_ANUS(true, "anus"),
-	ORIFICE_VAGINA(true, "vagina"),
-	ORIFICE_MOUTH(true, "mouth"),
+	ORIFICE_ANUS(true, "анус"),
+	ORIFICE_VAGINA(true, "вагина"),
+	ORIFICE_MOUTH(true, "рот"),
 	ORIFICE_SPINNERET(true, "spinneret"),
-	ORIFICE_NIPPLE(true, "nipple") {
+	ORIFICE_NIPPLE(true, "сосок") {
 		@Override
 		public boolean isNaturalSecondColour(GameCharacter owner) {
 			return owner!=null && owner.getNippleCapacity()!=Capacity.ZERO_IMPENETRABLE;
@@ -32,20 +32,20 @@ public enum CoveringPattern {
 		}
 	},
 
-	EYE_IRISES(false, "standard"),
+	EYE_IRISES(false, "стандарт"),
 	EYE_IRISES_HETEROCHROMATIC(true, "heterochromatic"),
-	EYE_PUPILS(false, "standard"),
+	EYE_PUPILS(false, "стандарт"),
 	EYE_PUPILS_HETEROCHROMATIC(true, "heterochromatic"),
-	EYE_SCLERA(false, "standard"),
+	EYE_SCLERA(false, "стандарт"),
 	EYE_SCLERA_HETEROCHROMATIC(true, "heterochromatic"),
 
-	HIGHLIGHTS(true, "highlighted"),
-	STRIPED(true, "striped"),
-	SPOTTED(true, "spotted"),
-	MOTTLED(true, "mottled"),
-	MARKED(true, "marked"),
-	FRECKLED(true, "freckled"),
-	FRECKLED_FACE(false, "freckled (face)"),
+	HIGHLIGHTS(true, "выделено"),
+	STRIPED(true, "полосато"),
+	SPOTTED(true, "пятнисто"),
+	MOTTLED(true, "пестро"),
+	MARKED(true, "помечено"),
+	FRECKLED(true, "веснушчато"),
+	FRECKLED_FACE(false, "веснушчато (лицо)"),
 	
 	OMBRE(true, "ombre");
 	
