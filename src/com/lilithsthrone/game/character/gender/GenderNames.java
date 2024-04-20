@@ -7,14 +7,14 @@ package com.lilithsthrone.game.character.gender;
  */
 public enum GenderNames {
 
-	Y_PENIS_Y_VAGINA_Y_BREASTS(true, true, true, "futanari", "hermaphrodite", "hermaphrodite"),
-	Y_PENIS_Y_VAGINA_N_BREASTS(true, true, false, "futanari", "hermaphrodite", "hermaphrodite"),
-	Y_PENIS_N_VAGINA_Y_BREASTS(true, false, true, "shemale", "shemale", "busty-boy"),
-	Y_PENIS_N_VAGINA_N_BREASTS(true, false, false, "trap", "trap", "male"),
-	N_PENIS_Y_VAGINA_Y_BREASTS(false, true, true, "female", "tomboy",  "butch"),
-	N_PENIS_Y_VAGINA_N_BREASTS(false, true, false, "female", "tomboy", "cuntboy"),
-	N_PENIS_N_VAGINA_Y_BREASTS(false, false, true, "mannequin", "neuter", "mannequin"),
-	N_PENIS_N_VAGINA_N_BREASTS(false, false, false, "mannequin", "neuter", "mannequin");
+	Y_PENIS_Y_VAGINA_Y_BREASTS(true, true, true, "Футанари", "гермафродит", "гермафродит"),
+	Y_PENIS_Y_VAGINA_N_BREASTS(true, true, false, "Футанари", "гермафродит", "гермафродит"),
+	Y_PENIS_N_VAGINA_Y_BREASTS(true, false, true, "транссексуал", "транссексуал", "грудастый мальчик"),
+	Y_PENIS_N_VAGINA_N_BREASTS(true, false, false, "трап", "трап", "мужчина"),
+	N_PENIS_Y_VAGINA_Y_BREASTS(false, true, true, "женщина", "томбой",  "мужеподобный(ая)"),
+	N_PENIS_Y_VAGINA_N_BREASTS(false, true, false, "женщина", "томбой", "кантбой"),
+	N_PENIS_N_VAGINA_Y_BREASTS(false, false, true, "манекен", "neuter", "манекен"),
+	N_PENIS_N_VAGINA_N_BREASTS(false, false, false, "манекен", "нейтрал", "манекен");
 	
 	
 	private boolean hasPenis, hasVagina, hasBreasts;
