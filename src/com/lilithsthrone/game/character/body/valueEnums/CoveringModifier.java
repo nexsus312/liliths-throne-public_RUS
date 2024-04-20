@@ -9,43 +9,43 @@ import com.lilithsthrone.game.dialogue.utils.UtilText;
  */
 public enum CoveringModifier {
 
-	EYE("eye", false),
-	FLUID("fluid", false),
-	MAKEUP("makeup", false),
-	GLOSSY("glossy", false),
-	MATTE("matte", false),
-	SPARKLY("sparkly", false),
-	METALLIC("metallic", false),
+	EYE("глаз", false),
+	FLUID("жидкость", false),
+	MAKEUP("макияж", false),
+	GLOSSY("глянцево", false),
+	MATTE("матотово", false),
+	SPARKLY("сверкает", false),
+	METALLIC("металлическое", false),
 
-	BLAZING("blazing", false),
-	SHIMMERING("shimmering", false),
-	GLITTERING("glittering", false),
-	SWIRLING("swirling", false),
+	BLAZING("пылает", false),
+	SHIMMERING("мерцает", false),
+	GLITTERING("блестит", false),
+	SWIRLING("клубится", false),
 	
-	GOOEY("gooey", false) {
+	GOOEY("липко", false) {
 		@Override
 		public String getName() {
 			return UtilText.returnStringAtRandom(
-					"gooey",
-					"wet",
-					"squishy");
+					"липко",
+					"мокро",
+					"хлюпает");
 		}
 	},
 	
 	// Generic:
-	SMOOTH("smooth", false),
-	ROUGH("rough", false),
+	SMOOTH("гладко", false),
+	ROUGH("жестко", false),
 	
 	//Skin:
-	LEATHERY("leathery", false),
+	LEATHERY("кожистый", false),
 	
 	// Fur/hair:
-	SHORT("short", true),
-	SILKEN("silken", true),
-	FLUFFY("fluffy", true),
-	SHAGGY("shaggy", true),
-	FURRY("fur-like", true), // FURRY is only used for head hair, not body-covering fur.
-	COARSE("coarse", true);
+	SHORT("коротко", true),
+	SILKEN("шелковисто", true),
+	FLUFFY("пушисто", true),
+	SHAGGY("лохмато", true),
+	FURRY("как шерсть", true), // FURRY is only used for head hair, not body-covering fur.
+	COARSE("грубо", true);
 	
 	private String descriptor;
 	private boolean furryModifier;
