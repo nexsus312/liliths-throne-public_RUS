@@ -7,13 +7,13 @@ package com.lilithsthrone.game.character.gender;
  */
 public enum GenderPronoun {
 
-	NOUN("Noun", "woman", "man", "person"),
-	YOUNG_NOUN("Young noun", "girl", "boy", "person"),
+	NOUN("Существительное", "Женщина", "Мужчина", "Человек"),
+	YOUNG_NOUN("Молодое Существительное", "Девочка", "Мальчик", "Человек"),
 	
-	SECOND_PERSON("Second person", "she", "he", "they"),
-	THIRD_PERSON("Third person", "her", "him", "them"),
-	POSSESSIVE_BEFORE_NOUN("Possessive before noun", "her", "his", "their"),
-	POSSESSIVE_ALONE("Possessive alone", "hers", "his", "theirs");
+	SECOND_PERSON("Второе лицо", "она", "он", "они"),
+	THIRD_PERSON("Третье лицо", "ее", "его", "их"),
+	POSSESSIVE_BEFORE_NOUN("Местоимение перед существительным", "ее", "его", "их"),
+	POSSESSIVE_ALONE("Нетральная принадлежность", "ее", "его", "их");
 	
 	private String name, feminine, masculine, neutral;
 	
