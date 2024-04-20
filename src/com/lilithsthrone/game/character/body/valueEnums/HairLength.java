@@ -12,21 +12,21 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum HairLength {
 	/** Bald */
-	ZERO_BALD("bald", 0, 1, PresetColour.GENERIC_SIZE_ONE, false),
+	ZERO_BALD("лысина", 0, 1, PresetColour.GENERIC_SIZE_ONE, false),
 	/** Very short */
-	ONE_VERY_SHORT("very short", 1, 8, PresetColour.GENERIC_SIZE_TWO, false),
+	ONE_VERY_SHORT("очень коротко", 1, 8, PresetColour.GENERIC_SIZE_TWO, false),
 	/** Short */
-	TWO_SHORT("short", 8, 15, PresetColour.GENERIC_SIZE_THREE, true),
+	TWO_SHORT("коротко", 8, 15, PresetColour.GENERIC_SIZE_THREE, true),
 	/** above the shoulders */
-	THREE_SHOULDER_LENGTH("shoulder-length", 15, 30, PresetColour.GENERIC_SIZE_FOUR, true),
+	THREE_SHOULDER_LENGTH("по плечи", 15, 30, PresetColour.GENERIC_SIZE_FOUR, true),
 	/** Reaching down to mid-back */
-	FOUR_MID_BACK("long", 30, 60, PresetColour.GENERIC_SIZE_FIVE, true),
+	FOUR_MID_BACK("длинно", 30, 60, PresetColour.GENERIC_SIZE_FIVE, true),
 	/** Reaching down to just above the ass */
-	FIVE_ABOVE_ASS("very long", 60, 100, PresetColour.GENERIC_SIZE_SIX, true),
+	FIVE_ABOVE_ASS("очень длинно", 60, 100, PresetColour.GENERIC_SIZE_SIX, true),
 	/** Reaching down to below the ass */
-	SIX_BELOW_ASS("incredibly long", 100, 180, PresetColour.GENERIC_SIZE_SEVEN, true),
+	SIX_BELOW_ASS("невероятно длинно", 100, 180, PresetColour.GENERIC_SIZE_SEVEN, true),
 	/** Hair so long that it reaches the floor */
-	SEVEN_TO_FLOOR("floor-length", 180, 350, PresetColour.GENERIC_SIZE_EIGHT, true);
+	SEVEN_TO_FLOOR("по-пол", 180, 350, PresetColour.GENERIC_SIZE_EIGHT, true);
 
 	private int minimumValue, maximumValue;
 	private String descriptor;
