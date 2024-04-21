@@ -19,47 +19,47 @@ public enum HairStyle {
 //	- shaved (different from bald)
 //	- punk (hair draped over face)
 	
-	NONE("natural", Femininity.ANDROGYNOUS, HairLength.ZERO_BALD) {
+	NONE("натуральная", Femininity.ANDROGYNOUS, HairLength.ZERO_BALD) {
 		@Override
 		public String getName(Body body) {
 			if(body!=null && body.isFeral()) {
 				if(body.getLegConfiguration()==LegConfiguration.AVIAN) {
-					return "plumed";
+					return "оперенная";
 				} else {
-					return "maned";
+					return "гривастая";
 				}
 			}
 			return super.getName(body);
 		}
 	},
-	MESSY("messy", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
-	LOOSE("loose", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
-	CURLY("curly", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
-	STRAIGHT("straight", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
-	SLICKED_BACK("slicked-back", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
-	SIDECUT("sidecut", Femininity.ANDROGYNOUS, HairLength.TWO_SHORT),
-	MOHAWK("mohawk", Femininity.ANDROGYNOUS, HairLength.TWO_SHORT),
-	DREADLOCKS("dreadlocks", Femininity.ANDROGYNOUS, HairLength.TWO_SHORT),
+	MESSY("неаккуратно", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
+	LOOSE("распущенно", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
+	CURLY("кудряво", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
+	STRAIGHT("прямо", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
+	SLICKED_BACK("зачесанно назад", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
+	SIDECUT("боковой андеркат", Femininity.ANDROGYNOUS, HairLength.TWO_SHORT),
+	MOHAWK("ирокез", Femininity.ANDROGYNOUS, HairLength.TWO_SHORT),
+	DREADLOCKS("дреды", Femininity.ANDROGYNOUS, HairLength.TWO_SHORT),
 	
-	AFRO("afro", Femininity.MASCULINE, HairLength.ONE_VERY_SHORT),
-	TOPKNOT("topknot", Femininity.MASCULINE, HairLength.THREE_SHOULDER_LENGTH),
+	AFRO("афро", Femininity.MASCULINE, HairLength.ONE_VERY_SHORT),
+	TOPKNOT("топ-узел.", Femininity.MASCULINE, HairLength.THREE_SHOULDER_LENGTH),
 	
-	PIXIE("pixie-cut", Femininity.FEMININE, HairLength.TWO_SHORT),
-	BUN("bun", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	BOB_CUT("bob-cut", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	CHONMAGE("chonmage", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	WAVY("wavy", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	PONYTAIL("ponytail", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	LOW_PONYTAIL("low ponytail", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	TWIN_TAILS("twintails", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	SIDE_BRAIDS("side braids", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	CHIGNON("chignon", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
-	BRAIDED("braided", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
-	TWIN_BRAIDS("twin braids", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
-	CROWN_BRAID("crown braid", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
-	DRILLS("ojou ringlets", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
-	HIME_CUT("hime-cut", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
-	BIRD_CAGE("bird cage", Femininity.FEMININE, HairLength.SEVEN_TO_FLOOR);
+	PIXIE("пикси", Femininity.FEMININE, HairLength.TWO_SHORT),
+	BUN("пучок", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	BOB_CUT("каре", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	CHONMAGE("чонмаге", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	WAVY("волнисто", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	PONYTAIL("конский хвост", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	LOW_PONYTAIL("низкий конский хвост", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	TWIN_TAILS("двойные хвостики", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	SIDE_BRAIDS("боковые косы", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	CHIGNON("шиньон", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
+	BRAIDED("косички", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
+	TWIN_BRAIDS("две косы", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
+	CROWN_BRAID("коса вокруг головы", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
+	DRILLS("кудрявые локоны ожо", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
+	HIME_CUT("принцесса (Японская Химе)", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
+	BIRD_CAGE("птичья клетка", Femininity.FEMININE, HairLength.SEVEN_TO_FLOOR);
 	
 	private String descriptor;
 	private Femininity femininity;
