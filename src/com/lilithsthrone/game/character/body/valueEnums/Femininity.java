@@ -14,13 +14,13 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum Femininity {
 	
-	MASCULINE_STRONG(Util.newArrayListOfValues("очень мужественно", "мужик"), 0, 19, PresetColour.MASCULINE_PLUS, PresetColour.MASCULINE_PLUS_NPC),
+	MASCULINE_STRONG(Util.newArrayListOfValues("очень мужественный", "мужчина"), 0, 19, PresetColour.MASCULINE_PLUS, PresetColour.MASCULINE_PLUS_NPC),
 	
-	MASCULINE(Util.newArrayListOfValues("мужественно", "мальчишка"), 20, 39, PresetColour.MASCULINE, PresetColour.MASCULINE_NPC),
+	MASCULINE(Util.newArrayListOfValues("мужественный", "мальчик"), 20, 39, PresetColour.MASCULINE, PresetColour.MASCULINE_NPC),
 	
 	ANDROGYNOUS(Util.newArrayListOfValues("неопределенно"), 40, 59, PresetColour.ANDROGYNOUS, PresetColour.ANDROGYNOUS_NPC),
 	
-	FEMININE(Util.newArrayListOfValues("женственно", "девчонка"), 60, 79, PresetColour.FEMININE, PresetColour.FEMININE_NPC),
+	FEMININE(Util.newArrayListOfValues("женственная", "девочка"), 60, 79, PresetColour.FEMININE, PresetColour.FEMININE_NPC),
 	
 	FEMININE_STRONG(Util.newArrayListOfValues("очень женственно", "женщина"), 80, 100, PresetColour.FEMININE_PLUS, PresetColour.FEMININE_PLUS_NPC);
 
