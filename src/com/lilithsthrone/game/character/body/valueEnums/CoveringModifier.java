@@ -14,38 +14,38 @@ public enum CoveringModifier {
 	MAKEUP("макияж", false),
 	GLOSSY("глянцевая", false),
 	MATTE("матовая", false),
-	SPARKLY("сверкает", false),
-	METALLIC("металлическое", false),
+	SPARKLY("сверкающая", false),
+	METALLIC("металлическая", false),
 
 	BLAZING("пыла(ет, ющая)", false),
-	SHIMMERING("мерца(ет, ющая)", false),
-	GLITTERING("блест(ит, ящая)", false),
+	SHIMMERING("мерцающая", false),
+	GLITTERING("блестящая", false),
 	SWIRLING("клубится", false),
 	
 	GOOEY("липко", false) {
 		@Override
 		public String getName() {
 			return UtilText.returnStringAtRandom(
-					"липко",
-					"мокро",
-					"хлюпает");
+					"липкая",
+					"мокрая",
+					"хлюпающая");
 		}
 	},
 	
 	// Generic:
-	SMOOTH("гладк(ая, ой)", false),
-	ROUGH("жестко", false),
+	SMOOTH("гладкая", false),
+	ROUGH("жесткая", false),
 	
 	//Skin:
-	LEATHERY("кожистый", false),
+	LEATHERY("кожистая", false),
 	
 	// Fur/hair:
-	SHORT("коротк(ая, ой)", true),
-	SILKEN("шелковист(ая, ой)", true),
-	FLUFFY("пушист(ая, ой)", true),
-	SHAGGY("лохмат(ая, ой)", true),
+	SHORT("короткая", true),
+	SILKEN("шелковистая", true),
+	FLUFFY("пушистая", true),
+	SHAGGY("лохматая", true),
 	FURRY("как шерсть", true), // FURRY is only used for head hair, not body-covering fur.
-	COARSE("груб(ая, ой)", true);
+	COARSE("грубая", true);
 	
 	private String descriptor;
 	private boolean furryModifier;
