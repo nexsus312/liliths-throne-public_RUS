@@ -13,28 +13,28 @@ import com.lilithsthrone.utils.colours.PresetColour;
 public enum CumProduction {
 
 	/** Self-explanatory.... */
-	ZERO_NONE("none", "no", 0, 1, 100, Wetness.ZERO_DRY, PresetColour.GENERIC_SIZE_ONE, 0),
+	ZERO_NONE("нисколько", "нет", 0, 1, 100, Wetness.ZERO_DRY, PresetColour.GENERIC_SIZE_ONE, 0),
 	
 	/** There's about one or two drops of cum here... */
-	ONE_TRICKLE("drop", "a few drops of", 1, 3, 75, Wetness.ONE_SLIGHTLY_MOIST, PresetColour.GENERIC_SIZE_TWO, 0),
+	ONE_TRICKLE("капля", "несколько капель", 1, 3, 75, Wetness.ONE_SLIGHTLY_MOIST, PresetColour.GENERIC_SIZE_TWO, 0),
 	
 	/** This is significantly less than an average amount of cum that a human male produces when orgasming. */
-	TWO_SMALL_AMOUNT("trickle", "a trickle of", 3, 6, 50, Wetness.TWO_MOIST, PresetColour.GENERIC_SIZE_THREE, 0),
+	TWO_SMALL_AMOUNT("струйка", "струйка", 3, 6, 50, Wetness.TWO_MOIST, PresetColour.GENERIC_SIZE_THREE, 0),
 	
 	/** This is an average amount of cum that a human male produces when orgasming. */
-	THREE_AVERAGE("average", "an average amount of", 6, 16, 25, Wetness.THREE_WET, PresetColour.GENERIC_SIZE_FOUR, 0),
+	THREE_AVERAGE("средне", "среднее количество", 6, 16, 25, Wetness.THREE_WET, PresetColour.GENERIC_SIZE_FOUR, 0),
 	
 	/** This is a large amount of cum, although relatively speaking, it's not a huge quantity of liquid. */
-	FOUR_LARGE("large", "a large amount of", 16, 30, 5, Wetness.FOUR_SLIMY, PresetColour.GENERIC_SIZE_FIVE, 1),
+	FOUR_LARGE("много", "большое количество", 16, 30, 5, Wetness.FOUR_SLIMY, PresetColour.GENERIC_SIZE_FIVE, 1),
 	
 	/** This is a very large amount of cum. (About a quarter of a can of coke.)*/
-	FIVE_HUGE("huge", "a huge amount of", 30, 100, 0, Wetness.FIVE_SLOPPY, PresetColour.GENERIC_SIZE_SIX, 2),
+	FIVE_HUGE("гигантское", "гигантское количество", 30, 100, 0, Wetness.FIVE_SLOPPY, PresetColour.GENERIC_SIZE_SIX, 2),
 	
 	/** This and SEVEN_MONSTROUS are a bit ridiculous, and should only be used as part of "extreme proportion" content. */
-	SIX_EXTREME("extreme", "an extreme amount of", 100, 1000, 0, Wetness.SIX_SOPPING_WET, PresetColour.GENERIC_SIZE_SEVEN, 4),
+	SIX_EXTREME("экстремальное", "экстремальное количество", 100, 1000, 0, Wetness.SIX_SOPPING_WET, PresetColour.GENERIC_SIZE_SEVEN, 4),
 	
 	/** This and SIX_EXTREME are a bit ridiculous, and should only be used as part of "extreme proportion" content. */
-	SEVEN_MONSTROUS("monstrous", "a monstrous amount of", 1000, 10000, 0, Wetness.SEVEN_DROOLING, PresetColour.GENERIC_SIZE_EIGHT, 8);
+	SEVEN_MONSTROUS("чудовищное", "невероятное количество", 1000, 10000, 0, Wetness.SEVEN_DROOLING, PresetColour.GENERIC_SIZE_EIGHT, 8);
 
 	private String name;
 	private String descriptor;
