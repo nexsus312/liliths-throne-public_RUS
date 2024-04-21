@@ -15,15 +15,15 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum FluidTypeBase {
 	
-	CUM(Util.newArrayListOfValues("cum", "cream", "jism", "jizz", "seed", "spooge"),
+	CUM(Util.newArrayListOfValues("сперма", "крем", "спущенка", "малафья", "семя", "конча"),
 			BodyCoveringType.CUM,
 			PresetColour.CUM),
 	
-	GIRLCUM(Util.newArrayListOfValues("girlcum"),
+	GIRLCUM(Util.newArrayListOfValues("конча"),
 			BodyCoveringType.GIRL_CUM,
 			PresetColour.GIRLCUM),
 	
-	MILK(Util.newArrayListOfValues("milk"),
+	MILK(Util.newArrayListOfValues("молоко"),
 			BodyCoveringType.MILK,
 			PresetColour.MILK);
 	
