@@ -12,14 +12,14 @@ public enum CoveringModifier {
 	EYE("глаз", false),
 	FLUID("жидкость", false),
 	MAKEUP("макияж", false),
-	GLOSSY("глянцево", false),
-	MATTE("матотово", false),
+	GLOSSY("глянцевая", false),
+	MATTE("матовая", false),
 	SPARKLY("сверкает", false),
 	METALLIC("металлическое", false),
 
-	BLAZING("пылает", false),
-	SHIMMERING("мерцает", false),
-	GLITTERING("блестит", false),
+	BLAZING("пыла(ет, ющая)", false),
+	SHIMMERING("мерца(ет, ющая)", false),
+	GLITTERING("блест(ит, ящая)", false),
 	SWIRLING("клубится", false),
 	
 	GOOEY("липко", false) {
@@ -33,19 +33,19 @@ public enum CoveringModifier {
 	},
 	
 	// Generic:
-	SMOOTH("гладко", false),
+	SMOOTH("гладк(ая, ой)", false),
 	ROUGH("жестко", false),
 	
 	//Skin:
 	LEATHERY("кожистый", false),
 	
 	// Fur/hair:
-	SHORT("коротко", true),
-	SILKEN("шелковисто", true),
-	FLUFFY("пушисто", true),
-	SHAGGY("лохмато", true),
+	SHORT("коротк(ая, ой)", true),
+	SILKEN("шелковист(ая, ой)", true),
+	FLUFFY("пушист(ая, ой)", true),
+	SHAGGY("лохмат(ая, ой)", true),
 	FURRY("как шерсть", true), // FURRY is only used for head hair, not body-covering fur.
-	COARSE("грубо", true);
+	COARSE("груб(ая, ой)", true);
 	
 	private String descriptor;
 	private boolean furryModifier;
