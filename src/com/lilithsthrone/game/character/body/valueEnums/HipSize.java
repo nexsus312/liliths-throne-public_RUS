@@ -13,21 +13,21 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum HipSize {
 	
-	ZERO_NO_HIPS("completely straight", 0, PresetColour.GENERIC_SIZE_ONE),
+	ZERO_NO_HIPS("совершенно прямые", 0, PresetColour.GENERIC_SIZE_ONE),
 	
-	ONE_VERY_NARROW("very narrow", 1, PresetColour.GENERIC_SIZE_TWO),
+	ONE_VERY_NARROW("очень узкие", 1, PresetColour.GENERIC_SIZE_TWO),
 	
-	TWO_NARROW("narrow", 2, PresetColour.GENERIC_SIZE_THREE),
+	TWO_NARROW("узкие", 2, PresetColour.GENERIC_SIZE_THREE),
 	
-	THREE_GIRLY("girly", 3, PresetColour.GENERIC_SIZE_FOUR),
+	THREE_GIRLY("двечиьи", 3, PresetColour.GENERIC_SIZE_FOUR),
 	
-	FOUR_WOMANLY("womanly", 4, PresetColour.GENERIC_SIZE_FIVE),
+	FOUR_WOMANLY("женственные", 4, PresetColour.GENERIC_SIZE_FIVE),
 	
-	FIVE_VERY_WIDE("very wide", 5, PresetColour.GENERIC_SIZE_SIX),
+	FIVE_VERY_WIDE("очень широкие", 5, PresetColour.GENERIC_SIZE_SIX),
 	
-	SIX_EXTREMELY_WIDE("extremely wide", 6, PresetColour.GENERIC_SIZE_SEVEN),
+	SIX_EXTREMELY_WIDE("чрезвычайно широкие", 6, PresetColour.GENERIC_SIZE_SEVEN),
 	
-	SEVEN_ABSURDLY_WIDE("absurdly wide", 7, PresetColour.GENERIC_SIZE_EIGHT);
+	SEVEN_ABSURDLY_WIDE("абсурдно широкие", 7, PresetColour.GENERIC_SIZE_EIGHT);
 
 	
 	private String descriptor;
