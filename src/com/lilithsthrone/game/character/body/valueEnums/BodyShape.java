@@ -21,39 +21,39 @@ public enum BodyShape {
 	 */
 	
 	// BodySize == ZERO_SKINNY
-	SKINNY_SOFT("gaunt", BodySize.ZERO_SKINNY, Muscle.ZERO_SOFT, Util.newArrayListOfValues("slender", "skinny")),
-	SKINNY_LIGHTLY_MUSCLED("petite", BodySize.ZERO_SKINNY, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("slender", "skinny")),
-	SKINNY_TONED("willowy", BodySize.ZERO_SKINNY, Muscle.TWO_TONED, Util.newArrayListOfValues("slender")),
-	SKINNY_MUSCULAR("lean", BodySize.ZERO_SKINNY, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("slender", "toned")),
-	SKINNY_RIPPED("gymnastic", BodySize.ZERO_SKINNY, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("slender", "toned")),
+	SKINNY_SOFT("тощ(ий,ая)", BodySize.ZERO_SKINNY, Muscle.ZERO_SOFT, Util.newArrayListOfValues("худ(ой,ая)", "тощ(ий,ая)")),
+	SKINNY_LIGHTLY_MUSCLED("миниатюрн(ый,ая)", BodySize.ZERO_SKINNY, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("худ(ой,ая)", "тощ(ий,ая)")),
+	SKINNY_TONED("гибк(ий,ая)", BodySize.ZERO_SKINNY, Muscle.TWO_TONED, Util.newArrayListOfValues("худ(ой,ая)")),
+	SKINNY_MUSCULAR("Исхудавш(ий,ая)", BodySize.ZERO_SKINNY, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("худ(ой,ая)", "в тонусе")),
+	SKINNY_RIPPED("Занимается гимнастикой", BodySize.ZERO_SKINNY, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("худ(ой,ая)", "в тонусе")),
 
 	// BodySize == ONE_SLENDER
-	SLENDER_SOFT("slim", BodySize.ONE_SLENDER, Muscle.ZERO_SOFT, Util.newArrayListOfValues("slim", "slender")),
-	SLENDER_LIGHTLY_MUSCLED("thin", BodySize.ONE_SLENDER, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("slim", "slender")),
-	SLENDER_TONED("spry", BodySize.ONE_SLENDER, Muscle.TWO_TONED, Util.newArrayListOfValues("slim", "slender", "toned")),
-	SLENDER_MUSCULAR("lithe", BodySize.ONE_SLENDER, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("slim", "toned")),
-	SLENDER_RIPPED("aerobicised", BodySize.ONE_SLENDER, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("slim", "toned")),
+	SLENDER_SOFT("тонк(ий,ая)", BodySize.ONE_SLENDER, Muscle.ZERO_SOFT, Util.newArrayListOfValues("тонк(ий,ая)", "стройн(ый,ая)")),
+	SLENDER_LIGHTLY_MUSCLED("худ(ой,ая)", BodySize.ONE_SLENDER, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("тонк(ий,ая)", "стройн(ый,ая)")),
+	SLENDER_TONED("проворн(ый,ая)", BodySize.ONE_SLENDER, Muscle.TWO_TONED, Util.newArrayListOfValues("тонк(ий,ая)", "стройн(ый,ая)", "в тонусе")),
+	SLENDER_MUSCULAR("гибк(ий,ая)", BodySize.ONE_SLENDER, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("тонк(ий,ая)", "в тонусе")),
+	SLENDER_RIPPED("Занимается аэробикой", BodySize.ONE_SLENDER, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("тонк(ий,ая)", "в тонусе")),
 	
 	// BodySize == TWO_AVERAGE
-	AVERAGE_SOFT("chubby", BodySize.TWO_AVERAGE, Muscle.ZERO_SOFT, Util.newArrayListOfValues("chubby", "soft")),
-	AVERAGE_LIGHTLY_MUSCLED("average", BodySize.TWO_AVERAGE, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("slightly toned")),
-	AVERAGE_TONED("healthy", BodySize.TWO_AVERAGE, Muscle.TWO_TONED, Util.newArrayListOfValues("toned")),
-	AVERAGE_MUSCULAR("fit", BodySize.TWO_AVERAGE, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("toned", "muscular")),
-	AVERAGE_RIPPED("athletic", BodySize.TWO_AVERAGE, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("toned", "muscular", "strong")),
+	AVERAGE_SOFT("упитанн(ый,ая)", BodySize.TWO_AVERAGE, Muscle.ZERO_SOFT, Util.newArrayListOfValues("упитанн(ый,ая)", "мягк(ий,ая)")),
+	AVERAGE_LIGHTLY_MUSCLED("средн(ий,ая)", BodySize.TWO_AVERAGE, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("немного в тонусе")),
+	AVERAGE_TONED("здоров(ый,ая)", BodySize.TWO_AVERAGE, Muscle.TWO_TONED, Util.newArrayListOfValues("в тонусе")),
+	AVERAGE_MUSCULAR("спортивн(ый,ая)", BodySize.TWO_AVERAGE, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("в тонусе", "мускулист(ый,ая)")),
+	AVERAGE_RIPPED("атлет", BodySize.TWO_AVERAGE, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("в тонусе", "мускулист(ый,ая)", "сильн(ый,ая)")),
 	
 	// BodySize == THREE_LARGE
-	LARGE_SOFT("fat", BodySize.THREE_LARGE, Muscle.ZERO_SOFT, Util.newArrayListOfValues("chubby", "soft", "fat")),
-	LARGE_LIGHTLY_MUSCLED("plump", BodySize.THREE_LARGE, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("chubby", "soft", "plump")),
-	LARGE_TONED("burly", BodySize.THREE_LARGE, Muscle.TWO_TONED, Util.newArrayListOfValues("large", "strong")),
-	LARGE_MUSCULAR("powerful", BodySize.THREE_LARGE, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("large", "muscular", "strong")),
-	LARGE_RIPPED("buff", BodySize.THREE_LARGE, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("huge", "muscular", "strong")),
+	LARGE_SOFT("толст(ый,ая)", BodySize.THREE_LARGE, Muscle.ZERO_SOFT, Util.newArrayListOfValues("упитанн(ый,ая)", "мягк(ий,ая)", "толст(ый,ая)")),
+	LARGE_LIGHTLY_MUSCLED("полн(ый,ая)", BodySize.THREE_LARGE, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("упитанн(ый,ая)", "мягк(ий,ая)", "полн(ый,ая)")),
+	LARGE_TONED("дородн(ый,ая)", BodySize.THREE_LARGE, Muscle.TWO_TONED, Util.newArrayListOfValues("больш(ой,ая)", "сильн(ый,ая)")),
+	LARGE_MUSCULAR("мощн(ый,ая)", BodySize.THREE_LARGE, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("больш(ой,ая)", "мускулист(ый,ая)", "сильн(ый,ая)")),
+	LARGE_RIPPED("крепк(ий,ая)", BodySize.THREE_LARGE, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("огромн(ый,ая)", "мускулист(ый,ая)", "сильн(ый,ая)")),
 	
 	// BodySize == FOUR_HUGE
-	HUGE_SOFT("obese", BodySize.FOUR_HUGE, Muscle.ZERO_SOFT, Util.newArrayListOfValues("chubby", "soft", "fat")),
-	HUGE_LIGHTLY_MUSCLED("chunky", BodySize.FOUR_HUGE, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("chubby", "soft", "plump")),
-	HUGE_TONED("robust", BodySize.FOUR_HUGE, Muscle.TWO_TONED, Util.newArrayListOfValues("large", "strong")),
-	HUGE_MUSCULAR("thickset", BodySize.FOUR_HUGE, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("large", "muscular", "strong")),
-	HUGE_RIPPED("jacked", BodySize.FOUR_HUGE, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("huge", "muscular", "strong"));
+	HUGE_SOFT("жирн(ый,ая)", BodySize.FOUR_HUGE, Muscle.ZERO_SOFT, Util.newArrayListOfValues("упитанн(ый,ая)", "мягк(ий,ая)", "толст(ый,ая)")),
+	HUGE_LIGHTLY_MUSCLED("коренаст(ый,ая)", BodySize.FOUR_HUGE, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("упитанн(ый,ая)", "мягк(ий,ая)", "полн(ый,ая)")),
+	HUGE_TONED("крепк(ий,ая)", BodySize.FOUR_HUGE, Muscle.TWO_TONED, Util.newArrayListOfValues("больш(ой,ая)", "сильн(ый,ая)")),
+	HUGE_MUSCULAR("плотн(ый,ая)", BodySize.FOUR_HUGE, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("больш(ой,ая)", "мускулист(ый,ая)", "сильн(ый,ая)")),
+	HUGE_RIPPED("подъемный кран", BodySize.FOUR_HUGE, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("огромн(ый,ая)", "мускулист(ый,ая)", "сильн(ый,ая)"));
 	
 	private String name;
 	private List<String> limbDescriptors;
