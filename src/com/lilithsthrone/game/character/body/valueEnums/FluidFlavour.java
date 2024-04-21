@@ -15,120 +15,120 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum FluidFlavour {
 	
-	CUM("cum", PresetColour.CUM,
+	CUM("сперма", PresetColour.CUM,
 			Util.newArrayListOfValues(
-					"salty")),
+					"соленая")),
 	
-	MILK("milk", PresetColour.MILK,
+	MILK("молоко", PresetColour.MILK,
 			Util.newArrayListOfValues(
-					"creamy")),
+					"кремовое")),
 	
-	GIRL_CUM("girlcum", PresetColour.GIRLCUM,
+	GIRL_CUM("конча", PresetColour.GIRLCUM,
 			Util.newArrayListOfValues(
-					"sweet")),
+					"сладкая")),
 	
-	FLAVOURLESS("flavourless", PresetColour.BASE_GREY,
+	FLAVOURLESS("без вкуса", PresetColour.BASE_GREY,
 			Util.newArrayListOfValues(
-					"flavourless",
-					"tasteless")),
+					"без аромата",
+					"без вкуса")),
 
-	BUBBLEGUM("bubblegum", PresetColour.BASE_PINK_LIGHT,
+	BUBBLEGUM("баблгам", PresetColour.BASE_PINK_LIGHT,
 			Util.newArrayListOfValues(
-					"sweet")),
+					"сладко")),
 	
-	BEER("beer", PresetColour.BASE_TAN,
+	BEER("пиво", PresetColour.BASE_TAN,
 			Util.newArrayListOfValues(
-					"yeasty",
-					"beer-flavoured")),
+					"дрожжи",
+					"со вкусом пива")),
 	
-	VANILLA("vanilla", PresetColour.BASE_YELLOW_PALE,
+	VANILLA("ваниль", PresetColour.BASE_YELLOW_PALE,
 			Util.newArrayListOfValues(
-					"sweet",
-					"vanilla-flavoured")),
+					"сладко",
+					"со вкусом ванили")),
 	
-	STRAWBERRY("strawberry", PresetColour.BASE_CRIMSON,
+	STRAWBERRY("клубника", PresetColour.BASE_CRIMSON,
 			Util.newArrayListOfValues(
-					"sweet",
-					"strawberry-flavoured")),
+					"сладко",
+					"со вкусом клубники")),
 	
-	CHOCOLATE("chocolate", PresetColour.BASE_BROWN,
+	CHOCOLATE("шоколад", PresetColour.BASE_BROWN,
 			Util.newArrayListOfValues(
-					"chocolatey",
-					"chocolate-flavoured")),
+					"шоколадно",
+					"со вкусом шоколада")),
 	
-	PINEAPPLE("pineapple", PresetColour.BASE_YELLOW_LIGHT,
+	PINEAPPLE("ананас", PresetColour.BASE_YELLOW_LIGHT,
 			Util.newArrayListOfValues(
-					"tart",
-					"sour",
-					"tangy",
-					"pineapple-flavoured")),
+					"кисло-сладкий",
+					"кисло",
+					"ярко, с кислинкой",
+					"со вкусом ананаса")),
 	
-	HONEY("honey", PresetColour.BASE_YELLOW,
+	HONEY("мед", PresetColour.BASE_YELLOW,
 			Util.newArrayListOfValues(
-					"sweet",
-					"honey-flavoured")),
+					"сладко",
+					"со вкусом меда")),
 	
-	MINT("mint", PresetColour.BASE_GREEN_LIME,
+	MINT("мята", PresetColour.BASE_GREEN_LIME,
 			Util.newArrayListOfValues(
-					"minty")),
+					"мятно")),
 	
-	CHERRY("cherry", PresetColour.BASE_RED_DARK,
+	CHERRY("вишня", PresetColour.BASE_RED_DARK,
 			Util.newArrayListOfValues(
-					"sweet",
-					"cherry-flavoured")),
+					"сладно",
+					"со вкусом вишни")),
 	
 	// ------ Icons for these made by 'Charisma is my Dump Stat': ------ //
 	
-	COFFEE("coffee", PresetColour.BASE_BROWN_DARK,
+	COFFEE("кофе", PresetColour.BASE_BROWN_DARK,
 			Util.newArrayListOfValues(
-					"bitter",
-					"coffee-flavoured")),
+					"горько",
+					"со вкусом кофе")),
 	
-	TEA("tea", PresetColour.BASE_GREEN,
+	TEA("чай", PresetColour.BASE_GREEN,
 			Util.newArrayListOfValues(
-					"tea-flavoured")),
+					"со вкусом чая")),
 	
-	MAPLE("maple", PresetColour.BASE_RED,
+	MAPLE("кленовый сироп", PresetColour.BASE_RED,
 			Util.newArrayListOfValues(
-					"sweet",
-					"maple-flavoured")),
+					"сладко",
+					"со вкусом кленового сиропа")),
 	
-	CINNAMON("cinnamon", PresetColour.BASE_BROWN,
+	CINNAMON("корица", PresetColour.BASE_BROWN,
 			Util.newArrayListOfValues(
-					"cinnamon-flavoured")),
+					"со вкусом корицы")),
 
-	LEMON("lemon", PresetColour.BASE_YELLOW,
+	LEMON("лемон", PresetColour.BASE_YELLOW,
 			Util.newArrayListOfValues(
-					"sour",
-					"lemon-flavoured")),
+					"кисло",
+					"со вкусом лимона")),
 	
 	// ------------ //
 	
 	// ------ Icons for these made by 'DSG': ------ //
 	
-	ORANGE("orange", PresetColour.BASE_ORANGE,
+	ORANGE("апельсин", PresetColour.BASE_ORANGE,
 			Util.newArrayListOfValues(
-					"orange-flavoured")),
+					"со вкусом апельсина")),
 	
-	GRAPE("grape", PresetColour.BASE_PURPLE,
+	GRAPE("виноград", PresetColour.BASE_PURPLE,
 			Util.newArrayListOfValues(
-					"grape-flavoured")),
+					"со вкусом винограда")),
 	
-	MELON("melon", PresetColour.BASE_GREEN_LIGHT,
+	MELON("арбуз", PresetColour.BASE_GREEN_LIGHT,
 			Util.newArrayListOfValues(
-					"melon-flavoured")),
+					"со вкусом арбуза")),
 	
-	COCONUT("coconut", PresetColour.BASE_BROWN_DARK,
+	COCONUT("кокос", PresetColour.BASE_BROWN_DARK,
 			Util.newArrayListOfValues(
-					"coconut-flavoured")),
+					"со вкусом кокоса")),
 	
-	BLUEBERRY("blueberry", PresetColour.BASE_BLUE_DARK,
+	BLUEBERRY("голубика", PresetColour.BASE_BLUE_DARK,
 			Util.newArrayListOfValues(
-					"blueberry-flavoured")),
+					"со вкусом голубики")),
 	
-	BANANA("banana", PresetColour.BASE_YELLOW_LIGHT,
+	BANANA("банан", PresetColour.BASE_YELLOW_LIGHT,
 			Util.newArrayListOfValues(
-					"banana-flavoured"))
+					"со вкусом банана"))
 	
 	// ------------ //
 	
