@@ -10,6 +10,7 @@ import java.util.Map;
  * @since 0.4.6.6
  * @version 0.4.6.6
  * @author Stadler76
+ * Вроде как не требует перевода
  */
 public enum Affinity {
 
