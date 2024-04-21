@@ -9,21 +9,21 @@ package com.lilithsthrone.game.character.body.valueEnums;
  */
 public enum Lactation {
 	
-	ZERO_NONE("none", "no", 0, 1, Wetness.ZERO_DRY),
+	ZERO_NONE("нет", "нет", 0, 1, Wetness.ZERO_DRY),
 	/** This, and all before, require actual milking to produce milk. */
-	ONE_TRICKLE("trickle", "a tiny trickle of", 1, 30, Wetness.ONE_SLIGHTLY_MOIST),
+	ONE_TRICKLE("каплями", "пару капель", 1, 30, Wetness.ONE_SLIGHTLY_MOIST),
 	/** This, and all before, require actual milking to produce milk. */
-	TWO_SMALL_AMOUNT("small", "a small amount of", 30, 100, Wetness.TWO_MOIST),
+	TWO_SMALL_AMOUNT("немного", "немного", 30, 100, Wetness.TWO_MOIST),
 	/** This, and all before, require actual milking to produce milk. */
-	THREE_DECENT_AMOUNT("decent", "a decent amount of", 100, 600, Wetness.THREE_WET),
+	THREE_DECENT_AMOUNT("прилично", "приличное количество", 100, 600, Wetness.THREE_WET),
 	/** This, and all before, require actual milking to produce milk. */
-	FOUR_LARGE_AMOUNT("large", "a large amount of", 600, 1000, Wetness.FOUR_SLIMY),
+	FOUR_LARGE_AMOUNT("много", "много", 600, 1000, Wetness.FOUR_SLIMY),
 	/** They start drooling at the slightest touch. */
-	FIVE_VERY_LARGE_DROOLING("huge", "a huge quantity of", 1000, 2000, Wetness.FIVE_SLOPPY),
+	FIVE_VERY_LARGE_DROOLING("большое", "большое количество", 1000, 2000, Wetness.FIVE_SLOPPY),
 	/** They start dripping at the slightest touch. */
-	SIX_EXTREME_AMOUNT_DRIPPING("extreme", "an extreme amount of", 2000, 10000, Wetness.SIX_SOPPING_WET),
+	SIX_EXTREME_AMOUNT_DRIPPING("экстремально", "экстремальное количество", 2000, 10000, Wetness.SIX_SOPPING_WET),
 	/** They start pouring at the slightest touch. */
-	SEVEN_MONSTROUS_AMOUNT_POURING("monstrous", "a monstrous amount of", 10000, 100000, Wetness.SEVEN_DROOLING);
+	SEVEN_MONSTROUS_AMOUNT_POURING("монструзно", "монструозное количество", 10000, 100000, Wetness.SEVEN_DROOLING);
 
 	private String name;
 	private String descriptor;
