@@ -7,11 +7,11 @@ package com.lilithsthrone.game.character.body.valueEnums;
  */
 public enum EyeShape {
 
-	ROUND("round"),
-	HORIZONTAL("horizontal"),
-	VERTICAL("vertical"),
-	HEART("heart-shaped"),
-	STAR("star-shaped");
+	ROUND("круглые"),
+	HORIZONTAL("горизонтальные"),
+	VERTICAL("вертикальные"),
+	HEART("в форме сердца"),
+	STAR("в форме звезды");
 	
 	private String descriptor;
 
