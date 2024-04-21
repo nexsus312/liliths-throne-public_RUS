@@ -7,11 +7,11 @@ package com.lilithsthrone.game.character.body.valueEnums;
  */
 public enum GenitalArrangement {
 	
-	NORMAL("normal", "[npc.NameHasFull] external genitals, in a separate area to that of [npc.her] asshole."),
+	NORMAL("нормально", "[npc.NameHasFull] наружные гениталии, отдельно от [npc.her] ануса."),
 	
-	CLOACA("cloaca", "[npc.NamePos] genitals and asshole are all located within a slit-like cloaca, which is located in the place where [npc.her] genitals would normally be."),
+	CLOACA("клоака", "[npc.NamePos] гениталии и ануса расположены в щелевидной клоаке, которая располжена там где [npc.her] гениталии должны были быть."),
 	
-	CLOACA_BEHIND("rear-facing cloaca", "[npc.NamePos] genitals and asshole are all located within a slit-like cloaca, which is located in the place where [npc.her] asshole would normally be.");
+	CLOACA_BEHIND("задняя клоака", "[npc.NamePos]гениталии и ануса расположены в щелевидной клоаке, которая располжена там где [npc.her] анус должен был быть.");
 	
 	
 	private String name;
