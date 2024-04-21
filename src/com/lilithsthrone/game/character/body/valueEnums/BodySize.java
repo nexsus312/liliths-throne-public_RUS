@@ -10,11 +10,11 @@ import com.lilithsthrone.utils.colours.PresetColour;
  * @author Innoxia
  */
 public enum BodySize {
-	ZERO_SKINNY("skinny", 0, 20, PresetColour.BODY_SIZE_ZERO),
-	ONE_SLENDER("slender", 20, 40, PresetColour.BODY_SIZE_ONE),
-	TWO_AVERAGE("average", 40, 60, PresetColour.BODY_SIZE_TWO),
-	THREE_LARGE("large", 60, 80, PresetColour.BODY_SIZE_THREE),
-	FOUR_HUGE("huge", 80, 100, PresetColour.BODY_SIZE_FOUR);
+	ZERO_SKINNY("тощ(ий,ая)", 0, 20, PresetColour.BODY_SIZE_ZERO),
+	ONE_SLENDER("худ(ой,ая)", 20, 40, PresetColour.BODY_SIZE_ONE),
+	TWO_AVERAGE("Средн(ий,ая)", 40, 60, PresetColour.BODY_SIZE_TWO),
+	THREE_LARGE("Больш(ой,ая)", 60, 80, PresetColour.BODY_SIZE_THREE),
+	FOUR_HUGE("Огромн(ый,ая)", 80, 100, PresetColour.BODY_SIZE_FOUR);
 
 	private String name;
 	private int minimumBodySize;
