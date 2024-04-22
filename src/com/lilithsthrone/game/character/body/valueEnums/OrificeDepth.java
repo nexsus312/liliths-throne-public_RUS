@@ -13,29 +13,29 @@ import com.lilithsthrone.utils.colours.PresetColour;
 public enum OrificeDepth {
 	
 	/** 50% of normal depth. */
-	ZERO_EXTREMELY_SHALLOW("very shallow", 0, 0.5f, PresetColour.GENERIC_SIZE_ONE),
+	ZERO_EXTREMELY_SHALLOW("очень неглубок(ая,ий)", 0, 0.5f, PresetColour.GENERIC_SIZE_ONE),
 
 	/** 75% of normal depth. */
-	ONE_SHALLOW("shallow", 1, 0.75f, PresetColour.GENERIC_SIZE_TWO),
+	ONE_SHALLOW("неглубок(ая,ий)", 1, 0.75f, PresetColour.GENERIC_SIZE_TWO),
 	
 	/*-------AVERAGE VALUE:---------*/
 	/** 100% of normal depth. */
-	TWO_AVERAGE("average-depth", 2, 1f, PresetColour.GENERIC_SIZE_THREE),
+	TWO_AVERAGE("средней глубины", 2, 1f, PresetColour.GENERIC_SIZE_THREE),
 
 	/** 150% of normal depth. */
-	THREE_SPACIOUS("spacious", 3, 1.5f, PresetColour.GENERIC_SIZE_FOUR),
+	THREE_SPACIOUS("просторн(ая,ый)", 3, 1.5f, PresetColour.GENERIC_SIZE_FOUR),
 
 	/** 200% of normal depth. */
-	FOUR_DEEP("deep", 4, 2f, PresetColour.GENERIC_SIZE_FIVE),
+	FOUR_DEEP("глубок(ая,ий)", 4, 2f, PresetColour.GENERIC_SIZE_FIVE),
 
 	/** 250% of normal depth. */
-	FIVE_VERY_DEEP("very deep", 5, 2.5f, PresetColour.GENERIC_SIZE_SIX),
+	FIVE_VERY_DEEP("очень глубок(ая,ий)", 5, 2.5f, PresetColour.GENERIC_SIZE_SIX),
 
 	/** 300% of normal depth. */
-	SIX_CAVERNOUS("cavernous", 6, 3f, PresetColour.GENERIC_SIZE_SEVEN),
+	SIX_CAVERNOUS("пещерн(ая,ый)", 6, 3f, PresetColour.GENERIC_SIZE_SEVEN),
 
 	/** 400% of normal depth. */
-	SEVEN_FATHOMLESS("fathomless", 7, 4f, PresetColour.GENERIC_SIZE_EIGHT);
+	SEVEN_FATHOMLESS("бездонн(ая,ый)", 7, 4f, PresetColour.GENERIC_SIZE_EIGHT);
 
 	
 	private String descriptor;
