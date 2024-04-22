@@ -14,38 +14,38 @@ import com.lilithsthrone.utils.Util;
  */
 public enum PenetrationModifier {
 
-	SHEATHED("sheathed", "Helps to hide bulge in clothing when not erect."),
+	SHEATHED("с оболочкой", "Помогает скрыть выпуклости в одежде в неэрегированном состоянии."),
 	
-	RIBBED("ribbed", ""),
+	RIBBED("ребристый", ""),
 	
-	TENTACLED("tentacled", ""),
+	TENTACLED("щупальцевый", ""),
 	
-	KNOTTED("knotted", "Grants ability to be pushed inside an orifice at the moment of orgasm, doubling effective diameter and locking partners together. (Requires orifice to be deep enough for knotted base to be inserted.)"),
+	KNOTTED("узловой", "Дает возможность затолкнуть его внутрь отверстия в момент оргазма, удвайвая диаметр и сковывая партнеров вместе. (Требует чтобы отверстие было достаточно глубоким для вмещения основы узла.)"),
 	
-	BLUNT("blunt", ""),
+	BLUNT("тупой", ""),
 
-	TAPERED("tapered", "Reduces effective diameter by 5%. (Mutually exclusive with 'flared'.)") {
+	TAPERED("узкий", "Уменьшает эффективный диаметр на 5%. (Несовместимо с 'широкий'.)") {
 		@Override
 		public List<PenetrationModifier> getMutuallyExclusivePenetrationModifiers() {
 			return Util.newArrayListOfValues(FLARED);
 		}
 	},
 	
-	FLARED("flared", "Increases effective diameter by 5%. (Mutually exclusive with 'tapered'.)") {
+	FLARED("широкий", "Увеличивает эффективный диаметр на 5%. (Несовместимо с 'узкий'.)") {
 		@Override
 		public List<PenetrationModifier> getMutuallyExclusivePenetrationModifiers() {
 			return Util.newArrayListOfValues(TAPERED);
 		}
 	},
 	
-	BARBED("barbed", ""),
+	BARBED("колючий", ""),
 	
-	VEINY("veiny", ""),
+	VEINY("жилистый", ""),
 	
-	PREHENSILE("prehensile", ""),
+	PREHENSILE("цепкий", ""),
 	
-	OVIPOSITOR("ovipositor",
-			"Grants ability to lay eggs in the currently-penetrated orifice. (Requires the eggs to already be fertilised. Eggs cannot be laid in an already-pregnant target's vagina.)",
+	OVIPOSITOR("яйцеклад",
+			"Дает возможность откладывать яйца в текущее проникаемое отверстие. (Требует чтобы яйца уже были оплодотворены. Яйца нельзя отложить если у партнера есть беременность.)",
 			Util.newArrayListOfValues(
 					SexAreaPenetration.PENIS,
 					SexAreaPenetration.CLIT));
@@ -88,7 +88,7 @@ public enum PenetrationModifier {
 	
 	public String getDescription() {
 		if(description.isEmpty()) {
-			return "No gameplay effect.";
+			return "Не влияет на геймплей.";
 		}
 		return description;
 	}
