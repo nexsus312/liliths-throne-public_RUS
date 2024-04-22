@@ -7,29 +7,29 @@ package com.lilithsthrone.game.character.body.valueEnums;
  */
 public enum PiercingType {
 	
-	EAR("ear",
-			"Ears are the most common area of the body that are pierced, and enable the equipping of earrings and other ear-related jewellery."),
+	EAR("ухо",
+			"Уши - самая распространенная область тела, которую прокалывают, что позволяет использовать серьги и другие украшения, связанные с ушами."),
 	
-	NOSE("nose",
-			"Having a nose piercing allows you to equip jewellery such as nose rings or studs."),
+	NOSE("нос",
+			"Пирсинг носа позволяет носить украшения, такие как кольца или шпильки."),
 	
-	LIP("lip",
-			"Lip piercings allow you to wear lip rings."),
+	LIP("губа",
+			"Пирсинг губ позволяет носить кольца для губ."),
 	
-	TONGUE("tongue",
-			"Getting a tongue piercing will allow you to equip tongue bars."),
+	TONGUE("язык",
+			"Пирсинг языка позволит вам оснастить язык прямыми барбеллами"),
 	
-	NAVEL("navel",
-			"Getting your navel (belly button) pierced allows you to equip navel-related jewellery."),
+	NAVEL("пупок",
+			"Прокалывание пупка позволит вам носить украшения, связанные с пупком."),
 	
-	NIPPLE("nipple",
-			"Nipple piercings will allow you to equip nipple bars."),
+	NIPPLE("сосок",
+			"Пирсинг сосков позволит вам оснастить соски барбеллами."),
 	
-	VAGINA("vagina",
-			"Having a vagina piercing will allow you to equip vagina-related jewellery."),
+	VAGINA("вагина",
+			"Прокалывание вагины позволит вам носить украшения, связанные с вагиной."),
 	
-	PENIS("penis",
-			"Having a penis piercing will allow you to equip penis-related jewellery.");
+	PENIS("пенис",
+			"Прокалывание пениса позволит вам носить украшения, связанные с пенисом.");
 	
 	private String name;
 	private String description;
