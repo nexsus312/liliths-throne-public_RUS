@@ -7,13 +7,13 @@ package com.lilithsthrone.game.character.body.valueEnums;
  */
 public enum OrificeModifier {
 	
-	PUFFY("puffy", ""),
+	PUFFY("пухл(ая,ый)", ""),
 	
-	RIBBED("internally-ribbed", ""),
+	RIBBED("ребрист(ая,ый)", ""),
 	
-	TENTACLED("tentacled", ""),
+	TENTACLED("щупальцев(ая,ый)", ""),
 	
-	MUSCLE_CONTROL("internally-muscled", "Prevents this orifice from ever being regarded as 'too loose', no matter how slender an insertion nor how loose its capacity might be.");
+	MUSCLE_CONTROL("мускулист(ая,ый)", "Предотвращает становление этого отверстия 'слишком свободным', маленький размер вставляемого объекта не имеет значение, как и вместимость отверстия.");
 	
 	
 	private String name;
@@ -34,7 +34,7 @@ public enum OrificeModifier {
 	
 	public String getDescription() {
 		if(description.isEmpty()) {
-			return "No gameplay effect.";
+			return "Не влияет на геймлпей";
 		}
 		return description;
 	}
