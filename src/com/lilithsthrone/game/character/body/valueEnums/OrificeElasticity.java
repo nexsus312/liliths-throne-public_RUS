@@ -15,32 +15,32 @@ public enum OrificeElasticity {
 	/*-------RIGID:---------*/
 
 	/**Is extremely resistant to being stretched out.*/
-	ZERO_UNYIELDING("rigid", 0, 0.025f, 0, false, PresetColour.GENERIC_SIZE_ONE),
+	ZERO_UNYIELDING("жестк(ая,ий)", 0, 0.025f, 0, false, PresetColour.GENERIC_SIZE_ONE),
 	
 	/**Is very resistant to being stretched out.*/
-	ONE_RIGID("stiff", 1, 0.05f, 0.05f, false, PresetColour.GENERIC_SIZE_TWO),
+	ONE_RIGID("негибк(ая,ий)", 1, 0.05f, 0.05f, false, PresetColour.GENERIC_SIZE_TWO),
 	
 	/**Is resistant to being stretched out.*/
-	TWO_FIRM("firm", 2, 0.1f, 0.1f, false, PresetColour.GENERIC_SIZE_THREE),
+	TWO_FIRM("упруг(ая,ий)", 2, 0.1f, 0.1f, false, PresetColour.GENERIC_SIZE_THREE),
 
 	/*-------NORMAL:---------*/
 	
 	/**Normal value, along with FOUR_LIMBER. Is quite resistant to being stretched out.*/
-	THREE_FLEXIBLE("flexible", 3, 0.15f, 0.15f, false, PresetColour.GENERIC_SIZE_FOUR),
+	THREE_FLEXIBLE("гибк(ая,ий)", 3, 0.15f, 0.15f, false, PresetColour.GENERIC_SIZE_FOUR),
 
 	/**Normal value, along with THREE_FLEXIBLE. Is somewhat resistant to being stretched out.*/
-	FOUR_LIMBER("limber", 4, 0.2f, 0.2f, true, PresetColour.GENERIC_SIZE_FIVE),
+	FOUR_LIMBER("подвижн(ая,ый)", 4, 0.2f, 0.2f, true, PresetColour.GENERIC_SIZE_FIVE),
 
 	/*-------STRETCHY:---------*/
 	
 	/**Stretches out fairly quickly.*/
-	FIVE_STRETCHY("stretchy", 5, 0.25f, 0.25f, true, PresetColour.GENERIC_SIZE_SIX),
+	FIVE_STRETCHY("тянущ(ийся,аяся)", 5, 0.25f, 0.25f, true, PresetColour.GENERIC_SIZE_SIX),
 
 	/**Easily stretches out.*/
-	SIX_SUPPLE("supple", 6, 0.3f, 0.25f, true, PresetColour.GENERIC_SIZE_SEVEN),
+	SIX_SUPPLE("податлив(ая,ый)", 6, 0.3f, 0.25f, true, PresetColour.GENERIC_SIZE_SEVEN),
 	
 	/**Very quickly stretches out.*/
-	SEVEN_ELASTIC("elastic", 7, 0.5f, 0.25f, true, PresetColour.GENERIC_SIZE_EIGHT);
+	SEVEN_ELASTIC("эластичн(ая,ый)", 7, 0.5f, 0.25f, true, PresetColour.GENERIC_SIZE_EIGHT);
 
 	
 	private String descriptor;
