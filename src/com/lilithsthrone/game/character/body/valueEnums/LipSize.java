@@ -10,14 +10,14 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum LipSize {
 
-	ZERO_THIN(0, "thin", PresetColour.GENERIC_SIZE_ONE, false),
-	ONE_AVERAGE(1, "average-sized", PresetColour.GENERIC_SIZE_TWO, false),
-	TWO_FULL(2, "full", PresetColour.GENERIC_SIZE_THREE, false),
-	THREE_PLUMP(3, "plump", PresetColour.GENERIC_SIZE_FOUR, false),
-	FOUR_HUGE(4, "huge", PresetColour.GENERIC_SIZE_FIVE, false),
-	FIVE_MASSIVE(5, "massive", PresetColour.GENERIC_SIZE_SIX, false),
-	SIX_GIGANTIC(6, "gigantic", PresetColour.GENERIC_SIZE_SEVEN, true),
-	SEVEN_ABSURD(7, "absurdly colossal", PresetColour.GENERIC_SIZE_EIGHT, true);
+	ZERO_THIN(0, "тонкие", PresetColour.GENERIC_SIZE_ONE, false),
+	ONE_AVERAGE(1, "средние", PresetColour.GENERIC_SIZE_TWO, false),
+	TWO_FULL(2, "полные", PresetColour.GENERIC_SIZE_THREE, false),
+	THREE_PLUMP(3, "пухлые", PresetColour.GENERIC_SIZE_FOUR, false),
+	FOUR_HUGE(4, "огромные", PresetColour.GENERIC_SIZE_FIVE, false),
+	FIVE_MASSIVE(5, "массивные", PresetColour.GENERIC_SIZE_SIX, false),
+	SIX_GIGANTIC(6, "гигантские", PresetColour.GENERIC_SIZE_SEVEN, true),
+	SEVEN_ABSURD(7, "абсурдно коллосальные", PresetColour.GENERIC_SIZE_EIGHT, true);
 	
 	
 	private int value;
