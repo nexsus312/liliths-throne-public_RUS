@@ -20,24 +20,24 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum BodyMaterial {
 
-	FLESH("flesh",
-			"skin", "fleshy",
-			"skin", "fleshy",
-			"flesh", "fleshy",
-			"flesh", "fleshy",
-			"hair", "hairy",
-			"hair", "hairy",
-			"hair", "hairy",
-			"fur", "furry",
-			"fur", "furry",
-			"feathers", "feathered",
-			"feathers", "feathered",
-			"scales", "scaled",
-			"scales", "scaled",
-			"shell", "shelled",
-			"shell", "shelled",
-			"nails", "hard",
-			"keratin", "keratinous",
+	FLESH("плоть",
+			"кожа", "мясист(ый,ая)",
+			"кожа", "мясист(ый,ая)",
+			"плоть", "мясист(ый,ая)",
+			"плоть", "мясист(ый,ая)",
+			"волосы", "волосат(ый,ая)",
+			"волосы", "волосат(ый,ая)",
+			"волосы", "волосат(ый,ая)",
+			"шерсть", "шерстян(ой,ая)",
+			"шерсть", "шерстян(ой,ая)",
+			"перья", "перьев(ой,ая)",
+			"перья", "перьев(ой,ая)",
+			"чешуя", "чешуйчат(ый,ая)",
+			"чешуя", "чешуйчат(ый,ая)",
+			"панцирь", "панцирн(ый,ая)",
+			"панцирь", "панцирн(ый,ая)",
+			"ногти", "тверд(ый,ая)",
+			"кератин", "кератинов(ый,ая)",
 			PresetColour.BASE_PINK_LIGHT,
 			DamageType.PHYSICAL,
 			true,
@@ -63,14 +63,14 @@ public enum BodyMaterial {
 		public List<String> getExtraEffects(GameCharacter target) {
 			return Util.newArrayListOfValues(
 					"<b>[style.boldBad(-75%)] base [style.colourUnarmed(unarmed damage)]</b>",
-					"<b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'>Can morph body at will</b>",
-					"<b style='color: "+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>Impregnated through any orifice</b>");
+					"<b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'>Может изменять тело по своему желанию</b>",
+					"<b style='color: "+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>оплодотворение через любое отверстие</b>");
 		}
 	},
 
 	// Dolls:
 	
-	SILICONE("silicone", "smooth", PresetColour.BASE_BLACK, DamageType.PHYSICAL, true, false, true) {
+	SILICONE("силикон", "гладко", PresetColour.BASE_BLACK, DamageType.PHYSICAL, true, false, true) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return null;
@@ -81,13 +81,13 @@ public enum BodyMaterial {
 		}
 		@Override
 		public List<String> getPartDescriptors() {
-			return Util.newArrayListOfValues("silicone", "artificial", "doll");
+			return Util.newArrayListOfValues("силикон", "искуственный", "кукла");
 		}
 	},
 	
 	// Fire elementals:
 	
-	FIRE("fire", "burning", PresetColour.BASE_ORANGE, DamageType.FIRE, false, false, false) {
+	FIRE("огонь", "горящий", PresetColour.BASE_ORANGE, DamageType.FIRE, false, false, false) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(
@@ -104,7 +104,7 @@ public enum BodyMaterial {
 
 	// Water elementals:
 
-	WATER("water", "cool", PresetColour.BASE_AQUA, DamageType.ICE, false, true, false) {
+	WATER("вода", "прохладный", PresetColour.BASE_AQUA, DamageType.ICE, false, true, false) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(
@@ -119,7 +119,7 @@ public enum BodyMaterial {
 		}
 	},
 	
-	ICE("ice", "freezing", PresetColour.BASE_BLUE_LIGHT, DamageType.ICE, true, true, true) {
+	ICE("лед", "замораживающий", PresetColour.BASE_BLUE_LIGHT, DamageType.ICE, true, true, true) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(
@@ -134,7 +134,7 @@ public enum BodyMaterial {
 
 	// Air elementals:
 
-	AIR("storm-clouds", "swirling", PresetColour.BASE_BLUE_STEEL, DamageType.POISON, false, false, false) {
+	AIR("штормовые-облака", "клубится", PresetColour.BASE_BLUE_STEEL, DamageType.POISON, false, false, false) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(
@@ -149,7 +149,7 @@ public enum BodyMaterial {
 
 	// Earth elementals:
 	
-	STONE("stone", "hard", PresetColour.BASE_GREY, DamageType.PHYSICAL, true, false, true) {
+	STONE("камень", "твердый", PresetColour.BASE_GREY, DamageType.PHYSICAL, true, false, true) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(
@@ -162,7 +162,7 @@ public enum BodyMaterial {
 		}
 	},
 	
-	RUBBER("rubber", PresetColour.BASE_BLACK, DamageType.PHYSICAL, true, false, true) {
+	RUBBER("резина", PresetColour.BASE_BLACK, DamageType.PHYSICAL, true, false, true) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(
@@ -176,7 +176,7 @@ public enum BodyMaterial {
 	
 	// Arcane elementals:
 	
-	ARCANE("energy", PresetColour.GENERIC_ARCANE, DamageType.PHYSICAL, false, false, false) {
+	ARCANE("энергия", PresetColour.GENERIC_ARCANE, DamageType.PHYSICAL, false, false, false) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(
