@@ -10,6 +10,7 @@ import com.lilithsthrone.utils.colours.PresetColour;
  * @since 0.2.?
  * @version 0.3.7
  * @author Pimgd
+ * Судя по всему не требует перевода, цвета хранятся отдельно.
  */
 public enum StartingSkinTone {
 	
