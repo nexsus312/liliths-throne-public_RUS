@@ -17,7 +17,7 @@ import com.lilithsthrone.utils.colours.PresetColour;
  * @author Innoxia
  */
 public enum FetishDesire {
-	
+	/*fondness1, это названия иконок. НЕ ПЕРЕВОДИТЬ. */
 	ZERO_HATE(0, "ненавидит", "ненавидит", "ненавидит", "fondness1", PresetColour.BASE_CRIMSON),
 	
 	ONE_DISLIKE(1, "не любит", "не любит", "не любит", "fondness2", PresetColour.BASE_RED),
