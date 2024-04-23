@@ -4,6 +4,7 @@ package com.lilithsthrone.game.character.fetishes;
  * @since 0.2.12
  * @version 0.2.12
  * @author Innoxia
+ * Не требует перевода
  */
 public enum FetishExperience {
 	
