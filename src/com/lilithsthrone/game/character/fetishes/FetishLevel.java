@@ -14,16 +14,16 @@ import com.lilithsthrone.utils.colours.PresetColour;
  * @author Innoxia
  */
 public enum FetishLevel {
+	/*overlay1 и т.д. НЕ ПЕРЕВОДИТЬ. ЯВЛЯЮТСЯ ТЕГАМИ ДЛЯ ДВИЖКА ИГРЫ.*/
+	ZERO_NO_EXPERIENCE("неопытн(ая,ый)", "I", "", "overlay1", 0, 0, 0, 10, PresetColour.DESIRE_STAGE_ZERO),
 	
-	ZERO_NO_EXPERIENCE("неопытн(ая,ый)", "I", "", "наложение1", 0, 0, 0, 10, PresetColour.DESIRE_STAGE_ZERO),
+	ONE_AMATEUR("любитель", "II", "", "overlay2", 0.5f, 1, 10, 50, PresetColour.DESIRE_STAGE_ONE),
 	
-	ONE_AMATEUR("любитель", "II", "", "наложение2", 0.5f, 1, 10, 50, PresetColour.DESIRE_STAGE_ONE),
+	TWO_EXPERIENCED("опытн(ая,ый)", "III", "", "overlay3", 1f, 2, 50, 100, PresetColour.DESIRE_STAGE_TWO),
 	
-	TWO_EXPERIENCED("опытн(ая,ый)", "III", "", "наложение3", 1f, 2, 50, 100, PresetColour.DESIRE_STAGE_TWO),
+	THREE_EXPERT("эксперт", "IV", "", "overlay4", 2f, 3, 100, 200, PresetColour.DESIRE_STAGE_THREE),
 	
-	THREE_EXPERT("эксперт", "IV", "", "наложение4", 2f, 3, 100, 200, PresetColour.DESIRE_STAGE_THREE),
-	
-	FOUR_MASTERFUL("мастер", "V", "", "наложение5", 2.5f, 4, 200, 200, PresetColour.DESIRE_STAGE_FOUR);
+	FOUR_MASTERFUL("мастер", "V", "", "overlay5", 2.5f, 4, 200, 200, PresetColour.DESIRE_STAGE_FOUR);
 	
 	
 	private String name;
