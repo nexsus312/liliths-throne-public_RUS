@@ -50,7 +50,7 @@ public abstract class AbstractFetish {
 		try {
 			InputStream is = Subspecies.class.getClassLoader().getResourceAsStream("com/lilithsthrone/res/fetishes/fetish_bimbo.svg");
 			if(is==null) {
-				System.err.println("Error! Fetish icon file does not exist (Trying to read from 'com/lilithsthrone/res/fetishes/fetish_bimbo')!");
+				System.err.println("Ошибка! иконка фетиша не обнаружена (Попытка чтения 'com/lilithsthrone/res/fetishes/fetish_bimbo')!");
 			}
 			bimboString = Util.inputStreamToString(is);
 			bimboString = SvgUtil.colourReplacement("FETISH_BIMBO", PresetColour.BASE_PINK, bimboString);
@@ -160,15 +160,15 @@ public abstract class AbstractFetish {
 	protected static String getGenericFetishDesireDescription(GameCharacter target, FetishDesire desire, String descriptor) {
 		switch(desire) {
 			case ZERO_HATE:
-				return UtilText.parse(target, "You absolutely hate "+descriptor+".");
+				return UtilText.parse(target, "Вы неанавидите "+descriptor+".");
 			case ONE_DISLIKE:
-				return UtilText.parse(target, "You don't like "+descriptor+".");
+				return UtilText.parse(target, "Вы не любите "+descriptor+".");
 			case TWO_NEUTRAL:
-				return UtilText.parse(target, "You are indifferent to "+descriptor+".");
+				return UtilText.parse(target, "Вы безразличны к "+descriptor+".");
 			case THREE_LIKE:
-				return UtilText.parse(target, "You like "+descriptor+".");
+				return UtilText.parse(target, "Вам нравится "+descriptor+".");
 			case FOUR_LOVE:
-				return UtilText.parse(target, "You love "+descriptor+".");
+				return UtilText.parse(target, "Вы любите "+descriptor+".");
 		}
 		return "";
 	}
@@ -251,7 +251,7 @@ public abstract class AbstractFetish {
 				try {
 					InputStream is = this.getClass().getResourceAsStream("/com/lilithsthrone/res/fetishes/" + pathName + ".svg");
 					if(is==null) {
-						System.err.println("Error! Fetish icon file does not exist (Trying to read from '"+pathName+"')!");
+						System.err.println("Ошибка! иконка фетиша не обнаружена (Попытка чтения '"+pathName+"')!");
 					}
 					SVGString = Util.inputStreamToString(is);
 					SVGString = SvgUtil.colourReplacement(this.getId(), colourShades, null, SVGString);
