@@ -18,15 +18,15 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum FetishDesire {
 	
-	ZERO_HATE(0, "hate", "hate", "hates", "fondness1", PresetColour.BASE_CRIMSON),
+	ZERO_HATE(0, "ненавидит", "ненавидит", "ненавидит", "симпатия1", PresetColour.BASE_CRIMSON),
 	
-	ONE_DISLIKE(1, "dislike", "dislike", "dislikes", "fondness2", PresetColour.BASE_RED),
+	ONE_DISLIKE(1, "не любит", "не любит", "не любит", "симпатия2", PresetColour.BASE_RED),
 	
-	TWO_NEUTRAL(2, "indifferent", "are indifferent to", "is indifferent to", "fondness3", PresetColour.BASE_BLUE_STEEL),
+	TWO_NEUTRAL(2, "безразлично", "безразлично к", "безразлично к", "симпатия3", PresetColour.BASE_BLUE_STEEL),
 	
-	THREE_LIKE(3, "like", "like", "likes", "fondness4", PresetColour.BASE_PINK_LIGHT),
+	THREE_LIKE(3, "нравится", "нравится", "нравится", "симпатия4", PresetColour.BASE_PINK_LIGHT),
 	
-	FOUR_LOVE(4, "love", "love", "loves", "fondness5", PresetColour.BASE_PINK);
+	FOUR_LOVE(4, "любит", "любит", "любит", "симпатия5", PresetColour.BASE_PINK);
 	
 	private int value;
 	private String name;
@@ -45,13 +45,13 @@ public enum FetishDesire {
 		this.colour = colour;
 		
 		modifiersList = new ArrayList<>();
-		modifiersList.add("Modifies sex actions' [style.boldLust("+ Util.capitaliseSentence(Attribute.LUST.getAbbreviatedName())+ " increments)]");
+		modifiersList.add("Модифицирует секс действия' [style.boldLust("+ Util.capitaliseSentence(Attribute.LUST.getAbbreviatedName())+ " повышая)]");
 
 		
 		try {
 			InputStream is = this.getClass().getResourceAsStream("/com/lilithsthrone/res/fetishes/" + pathName + ".svg");
 			if(is==null) {
-				System.err.println("Error! FetishDesire icon file does not exist (Trying to read from '"+pathName+"')!");
+				System.err.println("Ошибка! Иконка жажды фетиша не найдена (Попытка чтения '"+pathName+"')!");
 			}
 			String base = Util.inputStreamToString(is);
 
