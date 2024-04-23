@@ -1103,32 +1103,32 @@ public class Fetish {
 	};
 
 	public static AbstractFetish FETISH_TRANSFORMATION_GIVING = new AbstractFetish(60,
-			"transformer",
-			"transforming others",
-			"fetish_transformation_giving",
+			"трасформатор",
+			"трансформировать других",
+			"фетиш_трасформация_другие",
 			FetishExperience.BASE_RARE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			null,
 			Util.newArrayListOfValues(
-					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Halves cost of all potion making</span>"),
+					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Вдвое снижает стоимость создания зелий</span>"),
 			null) {
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for transforming others.";
+				return "Этот фетиш относится к желанию человека трансформировать других.";
 				
 			} else if (owner.isPlayer()){
-				return "You love the idea of transforming others. Watching their bodies change, either voluntarily or otherwise, is a massive turn-on for you.";
+				return "Вы любите идею трасформации других людей. Смотреть как меняются их тела, добровольно или иначе, очень сильно заводит вас.";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] loves transforming others. Watching their bodies change, either voluntarily or otherwise, is a massive turn-on for [npc.herHim].");
+				return UtilText.parse(owner, "[npc.Name] любит трасформировать других. мотреть как меняются их тела, добровольно или иначе, очень возбуждающе для [npc.herHim].");
 			}
 		}
 
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "transforming others");
+			return getGenericFetishDesireDescription(target, desire, "трансформировать других");
 		}
 		
 		@Override
@@ -1144,33 +1144,33 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_TRANSFORMATION_RECEIVING = new AbstractFetish(60,
-			"test subject",
-			"being transformed",
-			"fetish_transformation_receiving",
+			"подопытный",
+			"быть целью трансформации",
+			"фетиш_трасформация_получение",
 			FetishExperience.BASE_RARE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			null,
 			Util.newArrayListOfValues(
-					"[style.boldGood(Increases potency)] <span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>of receiving forced transformations</span>",
-					"[style.boldBad(Disables)] ability to spit out TF potions"),
+					"[style.boldGood(Увеличивает эффекты)] <span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>применямых или принужденных трансофрмаций</span>",
+					"[style.boldBad(Отключает)] способность выплевывать трасформирующие зелья"),
 			null) {
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека to be transformed by others.";
+				return "Этот фетиш относится к желанию человека быть трасформированным другими.";
 				
 			} else if(owner.isPlayer()) {
-				return "You love the idea of being transformed. Having your body parts changed, either voluntarily or otherwise, is a massive turn-on for you.";
+				return "Вам нравится идея о изменении своего тело. Чувствовать как меняется ваше тело, добровольно или иначе, очень возбуждает вас.";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] loves being transformed. Having [npc.her] body parts changed, either voluntarily or otherwise, is a massive turn-on for [npc.herHim].");
+				return UtilText.parse(owner, "[npc.Name] любит трансформации. Чувствовать как [npc.her] части тела меняются, добровольно или иначе, очень возбуждающе для [npc.herHim].");
 			}
 		}
 		
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "the idea of being transformed");
+			return getGenericFetishDesireDescription(target, desire, "идея быть жертвой трансформации");
 		}
 		
 		@Override
@@ -1183,34 +1183,34 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_KINK_GIVING = new AbstractFetish(60,
-			"kink advocate",
-			"giving others fetishes",
+			"защитник фетишей",
+			"давать другим фетиши",
 //			"fetish_transformation_giving",
-			"fetish_kink_giving",
+			"фетиш_кинк_давать",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			null,
 			Util.newArrayListOfValues(
 					// Unclear what extra effects this fetish should provide, other than triggering forced fetishes
-					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Enjoy making others try new things!</span>"),
+					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Наслаждайтесь давая другим возможность попробовать что-то новое!</span>"),
 			null) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for giving new fetishes to other people.";
+				return "Этот фетиш относится к желанию человека пробуждать новые фетиши у других людей.";
 				
 			} else if(owner.isPlayer()) {
-				return "The idea of giving people new fetishes, either voluntarily or otherwise, is a massive turn-on for you.";
+				return "Идея пробуждения в людях фетишей, добровольно или иначе, очень сильно вас заводит.";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] loves giving others new fetishes. Watching them enjoy perverse new things, either voluntarily or otherwise, is a massive turn-on for [npc.herHim].");
+				return UtilText.parse(owner, "[npc.Name] любит пробуждать в людях фетиши. Смотреть как они наслаждаются новыми извращениями, добровольно или иначе, очень возбуждающе для [npc.herHim].");
 			}
 		}
 		
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "giving others new fetishes");
+			return getGenericFetishDesireDescription(target, desire, "пробуждать фетиши у людей");
 		}
 		
 		@Override
@@ -1226,34 +1226,34 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_KINK_RECEIVING = new AbstractFetish(60,
-			"kink curious",
-			"gaining fetishes",
+			"любопытсво к фетишам",
+			"получать фетиши",
 //			"fetish_transformation_receiving",
-			"fetish_kink_receiving",
+			"фетиш_кинк_получение",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			null,
 			Util.newArrayListOfValues(
 					// Unclear what extra effects this fetish should provide, other than not taking corruption from receiving forced fetishes
-					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Removes corruption gain when a fetish is forced on you.</span>"),
+					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Убирает получение испорченности когда вас принуждают к фетишам.</span>"),
 			null) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for gaining new fetishes.";
+				return "Этот фетиш относится к желанию человека получать новые фетиши.";
 				
 			} else if (owner.isPlayer()) {
-				return "You love the idea of developing new fetishes. Gaining perverse joy from new things, either voluntarily or otherwise, is a massive turn-on for you.";
+				return "Вам нравится идея получения новых фетишей. Получая извращенное удовольствие от новых вещей, добровольно или иначе, очень заводит вас.";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] loves developing new fetishes. Gaining perverse joy from new things, either voluntarily or otherwise, is a massive turn-on for [npc.herHim].");
+				return UtilText.parse(owner, "[npc.Name] нравится идея получения новых фетишей. Получая извращенное удовольствие от новых вещей, добровольно или иначе, очень возбуждающе для [npc.herHim].");
 			}
 		}
 		
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "the idea of being given new fetishes");
+			return getGenericFetishDesireDescription(target, desire, "идея получения новых фетишей");
 		}
 		
 		@Override
@@ -1269,9 +1269,9 @@ public class Fetish {
 	
 
 	public static AbstractFetish FETISH_DENIAL = new AbstractFetish(60,
-			"orgasm denier",
-			"denying orgasms",
-			"fetish_denial",
+			"отрицатель оргазмов",
+			"отказ от оргазмов",
+			"фетиш_оказ",
 			FetishExperience.BASE_RARE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			null,
@@ -1281,19 +1281,19 @@ public class Fetish {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for denying their partner's orgasms.";
+				return "Этот фетиш относится к желанию человека недопускать оргазм своего партнера.";
 				
 			} else if(owner.isPlayer()) {
-				return "Either by teasing them with your body, or preventing them from orgasming, you love denying your partners during sex.";
+				return "Либо дразня их своим телом, или недопуская их оргазма, вы любите недопускать оргазма ваших партнеров.";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] has a fetish for orgasm denial.");
+				return UtilText.parse(owner, "[npc.Name] имеет фетиш на недопускание оргазмов.");
 			}
 		}
 
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "denying orgasms");
+			return getGenericFetishDesireDescription(target, desire, "недопускать оргазмы");
 		}
 		
 		@Override
@@ -1309,9 +1309,9 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_DENIAL_SELF = new AbstractFetish(60,
-			"self-denial",
-			"being denied",
-			"fetish_denial_self",
+			"сама-отказ",
+			"быть недопущенным до оргазма",
+			"фетиш_отказ_сам",
 			FetishExperience.BASE_RARE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			Util.newHashMapOfValues(
@@ -1323,19 +1323,19 @@ public class Fetish {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for having their orgasms denied.";
+				return "Этот фетиш относится к желанию человека недопускать сообственных оргазмов.";
 				
 			} else if(owner.isPlayer()) {
-				return "You love edging and having your orgasms denied.";
+				return "Вы любите ходить по краю и отказыватся от сообственного оргазма..";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] has a fetish for having [npc.her] orgasms denied.");
+				return UtilText.parse(owner, "[npc.Name] имеет фетиш на отказ от [npc.her] оргазмов.");
 			}
 		}
 
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "having your orgasms denied");
+			return getGenericFetishDesireDescription(target, desire, "недопущенные оргазмы");
 		}
 		
 		@Override
@@ -1348,35 +1348,35 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_DOMINANT = new AbstractFetish(60,
-			"dominant",
-			"acting dominantly",
-			"fetish_dominant",
+			"доминант",
+			"действовать доминирующе",
+			"фетиш_доминант",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			Util.newHashMapOfValues(new Value<>(Attribute.MANA_MAXIMUM, 5)),
 			Util.newArrayListOfValues(
-					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Разблокирует</span> <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>dominant tease</span>",
-					"<span style='color:"+ PresetColour.GENERIC_BAD.toWebHexString()+ ";'>Слабость к</span> <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>submissive tease</span>"),
+					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Разблокирует</span> <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>дразнение доминированием</span>",
+					"<span style='color:"+ PresetColour.GENERIC_BAD.toWebHexString()+ ";'>Слабость к</span> <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>дразнению покорностью</span>"),
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for being the dominant partner in sex.";
+				return "Этот фетиш относится к желанию человека доминировать над партнером в сексе.";
 				
 			} else if(owner.isPlayer()) {
-				return "You love being the dominant partner during sex, and you know just how to show your partners who's in charge.";
+				return "Вы любите доминировать над партнером во время секса, и вы знаете как показать партнеру кто главный.";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] has a fetish for being the dominant partner in sex.");
+				return UtilText.parse(owner, "[npc.Name] имеет фетиш на доминирование над партнером во время секса.");
 			}
 		}
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "being the dominant partner");
+			return getGenericFetishDesireDescription(target, desire, "доминировать во время секса");
 		}
 		@Override
 		public String getAppliedFetishLevelEffectDescription(GameCharacter character) {
-			return getAppliedFetishAttackLevelEffectDescription(character, this, "dominant tease");
+			return getAppliedFetishAttackLevelEffectDescription(character, this, "дразнить доминированием");
 		}
 		@Override
 		public CorruptionLevel getAssociatedCorruptionLevel() {
@@ -1391,35 +1391,35 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_SUBMISSIVE = new AbstractFetish(60,
-			"submissive",
-			"acting submissively",
-			"fetish_submissive",
+			"покорность",
+			"действовать покорно",
+			"фетиш_покорность",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_PHYSIQUE, 2)),
 			Util.newArrayListOfValues(
-					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Разблокирует</span> <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>submissive tease</span>",
-					"<span style='color:"+ PresetColour.GENERIC_BAD.toWebHexString()+ ";'>Слабость к</span> <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>dominant tease</span>"),
+					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Разблокирует</span> <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>дразнение покорностью</span>",
+					"<span style='color:"+ PresetColour.GENERIC_BAD.toWebHexString()+ ";'>Слабость к</span> <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>дразнению доминированием</span>"),
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for being the submissive partner in sex.";
+				return "Этот фетиш относится к желанию человека быть покорным во время секса.";
 				
 			} else if(owner.isPlayer()) {
-				return "You love being the submissive partner during sex. You'll do anything to show your submission, and will happily let your partner do whatever they want with you.";
+				return "Вам нравится подчинятся во время секса. Вы сделаете все чтобы показать свое подчинение, и вы счастливы дать вашему партнеру возможность делать что угодно.";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] has a fetish for being the submissive partner in sex.");
+				return UtilText.parse(owner, "[npc.Name] имеет фетиш на покорность во время секса.");
 			}
 		}
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "being the submissive partner");
+			return getGenericFetishDesireDescription(target, desire, "быть покорным");
 		}
 		@Override
 		public String getAppliedFetishLevelEffectDescription(GameCharacter character) {
-			return getAppliedFetishAttackLevelEffectDescription(character, this, "submissive tease");
+			return getAppliedFetishAttackLevelEffectDescription(character, this, "дразнение покорностю");
 		}
 		@Override
 		public CorruptionLevel getAssociatedCorruptionLevel() {
@@ -1431,38 +1431,38 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_INCEST = new AbstractFetish(60,
-			"incest",
-			"incestuous sex",
-			"fetish_incest",
+			"инцест",
+			"родственный секс",
+			"фетиш_инцест",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			null,
 			Util.newArrayListOfValues(
-					"Разблокирует <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>incest tease</span>"),
+					"Разблокирует <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>дразнение инцестом</span>"),
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for having sex with their relatives.";
+				return "Этот фетиш относится к желанию человека иметь секс со своими родственниками.";
 				
 			} else if(owner.isPlayer()) {
 				if(owner.getSexualOrientation()==SexualOrientation.ANDROPHILIC) {
-					return "You always did have the hots for your male cousin...";
+					return "Вам всегда западал в душу двоюродный брат...";
 				} else {
-					return "You always did have the hots for your aunt Lily, as well as your female cousin...";
+					return "Вам всегда западала в душу ваша тетя Лили, а так же ваша двоюродная сестра...";
 				}
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] has a fetish for incestuous sex.");
+				return UtilText.parse(owner, "[npc.Name] имеет фетиш на инцест.");
 			}
 		}
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "having sex with your relatives");
+			return getGenericFetishDesireDescription(target, desire, "иметь секс со своими родстенниками");
 		}
 		@Override
 		public String getAppliedFetishLevelEffectDescription(GameCharacter character) {
-			return getAppliedFetishAttackLevelEffectDescription(character, this, "incest tease");
+			return getAppliedFetishAttackLevelEffectDescription(character, this, "дразнение инцестом");
 		}
 		@Override
 		public CorruptionLevel getAssociatedCorruptionLevel() {
@@ -1473,38 +1473,38 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_SADIST = new AbstractFetish(60,
-			"sadist",
-			"inflicting pain",
-			"fetish_sadist",
+			"садист",
+			"причинять боль",
+			"фетиш_садист",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_PHYSICAL, 5)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Разблокирует)] sadistic [style.colourSex(sex actions)]",
-					"[style.boldExcellent(+5%)] to all [style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+" damage)]",
-					"10% of all inflicted",
-					"[style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+" damage)] is dealt",
-					"back to you as <span style='color:"+ Attribute.DAMAGE_LUST.getColour().toWebHexString()+ ";'>lust damage</span>",
-					"[style.boldArcane(+1 essence)] when critically",
-					" hitting enemies"),
+					"[style.boldExcellent(Разблокирует)] садисткие [style.colourSex(секс действия)]",
+					"[style.boldExcellent(+5%)] для всех [style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+" урона)]",
+					"10% всего причененного",
+					"[style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+" урона)] вернется",
+					"назад как <span style='color:"+ Attribute.DAMAGE_LUST.getColour().toWebHexString()+ ";'>похоть</span>",
+					"[style.boldArcane(+1 эссенция)] при критах",
+					" поражающих врагов"),
 			null) {
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for abusing others.";
+				return "Этот фетиш относится к желанию человека мучить других.";
 				
 			} else if(owner.isPlayer()) {
-				return "You love dishing out pain and humiliation, and causing others to suffer sends you absolutely wild with lust.";
+				return "Боль и унижение ваша пища и вино, видеть вызванные вами страдания невероятно возбуждающе.";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] has a fetish for dealing out pain and humiliation.");
+				return UtilText.parse(owner, "[npc.Name] имет фетиш на причинение боли и унижения.");
 			}
 		}
 		
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "inflicting pain and humiliation on others");
+			return getGenericFetishDesireDescription(target, desire, "причинять боль и унижение другим");
 		}
 		
 		@Override
@@ -1519,35 +1519,35 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_MASOCHIST = new AbstractFetish(60,
-			"masochist",
-			"pain and humiliation",
-			"fetish_masochist",
+			"мазохизм",
+			"боль и унижение",
+			"фетиш_мазохизм",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			Util.newHashMapOfValues(new Value<>(Attribute.RESISTANCE_PHYSICAL, 2)),
 			Util.newArrayListOfValues(
-					"[style.boldSex(Enjoys)] [style.boldTerrible(painful sex actions)]",
-					"25% of all incoming",
-					"<span style='color:"+ PresetColour.ATTRIBUTE_HEALTH.toWebHexString()+ ";'>"+Attribute.HEALTH_MAXIMUM.getName()+" damage</span>"+ " is converted",
-					" to <span style='color:"+ Attribute.DAMAGE_LUST.getColour().toWebHexString()+ ";'>lust damage</span>",
-					"[style.boldArcane(+1 essence)] when you're",
-					" critically hit"),
+					"[style.boldSex(Наслаждайтесь)] [style.boldTerrible(болезненными секс действиями)]",
+					"25% всего поступающего урона",
+					"<span style='color:"+ PresetColour.ATTRIBUTE_HEALTH.toWebHexString()+ ";'>"+Attribute.HEALTH_MAXIMUM.getName()+" урон</span>"+ " преобразуется",
+					" в <span style='color:"+ Attribute.DAMAGE_LUST.getColour().toWebHexString()+ ";'>похоть</span>",
+					"[style.boldArcane(+1 эссенция)] во время",
+					" критических ударов"),
 			null) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for being abused.";
+				return "Этот фетиш относится к желанию человека быть униженным.";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] [npc.verb(get)] extremely turned on when subjected to painful or humiliating experiences."
-					+ " [npc.She] [npc.verb(find)] [npc.herself] getting aroused whenever [npc.her] orifices are stretched out or penetrated too deeply.");
+				return UtilText.parse(owner, "[npc.Name] [npc.verb(get)] экстремально возбужденными когда испытавают болезненный или унижающий опыт."
+					+ " [npc.She] [npc.verb(find)] [npc.herself] возбуждается когда [npc.her] отверстия растягиваются или проникаются слишком глубоко.");
 			}
 		}
 
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "pain and humiliation");
+			return getGenericFetishDesireDescription(target, desire, "боль и унижение");
 		}
 		
 		@Override
@@ -1559,32 +1559,32 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_NON_CON_DOM = new AbstractFetish(60,
-			"non-consent",
-			"raping",
-			"fetish_noncon_dom",
+			"без согласия",
+			"насиловать",
+			"фетиш_безсогл_дом",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			null,
 			Util.newArrayListOfValues(
-					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Increases</span> <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>arousal gain when partner is resisting sex</span>"),
+					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Увеличивает</span> <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>возбуждение когда партнер сопротивляется сексу</span>"),
 			null) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for raping others.";
+				return "Этот фетиш относится к желанию человека насиловать других.";
 				
 			} else if(owner.isPlayer()) {
-				return "You love nothing more than when someone's being forced, against their will, to have sex. The more they're struggling, the more you get turned on...";
+				return "Вы любите принуждать других иметь секс против их воли. Чем больше они сопротивляются, тем больше вы возбуждаетесь...";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] has a fetish for non-consensual encounters. The more [npc.her] victim struggles, the more [npc.she] gets turned on...");
+				return UtilText.parse(owner, "[npc.Name] имеет фетиш на изнасилование. Чем больше [npc.her] жертвы сопростивляются, тем больше [npc.she] возбуждается...");
 			}
 		}
 
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "having sex with an unwilling partner");
+			return getGenericFetishDesireDescription(target, desire, "иметь секс без согласия партнера");
 		}
 		
 		@Override
@@ -1603,32 +1603,32 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_NON_CON_SUB = new AbstractFetish(60,
-			"unwilling fuck-toy",
-			"being raped",
-			"fetish_noncon_sub",
+			"безвольная секс игрушка",
+			"быть изнасилованой",
+			"фетиш_безсогл_подчинение",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			null,
 			Util.newArrayListOfValues(
-					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Increases</span> <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>arousal gain when you are resisting sex</span>"),
+					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Увеличивает</span> <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>возбуждение когда вы сопротивляетесь сексу</span>"),
 			null) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for being raped by others.";
+				return "Этот фетиш относится к желанию человека быть изнасилованным другими.";
 				
 			} else if(owner.isPlayer()) {
-				return "You love nothing more than when you're forced, against your will, to have sex with someone. Struggling and pleading to be released turns you on like nothing else...";
+				return "Вы любите когда вас принуждают иметь секс против вашей воли. Сопротивление и мольбы освобождают похоть как ничто другое...";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] has a fetish for being the victim in non-consensual encounters. Struggling and pleading to be released turns [npc.herHim] on like nothing else...");
+				return UtilText.parse(owner, "[npc.Name] имеет фетиш быть жертвой во время секса. Сопротивление и мольбы освобождают [npc.herHim] похоть как ничто другое...");
 			}
 		}
 
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "being forced to have sex against your will");
+			return getGenericFetishDesireDescription(target, desire, "иметь секс против вашей воли");
 		}
 		
 		@Override
@@ -1644,27 +1644,27 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_BONDAGE_APPLIER = new AbstractFetish(60,
-			"bondage applier",
-			"applying bondage",
-			"fetish_bondage_applier",
+			"применитель бондажа",
+			"применять бондаж",
+			"фетиш_бондаж_применять",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			Util.newArrayListOfValues(PresetColour.CLOTHING_BLACK_STEEL, PresetColour.CLOTHING_GOLD, PresetColour.CLOTHING_GOLD),
 			null,
 			Util.newArrayListOfValues(
-					"[style.colourGood(Removes essence cost for sealing, servitude, and enslavement enchantments)]"),
+					"[style.colourGood(Убирает стоимость для запечатывая, принуждения и порабощающих печатей.)]"),
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for locking others into sealed clothing.";
+				return "Этот фетиш относится к желанию человека одевать других в запечатанную одежду.";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] [npc.verb(love)] binding people up in clothing that they're unable to remove, and then taking advantage of their immobility...");
+				return UtilText.parse(owner, "[npc.Name] [npc.verb(love)] запечатывать одежду людей, чтобы они не могли ее снять и пользуется преимуществом их неподвижности...");
 			}
 		}
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "others wearing sealed clothing");
+			return getGenericFetishDesireDescription(target, desire, "другие носят запечатанную одежду");
 		}
 		@Override
 		public CorruptionLevel getAssociatedCorruptionLevel() {
@@ -1679,28 +1679,28 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_BONDAGE_VICTIM = new AbstractFetish(60,
-			"bondage bitch",
-			"being bound",
-			"fetish_bondage_victim",
+			"бондаж сучка",
+			"быть скованной",
+			"фетиш_бондаж_жертва",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			Util.newArrayListOfValues(PresetColour.CLOTHING_BLACK_STEEL, PresetColour.CLOTHING_GOLD, PresetColour.CLOTHING_GOLD),
 			null,
 			Util.newArrayListOfValues(
-					"[style.colourTerrible(5x cost)] to [style.colourSeal(unseal)] self-worn clothing",
-					"BDSM set bonus applies [style.colourGood(positive effects)]"),
+					"[style.colourTerrible(5x стоимость)] для [style.colourSeal(распечатывания)] носимой одежды",
+					"БДСМ бонус набора накладывает [style.colourGood(позитивные эффекты)]"),
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for wearing sealed clothing.";
+				return "Этот фетиш относится к желанию человека в запечатанной одежде.";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] [npc.verb(love)] being bound up in clothing that [npc.sheIs] unable to remove, leaving [npc.herHim] at the mercy of others...");
+				return UtilText.parse(owner, "[npc.Name] [npc.verb(love)] быть запечатанным в одежде которую [npc.sheIs] не может снять, оставляя [npc.herHim] на милосердие другиъ...");
 			}
 		}
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "wearing sealed clothing");
+			return getGenericFetishDesireDescription(target, desire, "носить запечатанную одежду");
 		}
 		@Override
 		public CorruptionLevel getAssociatedCorruptionLevel() {
@@ -1712,41 +1712,41 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_EXHIBITIONIST = new AbstractFetish(60,
-			"exhibitionist",
-			"exposing themself",
-			"fetish_exhibitionist",
+			"эксгибиционизм",
+			"обнажить себя",
+			"фетиш_эксгибиционизм",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			null,
 			Util.newArrayListOfValues(
-					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Replaces</span> <span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>exposed status effects</span>"
-										+" <span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>with beneficial versions</span>"),
+					"<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Заменяет</span> <span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>статус обнажения effects</span>"
+										+" <span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>более выгодным вариантом</span>"),
 			null) {
 
 		@Override
 		public String getShortDescriptor(GameCharacter target) {
 			if(target==null) {
-				return "exposing themself";
+				return "обнажать себя";
 			}
-			return UtilText.parse(target, "exposing [npc.herself]");
+			return UtilText.parse(target, "обнажает [npc.herself]");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for showing off their body and having others watch them having sex.";
+				return "Этот фетиш относится к желанию человека показывать других и иметь наблюдателей во время секса.";
 				
 			} else if(owner.isPlayer()) {
-				return "You love showing off your body, and the act of parading your naked form in public places turns you on like nothing else.";
+				return "Вы любите показывать свое тело, посещение мест будучи без одежды невероятно возбуждает вас..";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] has a fetish for exhibiting [npc.her] body.");
+				return UtilText.parse(owner, "[npc.Name] имеет фетиш на обнажение [npc.her] тела.");
 			}
 		}
 
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "exposing yourself to others");
+			return getGenericFetishDesireDescription(target, desire, "обнажать себя для других");
 		}
 		
 		@Override
@@ -1759,31 +1759,31 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_VOYEURIST = new AbstractFetish(60,
-			"voyeurist",
-			"watching others",
-			"fetish_voyeurist",
+			"вуайеризм",
+			"наблюдать за другими",
+			"фетиш_вуайерист",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			null,
 			Util.newArrayListOfValues(
-					"<span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>Arousal boost</span> while watching sex scenes"),
+					"<span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>Бонус к возбуждению</span> во время наблюдения секс сцен"),
 			null) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for watching others having sex.";
+				return "Этот фетиш относится к желанию человека смотреть как другие занимаются сексом.";
 				
 			} else if(owner.isPlayer()) {
-				return "You love watching other people... Especially while they're doing something naughty...";
+				return "Вы любите наблюдать за людьми... Особенно когда они шалят...";
 			} else {
-				return UtilText.parse(owner, "[npc.Name] has a fetish for watching other people...");
+				return UtilText.parse(owner, "[npc.Name] имеет фетиш наблюдения за людьми...");
 			}
 		}
 
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-			return getGenericFetishDesireDescription(target, desire, "watching others");
+			return getGenericFetishDesireDescription(target, desire, "наблюдать других");
 		}
 		
 		@Override
@@ -1799,64 +1799,64 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_BIMBO = new AbstractFetish(60,
-			"bimbo",
-			"being a bimbo",
+			"бимбо",
+			"быть бимбо",
 			null,
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_LUST, 10)),
-			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>Talk like a bimbo</span>"),
+			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>Разговаривать как бимбо</span>"),
 			null) {
 		
 		@Override
 		public String getName(GameCharacter owner) {
 			if(owner==null ||owner.isFeminine()) {
-				return "bimbo";
+				return "бимбо";
 			} else {
-				return "bro";
+				return "бро";
 			}
 		}
 		
 		@Override
 		public String getShortDescriptor(GameCharacter target) {
 			if (target==null ||target.isFeminine()) {
-				return "being a bimbo";
+				return "быть бимбо";
 			} else {
-				return "being a bro";
+				return "быть бро";
 			}
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for acting like a bimbo.";
+				return "Этот фетиш относится к желанию человека действовать как бимбо.";
 				
 			} else if(owner.isFeminine()) {
 				return UtilText.parse(owner,
-						"[npc.NameIsFull] obsessed with the idea of acting like a complete bimbo."
-						+ " It's gotten to the point where no matter how intelligent [npc.she] might actually be, [npc.she] can't imagine [npc.herself] as anything other than a ditzy airhead.");
+						"[npc.NameIsFull] одержима идеей дейстовать как полная бимбо."
+						+ " Дошло до того что не важно насколько интеллектуальной [npc.she] может быть на самом деле, [npc.she] не может представить [npc.herself] никак кроме пустоголовой глупышки.");
 			} else {
 				return UtilText.parse(owner,
-						"[npc.NameIsFull] obsessed with the idea of acting like a dopey surfer bro."
-						+ " It's gotten to the point where no matter how intelligent [npc.she] might actually be, [npc.she] can't imagine [npc.herself] as anything other than an airheaded meathead.");
+						"[npc.NameIsFull] одержим идеей вести себя как глупый бро серфер."
+						+ " Дошло до того что не важно насколько интеллектуальным [npc.she] может быть на самом деле, [npc.she] не может представить [npc.herself] никак кроме легкомысленного болвана.");
 			}
 		}
 
 		@Override
 		public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
 			if(target==null || target.isFeminine()) {
-				return getGenericFetishDesireDescription(target, desire, "acting like a bimbo");
+				return getGenericFetishDesireDescription(target, desire, "действовать как бимбо");
 			} else {
-				return getGenericFetishDesireDescription(target, desire, "acting like a bro");
+				return getGenericFetishDesireDescription(target, desire, "действовать как бро");
 			}
 		}
 
 		@Override
 		public List<String> getExtraEffects(GameCharacter owner) {
 			if(owner==null || owner.isFeminine()) {
-				return Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>Talk like a bimbo</span>");
+				return Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>Говорить как бимбо</span>");
 			} else {
-				return Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>Talk like a bro</span>");
+				return Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>Говорить как бро</span>");
 			}
 		}
 		
