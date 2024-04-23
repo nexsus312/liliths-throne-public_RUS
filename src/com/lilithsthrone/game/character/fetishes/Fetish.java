@@ -1881,22 +1881,22 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_CROSS_DRESSER = new AbstractFetish(60,
-			"cross dressing",
-			"cross dressing",
-			"fetish_cross_dresser",
+			"переодевание",
+			"переодевание",
+			"фетиш_переодевание",
 			FetishExperience.BASE_EXPERIENCE_GAIN,
 			PresetColour.GENERIC_ARCANE,
 			null,
-			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Immune to clothing femininity status effects</span>"),
+			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Иммунитет к женственному статусу одежды</span>"),
 			null) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека for wearing clothes that are either too feminine or too masculine for them.";
+				return "Этот фетиш относится к желанию человека носить одежду которая слишком женственная или мужественная для них.";
 				
 			} else {
-				return UtilText.parse(owner, "[npc.Name] [npc.verb(love)] wearing all manner of different clothing, and [npc.she] [npc.do]n't care if it's considered by others to be too masculine or feminine for [npc.her] body.");
+				return UtilText.parse(owner, "[npc.Name] [npc.verb(love)] носить всевозможные разнообразные одежды и [npc.she] не важно не важно что другие считают что она слишком женственна илим межественная для их [npc.her] тела.");
 			}
 		}
 
