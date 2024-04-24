@@ -4,6 +4,7 @@ package com.lilithsthrone.world.population;
  * @since 0.3.7.7
  * @version 0.3.7.7
  * @author Innoxia
+ * Без Перевода
  */
 public abstract class AbstractPopulationType {
 
