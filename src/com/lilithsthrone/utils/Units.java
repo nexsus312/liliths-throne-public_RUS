@@ -28,8 +28,11 @@ public enum Units {
     public final int MIN_PRECISION = 0;
     public final int MAX_PRECISION = 2;
 
-    public final List<String> imperialCountries = Arrays.asList("US", "LR", "MM");
-    public final List<String> twelveHourCountries = Arrays.asList("US", "UK", "PH", "CA", "AU", "NZ", "IN", "EG", "SA", "CO", "PK", "MY", "SG", "ZA");
+// Список стран, использующих имперскую систему мер
+public final List<String> imperialCountries = Arrays.asList("США", "Либерия", "Мьянма");
+
+// Список стран, использующих 12-часовой формат времени
+public final List<String> twelveHourCountries = Arrays.asList("США", "Великобритания", "Филиппины", "Канада", "Австралия", "Новая Зеландия", "Индия", "Египет", "Саудовская Аравия", "Колумбия", "Пакистан", "Малайзия", "Сингапур", "Южная Африка");
 
     DateTimeFormatter shortDate;
     DateTimeFormatter longDate;
@@ -42,7 +45,7 @@ public enum Units {
         defaultLocale = Locale.getDefault();
 
         if (Main.getProperties() == null) {
-            new NullPointerException("Unit formatters initialized before properties. Assuming auto locale.").printStackTrace();
+            new NullPointerException("Инициализация форматировщиков единиц измерения произошла до инициализации свойств. Предполагается автоматическая локаль.").printStackTrace();
             updateFormats(true);
         } else {
             updateSettings();
@@ -289,26 +292,26 @@ public enum Units {
             case LONG:
                 if(Math.floor(inches) == 0 && vType != ValueType.PRECISE) {
                     output.setLength(0);
-                    return output.append("less than ")
-                            .append(vType == ValueType.TEXT ? "one" : "1")
+                    return output.append("меньше чем ")
+                            .append(vType == ValueType.TEXT ? "один" : "1")
                             .append(" inch").toString();
                 }
                 
                 output.append(" ");
                 if(Math.abs(usedValue) >= 1 + roundingFactor/2
                 		|| usedValue == 0) {
-                	output.append(wrap ? "feet" : "inches");
+                	output.append(wrap ? "фут" : "дюймов");
                 } else {
-                	output.append(wrap ? "foot" : "inch");
+                	output.append(wrap ? "фут" : "дюйм");
                 }
                 break;
             case LONG_SINGULAR:
-                output.append("-").append(wrap ? "foot" : "inch");
+                output.append("-").append(wrap ? "фут" : "дюйм");
         }
 
         // Append second unit for long or short notation and if neither value is 0
         if (both) {
-            if (uType == UnitType.LONG) output.append(" and ");
+            if (uType == UnitType.LONG) output.append(" и ");
             if (uType == UnitType.LONG_SINGULAR) output.append("-");
             remainingInches = Math.abs(roundTo(remainingInches, roundingFactor));
             output.append(value(remainingInches, vType, true));
@@ -317,7 +320,7 @@ public enum Units {
                     output.append(INCH_SYMBOL);
                     break;
                 case LONG:
-                    output.append(" ").append(remainingInches >= 1 + roundingFactor/2 ? "inches" : "inch");
+                    output.append(" ").append(remainingInches >= 1 + roundingFactor/2 ? "дюймов" : "дюйм");
                     break;
                 case LONG_SINGULAR:
                     break;
@@ -336,7 +339,7 @@ public enum Units {
      */
     public static String sizeAsMetric(double cm, ValueType vType, UnitType uType) {
         double m = cm / 100;
-        return valueWithUnit(cm, "cm", "centimetre"/*+(cm!=1?"s":"")*/, m, "m", "metre"/*+(cm!=100?"s":"")*/, vType, uType, false);
+        return valueWithUnit(cm, "см", "сантиметры"/*+(cm!=1?"s":"")*/, m, "м", "метры"/*+(cm!=100?"s":"")*/, vType, uType, false);
     }
 
     /**
@@ -391,7 +394,7 @@ public enum Units {
         double oz = ml / 28.4131;
 
         double gal = oz / 160;
-        return valueWithUnit(oz, "oz", "ounce", gal, "gal", "gallon", vType, uType, true);
+        return valueWithUnit(oz, "ун", "унция", gal, "гал", "галлон", vType, uType, true);
     }
 
     /**
@@ -403,7 +406,7 @@ public enum Units {
      */
     public static String fluidAsMetric(double ml, ValueType vType, UnitType uType) {
         double l = ml / 1000;
-        return valueWithUnit(ml, "mL", "millilitre", l, "L", "litre", vType, uType, false); // Innoxia's note: I usually prefer the lowercase l for ml and l, but LT's font makes it look bad.
+        return valueWithUnit(ml, "мЛ", "миллилитры", l, "Л", "Литры", vType, uType, false); // Innoxia's note: I usually prefer the lowercase l for ml and l, but LT's font makes it look bad.
     }
 
     /**
@@ -447,7 +450,7 @@ public enum Units {
         double oz = grams / 28.34952;
 
         double lb = oz / 16;
-        return valueWithUnit(oz, "oz", "ounce", lb, "lb", "pound", vType, uType, true);
+        return valueWithUnit(oz, "ун", "унции", lb, "фунт", "фунты", vType, uType, true);
     }
 
     /**
@@ -459,7 +462,7 @@ public enum Units {
      */
     public static String weightAsMetric(double grams, ValueType vType, UnitType uType) {
         double kg = grams / 1000;
-        return valueWithUnit(grams, "g", "gram", kg, "kg", "kilogram", vType, uType, false);
+        return valueWithUnit(grams, "г", "грамм", kg, "кг", "килограмм", vType, uType, false);
     }
 
     private static String value(double value, ValueType vType, boolean useQuarters) {
@@ -503,8 +506,8 @@ public enum Units {
             case LONG:
                 if (Math.floor(value) == 0 && vType != ValueType.PRECISE) {
                     output.setLength(0);
-                    return output.append("less than ")
-                            .append(vType == ValueType.TEXT ? "one " : "1 ")
+                    return output.append("меньше чем ")
+                            .append(vType == ValueType.TEXT ? "один " : "1 ")
                             .append(unit).toString();
                 }
 
@@ -543,7 +546,7 @@ public enum Units {
         }
     }
 
-    private final static String[] suffixes = new String[] { "th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th" };
+    private final static String[] suffixes = new String[] { "ое", "ый", "ой", "ий", "ое", "ое", "ое", "ое", "ое", "ое" };
     /**
      * Selects the correct ordinal for a given value. Only the ordinal itself is returned.
      * @param value The number to select an ordinal for
@@ -560,23 +563,23 @@ public enum Units {
         }
     }
 
-    public static String getMonthName(int month) {
-        switch (month) {
-            case 1: return "January";
-            case 2: return "February";
-            case 3: return "March";
-            case 4: return "April";
-            case 5: return "May";
-            case 6: return "June";
-            case 7: return "July";
-            case 8: return "August";
-            case 9: return "September";
-            case 10: return "October";
-            case 11: return "November";
-            case 12: return "December";
-        }
-        return "";
+public static String getMonthName(int month) {
+    switch (month) {
+        case 1: return "Январь";
+        case 2: return "Февраль";
+        case 3: return "Март";
+        case 4: return "Апрель";
+        case 5: return "Май";
+        case 6: return "Июнь";
+        case 7: return "Июль";
+        case 8: return "Август";
+        case 9: return "Сентябрь";
+        case 10: return "Октябрь";
+        case 11: return "Ноябрь";
+        case 12: return "Декабрь";
     }
+    return "";
+}
 
     /**
      * Rounds a given number to a given amount of fractional places.
@@ -585,7 +588,7 @@ public enum Units {
      * @return A correctly rounded float
      */
     public static float round(double value, int places) {
-        if (places < 0) throw new IllegalArgumentException("Amount of fractional places cannot be less than 0.");
+        if (places < 0) throw new IllegalArgumentException("Количество дробных мест не может быть меньше, чем 0.");
         return BigDecimal.valueOf(value).setScale(places, RoundingMode.HALF_UP).floatValue();
     }
 
