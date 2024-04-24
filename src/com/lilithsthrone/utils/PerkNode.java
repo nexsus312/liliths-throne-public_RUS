@@ -8,6 +8,7 @@ import com.lilithsthrone.game.character.effects.TreeEntry;
  * @since 0.3.4
  * @version 0.3.4
  * @author Innoxia
+ * Перевод не нужен
  */
 public class PerkNode {
 	private PerkNode parent;
