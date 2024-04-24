@@ -6,15 +6,15 @@ package com.lilithsthrone.world;
  * @author Innoxia
  */
 public enum Bearing {
-	NORTH("north"),
-	NORTH_EAST("north-east"),
-	EAST("east"),
-	SOUTH_EAST("south-east"),
-	SOUTH("south"),
-	SOUTH_WEST("south-west"),
-	WEST("west"),
-	NORTH_WEST("north-west"),
-	RANDOM("random");
+	NORTH("север"),
+	NORTH_EAST("северо-восток"),
+	EAST("восток"),
+	SOUTH_EAST("юго-восток"),
+	SOUTH("юг"),
+	SOUTH_WEST("юго-запад"),
+	WEST("запад"),
+	NORTH_WEST("северо-запад"),
+	RANDOM("случайно");
 	
 	private String name;
 	
