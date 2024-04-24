@@ -15,6 +15,7 @@ import com.lilithsthrone.utils.colours.PresetColour;
  * @since 0.2.12
  * @version 0.3.7.7
  * @author Innoxia
+ * Перевод не требуется
  */
 public class SvgUtil {
 
