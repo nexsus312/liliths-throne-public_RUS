@@ -7,6 +7,7 @@ import org.w3c.dom.Element;
  * @since 0.1.87
  * @version 0.1.87
  * @author Innoxia
+ * Нечего переводить
  */
 public interface XMLSaving {
 	
