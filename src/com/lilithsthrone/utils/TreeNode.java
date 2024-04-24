@@ -7,6 +7,7 @@ import java.util.List;
  * @since 0.1.99
  * @version 0.1.99
  * @author Innoxia
+ * Переводить ненужно
  */
 public class TreeNode<T> {
 	
