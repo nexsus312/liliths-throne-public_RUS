@@ -9,6 +9,7 @@ import java.util.Set;
  * @author Cognitive Mist
  * @since 0.4.7.1
  * @version 0.4.7.1
+ * Перевод не требуется
  */
 public class NumberMap<K, V extends Number> extends AbstractMap<K, V> implements Map<K, V> {
 	private final Map<K, V> map;
