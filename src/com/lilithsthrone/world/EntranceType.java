@@ -4,6 +4,7 @@ package com.lilithsthrone.world;
  * @since 0.1.0
  * @version 0.1.75
  * @author Innoxia
+ * Без перевода
  */
 public enum EntranceType {
 	RANDOM,
