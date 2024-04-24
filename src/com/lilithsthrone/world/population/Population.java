@@ -17,6 +17,7 @@ import com.lilithsthrone.world.places.PlaceType;
  * @since 0.2.12
  * @version 0.4
  * @author Innoxia
+ * Без перевода
  */
 public class Population {
 	
