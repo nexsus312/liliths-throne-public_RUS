@@ -4,6 +4,7 @@ package com.lilithsthrone.utils;
  * @since 0.1.0
  * @version 0.1.0
  * @author Innoxia
+ * Перевод не требуется
  */
 public class Node {
 	private Node parent;
