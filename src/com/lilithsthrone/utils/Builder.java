@@ -6,6 +6,7 @@ package com.lilithsthrone.utils;
  * @since 0.1.0
  * @version 0.1.0
  * @author Innoxia
+ * Без перевода
  */
 public interface Builder<T> {
 	public T build();
