@@ -6,6 +6,7 @@ package com.lilithsthrone.utils.time;
  * @since 0.3.5.5
  * @version 0.3.5.5
  * @author Innoxia
+ * Перевод не нужен
  */
 public enum SolarElevationAngle {
 
