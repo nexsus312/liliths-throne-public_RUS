@@ -9,6 +9,7 @@ import java.time.temporal.ChronoField;
  * @since 0.3.5.5
  * @version 0.3.5.5
  * @author Innoxia
+ * Перевод не требуется
  */
 public class DateAndTime {
 
