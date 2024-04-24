@@ -6,6 +6,7 @@ import java.util.Stack;
  * @since 0.2.?
  * @version 0.3.1
  * @author Innoxia
+ * Перевод не требуется
  */
 public class SizedStack<T> extends Stack<T> {
 	private static final long serialVersionUID = 1L;
