@@ -4,6 +4,7 @@ package com.lilithsthrone.world;
  * @since 0.3.5
  * @version 0.3.5
  * @author Innoxia
+ * Без перевода
  */
 public enum TeleportPermissions {
 
