@@ -12,15 +12,15 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum DayPeriod {
 	
-	DAY("day-time", PresetColour.BASE_BLUE_LIGHT),
+	DAY("дневное время", PresetColour.BASE_BLUE_LIGHT),
 	
-	CIVIL_TWILIGHT("civil twilight", PresetColour.BASE_PURPLE_LIGHT),
+	CIVIL_TWILIGHT("гражданские сумерки", PresetColour.BASE_PURPLE_LIGHT),
 	
-	NAUTICAL_TWILIGHT("nautical twilight", PresetColour.BASE_PURPLE),
+	NAUTICAL_TWILIGHT("морские сумерки", PresetColour.BASE_PURPLE),
 	
-	ASTRONOMICAL_TWILIGHT("astronomical twilight", PresetColour.BASE_BLUE_STEEL),
+	ASTRONOMICAL_TWILIGHT("астрономические сумерки", PresetColour.BASE_BLUE_STEEL),
 	
-	NIGHT("night-time", PresetColour.BASE_BLUE_DARK);
+	NIGHT("ночное время", PresetColour.BASE_BLUE_DARK);
 	
 	
 	private String name;
