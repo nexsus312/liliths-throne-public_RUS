@@ -21,13 +21,13 @@ public class PresetColour {
 	
 	// This class and BaseColour are beyond saving x_x
 	public static Colour BASE_FREEDOM = new Colour(false, BaseColour.RED,
-			"<span style='color:#EA5D76;'>f</span>"
-			+ "<span style='color:#FFFFFF;'>r</span>"
-			+ "<span style='color:#0090BF;'>e</span>"
-			+ "<span style='color:#EA5D76;'>e</span>"
-			+ "<span style='color:#FFFFFF;'>d</span>"
-			+ "<span style='color:#0090BF;'>o</span>"
-			+ "<span style='color:#EA5D76;'>m</span>", 
+			"<span style='color:#EA5D76;'>С</span>"
+			+ "<span style='color:#FFFFFF;'>В</span>"
+			+ "<span style='color:#0090BF;'>О</span>"
+			+ "<span style='color:#EA5D76;'>Б</span>"
+			+ "<span style='color:#FFFFFF;'>О</span>"
+			+ "<span style='color:#0090BF;'>Д</span>"
+			+ "<span style='color:#EA5D76;'>А</span>", 
 			Util.newArrayListOfValues("freedom", "america", "usa")) {
 		@Override
 		public List<String> getRainbowColours() {
@@ -38,61 +38,61 @@ public class PresetColour {
 		}
 	};
 	
-	public static Colour BASE_WHITE = new Colour(false, BaseColour.WHITE, "white", Util.newArrayListOfValues("white")) {};
+	public static Colour BASE_WHITE = new Colour(false, BaseColour.WHITE, "белый", Util.newArrayListOfValues("white")) {};
 
-	public static Colour BASE_GREY_LIGHT = new Colour(false, BaseColour.GREY_LIGHT, "light grey", Util.newArrayListOfValues("lightGrey")) {};
-	public static Colour BASE_GREY = new Colour(false, BaseColour.GREY, "grey", Util.newArrayListOfValues("grey")) {};
-	public static Colour BASE_GREY_DARK = new Colour(false, BaseColour.GREY_DARK, "dark grey", Util.newArrayListOfValues("darkGrey", "greyDark")) {};
+	public static Colour BASE_GREY_LIGHT = new Colour(false, BaseColour.GREY_LIGHT, "светло-серый", Util.newArrayListOfValues("lightGrey")) {};
+	public static Colour BASE_GREY = new Colour(false, BaseColour.GREY, "серый", Util.newArrayListOfValues("grey")) {};
+	public static Colour BASE_GREY_DARK = new Colour(false, BaseColour.GREY_DARK, "темно-серый", Util.newArrayListOfValues("darkGrey", "greyDark")) {};
 	
-	public static Colour BASE_ROSE = new Colour(false, BaseColour.ROSE, "rose", Util.newArrayListOfValues("rose")) {};
-	public static Colour BASE_LILAC = new Colour(false, BaseColour.LILAC, "lilac", Util.newArrayListOfValues("lilac")) {};
-	public static Colour BASE_LILAC_LIGHT = new Colour(false, BaseColour.LILAC_LIGHT, "light lilac", Util.newArrayListOfValues("lightLilac", "lilacLight")) {};
-	public static Colour BASE_INDIGO = new Colour(false, BaseColour.INDIGO, "indigo", Util.newArrayListOfValues("indigo")) {};
-	public static Colour BASE_PURPLE_DARK = new Colour(false, BaseColour.PURPLE_DARK, "violet", Util.newArrayListOfValues("darkPurple", "purpleDark", "violet")) {};
-	public static Colour BASE_PURPLE = new Colour(false, BaseColour.PURPLE, "purple", Util.newArrayListOfValues("purple")) {};
-	public static Colour BASE_PURPLE_LIGHT = new Colour(false, BaseColour.PURPLE_LIGHT, "light purple", Util.newArrayListOfValues("lightPurple", "purpleLight")) {};
+	public static Colour BASE_ROSE = new Colour(false, BaseColour.ROSE, "розовый", Util.newArrayListOfValues("rose")) {};
+	public static Colour BASE_LILAC = new Colour(false, BaseColour.LILAC, "сиреневый", Util.newArrayListOfValues("lilac")) {};
+	public static Colour BASE_LILAC_LIGHT = new Colour(false, BaseColour.LILAC_LIGHT, "светло-сиреневый", Util.newArrayListOfValues("lightLilac", "lilacLight")) {};
+	public static Colour BASE_INDIGO = new Colour(false, BaseColour.INDIGO, "индиго", Util.newArrayListOfValues("indigo")) {};
+	public static Colour BASE_PURPLE_DARK = new Colour(false, BaseColour.PURPLE_DARK, "фиолетовый", Util.newArrayListOfValues("darkPurple", "purpleDark", "violet")) {};
+	public static Colour BASE_PURPLE = new Colour(false, BaseColour.PURPLE, "пурпурный", Util.newArrayListOfValues("purple")) {};
+	public static Colour BASE_PURPLE_LIGHT = new Colour(false, BaseColour.PURPLE_LIGHT, "светло-пурпурный", Util.newArrayListOfValues("lightPurple", "purpleLight")) {};
 	
-	public static Colour BASE_PINK_DEEP = new Colour(false, BaseColour.PINK_DEEP, "deep pink", Util.newArrayListOfValues("deepPink", "darkPink", "pinkDeep", "pinkDark")) {};
-	public static Colour BASE_PINK_SALMON = new Colour(false, BaseColour.PINK_SALMON, "salmon-pink", Util.newArrayListOfValues("pinkSalmon", "salmonPink")) {};
-	public static Colour BASE_PINK = new Colour(false, BaseColour.PINK, "pink", Util.newArrayListOfValues("pink")) {};
-	public static Colour BASE_PINK_LIGHT = new Colour(false, BaseColour.PINK_LIGHT, "light pink", Util.newArrayListOfValues("lightPink", "pinkLight")) {};
+	public static Colour BASE_PINK_DEEP = new Colour(false, BaseColour.PINK_DEEP, "насыщенный розовый", Util.newArrayListOfValues("deepPink", "darkPink", "pinkDeep", "pinkDark")) {};
+	public static Colour BASE_PINK_SALMON = new Colour(false, BaseColour.PINK_SALMON, "лососево-розовый", Util.newArrayListOfValues("pinkSalmon", "salmonPink")) {};
+	public static Colour BASE_PINK = new Colour(false, BaseColour.PINK, "розовый", Util.newArrayListOfValues("pink")) {};
+	public static Colour BASE_PINK_LIGHT = new Colour(false, BaseColour.PINK_LIGHT, "светло-розовый", Util.newArrayListOfValues("lightPink", "pinkLight")) {};
 		
-	public static Colour BASE_MAGENTA = new Colour(false, BaseColour.MAGENTA, "magenta", Util.newArrayListOfValues("magenta")) {};
-	public static Colour BASE_CRIMSON = new Colour(false, BaseColour.CRIMSON, "crimson", Util.newArrayListOfValues("crimson")) {};
-	public static Colour BASE_RED_DARK = new Colour(false, BaseColour.RED_DARK, "dark red", Util.newArrayListOfValues("darkRed", "redDark")) {};
-	public static Colour BASE_RED = new Colour(false, BaseColour.RED, "red", Util.newArrayListOfValues("red")) {};
-	public static Colour BASE_RED_LIGHT = new Colour(false, BaseColour.RED_LIGHT, "light red", Util.newArrayListOfValues("lightRed", "redLight")) {};
+	public static Colour BASE_MAGENTA = new Colour(false, BaseColour.MAGENTA, "маджента", Util.newArrayListOfValues("magenta")) {};
+	public static Colour BASE_CRIMSON = new Colour(false, BaseColour.CRIMSON, "малиновый", Util.newArrayListOfValues("crimson")) {};
+	public static Colour BASE_RED_DARK = new Colour(false, BaseColour.RED_DARK, "темно-красный", Util.newArrayListOfValues("darkRed", "redDark")) {};
+	public static Colour BASE_RED = new Colour(false, BaseColour.RED, "красный", Util.newArrayListOfValues("red")) {};
+	public static Colour BASE_RED_LIGHT = new Colour(false, BaseColour.RED_LIGHT, "светло-красный", Util.newArrayListOfValues("lightRed", "redLight")) {};
 	
-	public static Colour BASE_TAN = new Colour(false, BaseColour.TAN, "tan", Util.newArrayListOfValues("tan")) {};
-	public static Colour BASE_BROWN = new Colour(false, BaseColour.BROWN, "brown", Util.newArrayListOfValues("brown")) {};
-	public static Colour BASE_BROWN_DARK = new Colour(false, BaseColour.BROWN_DARK, "dark brown", Util.newArrayListOfValues("darkBrown", "brownDark")) {};
-	public static Colour BASE_BROWN_LIGHT= new Colour(false, BaseColour.BROWN_LIGHT, "light brown", Util.newArrayListOfValues("lightBrown", "brownLight")) {};
+	public static Colour BASE_TAN = new Colour(false, BaseColour.TAN, "песочный", Util.newArrayListOfValues("tan")) {};
+	public static Colour BASE_BROWN = new Colour(false, BaseColour.BROWN, "коричневый", Util.newArrayListOfValues("brown")) {};
+	public static Colour BASE_BROWN_DARK = new Colour(false, BaseColour.BROWN_DARK, "темно-коричневый", Util.newArrayListOfValues("darkBrown", "brownDark")) {};
+	public static Colour BASE_BROWN_LIGHT= new Colour(false, BaseColour.BROWN_LIGHT, "светло-коричневый", Util.newArrayListOfValues("lightBrown", "brownLight")) {};
 
-	public static Colour BASE_COPPER = new Colour(false, BaseColour.COPPER, "copper", Util.newArrayListOfValues("baseCopper")) {};
-	public static Colour BASE_ORANGE = new Colour(false, BaseColour.ORANGE, "orange", Util.newArrayListOfValues("orange")) {};
-	public static Colour BASE_ORANGE_LIGHT = new Colour(false, BaseColour.ORANGE_LIGHT, "light orange", Util.newArrayListOfValues("orangeLight", "lightOrange")) {};
-	public static Colour BASE_GINGER = new Colour(false, BaseColour.GINGER, "ginger", Util.newArrayListOfValues("ginger")) {};
+	public static Colour BASE_COPPER = new Colour(false, BaseColour.COPPER, "медный", Util.newArrayListOfValues("baseCopper")) {};
+	public static Colour BASE_ORANGE = new Colour(false, BaseColour.ORANGE, "оранжевый", Util.newArrayListOfValues("orange")) {};
+	public static Colour BASE_ORANGE_LIGHT = new Colour(false, BaseColour.ORANGE_LIGHT, "светло-оранжевый", Util.newArrayListOfValues("orangeLight", "lightOrange")) {};
+	public static Colour BASE_GINGER = new Colour(false, BaseColour.GINGER, "рыжий", Util.newArrayListOfValues("ginger")) {};
 	
-	public static Colour BASE_GOLD = new Colour(false, BaseColour.GOLD, "gold", Util.newArrayListOfValues("gold")) {};
-	public static Colour BASE_YELLOW_PALE = new Colour(false, BaseColour.YELLOW_PALE, "pale yellow", Util.newArrayListOfValues("paleYellow", "yellowPale")) {};
-	public static Colour BASE_YELLOW = new Colour(false, BaseColour.YELLOW, "yellow", Util.newArrayListOfValues("yellow")) {};
-	public static Colour BASE_YELLOW_LIGHT = new Colour(false, BaseColour.YELLOW_LIGHT, "light yellow", Util.newArrayListOfValues("lightYellow", "yellowLight")) {};
+	public static Colour BASE_GOLD = new Colour(false, BaseColour.GOLD, "золотой", Util.newArrayListOfValues("gold")) {};
+	public static Colour BASE_YELLOW_PALE = new Colour(false, BaseColour.YELLOW_PALE, "бледно-желтый", Util.newArrayListOfValues("paleYellow", "yellowPale")) {};
+	public static Colour BASE_YELLOW = new Colour(false, BaseColour.YELLOW, "желтый", Util.newArrayListOfValues("yellow")) {};
+	public static Colour BASE_YELLOW_LIGHT = new Colour(false, BaseColour.YELLOW_LIGHT, "светло-желтый", Util.newArrayListOfValues("lightYellow", "yellowLight")) {};
 	
-	public static Colour BASE_GREEN_LIME = new Colour(false, BaseColour.GREEN_LIME, "lime green", Util.newArrayListOfValues("limeGreen", "greenLime")) {};
-	public static Colour BASE_GREEN_LIGHT = new Colour(false, BaseColour.GREEN_LIGHT, "light green", Util.newArrayListOfValues("lightGreen", "greenLight")) {};
-	public static Colour BASE_GREEN = new Colour(false, BaseColour.GREEN, "green", Util.newArrayListOfValues("green")) {};
-	public static Colour BASE_GREEN_DARK = new Colour(false, BaseColour.GREEN_DARK, "dark green", Util.newArrayListOfValues("darkGreen", "greenDark")) {};
+	public static Colour BASE_GREEN_LIME = new Colour(false, BaseColour.GREEN_LIME, "лаймовый", Util.newArrayListOfValues("limeGreen", "greenLime")) {};
+	public static Colour BASE_GREEN_LIGHT = new Colour(false, BaseColour.GREEN_LIGHT, "светло-зеленый", Util.newArrayListOfValues("lightGreen", "greenLight")) {};
+	public static Colour BASE_GREEN = new Colour(false, BaseColour.GREEN, "зеленый", Util.newArrayListOfValues("green")) {};
+	public static Colour BASE_GREEN_DARK = new Colour(false, BaseColour.GREEN_DARK, "темно-зеленый", Util.newArrayListOfValues("darkGreen", "greenDark")) {};
 	
-	public static Colour BASE_AQUA = new Colour(false, BaseColour.AQUA, "aqua", Util.newArrayListOfValues("aqua")) {};
-	public static Colour BASE_TEAL = new Colour(false, BaseColour.TEAL, "teal", Util.newArrayListOfValues("teal")) {};
-	public static Colour BASE_PERIWINKLE = new Colour(false, BaseColour.PERIWINKLE, "periwinkle", Util.newArrayListOfValues("periwinkle")) {};
-	public static Colour BASE_BLUE_DARK = new Colour(false, BaseColour.BLUE_DARK, "dark blue", Util.newArrayListOfValues("darkBlue", "blueDark")) {};
-	public static Colour BASE_BLUE_LIGHT = new Colour(false, BaseColour.BLUE_LIGHT, "light blue", Util.newArrayListOfValues("lightBlue", "blueLight")) {};
-	public static Colour BASE_BLUE = new Colour(false, BaseColour.BLUE, "blue", Util.newArrayListOfValues("blue")) {};
-	public static Colour BASE_BLUE_STEEL = new Colour(false, BaseColour.BLUE_STEEL, "steely blue", Util.newArrayListOfValues("steelyBlue", "steelBlue", "blueSteel")) {};
+	public static Colour BASE_AQUA = new Colour(false, BaseColour.AQUA, "аквамариновый", Util.newArrayListOfValues("aqua")) {};
+	public static Colour BASE_TEAL = new Colour(false, BaseColour.TEAL, "темно-циановый", Util.newArrayListOfValues("teal")) {};
+	public static Colour BASE_PERIWINKLE = new Colour(false, BaseColour.PERIWINKLE, "голубика", Util.newArrayListOfValues("periwinkle")) {};
+	public static Colour BASE_BLUE_DARK = new Colour(false, BaseColour.BLUE_DARK, "темно-синий", Util.newArrayListOfValues("darkBlue", "blueDark")) {};
+	public static Colour BASE_BLUE_LIGHT = new Colour(false, BaseColour.BLUE_LIGHT, "светло-синий", Util.newArrayListOfValues("lightBlue", "blueLight")) {};
+	public static Colour BASE_BLUE = new Colour(false, BaseColour.BLUE, "синий", Util.newArrayListOfValues("blue")) {};
+	public static Colour BASE_BLUE_STEEL = new Colour(false, BaseColour.BLUE_STEEL, "стальной синий", Util.newArrayListOfValues("steelyBlue", "steelBlue", "blueSteel")) {};
 	
-	public static Colour BASE_BLACK = new Colour(false, BaseColour.BLACK, "black", Util.newArrayListOfValues("black")) {};
-	public static Colour BASE_PITCH_BLACK = new Colour(false, BaseColour.PITCH_BLACK, "black", Util.newArrayListOfValues("black")) {};
+	public static Colour BASE_BLACK = new Colour(false, BaseColour.BLACK, "черный", Util.newArrayListOfValues("black")) {};
+	public static Colour BASE_PITCH_BLACK = new Colour(false, BaseColour.PITCH_BLACK, "абсолютно черный", Util.newArrayListOfValues("black")) {};
 	
 	
 	
@@ -614,13 +614,13 @@ public class PresetColour {
 		}
 	}; // Mostly for makeup but also used for chitin and doll covering option
 	public static Colour COVERING_RAINBOW = new Colour(false, BaseColour.BLUE_LIGHT,
-			"<span style='color:#E64C4C;'>r</span>"
-			+ "<span style='color:#E6854C;'>a</span>"
-			+ "<span style='color:#E6C74C;'>i</span>"
-			+ "<span style='color:#6EE64C;'>n</span>"
-			+ "<span style='color:#4CB2E6;'>b</span>"
-			+ "<span style='color:#AD4CE6;'>o</span>"
-			+ "<span style='color:#E64CA8;'>w</span>", 
+			"<span style='color:#E64C4C;'>р</span>"
+			+ "<span style='color:#E6854C;'>а</span>"
+			+ "<span style='color:#E6C74C;'>д</span>"
+			+ "<span style='color:#6EE64C;'>у</span>"
+			+ "<span style='color:#4CB2E6;'>г</span>"
+			+ "<span style='color:#AD4CE6;'>а</span>"
+			+ "<span style='color:#E64CA8;'>!</span>", 
 			Util.newArrayListOfValues("rainbow")) {
 		@Override
 		public List<String> getRainbowColours() {
@@ -635,20 +635,20 @@ public class PresetColour {
 		}
 	};
 	public static Colour COVERING_RAINBOW_PASTEL = new Colour(false, BaseColour.PINK_LIGHT,
-			"<span style='color:#4bb1d0;'>p</span>"
-			+ "<span style='color:#7bd8b0;'>a</span>"
-			+ "<span style='color:#83a5ef;'>s</span>"
-			+ "<span style='color:#ecb6f9;'>t</span>"
-			+ "<span style='color:#4bb1d0;'>e</span>"
-			+ "<span style='color:#7bd8b0;'>l</span>"
+			"<span style='color:#4bb1d0;'>п</span>"
+			+ "<span style='color:#7bd8b0;'>а</span>"
+			+ "<span style='color:#83a5ef;'>с</span>"
+			+ "<span style='color:#ecb6f9;'>т</span>"
+			+ "<span style='color:#4bb1d0;'>е</span>"
+			+ "<span style='color:#7bd8b0;'>ль</span>"
 			+ " "
-			+ "<span style='color:#83a5ef;'>r</span>"
-			+ "<span style='color:#ecb6f9;'>a</span>"
-			+ "<span style='color:#4bb1d0;'>i</span>"
-			+ "<span style='color:#7bd8b0;'>n</span>"
-			+ "<span style='color:#83a5ef;'>b</span>"
-			+ "<span style='color:#ecb6f9;'>o</span>"
-			+ "<span style='color:#4bb1d0;'>w</span>", 
+			+ "<span style='color:#83a5ef;'>р</span>"
+			+ "<span style='color:#ecb6f9;'>а</span>"
+			+ "<span style='color:#4bb1d0;'>д</span>"
+			+ "<span style='color:#7bd8b0;'>у</span>"
+			+ "<span style='color:#83a5ef;'>г</span>"
+			+ "<span style='color:#ecb6f9;'>а</span>"
+			+ "<span style='color:#4bb1d0;'>!</span>", 
 			Util.newArrayListOfValues("pastelRainbow")) {
 		@Override
 		public List<String> getRainbowColours() {
