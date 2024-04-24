@@ -10,17 +10,17 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum Weather {
 	
-	CLOUD("cloudy", PresetColour.BASE_GREY),
+	CLOUD("облачно", PresetColour.BASE_GREY),
 	
-	CLEAR("clear", PresetColour.BASE_YELLOW_PALE),
+	CLEAR("безоблачно", PresetColour.BASE_YELLOW_PALE),
 	
-	RAIN("raining", PresetColour.BASE_BLUE),
+	RAIN("дождь", PresetColour.BASE_BLUE),
 
-	SNOW("snowing", PresetColour.BASE_BLUE_LIGHT),
+	SNOW("снег", PresetColour.BASE_BLUE_LIGHT),
 	
-	MAGIC_STORM_GATHERING("stormy sky", PresetColour.GENERIC_ARCANE),
+	MAGIC_STORM_GATHERING("небо штормит", PresetColour.GENERIC_ARCANE),
 	
-	MAGIC_STORM("arcane storm", PresetColour.GENERIC_ARCANE);
+	MAGIC_STORM("магический шторм", PresetColour.GENERIC_ARCANE);
 
 	private String name;
 	private Colour colour;
