@@ -6,6 +6,7 @@ import com.lilithsthrone.game.character.race.AbstractSubspecies;
  * @since 0.1.82
  * @version 0.3.3
  * @author Innoxia
+ * Нечего переводить
  */
 public class CreditsSlot {
 
