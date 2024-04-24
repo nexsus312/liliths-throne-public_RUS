@@ -382,7 +382,7 @@ public class Fetish {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner==null) {
-				return "Этот фетиш относится к желанию человека чтобы у их партнеров была лактация.";
+				return "Этот фетиш относится к желанию человека чтобы у его партнеров была лактация.";
 				
 			} else if(owner.isPlayer()) {
 				return "У вас одержимость кормлением грудью. Вас мало что привлекает, кроме сосания чьих то заполненых грудей и мечтах о молочных сосках.";
@@ -1183,7 +1183,7 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_KINK_GIVING = new AbstractFetish(60,
-			"защитник фетишей",
+			"посланник фетишей",
 			"давать другим фетиши",
 //			"fetish_transformation_giving",
 			"fetish_kink_giving",
@@ -1309,7 +1309,7 @@ public class Fetish {
 	};
 	
 	public static AbstractFetish FETISH_DENIAL_SELF = new AbstractFetish(60,
-			"сама-отказ",
+			"само-отказ",
 			"быть недопущенным до оргазма",
 			"fetish_denial_self",
 			FetishExperience.BASE_RARE_EXPERIENCE_GAIN,
