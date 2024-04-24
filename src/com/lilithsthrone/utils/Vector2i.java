@@ -4,6 +4,7 @@ package com.lilithsthrone.utils;
  * @since 0.1.0
  * @version 0.4.1
  * @author Innoxia
+ * Нечего переводить
  */
 public class Vector2i {
 	int x, y;
