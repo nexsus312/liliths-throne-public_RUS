@@ -10,6 +10,7 @@ import com.lilithsthrone.main.Main;
  * @since 0.1.0
  * @version 0.1.97
  * @author Innoxia
+ * Перевод не нужен
  */
 public class TooltipMoveEventListener implements EventListener {
 	@Override
