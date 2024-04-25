@@ -815,23 +815,23 @@ public class TooltipInformationEventListener implements EventListener {
 					int knownAreas = 0;
 					if(Main.game.getPlayer().isKnowsCharacterArea(CoverableArea.ANUS, owner)) {
 						knownAreas++;
-						tooltipSB.append(getBodyPartDiv(owner, "Anus", owner.getAssRace(), owner.getAssType().getAnusType().getBodyCoveringType(owner), owner.isAnusFeral()));
+						tooltipSB.append(getBodyPartDiv(owner, "Анус", owner.getAssRace(), owner.getAssType().getAnusType().getBodyCoveringType(owner), owner.isAnusFeral()));
 					}
 					if(Main.game.getPlayer().isKnowsCharacterArea(CoverableArea.BREASTS, owner)) {
 						knownAreas++;
 						if(owner.isFeral() && !owner.getFeralAttributes().isBreastsPresent()) {
-							tooltipSB.append(getEmptyBodyPartDiv("Nipples (Breasts)", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("Соски (Груди)", "Нет"));
 						} else {
-							tooltipSB.append(getBodyPartDiv(owner, "Nipples",
+							tooltipSB.append(getBodyPartDiv(owner, "Соски",
 									owner.getBreastRace(),
 									owner.getBreastType().getNippleType().getBodyCoveringType(owner),
 									owner.isNippleFeral(),
-									Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+" "+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "-cup breasts"):(owner.isFeminine()?"плоская грудь":"грудные мышцы"))));
+									Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+" "+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "-чашка грудей"):(owner.isFeminine()?"плоская грудь":"грудные мышцы"))));
 						}
 					}
 					if(owner.hasBreastsCrotch() && Main.game.getPlayer().isKnowsCharacterArea(CoverableArea.BREASTS_CROTCH, owner)) {
 						knownAreas++;
-						tooltipSB.append(getBodyPartDiv(owner, "Nipples",
+						tooltipSB.append(getBodyPartDiv(owner, "Соски",
 								owner.getBreastCrotchRace(),
 								owner.getNippleCrotchCovering(),
 								owner.isNippleCrotchFeral(),
@@ -839,28 +839,28 @@ public class TooltipInformationEventListener implements EventListener {
 										+(owner.getBreastRawSizeValue()>0?(owner.getBreastCrotchSize().getCupSizeName() + "-cup "):"flat ")
 										+(owner.getBreastCrotchShape()==BreastShape.UDDERS
 											?(owner.getBreastCrotchRows()==0
-												?"udder"
-												:"udders")
-											:"crotch-boobs")));
+												?"вымя"
+												:"вымя")
+											:"груди рядом с пахом")));
 					}
 					if(Main.game.getPlayer().isKnowsCharacterArea(CoverableArea.PENIS, owner)) {
 						knownAreas++;
 						if (owner.hasPenisIgnoreDildo()) {
-							tooltipSB.append(getBodyPartDiv(owner, "Penis", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(), "[unit.sizeShort(" + owner.getPenisRawSizeValue()+ ")]"));
+							tooltipSB.append(getBodyPartDiv(owner, "Пенис", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(), "[unit.sizeShort(" + owner.getPenisRawSizeValue()+ ")]"));
 						}
 //						else if (owner.hasPenis()) {
 //							tooltipSB.append(getBodyPartDiv(owner, "Penis", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(), "[unit.sizeShort(" + owner.getPenisRawSizeValue()+ ")]"));
 //						}
 						else {
-							tooltipSB.append(getEmptyBodyPartDiv("Penis", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("Пенис", "Нет"));
 						}
 					}
 					if(Main.game.getPlayer().isKnowsCharacterArea(CoverableArea.VAGINA, owner)) {
 						knownAreas++;
 						if(owner.getVaginaType() != VaginaType.NONE) {
-							tooltipSB.append(getBodyPartDiv(owner, "Vagina", owner.getVaginaRace(), owner.getVaginaCovering(), owner.isVaginaFeral(), owner.isClitorisPseudoPenis()?"[unit.sizeShort(" + owner.getVaginaRawClitorisSizeValue()+ ")] clit":null));
+							tooltipSB.append(getBodyPartDiv(owner, "Вагина", owner.getVaginaRace(), owner.getVaginaCovering(), owner.isVaginaFeral(), owner.isClitorisPseudoPenis()?"[unit.sizeShort(" + owner.getVaginaRawClitorisSizeValue()+ ")] клитор":null));
 						} else {
-							tooltipSB.append(getEmptyBodyPartDiv("Vagina", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("Вагина", "Нет"));
 						}
 					}
 					
@@ -910,8 +910,8 @@ public class TooltipInformationEventListener implements EventListener {
 								:"")
 							+ "<b style='color:"+owner.getSubspecies().getColour(owner).toWebHexString()+";'>"
 								+ (owner.isFeminine()
-										?Util.capitaliseSentence((showWinged ? "winged " : "") + owner.getSubspecies().getSingularFemaleName(owner.getBody()))
-										:Util.capitaliseSentence((showWinged ? "winged " : "") + owner.getSubspecies().getSingularMaleName(owner.getBody())))
+										?Util.capitaliseSentence((showWinged ? "крылья " : "") + owner.getSubspecies().getSingularFemaleName(owner.getBody()))
+										:Util.capitaliseSentence((showWinged ? "крылья " : "") + owner.getSubspecies().getSingularMaleName(owner.getBody())))
 							+ "</b>"
 							+ "</div>");
 					
@@ -925,7 +925,7 @@ public class TooltipInformationEventListener implements EventListener {
 						// GREATER:
 						if(owner.getCovering(owner.getFaceCovering()).getPattern()==CoveringPattern.FRECKLED_FACE) {
 							Covering c = owner.getCovering(owner.getFaceCovering());
-							tooltipSB.append(getBodyPartDiv(owner, "Face", owner.getFaceRace(),
+							tooltipSB.append(getBodyPartDiv(owner, "Лицо", owner.getFaceRace(),
 									new Covering(owner.getFaceCovering(),
 											CoveringPattern.FRECKLED,
 											c.getModifier(),
@@ -937,9 +937,9 @@ public class TooltipInformationEventListener implements EventListener {
 									null));
 							
 						} else {
-							tooltipSB.append(getBodyPartDiv(owner, "Face", owner.getFaceRace(), owner.getFaceCovering(), owner.isFaceFeral()));
+							tooltipSB.append(getBodyPartDiv(owner, "Лицо", owner.getFaceRace(), owner.getFaceCovering(), owner.isFaceFeral()));
 						}
-						tooltipSB.append(getBodyPartDiv(owner, "Torso", owner.getSkinRace(), owner.getTorsoCovering(), owner.isTorsoFeral(),
+						tooltipSB.append(getBodyPartDiv(owner, "Тело", owner.getSkinRace(), owner.getTorsoCovering(), owner.isTorsoFeral(),
 								(owner.isSizeDifferenceShorterThan(Main.game.getPlayer())
 								?"<span style='color:"+PresetColour.BODY_SIZE_ONE.toWebHexString()+";'>"
 								:(owner.isSizeDifferenceTallerThan(Main.game.getPlayer())
@@ -947,48 +947,48 @@ public class TooltipInformationEventListener implements EventListener {
 									:"<span>"))
 								+(feral&&!owner.getFeralAttributes().isSizeHeight()
 //										?"Length: [unit.sizeShort(" + (owner.getHeightValue() + owner.getLegTailLength(false))+ ")]</span>"
-										?"Length: [unit.sizeShort(" + (owner.getHeightValue())+ ")]</span>"
-										:"Height: [unit.sizeShort(" + owner.getHeightValue() + ")]</span>")));
+										?"Длинна: [unit.sizeShort(" + (owner.getHeightValue())+ ")]</span>"
+										:"Высота: [unit.sizeShort(" + owner.getHeightValue() + ")]</span>")));
 						
 						
 						// LESSER:
 						if(owner.isFeral() && !owner.getFeralAttributes().isArmsOrWingsPresent() && owner.getLegConfiguration()!=LegConfiguration.AVIAN) {
-							tooltipSB.append(getEmptyBodyPartDiv("Arms", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("Руки", "Нет"));
 						} else {
-							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getArmRows()*2))+" arms", owner.getArmRace(), owner.getArmCovering(), owner.isArmFeral()));
+							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getArmRows()*2))+" руки", owner.getArmRace(), owner.getArmCovering(), owner.isArmFeral()));
 						}
 						switch(owner.getLegConfiguration()) {
 							case ARACHNID:
-								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" arachnid legs", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" арахнидские ноги", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								break;
 							case BIPEDAL:
 							case QUADRUPEDAL:
 							case WINGED_BIPED:
-								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" "+owner.getFootStructure().getName()+" legs", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" "+owner.getFootStructure().getName()+" ноги", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								break;
 							case CEPHALOPOD:
-								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" tentacle-legs", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" тентакле-ноги", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								break;
 							case TAIL:
 								if(owner.hasStatusEffect(StatusEffect.AQUATIC_NEGATIVE)) {
-									tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" "+owner.getFootStructure().getName()+" legs", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+									tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" "+owner.getFootStructure().getName()+" ноги", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								} else {
-									tooltipSB.append(getBodyPartDiv(owner, "Mer-tail", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+									tooltipSB.append(getBodyPartDiv(owner, "Хвост русалки", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								}
 								break;
 							case TAIL_LONG:
 //								tooltipSB.append(getBodyPartDiv(owner, "Serpent-tail"+ (feral&&!owner.getFeralAttributes().isSizeHeight()?"":" (Length: "+(Units.size(owner.getLegTailLength(false)))+")"),
 //										owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
-								tooltipSB.append(getBodyPartDiv(owner, "Serpent-tail (Length: "+(Units.size(owner.getLegTailLength(false)))+")", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+								tooltipSB.append(getBodyPartDiv(owner, "Хвост змеии (Length: "+(Units.size(owner.getLegTailLength(false)))+")", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								break;
 							case AVIAN:
-								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" bird legs", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" птичьи ноги", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								break;
 						}
 						
 						// PARTIAL:
 						if (owner.getHairRawLengthValue() == 0 && owner.isFaceBaldnessNatural()) {
-							tooltipSB.append(getEmptyBodyPartDiv("Hair", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("Волосы", "Нет"));
 						} else {
 							tooltipSB.append(getBodyPartDiv(owner,
 									Util.capitaliseSentence(owner.getHairLength().getDescriptor())+" "+owner.getHairStyle().getName(owner)+" "+owner.getHairName(), owner.getHairRace(), owner.getHairCovering(), owner.isHairFeral()));
@@ -996,10 +996,10 @@ public class TooltipInformationEventListener implements EventListener {
 						if(!owner.isPlayer() && !owner.isAreaKnownByCharacter(CoverableArea.EYES, Main.game.getPlayer())) {
 							tooltipSB.append(getEmptyBodyPartDiv("Eyes", "Unknown!"));
 						} else {
-							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getEyePairs()*2))+" eyes", owner.getEyeRace(), owner.getEyeCovering(), owner.isEyeFeral()));
+							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getEyePairs()*2))+" глаза", owner.getEyeRace(), owner.getEyeCovering(), owner.isEyeFeral()));
 						}
-						tooltipSB.append(getBodyPartDiv(owner, "Ears", owner.getEarRace(), owner.getEarCovering(), owner.isEarFeral()));
-						tooltipSB.append(getBodyPartDiv(owner, "Tongue", owner.getTongueRace(), owner.getTongueCovering(), owner.isTongueFeral()));
+						tooltipSB.append(getBodyPartDiv(owner, "Уши", owner.getEarRace(), owner.getEarCovering(), owner.isEarFeral()));
+						tooltipSB.append(getBodyPartDiv(owner, "Язык", owner.getTongueRace(), owner.getTongueCovering(), owner.isTongueFeral()));
 						if (owner.getHornType() != HornType.NONE) {
 							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getTotalHorns()))+" "+(owner.getTotalHorns()==1?owner.getHornNameSingular():owner.getHornName()),
 									owner.getHornRace(), owner.getHornCovering(), owner.isHornFeral()));
@@ -1010,90 +1010,90 @@ public class TooltipInformationEventListener implements EventListener {
 							//TODO might need changing if made like horn count:
 							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getAntennaRows()*owner.getAntennaePerRow()))+" antennae", owner.getAntennaRace(), owner.getAntennaCovering(), owner.isAntennaFeral()));
 						} else {
-							tooltipSB.append(getEmptyBodyPartDiv("Antennae", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("Антенны", "Нет"));
 						}
 						if (owner.getWingType() != WingType.NONE) {
 							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(owner.getWingSize().getName())+" wings", owner.getWingRace(), owner.getWingCovering(), owner.isWingFeral()));
 						} else {
-							tooltipSB.append(getEmptyBodyPartDiv("Wings", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("Крылья", "Нет"));
 						}
 						if (owner.getTailType() != TailType.NONE) {
 							tooltipSB.append(
 									getBodyPartDiv(owner,
 											Util.capitaliseSentence(Util.intToString(owner.getTailCount()))+" "+(owner.getTailGirthDescriptor())+" tail"+(owner.getTailCount()!=1?"s":""), owner.getTailRace(), owner.getTailCovering(), owner.isTailFeral()));
 						} else {
-							tooltipSB.append(getEmptyBodyPartDiv("Tail", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("Хвост", "Нет"));
 						}
 						
 						// SEXUAL:
 						if(!owner.isPlayer() && !owner.isAreaKnownByCharacter(CoverableArea.VAGINA, Main.game.getPlayer())) {
 							if (owner.getVaginaType() == VaginaType.NONE && Main.game.getPlayer().hasTrait(Perk.OBSERVANT, true)) {
-								tooltipSB.append(getEmptyBodyPartDiv("Vagina", "None"));
+								tooltipSB.append(getEmptyBodyPartDiv("Вагина", "Нет"));
 							} else {
-								tooltipSB.append(getEmptyBodyPartDiv("Vagina", "Unknown!"));
+								tooltipSB.append(getEmptyBodyPartDiv("Вагина", "Неизвестно!"));
 							}
 						} else {
 							if (owner.getVaginaType() != VaginaType.NONE) {
 								tooltipSB.append(
-										getBodyPartDiv(owner, "Vagina", owner.getVaginaRace(), owner.getVaginaCovering(), owner.isVaginaFeral(), owner.isClitorisPseudoPenis()?"[unit.sizeShort(" + owner.getVaginaRawClitorisSizeValue()+ ")] clit":null));
+										getBodyPartDiv(owner, "Вагина", owner.getVaginaRace(), owner.getVaginaCovering(), owner.isVaginaFeral(), owner.isClitorisPseudoPenis()?"[unit.sizeShort(" + owner.getVaginaRawClitorisSizeValue()+ ")] клитор":null));
 							} else {
-								tooltipSB.append(getEmptyBodyPartDiv("Vagina", "None"));
+								tooltipSB.append(getEmptyBodyPartDiv("Вагина", "Нет"));
 							}
 						}
 						
 						if(!owner.isPlayer() && !owner.isAreaKnownByCharacter(CoverableArea.PENIS, Main.game.getPlayer())) {
 							if (!owner.hasPenis() && Main.game.getPlayer().hasTrait(Perk.OBSERVANT, true)) {
-								tooltipSB.append(getEmptyBodyPartDiv("Penis", "None"));
+								tooltipSB.append(getEmptyBodyPartDiv("Пенис", "Пенис"));
 							} else {
-								tooltipSB.append(getEmptyBodyPartDiv("Penis", "Unknown!"));
+								tooltipSB.append(getEmptyBodyPartDiv("Пенис", "Неизвестно!"));
 							}
 						} else {
 							if (owner.hasPenisIgnoreDildo()) {
-								tooltipSB.append(getBodyPartDiv(owner, "Penis", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(),
-										"[unit.sizeShort("+owner.getPenisRawSizeValue()+")] long, [unit.sizeShort("+owner.getPenisDiameter()+")] diameter"));
+								tooltipSB.append(getBodyPartDiv(owner, "Пенис", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(),
+										"[unit.sizeShort("+owner.getPenisRawSizeValue()+")] длинна, [unit.sizeShort("+owner.getPenisDiameter()+")] диаметр"));
 							} else if (owner.hasPenis()) {
-								tooltipSB.append(getBodyPartDiv(owner, "Penis", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(),
-										"[unit.sizeShort("+owner.getPenisRawSizeValue()+")] long, [unit.sizeShort("+owner.getPenisDiameter()+")] diameter"));
+								tooltipSB.append(getBodyPartDiv(owner, "Пенис", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(),
+										"[unit.sizeShort("+owner.getPenisRawSizeValue()+")] длинна, [unit.sizeShort("+owner.getPenisDiameter()+")] диаметр"));
 							} else {
-								tooltipSB.append(getEmptyBodyPartDiv("Penis", "None"));
+								tooltipSB.append(getEmptyBodyPartDiv("Пенис", "Пенис"));
 							}
 						}
 	
 						if(!owner.isPlayer() && !owner.isAreaKnownByCharacter(CoverableArea.ANUS, Main.game.getPlayer())) {
-							tooltipSB.append(getEmptyBodyPartDiv("Anus", "Unknown!"));
+							tooltipSB.append(getEmptyBodyPartDiv("Анус", "Неизвестно!"));
 						} else {
-							tooltipSB.append(getBodyPartDiv(owner, "Anus", owner.getAssRace(), owner.getAssType().getAnusType().getBodyCoveringType(owner), owner.isAnusFeral()));
+							tooltipSB.append(getBodyPartDiv(owner, "Анус", owner.getAssRace(), owner.getAssType().getAnusType().getBodyCoveringType(owner), owner.isAnusFeral()));
 						}
 						
 						if(!owner.isPlayer() && !owner.isAreaKnownByCharacter(CoverableArea.NIPPLES, Main.game.getPlayer())) {
 							if(owner.isFeral() && !owner.getFeralAttributes().isBreastsPresent()) {
-								tooltipSB.append(getEmptyBodyPartDiv("Nipples (Breasts)", "None"));
+								tooltipSB.append(getEmptyBodyPartDiv("Соски (Груди)", "Нет"));
 							} else {
-								tooltipSB.append(getEmptyBodyPartDiv("Nipples",
-										"Unknown!",
-										Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+" "+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "-cup breasts"):(owner.isFeminine()?"flat breasts":"pecs"))));
+								tooltipSB.append(getEmptyBodyPartDiv("Соски",
+										"Неизвестно!",
+										Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+" "+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "-чашка груди"):(owner.isFeminine()?"плоские груди":"грудные мышцы"))));
 							}
 						} else {
 							if(owner.isFeral() && !owner.getFeralAttributes().isBreastsPresent()) {
-								tooltipSB.append(getEmptyBodyPartDiv("Nipples (Breasts)", "None"));
+								tooltipSB.append(getEmptyBodyPartDiv("Соски (Груди)", "Нет"));
 							} else {
-								tooltipSB.append(getBodyPartDiv(owner, "Nipples",
+								tooltipSB.append(getBodyPartDiv(owner, "Соски",
 										owner.getBreastRace(),
 										owner.getBreastType().getNippleType().getBodyCoveringType(owner),
 										owner.isNippleFeral(),
-										Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+" "+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "-cup breasts"):(owner.isFeminine()?"flat breasts":"pecs"))));
+										Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+" "+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "-чашка груди"):(owner.isFeminine()?"плоские груди":"грудные мышцы"))));
 							}
 						}
 						
 						if(spinneret) {
 							if(owner.hasTailSpinneret()) {
-								tooltipSB.append(getBodyPartDiv(owner, "Spinneret",
+								tooltipSB.append(getBodyPartDiv(owner, "Прядильный орган",
 										owner.getTailRace(),
 										owner.getSpinneretCovering(),
 										owner.isTailFeral(),
 										""));
 							} else {
-								tooltipSB.append(getBodyPartDiv(owner, "Spinneret",
+								tooltipSB.append(getBodyPartDiv(owner, "Прядильный орган",
 										owner.getLegRace(),
 										owner.getSpinneretCovering(),
 										owner.isLegFeral(),
@@ -1103,39 +1103,39 @@ public class TooltipInformationEventListener implements EventListener {
 						
 						if(crotchBreasts) {
 							if(!owner.isAreaKnownByCharacter(CoverableArea.NIPPLES_CROTCH, Main.game.getPlayer())) {
-								tooltipSB.append(getEmptyBodyPartDiv("Nipples",
-										"Unknown!",
+								tooltipSB.append(getEmptyBodyPartDiv("Соски",
+										"Неизвестно!",
 										Util.capitaliseSentence(Util.intToString(Math.max(1, owner.getBreastCrotchRows()*2)))+" "
-												+(owner.getBreastCrotchRawSizeValue()>0?(owner.getBreastCrotchSize().getCupSizeName() + "-cup "):"flat ")
+												+(owner.getBreastCrotchRawSizeValue()>0?(owner.getBreastCrotchSize().getCupSizeName() + "-чашка "):"плоско ")
 												+(owner.getBreastCrotchShape()==BreastShape.UDDERS
 													?(owner.getBreastCrotchRows()==0
-														?"udder"
-														:"udders")
-													:"crotch-boobs")));
+														?"вымя"
+														:"вымя")
+													:"груди перед промежностью")));
 							} else {
-								tooltipSB.append(getBodyPartDiv(owner, "Nipples",
+								tooltipSB.append(getBodyPartDiv(owner, "Соски",
 										owner.getBreastCrotchRace(),
 										owner.getNippleCrotchCovering(),
 										owner.isNippleCrotchFeral(),
 										Util.capitaliseSentence(Util.intToString(Math.max(1, owner.getBreastCrotchRows()*2)))+" "
-												+(owner.getBreastCrotchRawSizeValue()>0?(owner.getBreastCrotchSize().getCupSizeName() + "-cup "):"flat ")
+												+(owner.getBreastCrotchRawSizeValue()>0?(owner.getBreastCrotchSize().getCupSizeName() + "-чашка "):"плоско ")
 												+(owner.getBreastCrotchShape()==BreastShape.UDDERS
 													?(owner.getBreastCrotchRows()==0
-														?"udder"
-														:"udders")
-													:"crotch-boobs")));
+														?"вымя"
+														:"вымя")
+													:"груди перед промежностью")));
 							}
 						}
 						
 					} else {
-						tooltipSB.append(getBodyPartDiv(owner, "Passive form", owner.getSkinRace(), owner.getTorsoCovering(), owner.isTorsoFeral()));
+						tooltipSB.append(getBodyPartDiv(owner, "Пассивная Форма", owner.getSkinRace(), owner.getTorsoCovering(), owner.isTorsoFeral()));
 						
 						if(((Elemental)owner).getSummoner().isPlayer()) {
 							tooltipSB.append("<div class='subTitle' style='font-weight:normal; margin-top:2px; white-space:nowrap;'>");
 								if(!Main.game.isInNeutralDialogue()) {
-									tooltipSB.append("[style.italicsBad(You cannot talk to your Elemental in this scene!)]");
+									tooltipSB.append("[style.italicsBad(Вы не можете разговаривать со своим элементалем в этой сцене.!)]");
 								} else {
-									tooltipSB.append("[style.italicsMinorGood(Click to start talking to your Elemental!)]");
+									tooltipSB.append("[style.italicsMinorGood(Кликните, чтобы начать разговор с вашим элементалем!)]");
 								}
 							tooltipSB.append("</div>");
 						}
@@ -1147,7 +1147,7 @@ public class TooltipInformationEventListener implements EventListener {
 								+ "<div style='float: left;'>"
 									+ "<img id='CHARACTER_IMAGE' style='"+(revealed?"":"-webkit-filter: brightness(0%);")
 										+" width: auto; height: auto; max-width: 300; max-height: 445; padding-top: " + imagePadding + "px;' src='" + image.getThumbnailString()+ "'/>"
-										+(revealed?"":"<p style='position:absolute; top:33%; right:0; width:"+imageWidth+"; font-weight:bold; text-align:center; color:"+PresetColour.BASE_GREY.toWebHexString()+";'>Unlocked through sex!</p>")
+										+(revealed?"":"<p style='position:absolute; top:33%; right:0; width:"+imageWidth+"; font-weight:bold; text-align:center; color:"+PresetColour.BASE_GREY.toWebHexString()+";'>Открывается через секс!</p>")
 								+ "</div>");
 					}
 				}
@@ -1161,7 +1161,7 @@ public class TooltipInformationEventListener implements EventListener {
 						"<div class='title' style='color:" + attribute.getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(attribute.getName()) + "</div>"
 
 						+ "<div class='subTitle-third'>"
-						+ "<b style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Core</b><br/>"
+						+ "<b style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Основа</b><br/>"
 						+ (owner.getBaseAttributeValue(attribute) > 0 ? "<span style='color: " + PresetColour.GENERIC_EXCELLENT.getShades()[1] + ";'>" : "<span>")
 							+ Units.number(owner.getBaseAttributeValue(attribute), 1, 1)
 						+ "</span>"
@@ -1212,7 +1212,7 @@ public class TooltipInformationEventListener implements EventListener {
 							+ (owner.getLevel()!=owner.getTrueLevel()?" [style.colourDisabled(("+owner.getTrueLevel()+"))]":"")
 							+ " <span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>| "
 						+ (owner.isElemental()
-								?"Elementals share their summoner's level</span>"
+								?"Элементали имеют тот же уровень что и у призывателя</span>"
 								:"</span>"+owner.getExperience() + " / "+ (10 * owner.getLevel()) + " xp")
 						+ "</div>");
 			
@@ -1230,7 +1230,7 @@ public class TooltipInformationEventListener implements EventListener {
 								
 								+"<div class='subTitle-half' style='padding:2px; margin:2px 2% 2px 1%; width:47%;'>"
 							:"<div class='subTitle' style='margin:2px 1%; width:98%'>")
-						+ "[style.colourArcane(Essences)]"+(Main.game.isEnchantmentCapacityEnabled()?"<br/>":": ")
+						+ "[style.colourArcane(Эссенция)]"+(Main.game.isEnchantmentCapacityEnabled()?"<br/>":": ")
 						+ owner.getEssenceCount()
 					+ "</div>");
 			
@@ -1265,11 +1265,11 @@ public class TooltipInformationEventListener implements EventListener {
 					+ "</div>"
 
 					// Values:
-					+ getAttributeTableRowDiv(owner, "Physical", Attribute.DAMAGE_PHYSICAL, Attribute.RESISTANCE_PHYSICAL)
-					+ getAttributeTableRowDiv(owner, "Fire", Attribute.DAMAGE_FIRE, Attribute.RESISTANCE_FIRE)
-					+ getAttributeTableRowDiv(owner, "Cold", Attribute.DAMAGE_ICE, Attribute.RESISTANCE_ICE)
-					+ getAttributeTableRowDiv(owner, "Poison", Attribute.DAMAGE_POISON, Attribute.RESISTANCE_POISON)
-					+ getAttributeTableRowDiv(owner, "Seduction", Attribute.DAMAGE_LUST, Attribute.RESISTANCE_LUST)
+					+ getAttributeTableRowDiv(owner, "Физический", Attribute.DAMAGE_PHYSICAL, Attribute.RESISTANCE_PHYSICAL)
+					+ getAttributeTableRowDiv(owner, "Огонь", Attribute.DAMAGE_FIRE, Attribute.RESISTANCE_FIRE)
+					+ getAttributeTableRowDiv(owner, "Холод", Attribute.DAMAGE_ICE, Attribute.RESISTANCE_ICE)
+					+ getAttributeTableRowDiv(owner, "Яд", Attribute.DAMAGE_POISON, Attribute.RESISTANCE_POISON)
+					+ getAttributeTableRowDiv(owner, "Соблазнение", Attribute.DAMAGE_LUST, Attribute.RESISTANCE_LUST)
 					
 					+ getAttributeDiv(owner, Attribute.FERTILITY)
 					+ getAttributeDiv(owner, Attribute.VIRILITY));
@@ -1277,9 +1277,9 @@ public class TooltipInformationEventListener implements EventListener {
 				if(elemental) {
 					tooltipSB.append("<div class='subTitle' style='font-weight:normal; margin-top:2px; white-space:nowrap;'>");
 						if(!Main.game.isInNeutralDialogue()) {
-							tooltipSB.append("[style.italicsBad(You cannot talk to your Elemental in this scene!)]");
+							tooltipSB.append("[style.italicsBad(Вы не можете разговаривать с элеменатлем во время этой сцены!)]");
 						} else {
-							tooltipSB.append("[style.italicsMinorGood(Click to start talking to your Elemental!)]");
+							tooltipSB.append("[style.italicsMinorGood(Клик, чтобы начать говорить с вашим элементалем!)]");
 						}
 					tooltipSB.append("</div>");
 				}
@@ -1299,12 +1299,12 @@ public class TooltipInformationEventListener implements EventListener {
 				+ "</div>"
 				+ "<div class='title'><b>"
 					+ (hours>0
-							?hours+" hour"+(hours>1?"s ":" ")
+							?hours+" часов"+(hours>1?"сек ":" ")
 							:"")
 					+ (minutes%60>0
-							?minutes+" minute"+(minutes>1?"s ":" ")
+							?minutes+" минут"+(minutes>1?"сек ":" ")
 							:"")
-					+"remaining"
+					+"осталось"
 				+ "</b></div>");
 
 			Main.mainController.setTooltipContent(UtilText.parse(tooltipSB.toString()));
@@ -1314,9 +1314,9 @@ public class TooltipInformationEventListener implements EventListener {
 			Main.mainController.setTooltipSize(360, 100);
 
 			tooltipSB.setLength(0);
-			tooltipSB.append("<div class='title'>Protection</div>"
+			tooltipSB.append("<div class='title'>Защита</div>"
 					+ "<div class='subTitle'>"
-					+ (owner.isWearingCondom()?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Wearing Condom</span>":"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>No Condom</span>")
+					+ (owner.isWearingCondom()?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Одеть презерватив</span>":"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Нет презервативов</span>")
 					+"</div>");
 
 			Main.mainController.setTooltipContent(UtilText.parse(tooltipSB.toString()));
@@ -1332,8 +1332,8 @@ public class TooltipInformationEventListener implements EventListener {
 					+"Copy Scene"
 					+ "</div>"
 					+ "<div class='description'>"
-					+ "Click to copy the currently displayed dialogue to your clipboard.<br/><br/>"
-					+ "This scene was written by <b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>"
+					+ "Клик, чтобы скопировать отображаемый диалог в буфер обмена.<br/><br/>"
+					+ "Эта сцена написана <b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>"
 					+ Main.game.getCurrentDialogueNode().getAuthor()
 					+ "</b></div>");
 
@@ -1351,10 +1351,10 @@ public class TooltipInformationEventListener implements EventListener {
 					+ "<div class='description'>"
 						+ UtilText.parse(RenderingEngine.getCharacterToRender(),
 							(concealedSlots.get(concealedSlot).isEmpty()
-								?"Due to [npc.namePos] position, this slot is currently hidden from view!"
+								?"Из-за [npc.namePos] позиции, этот слот скрыт от взгляда!"
 								:(clothingVisible.isEmpty()
-										?"This slot is currently hidden from view by items of [npc.namePos] clothing that you cannot see!"
-										:"This slot is currently hidden from view by [npc.namePos] <b>"+Util.clothesToStringList(clothingVisible, false)+"</b>.")))
+										?"В настоящее время этот слот скрыт элементами [npc.namePos] одежды которые вы не видите!"
+										:"В настоящее время этот слот скрыт [npc.namePos] <b>"+Util.clothesToStringList(clothingVisible, false)+"</b>.")))
 					+ "</div>"));
 			
 		} else if(slaveJob!=null) {//TODO
@@ -1367,7 +1367,7 @@ public class TooltipInformationEventListener implements EventListener {
 							+ "</div>");
 
 			tooltipSB.append("<div class='description' style='min-height:28px; height:28px; text-align:center;'>"
-								+ "[style.boldStamina(Hourly Stamina Cost:)]"
+								+ "[style.boldStamina(Стоимость Выносливости в час:)]"
 								+ (slaveJob.getHourlyStaminaDrain(owner)>0
 										?" [style.boldBad("
 										:" [style.boldGood(")+slaveJob.getHourlyStaminaDrain(owner)+")]"
@@ -1377,7 +1377,7 @@ public class TooltipInformationEventListener implements EventListener {
 				tooltipSB.append(slaveJob.getDescription());
 				if(slaveJob==SlaveJob.IDLE) {
 					tooltipSB.append("<br/>");
-					tooltipSB.append("The idle hours in which this slave will choose to sleep will be marked with [style.colourSleep(zzZ)].");
+					tooltipSB.append("Часы простоя, в которые этот раб будет спать, будут отмечены значком [style.colourSleep(zzZ)].");
 				}
 			tooltipSB.append("</div>");
 
@@ -1400,9 +1400,9 @@ public class TooltipInformationEventListener implements EventListener {
 			tooltipSB.append("<div class='title'>" + Util.capitaliseSentence(loadedEnchantment.getName()) + "</div>");
 
 			if(loadedEnchantment.isSuitableItemAvailable()) {
-				tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Suitable item in inventory</div>");
+				tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Подходящий предмет в инвентаре</div>");
 			} else {
-				tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>No suitable item in inventory</div>");
+				tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Подходящих предметов в инвентаре не найдено</div>");
 			}
 			
 			// Attribute modifiers:
@@ -1455,20 +1455,20 @@ public class TooltipInformationEventListener implements EventListener {
 								(Main.game.getCharactersPresent(cell).contains(character)
 										?character.getName("The")
 										:"[style.colourDisabled("+character.getName("The")+")]")
-								+": "+(character.isRaceConcealed()?"[style.colourDisabled(Unknown race!)]":UtilText.parse(character, "[npc.FullRace(true)]"))
+								+": "+(character.isRaceConcealed()?"[style.colourDisabled(Неизвестная раса!)]":UtilText.parse(character, "[npc.FullRace(true)]"))
 								+"<br/>");
 					}
 				}
 				if(teleport) {
 					if(cell.getType().getTeleportPermissions().isIncoming() && cell.getPlace().getPlaceType().getTeleportPermissions().isIncoming()) {
-						teleportingDescription.append("It [style.colourGood(is possible)] to [style.colourArcane(teleport)] into this tile!");
+						teleportingDescription.append("[style.colourGood(Возможно)] [style.colourArcane(телепортироваться)] на эту плитку!");
 					} else {
-						teleportingDescription.append("It [style.colourBad(is not possible)] to [style.colourArcane(teleport)] into this tile!");
+						teleportingDescription.append("[style.colourBad(Невозможно)] [style.colourArcane(телепортироваться)] на эту плитку!");
 					}
 					if(cell.getType().getTeleportPermissions().isOutgoing() && cell.getPlace().getPlaceType().getTeleportPermissions().isOutgoing()) {
-						teleportingDescription.append("<br/>It [style.colourGood(is possible)] to [style.colourArcane(teleport)] out of this tile!");
+						teleportingDescription.append("<br/>[style.colourGood(Возможно)] [style.colourArcane(телепортироваться)] с этой плитки!");
 					} else {
-						teleportingDescription.append("<br/>It [style.colourBad(is not possible)] to [style.colourArcane(teleport)] out of this tile!");
+						teleportingDescription.append("<br/>[style.colourBad(Невозможно)] [style.colourArcane(телепортироваться)] с этой плитки!");
 					}
 				}
 			}
@@ -1485,8 +1485,8 @@ public class TooltipInformationEventListener implements EventListener {
 							?""
 							:tooltipDesc+"<br/>")
 						+(cell.getPlace().getPlaceType().isDangerous()
-							?"This is a [style.italicsBad(dangerous)] area!"
-							:"This is a [style.italicsGood(safe)] area.")
+							?"This is a [style.italicsBad(опасная)] область!"
+							:"This is a [style.italicsGood(безопасная)] область.")
 					+ "</div>"
 					+ (yIncrease>0
 							?"<div class='description' style='height:"+(24 + yIncrease * LINE_HEIGHT)+"px;'>"+charactersPresentDescription.toString()+"</div>"
@@ -1509,28 +1509,28 @@ public class TooltipInformationEventListener implements EventListener {
 			int transferAmount;
 			
 			if(this.moneyTransferPercentage==1) {
-				tooltipSB.append("<div class='title'>[style.colourMinorGood(Small Flames Transfer)]</div>");
+				tooltipSB.append("<div class='title'>[style.colourMinorGood(Перенести немного пламени)]</div>");
 				percentageTransfer = "[style.colourMinorGood("+moneyTransferPercentage+"%)]";
 			} else if(this.moneyTransferPercentage==10) {
-				tooltipSB.append("<div class='title'>[style.colourGood(Flames Transfer)]</div>");
+				tooltipSB.append("<div class='title'>[style.colourGood(Перенести пламя)]</div>");
 				percentageTransfer = "[style.colourGood("+moneyTransferPercentage+"%)]";
 			} else {
-				tooltipSB.append("<div class='title'>[style.colourExcellent(Total Flames Transfer)]</div>");
+				tooltipSB.append("<div class='title'>[style.colourExcellent(Полный перенос пламени)]</div>");
 				percentageTransfer = "[style.colourExcellent("+moneyTransferPercentage+"%)]";
 			}
 			
 			if(InventoryDialogue.getNPCInventoryInteraction()!=InventoryInteraction.FULL_MANAGEMENT) {
 				tooltipSB.append("<div class='subtitle'>"
-						+ "[style.italicsBad(Flame transfer not available in this interaction!)]"
+						+ "[style.italicsBad(Перенос пламени недоступен в этом взаимодействии!)]"
 						+ "</div>");
 				
 			} else if(owner==null) {
 				transferAmount = (int) Math.max(1, Main.game.getPlayerCell().getInventory().getMoney()*(moneyTransferPercentage/100f));
 				tooltipSB.append("<div class='subtitle'>"
 						+ (Main.game.getPlayerCell().getInventory().getMoney()==0
-								?"[style.italicsBad(There are no flames in this area...)]"
+								?"[style.italicsBad(В этой области нет пламени...)]"
 								:UtilText.parse(moneyTransferTarget,
-									"Pick up "+percentageTransfer+" of the flames in this area:<br/> ")
+									"Поднять "+percentageTransfer+" пламени в этой области:<br/> ")
 									+ UtilText.formatAsMoney(transferAmount, "i"))
 						+"</div>");
 				
@@ -1538,13 +1538,13 @@ public class TooltipInformationEventListener implements EventListener {
 				transferAmount = (int) Math.max(1, owner.getMoney()*(moneyTransferPercentage/100f));
 				tooltipSB.append("<div class='subtitle'>"
 						+ (owner.getMoney()==0
-								?"[style.italicsBad(You do not have any flames, so cannot transfer any money...)]"
+								?"[style.italicsBad(У вас нет пламени, вы не можете перенести никаких денег...)]"
 								:((moneyTransferTarget==null
 									?(Main.game.getPlayerCell().getPlace().isItemsDisappear()
-											?"[style.colourBad(Abandon)] "+percentageTransfer+" of your flames in this area:<br/> "
-											:"[style.colourGood(Safely store)] "+percentageTransfer+" of your flames in this area:<br/> ")
+											?"[style.colourBad(Бросить)] "+percentageTransfer+" пламени в этой области:<br/> "
+											:"[style.colourGood(Безопасно хранить)] "+percentageTransfer+" пламени в этой области:<br/> ")
 									:UtilText.parse(moneyTransferTarget,
-											"Transfer "+percentageTransfer+" of your flames to [npc.name]:<br/> "))
+											"Перевести "+percentageTransfer+" вашего пламени [npc.name]:<br/> "))
 									+UtilText.formatAsMoney(transferAmount, "i")))
 						+"</div>");
 				
@@ -1553,8 +1553,8 @@ public class TooltipInformationEventListener implements EventListener {
 				tooltipSB.append("<div class='subtitle'>"
 						+ UtilText.parse(owner,
 								(owner.getMoney()==0
-									?"[style.italicsBad([npc.Name] does not have any flames...)]"
-									:"Take "+percentageTransfer+" of [npc.namePos] flames:<br/> "
+									?"[style.italicsBad([npc.Name] не имеет пламени...)]"
+									:"Взять "+percentageTransfer+" [npc.namePos] пламени:<br/> "
 										+ UtilText.formatAsMoney(transferAmount, "i")))
 						+"</div>");
 			}
@@ -1590,7 +1590,7 @@ public class TooltipInformationEventListener implements EventListener {
 			AbstractBodyCoveringType covType = loadedBody.getFace().getBodyCoveringType(loadedBody);
 			if(loadedBody.getCovering(covType, true).getPattern()==CoveringPattern.FRECKLED_FACE) {
 				Covering c = loadedBody.getCovering(covType, true);
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Face", loadedBody.getFace(), null,
+				tooltipSB.append(getBodyPartDiv(loadedBody, "Лицо", loadedBody.getFace(), null,
 						new Covering(covType,
 								CoveringPattern.FRECKLED,
 								c.getModifier(),
@@ -1600,121 +1600,121 @@ public class TooltipInformationEventListener implements EventListener {
 								c.isSecondaryGlowing())));
 				
 			} else {
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Face", loadedBody.getFace()));
+				tooltipSB.append(getBodyPartDiv(loadedBody, "Лицо", loadedBody.getFace()));
 			}
 			
-			tooltipSB.append(getBodyPartDiv(loadedBody, "Torso", loadedBody.getTorso(),
+			tooltipSB.append(getBodyPartDiv(loadedBody, "Тело", loadedBody.getTorso(),
 					"<span>"
 					+(feral && !loadedBody.getSubspecies().getFeralAttributes(loadedBody).isSizeHeight()
-						?"Length: [unit.sizeShort(" + (loadedBody.getHeightValue())+ ")]</span>"
-						:"Height: [unit.sizeShort(" + loadedBody.getHeightValue() + ")]</span>")));
+						?"Длинна: [unit.sizeShort(" + (loadedBody.getHeightValue())+ ")]</span>"
+						:"Высота: [unit.sizeShort(" + loadedBody.getHeightValue() + ")]</span>")));
 			
 			
 			// LESSER:
 			if(feral && !loadedBody.getSubspecies().getFeralAttributes(loadedBody).isArmsOrWingsPresent() && loadedBody.getLegConfiguration()!=LegConfiguration.AVIAN) {
-				tooltipSB.append(getEmptyBodyPartDiv("Arms", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("Руки", "None"));
 			} else {
-				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getArm().getArmRows()*2))+" arms", loadedBody.getArm()));
+				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getArm().getArmRows()*2))+" руки", loadedBody.getArm()));
 			}
 			switch(loadedBody.getLegConfiguration()) {
 				case ARACHNID:
-					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+" arachnid legs", loadedBody.getLeg()));
+					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+" арахнидские ноги", loadedBody.getLeg()));
 					break;
 				case BIPEDAL:
 				case QUADRUPEDAL:
 				case WINGED_BIPED:
 					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(
-							Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+" "+loadedBody.getLeg().getFootStructure().getName()+" legs", loadedBody.getLeg()));
+							Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+" "+loadedBody.getLeg().getFootStructure().getName()+" ноги", loadedBody.getLeg()));
 					break;
 				case CEPHALOPOD:
-					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+" tentacle-legs", loadedBody.getLeg()));
+					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+" тентакле-ноги", loadedBody.getLeg()));
 					break;
 				case TAIL:
-					tooltipSB.append(getBodyPartDiv(loadedBody, "Mer-tail", loadedBody.getLeg()));
+					tooltipSB.append(getBodyPartDiv(loadedBody, "Хвост русалки", loadedBody.getLeg()));
 					break;
 				case TAIL_LONG:
-					tooltipSB.append(getBodyPartDiv(loadedBody, "Serpent-tail (Length: "+(Units.size(loadedBody.getLeg().getLength(loadedBody)))+")", loadedBody.getLeg()));
+					tooltipSB.append(getBodyPartDiv(loadedBody, "Хвост змеи (Length: "+(Units.size(loadedBody.getLeg().getLength(loadedBody)))+")", loadedBody.getLeg()));
 					break;
 				case AVIAN:
-					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+" bird legs", loadedBody.getLeg()));
+					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+" птичьи ноги", loadedBody.getLeg()));
 					break;
 			}
 			
 			// PARTIAL:
 			if (loadedBody.getHair().getRawLengthValue() == 0 && loadedBody.getFace().isBaldnessNatural()) {
-				tooltipSB.append(getEmptyBodyPartDiv("Hair", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("Волосы", "Нет"));
 			} else {
 				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(
 						loadedBody.getHair().getLength().getDescriptor())+" "+loadedBody.getHair().getStyle().getName(loadedBody)+" "+loadedBody.getHair().getName(owner), loadedBody.getHair()));
 			}
 			tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getEye().getEyePairs()*2))+" eyes", loadedBody.getEye()));
-			tooltipSB.append(getBodyPartDiv(loadedBody, "Ears", loadedBody.getEar()));
-			tooltipSB.append(getBodyPartDiv(loadedBody, "Tongue", loadedBody.getFace().getTongue()));
+			tooltipSB.append(getBodyPartDiv(loadedBody, "Уши", loadedBody.getEar()));
+			tooltipSB.append(getBodyPartDiv(loadedBody, "Язык", loadedBody.getFace().getTongue()));
 			if (loadedBody.getHornType() != HornType.NONE) {
 				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getHorn().getTotalHorns()))+" "+loadedBody.getHorn().getName(owner),
 						loadedBody.getHorn()));
 			} else {
-				tooltipSB.append(getEmptyBodyPartDiv("Horns", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("Рога", "None"));
 			}
 			if (loadedBody.getAntenna().getType() != AntennaType.NONE) {
-				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getAntenna().getTotalAntennae()))+" antennae", loadedBody.getAntenna()));
+				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getAntenna().getTotalAntennae()))+" антенн", loadedBody.getAntenna()));
 			} else {
-				tooltipSB.append(getEmptyBodyPartDiv("Antennae", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("Антенны", "Нет"));
 			}
 			if (loadedBody.getWingType() != WingType.NONE) {
-				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(loadedBody.getWing().getSize().getName())+" wings", loadedBody.getWing()));
+				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(loadedBody.getWing().getSize().getName())+" крылья", loadedBody.getWing()));
 			} else {
-				tooltipSB.append(getEmptyBodyPartDiv("Wings", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("Крылья", "Нет"));
 			}
 			if (loadedBody.getTailType() != TailType.NONE) {
 				tooltipSB.append(
 						getBodyPartDiv(loadedBody,
 								Util.capitaliseSentence(
 									Util.intToString(loadedBody.getTail().getTailCount()))
-										+" "+(loadedBody.getTail().getType().getGirthDescriptor(loadedBody))+" tail"+(loadedBody.getTail().getTailCount()!=1?"s":""), loadedBody.getTail()));
+										+" "+(loadedBody.getTail().getType().getGirthDescriptor(loadedBody))+" хвост"+(loadedBody.getTail().getTailCount()!=1?"s":""), loadedBody.getTail()));
 			} else {
-				tooltipSB.append(getEmptyBodyPartDiv("Tail", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("Хвост", "Нет"));
 			}
 			
 			// SEXUAL:
 			if (loadedBody.getVaginaType() != VaginaType.NONE) {
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Vagina", loadedBody.getVagina(),
-								loadedBody.getVagina().getClitoris().getClitorisSize().isPseudoPenisSize()?"[unit.sizeShort(" + loadedBody.getVagina().getClitoris().getRawClitorisSizeValue()+ ")] clit":null));
+				tooltipSB.append(getBodyPartDiv(loadedBody, "Вагина", loadedBody.getVagina(),
+								loadedBody.getVagina().getClitoris().getClitorisSize().isPseudoPenisSize()?"[unit.sizeShort(" + loadedBody.getVagina().getClitoris().getRawClitorisSizeValue()+ ")] клитор":null));
 			} else {
-				tooltipSB.append(getEmptyBodyPartDiv("Vagina", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("Вагина", "Нет"));
 			}
 			
 			if (loadedBody.hasPenisIgnoreDildo()) {
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Penis", loadedBody.getPenis(),
-						"[unit.sizeShort("+loadedBody.getPenis().getRawLengthValue()+")] long, [unit.sizeShort("+loadedBody.getPenis().getDiameter()+")] diameter"));
+				tooltipSB.append(getBodyPartDiv(loadedBody, "Пенис", loadedBody.getPenis(),
+						"[unit.sizeShort("+loadedBody.getPenis().getRawLengthValue()+")] длинна, [unit.sizeShort("+loadedBody.getPenis().getDiameter()+")] диаметр"));
 			} else if (loadedBody.hasPenis()) {
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Penis", loadedBody.getPenis(),
-						"[unit.sizeShort("+loadedBody.getPenis().getRawLengthValue()+")] long, [unit.sizeShort("+loadedBody.getPenis().getDiameter()+")] diameter"));
+				tooltipSB.append(getBodyPartDiv(loadedBody, "Пенис", loadedBody.getPenis(),
+						"[unit.sizeShort("+loadedBody.getPenis().getRawLengthValue()+")] длинна, [unit.sizeShort("+loadedBody.getPenis().getDiameter()+")] диаметр"));
 			} else {
-				tooltipSB.append(getEmptyBodyPartDiv("Penis", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("Пенис", "Нет"));
 			}
 			
-			tooltipSB.append(getBodyPartDiv(loadedBody, "Anus", loadedBody.getAss().getAnus()));
+			tooltipSB.append(getBodyPartDiv(loadedBody, "Анус", loadedBody.getAss().getAnus()));
 			
 			if(feral && !loadedBody.getSubspecies().getFeralAttributes(loadedBody).isBreastsPresent()) {
-				tooltipSB.append(getEmptyBodyPartDiv("Nipples (Breasts)", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("Соски (Груди)", "Нет"));
 			} else {
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Nipples",
+				tooltipSB.append(getBodyPartDiv(loadedBody, "Соски",
 						loadedBody.getBreast().getNipples(),
 						Util.capitaliseSentence(Util.intToString(loadedBody.getBreast().getRows()*2))+" "
 								+(loadedBody.getBreast().getRawSizeValue()>0
-								?(loadedBody.getBreast().getSize().getCupSizeName() + "-cup breasts")
-								:(loadedBody.isFeminine()?"flat breasts":"pecs"))));
+								?(loadedBody.getBreast().getSize().getCupSizeName() + "-чашка груди")
+								:(loadedBody.isFeminine()?"плоская грудь":"грудные мышцы"))));
 			}
 			
 			if(spinneret) {
 				if(loadedBody.hasTailSpinneret()) {
-					tooltipSB.append(getBodyPartDiv(loadedBody, "Spinneret",
+					tooltipSB.append(getBodyPartDiv(loadedBody, "Прядильный орган",
 							loadedBody.getTail(),
 							"",
 							loadedBody.getCovering(BodyCoveringType.SPINNERET, true)));
 				} else {
-					tooltipSB.append(getBodyPartDiv(loadedBody, "Spinneret",
+					tooltipSB.append(getBodyPartDiv(loadedBody, "Прядильный орган",
 							loadedBody.getLeg(),
 							"",
 							loadedBody.getCovering(BodyCoveringType.SPINNERET, true)));
@@ -1722,15 +1722,15 @@ public class TooltipInformationEventListener implements EventListener {
 			}
 			
 			if(crotchBreasts) {
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Nipples",
+				tooltipSB.append(getBodyPartDiv(loadedBody, "Соски",
 						loadedBody.getBreastCrotch().getNipples(),
 						Util.capitaliseSentence(Util.intToString(Math.max(1, loadedBody.getBreastCrotch().getRows()*2)))+" "
-								+(loadedBody.getBreastCrotch().getRawSizeValue()>0?(loadedBody.getBreastCrotch().getSize().getCupSizeName() + "-cup "):"flat ")
+								+(loadedBody.getBreastCrotch().getRawSizeValue()>0?(loadedBody.getBreastCrotch().getSize().getCupSizeName() + "-чашка "):"плоско ")
 								+(loadedBody.getBreastCrotch().getShape()==BreastShape.UDDERS
 									?(loadedBody.getBreastCrotch().getRows()==0
-										?"udder"
-										:"udders")
-									:"crotch-boobs")));
+										?"вымя"
+										:"вымя")
+									:"груди рядом с пахом")));
 			}
 		
 			Main.mainController.setTooltipContent(UtilText.parse(tooltipSB.toString()));
@@ -1814,7 +1814,7 @@ public class TooltipInformationEventListener implements EventListener {
 							:"")
 					+ "</div>"
 					+ name +(size!=null&&!size.isEmpty()?" ("+size+"): ":": ")
-					+ (elementalFeral || (feral && race!=Race.NONE)?"[style.colourFeral(Feral )]":"")
+					+ (elementalFeral || (feral && race!=Race.NONE)?"[style.colourFeral(Животное )]":"")
 					+ (covering.getType()!=BodyCoveringType.DILDO
 						?"<span style='color:" + race.getColour().toWebHexString() + ";'>"
 							+Util.capitaliseSentence(raceName)
@@ -1873,7 +1873,7 @@ public class TooltipInformationEventListener implements EventListener {
 							:"")
 					+ "</div>"
 					+ name +(size!=null&&!size.isEmpty()?" ("+size+"): ":": ")
-					+ ((feral && race!=Race.NONE)?"[style.colourFeral(Feral )]":"")
+					+ ((feral && race!=Race.NONE)?"[style.colourFeral(Животное )]":"")
 					+ (covering.getType()!=BodyCoveringType.DILDO
 						?"<span style='color:" + race.getColour().toWebHexString() + ";'>"
 							+Util.capitaliseSentence(raceName)
