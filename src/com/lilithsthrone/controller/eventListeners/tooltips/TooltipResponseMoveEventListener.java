@@ -11,6 +11,7 @@ import com.lilithsthrone.main.Main;
  * @since 0.1.61
  * @version 0.1.69
  * @author Innoxia
+ * Перевод не требуется
  */
 public class TooltipResponseMoveEventListener implements EventListener {
 
