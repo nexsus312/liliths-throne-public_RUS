@@ -1004,11 +1004,11 @@ public class TooltipInformationEventListener implements EventListener {
 							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getTotalHorns()))+" "+(owner.getTotalHorns()==1?owner.getHornNameSingular():owner.getHornName()),
 									owner.getHornRace(), owner.getHornCovering(), owner.isHornFeral()));
 						} else {
-							tooltipSB.append(getEmptyBodyPartDiv("Horns", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("Рога", "Нет"));
 						}
 						if (owner.getAntennaType() != AntennaType.NONE) {
 							//TODO might need changing if made like horn count:
-							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getAntennaRows()*owner.getAntennaePerRow()))+" antennae", owner.getAntennaRace(), owner.getAntennaCovering(), owner.isAntennaFeral()));
+							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getAntennaRows()*owner.getAntennaePerRow()))+" антенны", owner.getAntennaRace(), owner.getAntennaCovering(), owner.isAntennaFeral()));
 						} else {
 							tooltipSB.append(getEmptyBodyPartDiv("Антенны", "Нет"));
 						}
@@ -1496,12 +1496,12 @@ public class TooltipInformationEventListener implements EventListener {
 							:"")));
 			
 		} else if(moneyTransferPercentage>0) {
-			
+			//Увеличил высоту окна с текстом, не влезает по умолчанию
 			if(InventoryDialogue.getNPCInventoryInteraction()==InventoryInteraction.FULL_MANAGEMENT
 					&& owner!=null?owner.getMoney()>0:Main.game.getPlayerCell().getInventory().getMoney()>0) {
-				Main.mainController.setTooltipSize(360, 112);
+				Main.mainController.setTooltipSize(360, 130);
 			} else {
-				Main.mainController.setTooltipSize(360, 96);
+				Main.mainController.setTooltipSize(360, 120);
 			}
 			tooltipSB.setLength(0);
 
