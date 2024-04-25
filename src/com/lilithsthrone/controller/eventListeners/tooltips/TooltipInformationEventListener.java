@@ -160,23 +160,23 @@ public class TooltipInformationEventListener implements EventListener {
 				} else {
 					tooltipSB.append("<p style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>");
 					if(owner.isRaceConcealed()) {
-						tooltipSB.append(UtilText.parse(owner, "You don't know what [npc.namePos] race is, so can't know [npc.her] strengths and weaknesses...</p>"));
+						tooltipSB.append(UtilText.parse(owner, "Вы не знаете расу [npc.namePos], поэтому не можете знать [npc.her] сильные и слабые стороны ...</p>"));
 					} else {
-						tooltipSB.append(UtilText.parse(owner, "You don't know enough about [npc.racePlural] to know [npc.her] strengths and weaknesses...</p>"));
+						tooltipSB.append(UtilText.parse(owner, "Вы не обладаете достаточными зананиями о [npc.racePlural] чтобы занть [npc.her] сильные и слабые стороны...</p>"));
 					}
 					effectsFound = true;
 				}
 				for (AbstractCombatMove cm : statusEffect.getCombatMoves()) {
-					tooltipSB.append((effectsFound?"<br/>":"")+"[style.boldExcellent(Grants)] [style.boldCombat(Move)]: "+Util.capitaliseSentence(cm.getName(0, owner)));
+					tooltipSB.append((effectsFound?"<br/>":"")+"[style.boldExcellent(Дает)] [style.boldCombat(Движение)]: "+Util.capitaliseSentence(cm.getName(0, owner)));
 					effectsFound =true;
 				}
 				for (Spell spell : statusEffect.getSpells()) {
-					tooltipSB.append((effectsFound?"<br/>":"")+"[style.boldExcellent(Grants)] [style.boldSpell(Spell)]<b>:</b> <b style='color:"+spell.getSpellSchool().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(spell.getName())+"</b>");
+					tooltipSB.append((effectsFound?"<br/>":"")+"[style.boldExcellent(Дает)] [style.boldSpell(Заклинание)]<b>:</b> <b style='color:"+spell.getSpellSchool().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(spell.getName())+"</b>");
 					effectsFound =true;
 				}
 				
 				if(!effectsFound) {
-					tooltipSB.append("<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>No bonuses</span>");
+					tooltipSB.append("<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Без бонусов</span>");
 				}
 			tooltipSB.append("</div>");
 
@@ -200,7 +200,7 @@ public class TooltipInformationEventListener implements EventListener {
 			if(owner.hasStatusEffect(statusEffect)) {
 				if (owner.getStatusEffectDuration(statusEffect) != -1 || statusEffect.isCombatEffect()) {
 					if (statusEffect.isCombatEffect()) {
-						tooltipSB.append("<div class='subTitle'><b>Turns remaining: ");
+						tooltipSB.append("<div class='subTitle'><b>Осталось ходов: ");
 						if(owner.getStatusEffectDuration(statusEffect) != -1) {
 							tooltipSB.append(owner.getStatusEffectDuration(statusEffect));
 						} else {
@@ -225,24 +225,24 @@ public class TooltipInformationEventListener implements EventListener {
 						int hours = minutes/60;
 						int days = hours/24;
 						
-						tooltipSB.append("<div class='subTitle'><b>Time remaining: "
+						tooltipSB.append("<div class='subTitle'><b>Осталось времени: "
 								+ "<b style='color:"+timerColour.toWebHexString()+";'>"
 								+(days>0
-									?days+" day"+(days>1?"s":"")
+									?days+" дней"+(days>1?"s":"")
 										+(hours%24>0
-												?" "+(hours%24)+" hour"+((hours%24)>1?"s":"")
+												?" "+(hours%24)+" часов"+((hours%24)>1?"сек":"")
 														+ (minutes%60>0
-																?" "+(minutes%60)+" minute"+((minutes%60)>1?"s":"")
+																?" "+(minutes%60)+" минут"+((minutes%60)>1?"сек":"")
 																		:"")
 												:(minutes%60>0
-														?" "+(minutes%60)+" minute"+((minutes%60)>1?"s":"")
+														?" "+(minutes%60)+" минут"+((minutes%60)>1?"s":"")
 																:""))
 									:(hours>0
-											?" "+(hours)+" hour"+((hours)>1?"s":"")
+											?" "+(hours)+" часов"+((hours)>1?"s":"")
 													+ (minutes%60>0
-															?" "+(minutes%60)+" minute"+((minutes%60)>1?"s":"")
+															?" "+(minutes%60)+" минут"+((minutes%60)>1?"s":"")
 																	:"")
-											:(minutes)+" minute"+((minutes)>1?"s":"")))
+											:(minutes)+" минут"+((minutes)>1?"сек":"")))
 								+ "</b>"
 								+ "</div>");
 						//STATUS_EFFECT_TIME_OVERFLOW
@@ -273,9 +273,9 @@ public class TooltipInformationEventListener implements EventListener {
 			tooltipSB.append("<div class='title'>" + Util.capitaliseSentence(perk.getName(owner)) + "</div>");
 
 			if(perk.isEquippableTrait()) {
-				tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.TRAIT.toWebHexString()+";'>Trait</div>");
+				tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.TRAIT.toWebHexString()+";'>Черта</div>");
 			} else {
-				tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.PERK.toWebHexString()+";'>Perk</div>");
+				tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.PERK.toWebHexString()+";'>Перк</div>");
 			}
 			
 			// Attribute modifiers:
@@ -287,7 +287,7 @@ public class TooltipInformationEventListener implements EventListener {
 					i++;
 				}
 			} else {
-				tooltipSB.append("<b style='color:" + PresetColour.PERK.toWebHexString() + ";'>Perk</b>" + "<br/><span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>None</span>");
+				tooltipSB.append("<b style='color:" + PresetColour.PERK.toWebHexString() + ";'>Перк</b>" + "<br/><span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Нет</span>");
 			}
 			tooltipSB.append("</div>");
 
@@ -312,17 +312,17 @@ public class TooltipInformationEventListener implements EventListener {
 			
 			if(levelUpPerk.isEquippableTrait()) {
 				if(levelUpPerk.getPerkCategory()==PerkCategory.JOB) {
-					tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>'"+Util.capitaliseSentence(owner.getHistory().getName(owner))+"' Occupation Trait</div>");
+					tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>'"+Util.capitaliseSentence(owner.getHistory().getName(owner))+"' Профессиональная черта</div>");
 				} else if(levelUpPerk.isHiddenPerk()) {
-					tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>Unique Trait</div>");
+					tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>Уникальная Черта</div>");
 				} else {
-					tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.TRAIT.toWebHexString()+";'>Trait</div>");
+					tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.TRAIT.toWebHexString()+";'>Черта</div>");
 				}
 			} else {
 				 if(levelUpPerk.isHiddenPerk()) {
-					tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>Unique Perk</div>");
+					tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>Уникальный перк</div>");
 				} else {
-					tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.PERK.toWebHexString()+";'>Perk</div>");
+					tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.PERK.toWebHexString()+";'>Перк</div>");
 				}
 			}
 			
@@ -335,7 +335,7 @@ public class TooltipInformationEventListener implements EventListener {
 					i++;
 				}
 			} else {
-				tooltipSB.append("<b style='color:" + PresetColour.PERK.toWebHexString() + ";'>Perk</b>" + "<br/><span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>None</span>");
+				tooltipSB.append("<b style='color:" + PresetColour.PERK.toWebHexString() + ";'>Перк</b>" + "<br/><span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Нет</span>");
 			}
 			tooltipSB.append("</div>");
 
@@ -353,23 +353,23 @@ public class TooltipInformationEventListener implements EventListener {
 			if(availableForSelection) {
 				if(levelUpPerk.isEquippableTrait()) {
 					if(levelUpPerk.getPerkCategory()==PerkCategory.JOB) {
-						tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>Occupation traits cannot be removed.</div>");
+						tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>Профессиональные черты не могут быть убраны.</div>");
 						
 					} else {
 						if(!owner.hasPerkInTree(perkRow, levelUpPerk)) {
 							if(!PerkManager.MANAGER.isPerkAvailable(owner, perkRow, levelUpPerk)) {
-								tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Purchasing requires a connecting perk or trait.</div>");
+								tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Покупка требует соединяющего перка или черты.</div>");
 							} else {
-								tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>Click to purchase trait.</div>");
+								tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>Клик для покупки черты.</div>");
 							}
 						} else {
 							if(owner.getTraits().contains(levelUpPerk)) {
-								tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>Click to unequip trait.</div>");
+								tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>Клик для снятия черты.</div>");
 							} else {
 								if(owner.getTraits().size()==GameCharacter.MAX_TRAITS) {
-									tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Maximum traits activated.</div>");
+									tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Максимум черт активно.</div>");
 								} else {
-									tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.TRAIT.toWebHexString()+";'>Click to equip trait.</div>");
+									tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.TRAIT.toWebHexString()+";'>Клик для активации черты.</div>");
 								}
 							}
 						}
@@ -378,14 +378,14 @@ public class TooltipInformationEventListener implements EventListener {
 				} else {
 					if(!owner.hasPerkInTree(perkRow, levelUpPerk) && !levelUpPerk.isHiddenPerk()) {
 						if(!PerkManager.MANAGER.isPerkAvailable(owner, perkRow, levelUpPerk)) {
-							tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Purchasing requires a connecting perk or trait.</div>");
+							tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Покупка требует соединяющего перка или черты.</div>");
 						} else {
-							tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>Click to purchase perk.</div>");
+							tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>Клик для покупки перка.</div>");
 						}
 						
 					} else {
 						tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.PERK.toWebHexString()+";'>"
-											+ UtilText.parse(owner, "[npc.Name] already [npc.verb(own)] this perk!")
+											+ UtilText.parse(owner, "[npc.Name] уже имеет этот перк!")
 										+ "</div>");
 					}
 				}
@@ -409,11 +409,11 @@ public class TooltipInformationEventListener implements EventListener {
 
 			boolean coreMove = owner.getEquippedMoves().contains(move);
 			
-			tooltipSB.append("<div class='subTitle' style='width:46%; margin:2% 2% 0% 2%;'>"+(coreMove?"[style.colourMinorGood(Core)]":"[style.colourMinorBad(Non-core)]")+"</div>");
+			tooltipSB.append("<div class='subTitle' style='width:46%; margin:2% 2% 0% 2%;'>"+(coreMove?"[style.colourMinorGood(Основные)]":"[style.colourMinorBad(Не основные)]")+"</div>");
 			tooltipSB.append("<div class='subTitle' style='color:"+move.getColourByDamageType(0, owner).toWebHexString()+"; width:46%; margin:2% 2% 0% 2%;'>"+move.getType().getName()+"</div>");
 			
 			if(currentCooldown>0) {
-				tooltipSB.append("<div class='subTitle'><span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>On cooldown</span>: "+currentCooldown+(currentCooldown==1?" turn":" turns")+"</div>");
+				tooltipSB.append("<div class='subTitle'><span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>На перезарядке</span>: "+currentCooldown+(currentCooldown==1?" ход":" ходов")+"</div>");
 			}
 			
 			// Picture:
@@ -439,7 +439,7 @@ public class TooltipInformationEventListener implements EventListener {
 			
 			if(move.getStatusEffects(owner, owner, false)!=null) {
 				for(Entry<AbstractStatusEffect, Integer> entry : move.getStatusEffects(owner, owner, false).entrySet()) {
-					tooltipSB.append("<br/>Applies: <span style='color:"+entry.getKey().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(entry.getKey().getName(null))+"</span> for "+entry.getValue()+(entry.getValue()==1?" turn":" turns"));
+					tooltipSB.append("<br/>Применяется: <span style='color:"+entry.getKey().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(entry.getKey().getName(null))+"</span> на "+entry.getValue()+(entry.getValue()==1?" ход":" ходов"));
 				}
 			}
 			tooltipSB.append("</div>");
@@ -456,7 +456,7 @@ public class TooltipInformationEventListener implements EventListener {
 					+ "</div>");
 			
 
-			tooltipSB.append("<div class='subTitle'><span style='color:"+PresetColour.CRIT.toWebHexString()+";'>Critically hits when:</span>");
+			tooltipSB.append("<div class='subTitle'><span style='color:"+PresetColour.CRIT.toWebHexString()+";'>Критический удар когда:</span>");
 			for(String s : critReqs) {
 				tooltipSB.append("<br/>"+s);
 			}
@@ -464,12 +464,12 @@ public class TooltipInformationEventListener implements EventListener {
 
 			if(!Main.game.isInCombat()) {
 				if(owner.getEquippedMoves().contains(move)) {
-					tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>Click to unequip move.</div>");
+					tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>Клик чтобы убрать движение.</div>");
 				} else {
 					if(owner.getEquippedMoves().size()>=GameCharacter.MAX_COMBAT_MOVES) {
-						tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Maximum core moves selected.</div>");
+						tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Максимум основных движений.</div>");
 					} else {
-						tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.TRAIT.toWebHexString()+";'>Click to equip move.</div>");
+						tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.TRAIT.toWebHexString()+";'>Клик чтобы взять движение.</div>");
 					}
 				}
 			}
@@ -499,17 +499,17 @@ public class TooltipInformationEventListener implements EventListener {
 			// Description:
 			if(owner.hasFetish(fetish) && desire!=FetishDesire.FOUR_LOVE) {
 				tooltipSB.append("<div class='description' style='height:53px'>Your desire is [style.boldBad(locked)] to <b style='color:"+FetishDesire.FOUR_LOVE.getColour().toWebHexString()+";'>"+FetishDesire.FOUR_LOVE.getName()+"</b>,"
-						+ " due to owning the related fetish ("+fetish.getName(owner)+").</div>");
-				tooltipSB.append("<div class='subTitle' style='text-align:center;'>Cost: [style.boldDisabled(N/A)]</div>");
+						+ " из-за обладания соответствующим фетишем ("+fetish.getName(owner)+").</div>");
+				tooltipSB.append("<div class='subTitle' style='text-align:center;'>Стоимость: [style.boldDisabled(Нет)]</div>");
 			} else {
 				tooltipSB.append("<div class='description' style='height:53px'>" + fetish.getFetishDesireDescription(owner, desire) + "</div>");
 				if(owner.getBaseFetishDesire(fetish)==desire) {
-					tooltipSB.append("<div class='subTitle' style='text-align:center;'>Cost: [style.boldDisabled(N/A)]</div>");
+					tooltipSB.append("<div class='subTitle' style='text-align:center;'>Стоимость: [style.boldDisabled(Нет)]</div>");
 				} else {
-					tooltipSB.append("<div class='subTitle' style='text-align:center;'>Cost: [style.boldArcane("
+					tooltipSB.append("<div class='subTitle' style='text-align:center;'>Стоимость: [style.boldArcane("
 							+ (FetishDesire.getCostToChange()==0
-								?"Free"
-								:Integer.toString(FetishDesire.getCostToChange())+" Arcane Essence"+(FetishDesire.getCostToChange()>1?"s":""))
+								?"Бесплатно"
+								:Integer.toString(FetishDesire.getCostToChange())+" Магических Эссенций"+(FetishDesire.getCostToChange()>1?"s":""))
 							+ ")]</div>");
 				}
 			}
@@ -524,11 +524,11 @@ public class TooltipInformationEventListener implements EventListener {
 				Main.mainController.setTooltipSize(420, 156);
 				
 				tooltipSB.setLength(0);
-				tooltipSB.append("<div class='title'>" + Util.capitaliseSentence(fetish.getName(owner)) + " fetish</div>");
+				tooltipSB.append("<div class='title'>" + Util.capitaliseSentence(fetish.getName(owner)) + " фетиш</div>");
 				FetishLevel level = FetishLevel.getFetishLevelFromValue(owner.getFetishExperience(fetish));
-				tooltipSB.append("<div class='subTitle'>Level "+level.getNumeral()+": <span style='color:"+level.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(level.getName())+"</span>"
+				tooltipSB.append("<div class='subTitle'>Уровень "+level.getNumeral()+": <span style='color:"+level.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(level.getName())+"</span>"
 									+ " <span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>|</span> " + owner.getFetishExperience(fetish) +" / "+ level.getMaximumExperience() + " xp" + "</div>");
-				tooltipSB.append("<div class='description' style='height:53px'>You earn fetish experience by performing related actions in sex. Each level increases the fetish's bonuses (max level is 5).</div>");
+				tooltipSB.append("<div class='description' style='height:53px'>Вы зарабатываете очки опыта фетиша выполняя связанные с ним действия. Каждый уровень увеличивает бонусы фетиша (максимальный уровень: 5).</div>");
 
 				Main.mainController.setTooltipContent(UtilText.parse(tooltipSB.toString()));
 				
@@ -554,24 +554,24 @@ public class TooltipInformationEventListener implements EventListener {
 				
 				// Title:
 				tooltipSB.setLength(0);
-				tooltipSB.append("<div class='title'>" + Util.capitaliseSentence(fetish.getName(owner)) + " fetish</div>");
+				tooltipSB.append("<div class='title'>" + Util.capitaliseSentence(fetish.getName(owner)) + " фетиш</div>");
 				FetishLevel level = FetishLevel.getFetishLevelFromValue(owner.getFetishExperience(fetish));
 				tooltipSB.append("<div class='subTitle'>");
 				tooltipSB.append("Level "+level.getNumeral()+": <span style='color:"+level.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(level.getName())+"</span>"
 						+ " <span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>|</span> " + owner.getFetishExperience(fetish) +" / "+ level.getMaximumExperience() + " xp");
 
 				String appliedFetishLevelDescription = fetish.getAppliedFetishLevelEffectDescription(owner);
-				tooltipSB.append("<br/>[style.boldFetish(Level Effects:)] ");
+				tooltipSB.append("<br/>[style.boldFetish(Эффект уровня:)] ");
 				if(appliedFetishLevelDescription!=null && !appliedFetishLevelDescription.isEmpty()) {
 					tooltipSB.append(appliedFetishLevelDescription);
 				} else {
-					tooltipSB.append("[style.colourDisabled(None...)]");
+					tooltipSB.append("[style.colourDisabled(Нет...)]");
 				}
 				tooltipSB.append("</div>");
 				
 				// Requirements:
 				if(!fetish.getFetishesForAutomaticUnlock().isEmpty() || (!owner.hasFetish(fetish) && !fetish.getPerkRequirements(owner).isEmpty())) {
-					tooltipSB.append("<div class='subTitle' style='font-weight:normal;'><b>Requirements</b>");
+					tooltipSB.append("<div class='subTitle' style='font-weight:normal;'><b>Требования</b>");
 					for(AbstractFetish f : fetish.getFetishesForAutomaticUnlock()) {
 						if(owner.hasFetish(f)) {
 							tooltipSB.append("<br/>[style.italicsGood(" + Util.capitaliseSentence(f.getName(owner))+")]");
@@ -596,7 +596,7 @@ public class TooltipInformationEventListener implements EventListener {
 						i++;
 					}
 				} else {
-					tooltipSB.append("<b style='color:" + PresetColour.FETISH.toWebHexString() + ";'>Fetish</b>" + "<br/><span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>None</span>");
+					tooltipSB.append("<b style='color:" + PresetColour.FETISH.toWebHexString() + ";'>Fetish</b>" + "<br/><span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Нет</span>");
 				}
 				tooltipSB.append("</div>");
 	
@@ -608,9 +608,9 @@ public class TooltipInformationEventListener implements EventListener {
 				
 				if(fetish.getFetishesForAutomaticUnlock().isEmpty()) {
 					if(owner.hasBaseFetish(fetish)) {
-						tooltipSB.append("<div class='subTitle' style='text-align:center;'>Cost: [style.boldDisabled(N/A)]</div>");
+						tooltipSB.append("<div class='subTitle' style='text-align:center;'>Стоимость: [style.boldDisabled(Нет)]</div>");
 					} else {
-						tooltipSB.append("<div class='subTitle' style='text-align:center;'>Cost: [style.boldArcane("+fetish.getCost()+" Arcane Essences)]</div>");
+						tooltipSB.append("<div class='subTitle' style='text-align:center;'>Стоимость: [style.boldArcane("+fetish.getCost()+" Волшебных эссенций)]</div>");
 					}
 				}
 				
@@ -632,13 +632,13 @@ public class TooltipInformationEventListener implements EventListener {
 
 			if(spell.getDamage(Main.game.getPlayer())>0) {
 				tooltipSB.append(
-						"<b>Base "+spell.getDamage(owner)+"</b> <b style='color:"+ spell.getDamageType().getMultiplierAttribute().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(spell.getDamageType().getName()) + " Damage</b><br/>"
+						"<b>Base "+spell.getDamage(owner)+"</b> <b style='color:"+ spell.getDamageType().getMultiplierAttribute().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(spell.getDamageType().getName()) + " Урон</b><br/>"
 						+"<b>"
 							+ Attack.getMinimumSpellDamage(owner, null, spell.getDamageType(), spell.getDamage(owner), spell.getDamageVariance())
 							+ "-"
 							+ Attack.getMaximumSpellDamage(owner, null, spell.getDamageType(), spell.getDamage(owner), spell.getDamageVariance())
 						+ "</b>"
-						+ " <b style='color:"+ spell.getDamageType().getMultiplierAttribute().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(spell.getDamageType().getName()) + " Damage</b><br/>");
+						+ " <b style='color:"+ spell.getDamageType().getMultiplierAttribute().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(spell.getDamageType().getName()) + " Урон</b><br/>");
 			}
 			
 			if(!spell.getModifiersAsStringList().isEmpty()) {
@@ -646,7 +646,7 @@ public class TooltipInformationEventListener implements EventListener {
 					tooltipSB.append(spell.getModifiersAsStringList().get(i)+(i<spell.getModifiersAsStringList().size()-1?"<br/>":""));
 				}
 			} else {
-				tooltipSB.append("<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>No effects</span><br/>");	
+				tooltipSB.append("<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Без эффекта</span><br/>");	
 			}
 			tooltipSB.append("</div>");
 
@@ -656,15 +656,15 @@ public class TooltipInformationEventListener implements EventListener {
 			// Description & turns remaining:
 			tooltipSB.append(
 					"<div class='description'>"
-							+ (spell.isForbiddenSpell() && !owner.hasSpell(spell)?"[style.italicsArcane(This is a forbidden spell, and can only be discovered through a special quest!)]<br/>":"")
+							+ (spell.isForbiddenSpell() && !owner.hasSpell(spell)?"[style.italicsArcane(Это запрещенное заклинание и оно может был получено только через специальное задание!)]<br/>":"")
 							+ spell.getDescription(owner)
-							+ "<br/>[style.colourExcellent(Crit requirements)]: ");
+							+ "<br/>[style.colourExcellent(Требования крита)]: ");
 			for(String s : spell.getCritRequirements(owner, null, null, null)) {
 				tooltipSB.append(s);
 			}
 			tooltipSB.append("</div>"
 					+ "<div class='subTitle'>"
-						+ "<b style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Costs</b> <b>" + (spell.getModifiedCost(owner)) + "</b> <b style='color:" + PresetColour.ATTRIBUTE_MANA.toWebHexString() + ";'>aura</b>"
+						+ "<b style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Стоимость</b> <b>" + (spell.getModifiedCost(owner)) + "</b> <b style='color:" + PresetColour.ATTRIBUTE_MANA.toWebHexString() + ";'>ауры</b>"
 					+ "</div>");
 
 			Main.mainController.setTooltipContent(UtilText.parse(tooltipSB.toString()));
@@ -687,7 +687,7 @@ public class TooltipInformationEventListener implements EventListener {
 					tooltipSB.append(spellUpgrade.getModifiersAsStringList().get(i)+(i<spellUpgrade.getModifiersAsStringList().size()-1?"<br/>":""));
 				}
 			} else {
-				tooltipSB.append("<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>No effects</span><br/>");
+				tooltipSB.append("<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Без эффекта</span><br/>");
 			}
 			
 			tooltipSB.append("</div>");
@@ -702,10 +702,10 @@ public class TooltipInformationEventListener implements EventListener {
 					+ "</div>"
 					+ "<div class='subTitle'>"
 						+ (owner.hasSpellUpgrade(spellUpgrade)
-								?"[style.boldExcellent(Owned)] (Cost <b style='color:"+spellUpgrade.getSpellSchool().getColour().toWebHexString()+";'>"+spellUpgrade.getPointCost()+"</b> Point"+(spellUpgrade.getPointCost()==1?"":"s")+")"
+								?"[style.boldExcellent(Есть)] (Cost <b style='color:"+spellUpgrade.getSpellSchool().getColour().toWebHexString()+";'>"+spellUpgrade.getPointCost()+"</b> очко"+(spellUpgrade.getPointCost()==1?"":"s")+")"
 								:(owner.getSpellUpgradePoints(spellUpgrade.getSpellSchool()) >= spellUpgrade.getPointCost()
-										?"Costs <b style='color:"+spellUpgrade.getSpellSchool().getColour().toWebHexString()+";'>"+spellUpgrade.getPointCost()+"</b> Point"+(spellUpgrade.getPointCost()==1?"":"s")+" - [style.colourGood(Can afford!)]"
-										:"Costs <b style='color:"+spellUpgrade.getSpellSchool().getColour().toWebHexString()+";'>"+spellUpgrade.getPointCost()+"</b> Point"+(spellUpgrade.getPointCost()==1?"":"s")+" - [style.colourBad(Cannot afford!)]"))
+										?"Стоит <b style='color:"+spellUpgrade.getSpellSchool().getColour().toWebHexString()+";'>"+spellUpgrade.getPointCost()+"</b> очко"+(spellUpgrade.getPointCost()==1?"":"в")+" - [style.colourGood(Можете себе позволить!)]"
+										:"Стоит <b style='color:"+spellUpgrade.getSpellSchool().getColour().toWebHexString()+";'>"+spellUpgrade.getPointCost()+"</b> очко"+(spellUpgrade.getPointCost()==1?"":"в")+" - [style.colourBad(Не можете себе позволить!)]"))
 					+ "</div>");
 
 			Main.mainController.setTooltipContent(UtilText.parse(tooltipSB.toString()));
@@ -754,12 +754,12 @@ public class TooltipInformationEventListener implements EventListener {
 				tooltipSB.setLength(0);
 				tooltipSB.append("<div class='title' style='color:" + attribute.getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(attribute.getName()) + "</div>"
 
-						+ "<div class='subTitle-third'>" + "<b style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Core</b><br/>"
+						+ "<div class='subTitle-third'>" + "<b style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Основа</b><br/>"
 						+ (owner.getBaseAttributeValue(attribute) > 0 ? "<span style='color: " + PresetColour.GENERIC_EXCELLENT.getShades()[1] + ";'>" : "<span>")
 							+ Units.number(owner.getBaseAttributeValue(attribute), 1, 1)
 						+ "</span>" + "</div>"
 						
-						+ "<div class='subTitle-third'>" + "<b style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Bonus</b><br/>"
+						+ "<div class='subTitle-third'>" + "<b style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Бонус</b><br/>"
 						+ ((owner.getBonusAttributeValue(attribute)) > 0 ? "<span style='color: " + PresetColour.GENERIC_GOOD.getShades()[1] + ";'>"
 								: ((owner.getBonusAttributeValue(attribute)) == 0 ? "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>" : "<span style='color: " + PresetColour.GENERIC_BAD.getShades()[1] + ";'>"))
 						+ Units.number(owner.getBonusAttributeValue(attribute), 1, 1)+ "</span>" + "</div>"
@@ -791,7 +791,7 @@ public class TooltipInformationEventListener implements EventListener {
 						i++;
 					}
 				} else {
-					tooltipSB.append("<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>No bonuses</span>");
+					tooltipSB.append("<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Без бонусов</span>");
 				}
 				tooltipSB.append("</div>");
 			
@@ -809,7 +809,7 @@ public class TooltipInformationEventListener implements EventListener {
 				if(owner.isRaceConcealed()) {
 					tooltipSB.setLength(0);
 					tooltipSB.append("<div class='title' style='color:" + PresetColour.RACE_UNKNOWN.toWebHexString() + ";'>"
-							+ "Unknown Race!"
+							+ "Неизвестная раса!"
 							+ "</div>");
 
 					int knownAreas = 0;
@@ -826,7 +826,7 @@ public class TooltipInformationEventListener implements EventListener {
 									owner.getBreastRace(),
 									owner.getBreastType().getNippleType().getBodyCoveringType(owner),
 									owner.isNippleFeral(),
-									Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+" "+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "-cup breasts"):(owner.isFeminine()?"flat breasts":"pecs"))));
+									Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+" "+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "-cup breasts"):(owner.isFeminine()?"плоская грудь":"грудные мышцы"))));
 						}
 					}
 					if(owner.hasBreastsCrotch() && Main.game.getPlayer().isKnowsCharacterArea(CoverableArea.BREASTS_CROTCH, owner)) {
