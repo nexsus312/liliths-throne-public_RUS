@@ -120,7 +120,7 @@ public class TooltipInformationEventListener implements EventListener {
 	
 	@Override
 	public void handleEvent(Event event) {
-		Main.mainController.setTooltipSize(360, 180);
+		Main.mainController.setTooltipSize(420, 200);
 		Main.mainController.setTooltipContent("");
 
 		if (statusEffect != null) {
@@ -398,8 +398,8 @@ public class TooltipInformationEventListener implements EventListener {
 			
 			int currentCooldown = owner.getMoveCooldown(move.getIdentifier());
 			
-			Main.mainController.setTooltipSize(360,
-					(Main.game.isInCombat()?320:352)
+			Main.mainController.setTooltipSize(400,
+					(Main.game.isInCombat()?340:370)
 					+ (critReqs.size()>0?(32+critReqs.size()*16):0)
 					+ (currentCooldown>0?32:0));
 
@@ -425,14 +425,14 @@ public class TooltipInformationEventListener implements EventListener {
 			int cooldown = move.getCooldown(owner);
 
 			tooltipSB.append(
-					"AP cost: "
+					"Стоимость действий: "
 						+"<span style='color:"+(PresetColour.ACTION_POINT_COLOURS[apCost]).toWebHexString()+";'>"
 						+(coreMove?apCost:(apCost-1)+"[style.colourBad(+1)]")
 						+"</span>"
-					+ "<br/>Cooldown: "
+					+ "<br/>Перезарядка: "
 						+ "<span style='color:"+(cooldown-(coreMove?0:1)<=0?PresetColour.GENERIC_MINOR_GOOD:PresetColour.GENERIC_MINOR_BAD).toWebHexString()+";'>"
 						+(coreMove?cooldown:(cooldown-1)+"[style.colourBad(+1)]")
-						+"</span> turn"+(cooldown==1?"":"s"));
+						+"</span> ход"+(cooldown==1?"":"ов"));
 			
 //			tooltipSB.append("AP cost: "+"<span style='color:"+(apColours[apCost]).toWebHexString()+";'>"+apCost+"</span>");
 //			tooltipSB.append("<br/>Cooldown: "+"<span style='color:"+(cooldown==0?PresetColour.GENERIC_MINOR_GOOD:PresetColour.GENERIC_MINOR_BAD).toWebHexString()+";'>"+cooldown+(cooldown==1?" turn":" turns")+"</span>");
@@ -478,7 +478,7 @@ public class TooltipInformationEventListener implements EventListener {
 
 		} else if (desire != null) { // Desire:
 
-			Main.mainController.setTooltipSize(360, 264);
+			Main.mainController.setTooltipSize(400, 280);
 
 			// Title:
 			tooltipSB.setLength(0);
@@ -521,7 +521,7 @@ public class TooltipInformationEventListener implements EventListener {
 			
 			if(fetishExperience) {
 				
-				Main.mainController.setTooltipSize(420, 156);
+				Main.mainController.setTooltipSize(440, 170);
 				
 				tooltipSB.setLength(0);
 				tooltipSB.append("<div class='title'>" + Util.capitaliseSentence(fetish.getName(owner)) + " фетиш</div>");
@@ -550,7 +550,7 @@ public class TooltipInformationEventListener implements EventListener {
 				}
 				specialIncrease += LINE_HEIGHT; // For fetish level effects
 				
-				Main.mainController.setTooltipSize(360, 342 + specialIncrease + (yIncrease * LINE_HEIGHT));
+				Main.mainController.setTooltipSize(380, 370 + specialIncrease + (yIncrease * LINE_HEIGHT));
 				
 				// Title:
 				tooltipSB.setLength(0);
@@ -621,7 +621,7 @@ public class TooltipInformationEventListener implements EventListener {
 
 			int yIncrease = (spell.getModifiersAsStringList().size() > 5 ? spell.getModifiersAsStringList().size() - 5 : 0);
 
-			Main.mainController.setTooltipSize(360, 312 + (yIncrease * LINE_HEIGHT));
+			Main.mainController.setTooltipSize(380, 330 + (yIncrease * LINE_HEIGHT));
 
 			// Title:
 			tooltipSB.setLength(0);
@@ -673,7 +673,7 @@ public class TooltipInformationEventListener implements EventListener {
 
 			int yIncrease = (spellUpgrade.getModifiersAsStringList().size() > 5 ? spellUpgrade.getModifiersAsStringList().size() - 5 : 0);
 
-			Main.mainController.setTooltipSize(360, 316 + (yIncrease * LINE_HEIGHT));
+			Main.mainController.setTooltipSize(380, 330 + (yIncrease * LINE_HEIGHT));
 
 			// Title:
 			tooltipSB.setLength(0);
@@ -749,7 +749,7 @@ public class TooltipInformationEventListener implements EventListener {
 				int yIncrease = (currentAttributeStatusEffect.getModifiersAsStringList(owner).size() > 4 ? currentAttributeStatusEffect.getModifiersAsStringList(owner).size() - 4 : 0)
 						+ (owner.hasStatusEffect(currentAttributeStatusEffect)?(owner.getStatusEffectDuration(currentAttributeStatusEffect) == -1 ? 0 : 2):0);
 
-				Main.mainController.setTooltipSize(360, 460 + (yIncrease * LINE_HEIGHT));
+				Main.mainController.setTooltipSize(380, 480 + (yIncrease * LINE_HEIGHT));
 				
 				tooltipSB.setLength(0);
 				tooltipSB.append("<div class='title' style='color:" + attribute.getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(attribute.getName()) + "</div>"
