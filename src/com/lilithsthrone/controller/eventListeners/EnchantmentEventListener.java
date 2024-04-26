@@ -61,7 +61,7 @@ public class EnchantmentEventListener implements EventListener {
 			EnchantmentDialogue.setLimit(EnchantmentDialogue.getIngredient().getEnchantmentEffect().getLimits(EnchantmentDialogue.getPrimaryMod(), EnchantmentDialogue.getSecondaryMod()));
 		}
 		
-		Main.game.setContent(new Response("Enchanting", "Start enchanting.", EnchantmentDialogue.ENCHANTMENT_MENU));
+		Main.game.setContent(new Response("Зачаровать", "Начать зачаровывать.", EnchantmentDialogue.ENCHANTMENT_MENU));
 	}
 
 	public EnchantmentEventListener setItemToEnchant(AbstractCoreItem itemToEnchant) {
