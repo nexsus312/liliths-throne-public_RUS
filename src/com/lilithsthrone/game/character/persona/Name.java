@@ -628,13 +628,13 @@ public class Name {
 "Юкидзомэ", "Юми", "Юума", "Дзабацу"};
 	
 	private static String[] lilinNames = new String[] {
-			"Lovienne",
-			"Lasielle",
-			"Lyssieth",
-			"Lianna",
-			"Lilysha",
-			"Lynixi",
-			"Liloria"};
+			"Лавиния",
+			"Ласиэль",
+			"Лисиэт",
+			"Лианна",
+			"Лилиша",
+			"Линикси",
+			"Лилория"};
 	
 	private static Map<String, List<NameTriplet>> racialNames = new HashMap<>();
 	
@@ -718,9 +718,9 @@ public class Name {
 					String subspeciesId = outerElement.getAttribute("id");
 					List<NameTriplet> importedNames = new ArrayList<>();
 					for(Element e : outerElement.getAllOf("nameTriplet")) {
-						String femName = e.getOptionalFirstOf("fem").isPresent()?e.getMandatoryFirstOf("fem").getTextContent():null;
-						String andName = e.getOptionalFirstOf("and").isPresent()?e.getMandatoryFirstOf("and").getTextContent():null;
-						String masName = e.getOptionalFirstOf("mas").isPresent()?e.getMandatoryFirstOf("mas").getTextContent():null;
+						String femName = e.getOptionalFirstOf("фем").isPresent()?e.getMandatoryFirstOf("фем").getTextContent():null;
+						String andName = e.getOptionalFirstOf("и").isPresent()?e.getMandatoryFirstOf("и").getTextContent():null;
+						String masName = e.getOptionalFirstOf("мас").isPresent()?e.getMandatoryFirstOf("мас").getTextContent():null;
 						
 						if(femName!=null || andName!=null || masName!=null) {
 							if(femName==null) {
@@ -807,17 +807,17 @@ public class Name {
 				if(offspring.contains(gc)) {
 					offspring.sort((c1, c2) -> c1.getAgeValue()-c2.getAgeValue());
 					if(offspring.get(0).equals(gc)) {
-						surname+="marturabitu";
+						surname+="мартурабиту";
 					} else {
-						surname+="martuilani";
+						surname+="мартуилани";
 					}
 				} else {
-					surname+="martu";
+					surname+="марту";
 				}
 			}
 			
 		} else {
-			surname = lilinNames[Util.random.nextInt(lilinNames.length)]+"martu";
+			surname = lilinNames[Util.random.nextInt(lilinNames.length)]+"марту";
 		}
 		
 		return surname;
@@ -871,11 +871,11 @@ public class Name {
 	}
 	
 	private static NameTriplet getDemonName() {
-		String[] prefixFem = new String[] {"Aella", "Bella", "Cae", "Deva", "Ella", "Fae", "Hela", "Isa", "Katha", "Loe", "Nysa", "Oella", "Rae", "Sytha", "Vixxa", "Wynna"};
-		String[] prefixMas = new String[] {"Ada", "Boro", "Foro", "Helio", "Kiri", "Zara"};
+		String[] prefixFem = new String[] {"Элла", "Белла", "Кэй", "Дева", "Элла", "Фэй", "Хела", "Иса", "Ката", "Лоу", "Ниса", "Оэлла", "Рэй", "Сайта", "Викса", "Винна"};
+		String[] prefixMas = new String[] {"Ада", "Боро", "Форо", "Гелио", "Кири", "Зара"};
 		
-		String[] postfixFem = new String[] {"jyx", "ryth", "ney", "nix", "sys", "trix"};
-		String[] postfixMas = new String[] {"jyx", "ryth", "ney", "nix", "sys", "trix"};
+		String[] postfixFem = new String[] {"джикс", "рит", "ней", "никс", "сис", "трикс"};
+		String[] postfixMas = new String[] {"джикс", "рит", "ней", "никс", "сис", "трикс"};
 		
 		String femName = prefixFem[Util.random.nextInt(prefixFem.length)] + postfixFem[Util.random.nextInt(postfixFem.length)];
 		char startingChar = femName.charAt(0);
