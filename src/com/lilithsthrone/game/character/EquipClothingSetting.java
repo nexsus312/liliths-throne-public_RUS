@@ -7,6 +7,7 @@ import java.util.List;
  * @since 0.3.2
  * @version 0.3.2
  * @author Innoxia
+ * Перевод не требуется
  */
 public enum EquipClothingSetting {
 	
