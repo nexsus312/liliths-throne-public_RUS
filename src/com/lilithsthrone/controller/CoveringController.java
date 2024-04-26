@@ -27,6 +27,7 @@ import com.lilithsthrone.utils.colours.PresetColour;
  * @since 0.4.6.4
  * @version 0.4.6.4
  * @author Maxis010, Innoxia
+ * Перевод не требуется
  */
 public class CoveringController {
 	private static boolean isNoCost() {
