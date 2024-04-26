@@ -12,6 +12,7 @@ import javafx.scene.control.ProgressBar;
  * @since 0.1.0
  * @version 0.1.0
  * @author Innoxia
+ * Перевод не нужен
  */
 public class LoadingController implements Initializable {
 
