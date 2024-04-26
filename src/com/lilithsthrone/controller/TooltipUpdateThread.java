@@ -8,6 +8,7 @@ import javafx.application.Platform;
  * @since 0.1.3
  * @version 0.1.7
  * @author Innoxia
+ * Перевод не требуется
  */
 public class TooltipUpdateThread extends Thread {
 
