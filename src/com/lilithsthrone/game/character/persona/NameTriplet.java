@@ -4,6 +4,7 @@ package com.lilithsthrone.game.character.persona;
  * @since 0.1.75
  * @version 0.3
  * @author Innoxia
+ * Не требует перевода
  */
 public class NameTriplet {
 	
