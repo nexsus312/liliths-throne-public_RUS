@@ -23,6 +23,7 @@ import com.lilithsthrone.main.Main;
  * @since 0.4.6.4
  * @version 0.4.6.4
  * @author Maxis010, Innoxia
+ * Не требует перевода
  */
 public class DebugController {
 	public static void initSpawnItemListeners() {
