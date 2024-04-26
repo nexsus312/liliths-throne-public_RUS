@@ -21,6 +21,7 @@ import com.lilithsthrone.rendering.RenderingEngine;
  * @since 0.1.0
  * @version 0.3.4.5
  * @author Innoxia
+ * Перевод не требуется
  */
 public class InventorySelectedItemEventListener implements EventListener {
 	private AbstractItem item;
