@@ -371,11 +371,11 @@ public class InventoryController {
 					}
 					TooltipInformationEventListener el = new TooltipInformationEventListener();
 					if (lineHeight>0) {
-						el.setInformation("Special Effects",
+						el.setInformation("Особые эффекты",
 								tooltipDescriptionSB.toString(),
 								(lineHeight*16));
 					} else {
-						el.setInformation("Без специальных эффектов", "");
+						el.setInformation("Без особых эффектов", "");
 					}
 					MainController.addTooltipListeners(id, el);
 				}
