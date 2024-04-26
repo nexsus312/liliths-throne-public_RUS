@@ -14,6 +14,7 @@ import com.lilithsthrone.utils.colours.PresetColour;
  * @since 0.1.0
  * @version 0.1.86
  * @author Innoxia
+ * Перевод не требуется
  */
 public enum Gender {
 	
