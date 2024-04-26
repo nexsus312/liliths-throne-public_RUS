@@ -321,7 +321,7 @@ public class OptionsController {
 							preference.getName(),
 							subspecies.isFurryPreferencesEnabled()
 									?preference.getDescriptionFeminine(subspecies)
-									:"This subspecies cannot have its furry preference changed!"
+									:"Фурри предпочтения не могут быть изменены для этого подвида!"
 					));
 				}
 				id = "MASCULINE_"+preference+"_"+subspeciesId;
