@@ -4,6 +4,7 @@ package com.lilithsthrone.game.character.attributes;
  * @since 0.1.99
  * @version 0.1.99
  * @author Innoxia
+ * Не требует перевода
  */
 public class AttributeRange {
 	private float minimum, maximum;
