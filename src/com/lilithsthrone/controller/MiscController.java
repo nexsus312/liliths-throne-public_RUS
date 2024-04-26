@@ -199,7 +199,7 @@ public class MiscController {
 			if (MainController.document.getElementById(id) != null) {
 				((EventTarget) MainController.document.getElementById(id)).addEventListener("click", e->{
 					Main.game.restoreSavedContent(false);
-					Main.game.setContent(new Response("Give Gift", "", GiftDialogue.getDialogueToProceedTo()) {
+					Main.game.setContent(new Response("Подарите подарок", "", GiftDialogue.getDialogueToProceedTo()) {
 						@Override
 						public void effects() {
 							Main.game.setResponseTab(GiftDialogue.getProceedDialogueTab());
@@ -216,7 +216,7 @@ public class MiscController {
 			if (MainController.document.getElementById(id) != null) {
 				((EventTarget) MainController.document.getElementById(id)).addEventListener("click", e->{
 					Main.game.restoreSavedContent(false);
-					Main.game.setContent(new Response("Give Gift", "", GiftDialogue.getDialogueToProceedTo()) {
+					Main.game.setContent(new Response("Подарите подарок", "", GiftDialogue.getDialogueToProceedTo()) {
 						@Override
 						public void effects() {
 							Main.game.setResponseTab(GiftDialogue.getProceedDialogueTab());
@@ -233,7 +233,7 @@ public class MiscController {
 			if (MainController.document.getElementById(id) != null) {
 				((EventTarget) MainController.document.getElementById(id)).addEventListener("click", e->{
 					Main.game.restoreSavedContent(false);
-					Main.game.setContent(new Response("Give Gift", "", GiftDialogue.getDialogueToProceedTo()) {
+					Main.game.setContent(new Response("Подарите подарок", "", GiftDialogue.getDialogueToProceedTo()) {
 						@Override
 						public void effects() {
 							Main.game.setResponseTab(GiftDialogue.getProceedDialogueTab());
@@ -268,7 +268,7 @@ public class MiscController {
 					}
 					
 					if (!unsuitableName) {
-						Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()) {
+						Main.game.setContent(new Response("Переименовать", "", Main.game.getCurrentDialogueNode()) {
 							@Override
 							public void effects() {
 								finalSlave.setName(new NameTriplet(Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent()));
@@ -284,7 +284,7 @@ public class MiscController {
 		id = slave.getId()+"_RENAME_RANDOM";
 		if (MainController.document.getElementById(id) != null) {
 			((EventTarget) MainController.document.getElementById(id)).addEventListener("click", e->{
-				Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()) {
+				Main.game.setContent(new Response("Переименовать", "", Main.game.getCurrentDialogueNode()) {
 					@Override
 					public void effects() {
 						finalSlave.setName(new NameTriplet(Name.getRandomName(finalSlave)));
@@ -306,7 +306,7 @@ public class MiscController {
 					}
 					
 					if (!unsuitableName) {
-						Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()) {
+						Main.game.setContent(new Response("Переименовать", "", Main.game.getCurrentDialogueNode()) {
 							@Override
 							public void effects() {
 								finalSlave.setSurname(Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent());
@@ -320,7 +320,7 @@ public class MiscController {
 		id = slave.getId()+"_RENAME_SURNAME_RANDOM";
 		if (MainController.document.getElementById(id) != null) {
 			((EventTarget) MainController.document.getElementById(id)).addEventListener("click", e->{
-				Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()) {
+				Main.game.setContent(new Response("Переименовать", "", Main.game.getCurrentDialogueNode()) {
 					@Override
 					public void effects() {
 						finalSlave.setSurname(Name.getSurname(finalSlave));
@@ -341,7 +341,7 @@ public class MiscController {
 					}
 					
 					if (!unsuitableName) {
-						Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()) {
+						Main.game.setContent(new Response("Переименовать", "", Main.game.getCurrentDialogueNode()) {
 							@Override
 							public void effects() {
 								finalSlave.setPetName(Main.game.getPlayer(), Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent());
@@ -365,7 +365,7 @@ public class MiscController {
 					}
 					
 					if (!unsuitableName) {
-						Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()) {
+						Main.game.setContent(new Response("Переименовать", "", Main.game.getCurrentDialogueNode()) {
 							@Override
 							public void effects() {
 								for (String id : Main.game.getPlayer().getSlavesOwned()) {
@@ -396,7 +396,7 @@ public class MiscController {
 					}
 					
 					if (!unsuitableName) {
-						Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()) {
+						Main.game.setContent(new Response("Переименовать", "", Main.game.getCurrentDialogueNode()) {
 							@Override
 							public void effects() {
 								Main.game.getActiveNPC().setPetName(Main.game.getPlayer(), Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent());
@@ -415,18 +415,18 @@ public class MiscController {
 				
 				if (MainController.document.getElementById(id) != null) {
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							Util.capitaliseSentence(dt.getName())+" shielding",
+							Util.capitaliseSentence(dt.getName())+" защита",
 							dt == DamageType.HEALTH
-									?UtilText.parse(combatant, "[npc.Name] will block incoming damage from any non-lust source by this amount."
-									+" Other damage type shielding will be used first, with health shielding used as the last resort."
-									+" Negative values have no effect.")
+									?UtilText.parse(combatant, "[npc.Name] будет блокировать поступающий урон из любого источника (кроме похоти) на это число."
+									+" Сначала будут использоваться другие типы защиты, защита здоровья будет последней."
+									+" Негативные значения не имеют эффекта.")
 									:dt != DamageType.LUST
-									?UtilText.parse(combatant, "[npc.Name] will block incoming "+dt.getName()+" damage by this amount."
-									+" Once this shielding is broken, health shielding will be used, and once that's broken, damage will be dealt [npc.her] health."
-									+" Negative values have no effect.")
-									:UtilText.parse(combatant, "[npc.Name] will block incoming "+dt.getName()+" damage by this amount."
-									+" Once this shielding is broken, incoming "+dt.getName()+" damage will cause [npc.her] lust to rise."
-									+" Negative values have no effect.")));
+									?UtilText.parse(combatant, "[npc.Name] будет блокировать "+dt.getName()+" урона на это число."
+									+" Когда урон превысит защиту, будет использована защита здоровья и только потом будет нанесен урон."
+									+" Негативные значения не имеют эффекта.")
+									:UtilText.parse(combatant, "[npc.Name] будет блокировать "+dt.getName()+" урона на это число."
+									+" Когда урон превысит защиту, поступающий "+dt.getName()+" урон вызовет увеличение похоти."
+									+" Негативные значения не имеют эффекта.")));
 				}
 			}
 		}
@@ -539,8 +539,8 @@ public class MiscController {
 					if (character.hasPerkAnywhereInTree(perk)) {
 						MainController.addTooltipListeners(id, new TooltipInformationEventListener().setLevelUpPerk(0, perk, character, false));
 					} else {
-						MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Unknown!",
-								"This is an undiscovered hidden perk, and as such, you have no idea what it could be!<br/><i>Hidden perks are discovered through the main quest.</i>"));
+						MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Неизвестно!",
+								"Это неизвестный спрятанный перк, вы не знаете его эффекты!<br/><i>Спрятанные перки обнаруживаются по основным заданиям..</i>"));
 					}
 				}
 			} else if (perk.getPerkCategory() == PerkCategory.JOB) {
@@ -725,7 +725,7 @@ public class MiscController {
 									DialogueNode dn = Main.game.getActiveWorld().getCell(Main.game.getPlayer().getLocation()).getDialogue(true);
 									Main.game.getTextStartStringBuilder().append(
 											"<p style='text-align:center'>"
-													+"[style.italicsArcane(Recalling what your destination looked like the last time you were there, you cast the teleportation spell, and in an instant, you appear there!)]"
+													+"[style.italicsArcane(Вспомниная как выглядел ваш пункт назначения в последний раз, когда вы там были, вы произносите заклинание телепортации, и в одно мгновение оказываетесь там!)]"
 													+"</p>");
 									Main.game.setContent(new Response("", "", dn) {
 										@Override
@@ -742,14 +742,14 @@ public class MiscController {
 								if (worldType.equals(Main.game.getPlayer().getWorldLocation())) {
 									if (clickLocation.equals(Pathing.getEndPoint())) {
 										if (Pathing.isImpossibleDestination()) {
-											Main.game.flashMessage(PresetColour.GENERIC_BAD, "Cannot travel here!");
+											Main.game.flashMessage(PresetColour.GENERIC_BAD, "Нельзя путешествовать сюда!");
 										} else {
 											Main.game.getPlayer().setLocation(worldType, clickLocation, false);
 											DialogueNode dn = c.getDialogue(true);
 											Main.game.getTextStartStringBuilder()
 													.append("<p style='text-align:center'>[style.italicsAir(")
-													.append(!Main.game.getPlayer().isAbleToFlyFromExtraParts()?"With a flap of your wings, you":"You")
-													.append(" launch yourself into the air, before swiftly flying to your destination!)]</p>");
+													.append(!Main.game.getPlayer().isAbleToFlyFromExtraParts()?"Взмахнув крыльями, вы":"Вы")
+													.append(" запускаете себя в воздух и ловко летите к месту назначения!)]</p>");
 											Main.game.setContent(new Response("", "", dn) {
 												@Override
 												public int getSecondsPassed() {
@@ -769,7 +769,7 @@ public class MiscController {
 								if (worldType.equals(Main.game.getPlayer().getWorldLocation())) {
 									if (clickLocation.equals(Pathing.getEndPoint())) {
 										if (Pathing.isImpossibleDestination()) {
-											Main.game.flashMessage(PresetColour.GENERIC_BAD, "Cannot travel here!");
+											Main.game.flashMessage(PresetColour.GENERIC_BAD, "Нельзя путешествовать сюда!");
 										} else {
 											Main.game.setContent(Pathing.walkPath(Pathing.getMapTravelType()));
 										}
@@ -788,9 +788,9 @@ public class MiscController {
 					}
 				} else {
 					if (!c.isTravelledTo()) {
-						Main.game.flashMessage(PresetColour.GENERIC_BAD, "Cannot fast-travel to unexplored locations!");
+						Main.game.flashMessage(PresetColour.GENERIC_BAD, "Нельзя путешествовать в неизведанные локации!");
 					} else {
-						Main.game.flashMessage(PresetColour.GENERIC_BAD, "Cannot travel here!");
+						Main.game.flashMessage(PresetColour.GENERIC_BAD, "Нельзя путешествовать сюда!");
 					}
 				}
 				
