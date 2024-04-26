@@ -6,6 +6,7 @@ import org.w3c.dom.events.EventListener;
  * @since 0.1.075
  * @version 0.1.75
  * @author Innoxia
+ * Не требует перевода
  */
 public class EventListenerData {
 	public String ID, type;
