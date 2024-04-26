@@ -142,7 +142,39 @@ public class Name {
 					new NameTriplet("Уоллес", "Уоллис", "Ванда"),
 					new NameTriplet("Уильям", "Винтер", "Уитни"),
 					new NameTriplet("Уилл", "Уинн", "Виллоу"),
-					new NameTriplet("Уинн", "Уинн", "Гвен")
+					new NameTriplet("Уинн", "Уинн", "Гвен"),
+					//Добавил Русские имена
+new NameTriplet("Александр", "Саша", "Александра"),
+new NameTriplet("Дмитрий", "Дима", "Дмитрина"),
+new NameTriplet("Владимир", "Влада", "Владимира"),
+new NameTriplet("Андрей", "Андрея", "Андреевна"),
+new NameTriplet("Николай", "Коля", "Николина"),
+new NameTriplet("Иван", "Ваня", "Иванна"),
+new NameTriplet("Михаил", "Миша", "Михайлина"),
+new NameTriplet("Евгений", "Женя", "Евгения"),
+new NameTriplet("Петр", "Петя", "Петра"),
+new NameTriplet("Сергей", "Сережа", "Сергеевна"),
+
+new NameTriplet("Али", "Али", "Алия"),
+new NameTriplet("Фарид", "Фарид", "Фарида"),
+new NameTriplet("Рустам", "Рустам", "Рустама"),
+new NameTriplet("Шерали", "Шерали", "Шералия"),
+new NameTriplet("Бахтиёр", "Бахтиёр", "Бахтиёра"),
+new NameTriplet("Джамшед", "Джамшед", "Джамшеда"),
+new NameTriplet("Фирдавс", "Фирдавс", "Фирдавса"),
+new NameTriplet("Гулом", "Гулом", "Гулома"),
+new NameTriplet("Саид", "Саид", "Саида"),
+
+new NameTriplet("Георгий", "Георги", "Георгия"),
+new NameTriplet("Ираклий", "Иракли", "Ираклия"),
+new NameTriplet("Леван", "Лево", "Левани"),
+new NameTriplet("Гиви", "Гиво", "Гивия"),
+new NameTriplet("Тамаз", "Тамо", "Тамара"),
+new NameTriplet("Зураб", "Зуро", "Зурабия"),
+new NameTriplet("Михаил", "Михо", "Михаилия"),
+new NameTriplet("Автандил", "Авто", "Автандили"),
+new NameTriplet("Нодар", "Нодо", "Нодари"),
+new NameTriplet("Торник", "Торно", "Торника"),
 	));
 	
 	private static List<NameTriplet> equine = (Util.newArrayListOfValues(
