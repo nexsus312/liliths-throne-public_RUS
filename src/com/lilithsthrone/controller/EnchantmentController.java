@@ -49,7 +49,7 @@ public class EnchantmentController {
 			id = "DELETE_EFFECT_"+effectCount;
 			if (MainController.document.getElementById(id) != null) {
 				MainController.addTooltipListeners(id,
-						new TooltipInformationEventListener().setInformation("Delete Effect", ""),
+						new TooltipInformationEventListener().setInformation("Удалить эффект", ""),
 						new EnchantmentEventListener().removeEffect(effectCount), false);
 			}
 		}
@@ -139,15 +139,15 @@ public class EnchantmentController {
 					});
 				}
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Add Effect", ""));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Добавить эффект", ""));
 		}
 		
 		id = "ENCHANT_ADD_BUTTON_DISABLED";
 		if (MainController.document.getElementById(id) != null) {
 			String blockedString = EnchantmentDialogue.getEnchantmentEffectBlockedReason(EnchantmentDialogue.getCurrentEffect());
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Add Effect",
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Добавить эффект",
 					EnchantmentDialogue.getEffects().size()>=EnchantmentDialogue.getIngredient().getEnchantmentLimit()
-							?"You have already added the maximum number of effects for this item!"
+							?"Вы уже добавили максимальное число эффектов для этого предмета!"
 							:(blockedString != null
 							?blockedString
 							:"")));
