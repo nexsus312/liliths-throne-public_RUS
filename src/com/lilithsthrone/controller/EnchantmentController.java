@@ -130,7 +130,7 @@ public class EnchantmentController {
 			((EventTarget) MainController.document.getElementById(id)).addEventListener("click", e->{
 				if (EnchantmentDialogue.getIngredient().getEnchantmentEffect().getEffectsDescription(
 						EnchantmentDialogue.getPrimaryMod(), EnchantmentDialogue.getSecondaryMod(), EnchantmentDialogue.getPotency(), EnchantmentDialogue.getLimit(), Main.game.getPlayer(), Main.game.getPlayer()) != null) {
-					Main.game.setContent(new Response("Add", "Add the effect.", EnchantmentDialogue.ENCHANTMENT_MENU) {
+					Main.game.setContent(new Response("Добавить", "Добавить эффект.", EnchantmentDialogue.ENCHANTMENT_MENU) {
 						@Override
 						public void effects() {
 							EnchantmentDialogue.addEffect(new ItemEffect(
