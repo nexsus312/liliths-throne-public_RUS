@@ -80,24 +80,25 @@ public class OptionsDialogue {
 		public String getContent(){
 			return "<h1 class='special-text' style='font-size:48px; line-height:52px; text-align:center;'>"+Main.GAME_NAME+"</h1>"
 					+ (Main.game.isSillyMode()
-						?"<p class='special-text' style='text-align:center; margin:0 0; padding:0 0;'><i>Or, I can't believe I fell into a magic mirror and entered a world in which my aunt is a demon?!</i></p>"
+						?"<p class='special-text' style='text-align:center; margin:0 0; padding:0 0;'><i>Или я не могу поверить, что упал в волшебное зеркало и попал в мир, где моя тетя - демон?!</i></p>"
 						:"")
-					+ "<h5 class='special-text' style='text-align:center;'>Created by "+Main.AUTHOR+"</h5>"
+					+ "<h5 class='special-text' style='text-align:center;'>Создано: "+Main.AUTHOR+"</h5>"
 					+ "<br/>"
 					+ "<p>"
-						+ "This game is a text-based erotic RPG, and contains a lot of graphic sexual content. You must agree to the game's disclaimer before playing this game!"
+						+ "Эта игра представляет собой текстовую эротическую ролевую игру и содержит большое количество графического сексуального контента. Прежде чем играть в эту игру, вы должны согласиться с отказом от ответственности!"
 					+ "</p>"
 					+"<p>"
-						+ "You can visit my blog (https://lilithsthrone.blogspot.co.uk) to check on development progress (use the 'Blog' button below to open the blog in your default browser)."
-						+ " [style.italicsMinorBad(<b>Note:</b> Intrusive age verification is being rolled out on blogspot, so I will likely create a new blog soon.)]"
+						+ "Вы можете посетить блог разработчика: (https://lilithsthrone.blogspot.co.uk) чтобы увидеть прогресс разработки (используйте 'Блог' кнопку для открытия браузера)."
+						+ " [style.italicsMinorBad(<b>Заметка:</b> На blogspot внедряется интрузивная проверка возраста, поэтому я, скорее всего, скоро создам новый блог.)]"
 					+ "</p>"
 					+ "<p style='text-align:center'>"
-						+ "<b>Please use either my blog or github to get the latest official version of Lilith's Throne!</b>"
+						+ "<b>Пожалуйста, используйте мой блог или github, чтобы получить последнюю официальную версию Lilith's Throne!</b>"
+						+ "<b>Данная версия игры модифицирована для поддержки Русского языка!!! Все права принадлежат правообладателям, проект распостраняется в соотвествии с лицензией.</b>"
 					+ "</p>"
 					+ getJavaVersionInformation()
 					+ (Toolkit.getDefaultToolkit().getScreenSize().getHeight()<800
 							?"<p style='text-align:center; color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>"
-								+ "If the game's resolution isn't fitting to your screen, press the keys: 'Windows' + 'Up Arrow' to maximise!"
+								+ "Если разрешение игры не соответствует вашему экрану, нажмите клавиши: 'Windows' + 'Стрелка вверх' для увеличения!"
 							+ "</p>"
 							:"")
 					+ "<br/>"
@@ -117,11 +118,11 @@ public class OptionsDialogue {
 				 if(confirmNewGame || !Main.game.isStarted()) {
 					return new ResponseEffectsOnly(
 							(!Main.game.isStarted()
-									?"New Game"
-									:"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Confirm</b>"),
-							"Start a new game."
+									?"Новая игра"
+									:"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Подтвердить</b>"),
+							"Начать новую игру."
 								+(Main.game.isStarted()
-									?"<br/><br/>[style.italicsMinorBad(Remember to save your game first!)]</b>"
+									?"<br/><br/>[style.italicsMinorBad(Не забудьте сначала сохранить игру!)]</b>"
 									:"")){
 						@Override
 						public void effects() {
@@ -147,10 +148,10 @@ public class OptionsDialogue {
 					
 				 } else {
 					 return new Response(
-							 "New Game",
-							 "Start a new game."
+							 "Новая игра",
+							 "Начать новую игру."
 								+(Main.game.isStarted()
-									?"<br/><br/>[style.italicsMinorBad(Remember to save your game first!)]"
+									?"<br/><br/>[style.italicsMinorBad(Не забудьте сначала сохранить игру!)]"
 									:""),
 								MENU){
 							@Override
@@ -161,7 +162,7 @@ public class OptionsDialogue {
 				 }
 				
 			} else if (index == 2) {
-				return new Response("Save/Load", "Open the save/load game window.", SAVE_LOAD){
+				return new Response("Сохранить/Загрузить", "Открывает окно сохранить/загрузить", SAVE_LOAD){
 					@Override
 					public void effects() {
 						loadConfirmationName = ""; overwriteConfirmationName = ""; deleteConfirmationName = "";
@@ -170,7 +171,7 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 3) {
-				return new Response("Export character", "Open the character export game window.", IMPORT_EXPORT){
+				return new Response("Экспорт персонажа", "Открыть окно экспорта персонажа.", IMPORT_EXPORT){
 					@Override
 					public void effects() {
 						loadConfirmationName = ""; overwriteConfirmationName = ""; deleteConfirmationName = "";
@@ -179,7 +180,7 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 4) {
-				return new Response("Disclaimer", "View the game's disclaimer.", DISCLAIMER){
+				return new Response("Отказ от ответственности", "Ознакомьтесь с отказом от ответственности игры.", DISCLAIMER){
 					@Override
 					public void effects() {
 						confirmNewGame=false;
@@ -187,7 +188,7 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 5) {
-				return new ResponseEffectsOnly("Quit", "Quits your current game and closes the program.<br/><br/><b>Remember to save your game first!</b>"){
+				return new ResponseEffectsOnly("Выход", "Выход из игры и закрытие программы.<br/><br/><b>Не забудьте сначала сохранить игру!</b>"){
 					@Override
 					public void effects() {
 						Main.primaryStage.close();
@@ -197,7 +198,7 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 6) {
-				return new Response("Options", "Open the options page.", OPTIONS){
+				return new Response("Настройки", "Открыть страницу с настройками.", OPTIONS){
 					@Override
 					public void effects() {
 						confirmNewGame=false;
@@ -206,7 +207,7 @@ public class OptionsDialogue {
 				};
 
 			} else if (index == 7) {
-				return new Response("Content Options", "Set your preferred content settings.", MISCELLANEOUS){
+				return new Response("Настройки контента", "Настройте что вы хотели бы видеть в игре.", MISCELLANEOUS){
 					@Override
 					public void effects() {
 						confirmNewGame=false;
@@ -214,13 +215,13 @@ public class OptionsDialogue {
 				};
 			
 			} else if (index == 8) {
-				return new Response("Patch notes", "View the patch notes for this version.", PATCH_NOTES);
+				return new Response("Примечания к патчу", "Просмотрите примечания к патчу для этой версии.", PATCH_NOTES);
 			
 			} else if (index == 9) {
-				return new Response("Credits", "View the game's credits screen.", CREDITS);
+				return new Response("Титры", "Просмотрите экран титров игры.", CREDITS);
 				
 			} else if (index == 11) {
-				return new ResponseEffectsOnly("Blog", "Opens the page:<br/><br/><i>https://lilithsthrone.blogspot.co.uk/</i><br/><br/><b>Externally in your default browser.</b>"){
+				return new ResponseEffectsOnly("Блог", "Открывает страницу:<br/><br/><i>https://lilithsthrone.blogspot.co.uk/</i><br/><br/><b>Внешне в вашем браузере по умолчанию.</b>"){
 					@Override
 					public void effects() {
 						Util.openLinkInDefaultBrowser("https://lilithsthrone.blogspot.co.uk/");
@@ -229,7 +230,7 @@ public class OptionsDialogue {
 				};
 			
 			} else if (index == 12) {
-				return new ResponseEffectsOnly("Github", "Opens the page:<br/><br/><i>https://github.com/Innoxia/liliths-throne-public</i><br/><br/><b>Externally in your default browser.</b>"){
+				return new ResponseEffectsOnly("Github", "Открывает страницу:<br/><br/><i>https://github.com/Innoxia/liliths-throne-public</i><br/><br/><b>Внешне в вашем браузере по умолчанию.</b>"){
 					@Override
 					public void effects() {
 						Util.openLinkInDefaultBrowser("https://github.com/Innoxia/liliths-throne-public");
@@ -238,7 +239,7 @@ public class OptionsDialogue {
 				};
 			
 			} else if (index == 13) {
-				return new ResponseEffectsOnly("Wiki", "Opens the page:<br/><br/><i>https://www.lilithsthrone.com/wiki/doku.php</i><br/><br/><b>Externally in your default browser.</b>"){
+				return new ResponseEffectsOnly("Вики", "Открывает страницу:<br/><br/><i>https://www.lilithsthrone.com/wiki/doku.php</i><br/><br/><b>Внешне в вашем браузере по умолчанию.</b>"){
 					@Override
 					public void effects() {
 						Util.openLinkInDefaultBrowser("https://www.lilithsthrone.com/wiki/doku.php");
@@ -248,7 +249,7 @@ public class OptionsDialogue {
 			
 			} else if (index == 0) {
 				if(Main.game.isStarted()) {
-					return new ResponseEffectsOnly("Resume", "Return to whatever you were doing before opening this menu."){
+					return new ResponseEffectsOnly("Возобновить", "Вернитесь к тому, что вы делали до открытия этого меню."){
 						@Override
 						public void effects() {
 							Main.mainController.openOptions();
@@ -259,7 +260,7 @@ public class OptionsDialogue {
 					
 				} else {
 					if(Main.isLoadGameAvailable(Main.getProperties().lastSaveLocation)) {
-						return new ResponseEffectsOnly("Resume", "Continue playing from your last save."){
+						return new ResponseEffectsOnly("Продолжить", "Продолжайте играть с момента вашего последнего сохранения."){
 							@Override
 							public void effects() {
 								Main.loadGame(Main.getProperties().lastSaveLocation);
@@ -268,9 +269,9 @@ public class OptionsDialogue {
 							}
 						};
 					} else if ( "".equals(Main.getProperties().lastSaveLocation) ) {
-						return new Response("Resume", "There is no previously saved game to resume.", null);
+						return new Response("Продолжить", "Ранее сохраненная игра для возобновления отсутствует.", null);
 					} else {
-						return new Response("Resume", "Previously saved game (by the title '"+Main.getProperties().lastSaveLocation+"') not found in 'data/saves' folder.", null);
+						return new Response("Продолжить", "Ранее сохраненная игра (по названию '"+Main.getProperties().lastSaveLocation+"') не найдена в папке: 'data/saves'.", null);
 					}
 				}
 				
@@ -289,7 +290,7 @@ public class OptionsDialogue {
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append("<p style='text-align:center;'>"
-					+ "Your java version: "+System.getProperty("java.version"));
+					+ "Ваша версия Java: "+System.getProperty("java.version"));
 //				+" | ");
 		
 //		String[] version = System.getProperty("java.version").split("\\.");
@@ -329,7 +330,7 @@ public class OptionsDialogue {
 	public static String overwriteConfirmationName = "";
 	public static String deleteConfirmationName = "";
 	
-	public static final DialogueNode SAVE_LOAD = new DialogueNode("Save game files", "", true) {
+	public static final DialogueNode SAVE_LOAD = new DialogueNode("Сохранения", "", true) {
 
 		@Override
 		public String getContent() {
@@ -342,23 +343,23 @@ public class OptionsDialogue {
 
 			saveLoadSB.append(
 					"<p style='text-align:center;'>"
-						+ "<b>Please Note:</b>"
+						+ "<b>Пожалуйста, обратите внимание:</b>"
 					+ "</p>"
 					+ "<p>"
-						+ "1. Only standard characters (letters and numbers) will work for save file names.<br/>"
-						+ "2. The 'AutoSave' file is automatically overwritten every time you move between maps.<br/>"
-						+ "3. The 'QuickSave' file is automatically overwritten every time you quick save (binding is "+Main.getProperties().hotkeyMapPrimary.get(KeyboardAction.QUICKSAVE).getFullName()+").<br/>"
-						+ "4. You cannot save during scenes which restrict your movement, including combat and sex."
+						+ "1. Для сохранения имен файлов будут использоваться только стандартные символы (буквы и цифры).<br/>"
+						+ "2. Файл `Автосохранения` автоматически перезаписывается каждый раз, когда вы перемещаетесь между картами.<br/>"
+						+ "3. Файл `Быстрого сохранения` автоматически перезаписывается при каждом быстром сохранении (назначено на клавишу: "+Main.getProperties().hotkeyMapPrimary.get(KeyboardAction.QUICKSAVE).getFullName()+").<br/>"
+						+ "4. Вы не можете сохранять данные во время сцен, которые ограничивают ваши движения, включая боевые действия и секс."
 					+ "</p>"
 					+ "<div class='container-full-width' style='padding:0; margin:0;'>"
 						+ "<div class='container-full-width' style='width:calc(25% - 16px); background:transparent;'>"
-							+ "Time"
+							+ "Время"
 						+ "</div>"
 						+ "<div class='container-full-width' style='width:calc(50% - 16px); text-align:center; background:transparent;'>"
-							+ "Name"
+							+ "Имя"
 						+ "</div>"
 						+ "<div class='container-full-width' style='width:calc(25% - 16px); text-align:center; background:transparent;'>"
-							+ "Save | Load | Delete"
+							+ "Сохранить | Загрузить | Удалить"
 						+ "</div>"
 					+ "</div>");
 
@@ -385,16 +386,16 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Confirmations: ",
-						"Toggle confirmations being shown when you click to load, overwrite, or delete a saved game."
-							+ " When turned on, it will take two clicks to apply any button press."
-							+ " When turned off, it will only take one click.",
+				return new Response("Подтверждения: ",
+						"Переключите подтверждения, отображаемые при нажатии для загрузки, перезаписи или удаления сохраненной игры."
+							+ " Когда включено: любая кнопка будет требовать двух нажатий."
+							+ " Когда выключено: любая кнопка будет требовать одного нажатия.",
 						SAVE_LOAD) {
 					@Override
 					public String getTitle() {
-						return "Confirmations: "+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
-								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>ON</span>"
-								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>OFF</span>");
+						return "Подтверждения: "+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
+								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Вкл</span>"
+								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Выкл</span>");
 					}
 					
 					@Override
@@ -408,7 +409,7 @@ public class OptionsDialogue {
 				};
 
 			} else if (index == 2) {
-				return new Response("Sort: Date", "Sort all of your saved games by their date.", SAVE_LOAD) {
+				return new Response("Сортировка: Дата", "Отсортируйте все сохраненные вами игры по дате их создания.", SAVE_LOAD) {
 					@Override
 					public void effects() {
 						alphabeticalFileSort = false;
@@ -416,7 +417,7 @@ public class OptionsDialogue {
 				};
 
 			} else if (index == 3) {
-				return new Response("Sort: Name", "Sort all of your saved games by their name.", SAVE_LOAD) {
+				return new Response("Сортировка: Имя", "Отсортируйте все сохраненные вами игры по их названию.", SAVE_LOAD) {
 					@Override
 					public void effects() {
 						alphabeticalFileSort = true;
@@ -424,7 +425,7 @@ public class OptionsDialogue {
 				};
 
 			} else if (index == 0) {
-				return new Response("Back", "Back to the main menu.", MENU);
+				return new Response("Назад", "Вернутся в главное меню.", MENU);
 
 			} else {
 				return null;
@@ -437,7 +438,7 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode IMPORT_EXPORT = new DialogueNode("Export character", "", true) {
+	public static final DialogueNode IMPORT_EXPORT = new DialogueNode("Экспорт персонажа", "", true) {
 	
 		@Override
 		public String getContent() {
@@ -449,11 +450,11 @@ public class OptionsDialogue {
 			StringBuilder saveLoadSB = new StringBuilder();
 	
 			saveLoadSB.append("<p>"
-						+ "Here you can export your current character, or delete any characters that you've exported in the past."
-						+ " Any NPC can be exported in-game by viewing their information screen (either from the 'characters present' or your phone's 'contacts' screen), and then pressing the 'export character' button (in the bottom-right of the UI)."
+						+ "Здесь вы можете экспортировать своего текущего персонажа или удалить всех персонажий которых вы экспортировали в прошлом."
+						+ " Любого NPC можно экспортировать в игре, просмотрев экран информации о нем (либо на экране `присутствующие персонажи`, либо на экране `контакты` вашего телефона), а затем нажав кнопку `экспортировать персонажа` (в правом нижнем углу пользовательского интерфейса)."
 					+ "</p>"
 					+ "<p>"
-						+ "Exported characters can be used as a playable character when starting a new game (choose 'Start (Import)'), or as an importable slave at the Auction Block in Slaver Alley."
+						+ "Экспортированные персонажи могут быть использованы в качестве играбельного персонажа при начале новой игры (выберите `Начать (импорт)`.), или в качестве импортного раба в Аукционном блоке на Аллее рабов."
 					+ "</p>"
 					+ "<div class='container-full-width' style='padding:0; margin:0;'>"
 						+ "<div class='container-quarter-width' style='text-align:center;'>"
@@ -481,16 +482,16 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Confirmations: ",
-						"Toggle confirmations being shown when you click to load, overwrite, or delete a saved game."
-							+ " When turned on, it will take two clicks to apply any button press."
-							+ " When turned off, it will only take one click.",
+				return new Response("Подтверждения: ",
+						"Переключите подтверждения, отображаемые при нажатии для загрузки, перезаписи или удаления сохраненной игры."
+							+ " Когда включено: любая кнопка будет требовать двух нажатий."
+							+ " Когда выключено: любая кнопка будет требовать одного нажатия.",
 							IMPORT_EXPORT) {
 					@Override
 					public String getTitle() {
-						return "Confirmations: "+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
-								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>ON</span>"
-								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>OFF</span>");
+						return "Подтверждения: "+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
+								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Вкл</span>"
+								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Выкл</span>");
 					}
 					
 					@Override
@@ -505,19 +506,19 @@ public class OptionsDialogue {
 	
 			} else if (index == 2) {
 				if(Main.game.isStarted()) {
-					return new Response("Export character", "Exports your character file to the 'data/characters/' folder.", IMPORT_EXPORT){
+					return new Response("Экспорт персонажа", "Эспортирует файл персонажа в папку: 'data/characters/'.", IMPORT_EXPORT){
 						@Override
 						public void effects() {
 							Main.game.getCharacterUtils().saveCharacterAsXML(Main.game.getPlayer());
-							Main.game.flashMessage(PresetColour.GENERIC_GOOD, "Character exported!");
+							Main.game.flashMessage(PresetColour.GENERIC_GOOD, "Персонаж экспортрован!");
 						}
 					};
 				} else {
-					return new Response("Export character", "You'll need to start a game first!", null);
+					return new Response("Экспорт персонажа", "Вам нужно сначала начать игру!", null);
 				}
 			
 			} else if (index == 0) {
-				return new Response("Back", "Back to the main menu.", OptionsDialogue.MENU);
+				return new Response("Назад", "Вернуться в главное меню.", OptionsDialogue.MENU);
 	
 			} else {
 				return null;
@@ -606,25 +607,25 @@ public class OptionsDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<p>"
-					+ "<b>Light/Dark theme:</b>"
-					+ "<br/>This switches the main display between a light and dark theme. (Work in progress!)"
+					+ "<b>Светлая/Темная тема:</b>"
+					+ "<br/>Это переключает основной цвет между светлой и темной темой. (В разработке!)"
 					+ "</p>"
 					
 					+"<p>"
-					+ "<b>Font-size:</b><br/>"
-					+ "This cycles the game's base font size. This currently only affects the size of the text in the main dialogue, but in the future I'll expand it to include every display element.<br/>"
-					+ "Minimum font size is "+Game.FONT_SIZE_MINIMUM+". Default font size is "+Game.FONT_SIZE_NORMAL+". Maximum font size is "+Game.FONT_SIZE_HUGE+".<br/>"
-					+ "Current font size: "+Main.getProperties().fontSize+"."
+					+ "<b>Размер текста:</b><br/>"
+					+ "Это изменяет базовый размер шрифта игры. В настоящее время это влияет только на размер текста в диалогах, но в будущем я расширю его, чтобы включить каждый элемент окон.<br/>"
+					+ "Минимальный размер текста: "+Game.FONT_SIZE_MINIMUM+". Стандартный размер текста "+Game.FONT_SIZE_NORMAL+". Максимальный размер текста "+Game.FONT_SIZE_HUGE+".<br/>"
+					+ "Текущий размер текста: "+Main.getProperties().fontSize+"."
 					+ "</p>"
 
 					+"<p>"
-					+ "<b>Fade-in:</b>"
-					+ "<br/>This option is responsible for fading in the main part of the text each time a new scene is displayed."
-					+ " Although it makes scene transitions a little prettier, it is off by default, as it can cause some annoying lag in inventory screens."
+					+ "<b>Затухание:</b>"
+					+ "<br/>Эта опция отвечает за затухание основной части текста при каждом появлении новой сцены."
+					+ " Хотя оно делает переходы между сценами немного красивее, по умолчанию он отключен, так как может вызывать раздражающие задержки на экранах инвентаря."
 					+ "</p>"
 
 					+"<p>"
-					+ "<b>Difficulty (Currently set to "+Main.getProperties().difficultyLevel.getName()+"):</b>");
+					+ "<b>Сложность (Значение: "+Main.getProperties().difficultyLevel.getName()+"):</b>");
 			
 			for(DifficultyLevel dl : DifficultyLevel.values()) {
 				UtilText.nodeContentSB.append("<br/>"+(
@@ -642,12 +643,12 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Keybinds", "Open the keybinds page, where you can customise all the game's key bindings.", KEYBINDS);
+				return new Response("Клавиши", "Откройте страницу клавиш, где вы можете настроить все привязки клавиш в игре.", KEYBINDS);
 				
 			} else if (index == 2) {
 
 				if (Main.getProperties().hasValue(PropertyValue.lightTheme)) {
-					return new Response("Dark theme", "Switch the theme to the dark variant.", OPTIONS){
+					return new Response("Темная тема", "Переключите тему на темный вариант.", OPTIONS){
 						@Override
 						public void effects() {
 							Main.mainController.switchTheme();
@@ -655,7 +656,7 @@ public class OptionsDialogue {
 						}
 						};
 				} else {
-					return new Response("Light theme (WIP)", "Switch the theme to the light variant.<br/><br/><b>This is still a work in progress...</b>.", OPTIONS){
+					return new Response("Светлая тема (WIP)", "Переключите тему на светлый вариант.<br/><br/><b>Все еще в разработке...</b>.", OPTIONS){
 						@Override
 						public void effects() {
 							Main.mainController.switchTheme();
@@ -665,8 +666,8 @@ public class OptionsDialogue {
 				}
 
 			} else if (index == 3) {
-				return new Response("Font-size -",
-						"Decrease the size of the game's font. Default value is 18. Current value is "+Main.getProperties().fontSize+".",
+				return new Response("Размер текста -",
+						"Уменьшить размер шрифта игры. Значение по умолчанию - 18. Текущее значение: "+Main.getProperties().fontSize+".",
 								OPTIONS){
 					@Override
 					public void effects() {
@@ -679,8 +680,8 @@ public class OptionsDialogue {
 				};
 			
 			} else if (index == 4) {
-				return new Response("Font-size +",
-						"Increase the size of the game's font. Default value is 18. Current value is "+Main.getProperties().fontSize+".",
+				return new Response("Размер текста +",
+						"Увеличивает размер шрифта игры. Значение по умолчанию - 18. Текущее значение: "+Main.getProperties().fontSize+".",
 								OPTIONS){
 					@Override
 					public void effects() {
@@ -693,9 +694,9 @@ public class OptionsDialogue {
 				};
 			
 			} else if (index == 5) {
-				return new Response("Fade-in: " + (Main.getProperties().hasValue(PropertyValue.fadeInText)
-						? "[style.boldGood(ON)]"
-						: "[style.boldBad(OFF)]"), "Toggle the fading in of the game's text. If turned on, it may cause some minor lag in inventory screens.", OPTIONS) {
+				return new Response("Затухание: " + (Main.getProperties().hasValue(PropertyValue.fadeInText)
+						? "[style.boldGood(Вкл)]"
+						: "[style.boldBad(Выкл)]"), "Включите затухание игрового текста. Если включить эту функцию, это может вызвать небольшие лаги в экранах инвентаря.", OPTIONS) {
 					@Override
 					public void effects() {
 						Main.getProperties().setValue(PropertyValue.fadeInText, !Main.getProperties().hasValue(PropertyValue.fadeInText));
@@ -704,12 +705,12 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 6) {
-				return new Response("Gender pronouns", "Customise all gender pronouns and names.", OPTIONS_PRONOUNS);
+				return new Response("Местоимения полов", "Настройте все половые местоимения и имена.", OPTIONS_PRONOUNS);
 				
 			} else if (index == 7) {
-				return new Response("Unit preferences", "Set your preferred measurement units.", UNIT_PREFERENCE);
+				return new Response("Предпочтительные единицы", "Установите желаемые единицы измерения.", UNIT_PREFERENCE);
 			} else if (index == 8) {
-				return new Response("Difficulty: "+Main.getProperties().difficultyLevel.getName(), "Cycle the game's difficulty.", OPTIONS){
+				return new Response("Сложность: "+Main.getProperties().difficultyLevel.getName(), "Переключите сложность игры.", OPTIONS){
 					@Override
 					public void effects() {
 						switch(Main.getProperties().difficultyLevel) {
@@ -740,7 +741,7 @@ public class OptionsDialogue {
 					}
 				};
 			} else if (index == 0) {
-				return new Response("Back", "Back to the main menu.", MENU);
+				return new Response("Назад", "Вернуться в главное меню.", MENU);
 
 			} else {
 				return null;
@@ -759,7 +760,7 @@ public class OptionsDialogue {
 		public String getHeaderContent() {
 			return "<p>"
 					+ "<table align='center'>"
-					+ "<tr><th>Action</th><th>Primary binding</th><th>Secondary binding</th></tr>"
+					+ "<tr><th>Action</th><th>Основные клавиши</th><th>Вторичные клавиши</th></tr>"
 					+ getKeybindTableRow(KeyboardAction.MENU)
 					+ "<tr style='height:8px;'></tr>"
 
@@ -859,7 +860,7 @@ public class OptionsDialogue {
 			// Create new properties containing current key mappings
 			Properties preset = new Properties();
 			preset.setProperty("NAME", "Custom " + index);
-			preset.setProperty("DESCRIPTION", "Reapply your previously saved key bindings.");
+			preset.setProperty("DESCRIPTION", "Пере-применить сохраненные ранее клавиши.");
 
 			for (Map.Entry<KeyboardAction, KeyCodeWithModifiers> e : Main.getProperties().hotkeyMapPrimary.entrySet())
 				if (e.getValue() != null)
@@ -869,7 +870,7 @@ public class OptionsDialogue {
 				if (e.getValue() != null) {
 					// Write or append to existing entry
 					String primary = preset.getProperty(e.getKey().name());
-					primary = primary == null ? e.getValue().toString() : primary + " or " + e.getValue().toString();
+					primary = primary == null ? e.getValue().toString() : primary + " или " + e.getValue().toString();
 					preset.setProperty(e.getKey().name(), primary);
 				}
 			}
@@ -888,7 +889,7 @@ public class OptionsDialogue {
 			if (presets == null) loadPresets();
 
 			if (index == 0) {
-				return new Response("Back", "Go back to the options menu.", OPTIONS);
+				return new Response("Назад", "Вернуться в меню настроек.", OPTIONS);
 				
 			} else if (index <= presets.size()) {
 				Properties preset = presets.get(index - 1);
@@ -2340,7 +2341,7 @@ public class OptionsDialogue {
 				for(Artist artist : Artwork.allArtists) {
 					for(ArtistWebsite website : artist.getWebsites()) {
 						if(index==i) {
-							return new ResponseEffectsOnly(website.getName(), "Opens the page:<br/><br/><i>"+website.getURL()+"</i><br/><br/><b>Externally in your default browser.</b>"){
+							return new ResponseEffectsOnly(website.getName(), "Opens the page:<br/><br/><i>"+website.getURL()+"</i><br/><br/><b>Внешне в вашем браузере по умолчанию.</b>"){
 								@Override
 								public void effects() {
 									Util.openLinkInDefaultBrowser(website.getURL());
