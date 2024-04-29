@@ -282,8 +282,8 @@ public enum PersonalityTrait {
 	
 	PRUDE(false,
 			PersonalityCategory.SEX,
-			"prude",
-			"[npc.Name] [npc.do] not like talking about sexual matters, and [npc.verb(refuse)] to even acknowledge that [npc.she] [npc.verb(know)] anything about such things.",
+			"ханжа",
+			"[npc.Name] не любит говорить о вещах связанных с сексом и отказывается признавать что имеет какие либо знания из этой области.",
 			"", PresetColour.BASE_BLUE_STEEL) {
 		@Override
 		public List<PersonalityTrait> getMutuallyExclusiveSettings() {
@@ -294,8 +294,8 @@ public enum PersonalityTrait {
 			return UtilText.parse(target,
 					"<p style='text-align:center;'>"
 							+ (target.hasPersonalityTrait(INNOCENT)
-								?"[style.colourDisabled([npc.Name] [npc.isFull] already prude, so nothing happens...)]"
-								:"[npc.Name] [npc.verb(find)] [npc.herself] [style.colourMinorGood(feeling a lot more prude)]!")
+								?"[style.colourDisabled([npc.Name] [npc.isFull] уже ханжа, поэтому ничего не происходит...)]"
+								:"[npc.Name] [style.colourMinorGood(чувствует себ гораздо более ханжой)]!")
 						+ "</p>");
 		}
 		@Override
@@ -303,8 +303,8 @@ public enum PersonalityTrait {
 			return UtilText.parse(target,
 					"<p style='text-align:center;'>"
 							+ (!target.hasPersonalityTrait(INNOCENT)
-								?"[style.colourDisabled([npc.Name] already isn't prude, so nothing happens...)]"
-								:"[npc.Name] [npc.verb(find)] [npc.herself] [style.colourMinorBad(losing [npc.her] prudish mannerisms)]!")
+								?"[style.colourDisabled([npc.Name] уже не ханжа, поэтому ничего не происходит...)]"
+								:"[npc.Name] [style.colourMinorBad(теряет свои ханжеские манеры)]!")
 						+ "</p>");
 		}
 	},
@@ -313,9 +313,9 @@ public enum PersonalityTrait {
 	
 	LISP(false,
 			PersonalityCategory.SPEECH,
-			"lisp",
-			"[npc.Name] [npc.verb(speak)] with a lisp, pronouncing 's' and 'z' as 'th'.",
-			"[style.italicsBad(All of [npc.namePos] in-game speech will be affected by this lisp!)]", PresetColour.BASE_PURPLE_LIGHT) {
+			"картавость",
+			"[npc.Name] [npc.verb(speak)] кортаво, произнося 'с' и 'з' как 'с'.",
+			"[style.italicsBad(Все [npc.namePos] разговоры буду изменятся под действием картавости! (Не переведено!!!)]", PresetColour.BASE_PURPLE_LIGHT) {
 		@Override
 		public List<PersonalityTrait> getMutuallyExclusiveSettings() {
 			return Util.newArrayListOfValues(MUTE);
@@ -325,8 +325,8 @@ public enum PersonalityTrait {
 			return UtilText.parse(target,
 					"<p style='text-align:center;'>"
 							+ (target.hasPersonalityTrait(LISP)
-								?"[style.colourDisabled([npc.Name] already speaks with a lisp, so nothing happens...)]"
-								:"[npc.Name] [npc.verb(find)] [npc.herself] [style.colourMinorBad(speaking with a lisp)]!")
+								?"[style.colourDisabled([npc.Name] уже говорит картаво, поэтому ничего не происходит...)]"
+								:"[npc.Name] [style.colourMinorBad(говорит с картавостью)]!")
 						+ "</p>");
 		}
 		@Override
@@ -334,17 +334,17 @@ public enum PersonalityTrait {
 			return UtilText.parse(target,
 					"<p style='text-align:center;'>"
 							+ (!target.hasPersonalityTrait(LISP)
-								?"[style.colourDisabled([npc.Name] already [npc.do]n't speak with a lisp, so nothing happens...)]"
-								:"[npc.Name] [npc.verb(find)] [npc.herself] [style.colourMinorGood(able to speak without a lisp)]!")
+								?"[style.colourDisabled([npc.Name] уже не говорит кортаво, поэтому ничего не происходит...)]"
+								:"[npc.Name] [style.colourMinorGood(может говорить без картавости)]!")
 						+ "</p>");
 		}
 	},
 
 	STUTTER(false,
 			PersonalityCategory.SPEECH,
-			"stutter",
-			"[npc.NameHasFull] a habit of stuttering and stumbling over [npc.her] words as [npc.she] [npc.verb(speak)].",
-			"[style.italicsBad(All of [npc.namePos] in-game speech will be affected by this stutter!)]", PresetColour.BASE_PINK_SALMON) {
+			"заика",
+			"[npc.NameHasFull] имеет привычку заикаться и ошибаться .",
+			"[style.italicsBad(Все [npc.namePos] разговоры буду изменятся под действием заикания! (Не переведено!!!))]", PresetColour.BASE_PINK_SALMON) {
 		@Override
 		public List<PersonalityTrait> getMutuallyExclusiveSettings() {
 			return Util.newArrayListOfValues(MUTE);
@@ -354,8 +354,8 @@ public enum PersonalityTrait {
 			return UtilText.parse(target,
 					"<p style='text-align:center;'>"
 							+ (target.hasPersonalityTrait(STUTTER)
-								?"[style.colourDisabled([npc.Name] already speaks with a stutter, so nothing happens...)]"
-								:"[npc.Name] [npc.verb(find)] [npc.herself] [style.colourMinorBad(speaking with a stutter)]!")
+								?"[style.colourDisabled([npc.Name] уже говорит с заиканием, поэтому ничего не происходит...)]"
+								:"[npc.Name] [style.colourMinorBad(говорит с заиканием)]!")
 						+ "</p>");
 		}
 		@Override
@@ -363,17 +363,17 @@ public enum PersonalityTrait {
 			return UtilText.parse(target,
 					"<p style='text-align:center;'>"
 							+ (!target.hasPersonalityTrait(STUTTER)
-								?"[style.colourDisabled([npc.Name] already [npc.do]n't speak with a stutter, so nothing happens...)]"
-								:"[npc.Name] [npc.verb(find)] [npc.herself] [style.colourMinorGood(able to speak without a stutter)]!")
+								?"[style.colourDisabled([npc.Name] уже не заикается, поэтому ничего не происходит...)]"
+								:"[npc.Name] [style.colourMinorGood(может говорить без заикания)]!")
 						+ "</p>");
 		}
 	},
 
 	MUTE(true,
 			PersonalityCategory.SPEECH,
-			"mute",
-			"[npc.NameIsFull] a mute, and while [npc.she] can make some lewd noises when in the grips of passion, [npc.sheIsFull] otherwise completely unable to speak.",
-			"[style.italicsBad(All of [npc.namePos] in-game speech will be removed!)]", PresetColour.BASE_CRIMSON) {
+			"немота",
+			"[npc.NameIsFull] обладает немотой, и хотя [npc.she] может издавать некоторые похотливые звуки в порыве страсти, в остальное время [npc.she] полностью не может говорить.",
+			"[style.italicsBad((Все игровые реплики [npc.namePos] будут удалены!)]", PresetColour.BASE_CRIMSON) {
 		@Override
 		public List<PersonalityTrait> getMutuallyExclusiveSettings() {
 			return Util.newArrayListOfValues(LISP, STUTTER, SLOVENLY);
@@ -383,8 +383,8 @@ public enum PersonalityTrait {
 			return UtilText.parse(target,
 					"<p style='text-align:center;'>"
 							+ (target.hasPersonalityTrait(STUTTER)
-								?"[style.colourDisabled([npc.NameIsFull] already mute, so nothing happens...)]"
-								:"[npc.Name] [npc.verb(find)] [npc.herself] [style.colourMinorBad(unable to talk)]!")
+								?"[style.colourDisabled([npc.NameIsFull] уже обладает немотой, поэтому ничего не происходит...)]"
+								:"[npc.Name] [style.colourMinorBad(не может говорить)]!")
 						+ "</p>");
 		}
 		@Override
@@ -392,17 +392,17 @@ public enum PersonalityTrait {
 			return UtilText.parse(target,
 					"<p style='text-align:center;'>"
 							+ (!target.hasPersonalityTrait(STUTTER)
-								?"[style.colourDisabled([npc.NameIsFull] already able to speak, so nothing happens...)]"
-								:"[npc.Name] [npc.verb(find)] [npc.herself] [style.colourMinorGood(able to talk)]!")
+								?"[style.colourDisabled([npc.NameIsFull] уже может говорить, поэтому ничего не происходит...)]"
+								:"[npc.Name] [style.colourMinorGood(может говорить)]!")
 						+ "</p>");
 		}
 	},
 
 	SLOVENLY(false,
 			PersonalityCategory.SPEECH,
-			"slovenly",
-			"[npc.Name] [npc.verb(speak)] in a very slovenly manner; dropping syllables and with poor pronunciation, [npc.her] speech can often be very hard to understand.",
-			"[style.italicsBad(All of [npc.namePos] in-game speech will be affected by this!)]", PresetColour.BASE_BROWN) {
+			"неряшливость",
+			"[npc.Name] говорит очень неряшливо; проглатывая слоги и имея плохую дикцию, речь [npc.her] часто бывает очень трудно понять.",
+			"[style.italicsBad(Это повлияет на всю игровую речь [npc.namePos]!)]", PresetColour.BASE_BROWN) {
 		@Override
 		public List<PersonalityTrait> getMutuallyExclusiveSettings() {
 			return Util.newArrayListOfValues(MUTE);
@@ -412,8 +412,8 @@ public enum PersonalityTrait {
 			return UtilText.parse(target,
 					"<p style='text-align:center;'>"
 							+ (target.hasPersonalityTrait(SLOVENLY)
-								?"[style.colourDisabled([npc.Name] already speaks in a slovenly manner, so nothing happens...)]"
-								:"[npc.Name] [npc.verb(find)] [npc.herself] [style.colourMinorBad(speaking in a slovenly manner)]!")
+								?"[style.colourDisabled([npc.Name] уже говорит в неряшливой манере, поэтому ничего не происходит...)]"
+								:"[npc.Name] [npc.verb(find)] [npc.herself] [style.colourMinorBad(говорит в неряшливой манере)]!")
 						+ "</p>");
 		}
 		@Override
@@ -421,8 +421,8 @@ public enum PersonalityTrait {
 			return UtilText.parse(target,
 					"<p style='text-align:center;'>"
 							+ (!target.hasPersonalityTrait(SLOVENLY)
-								?"[style.colourDisabled([npc.Name] already [npc.do]n't speak in a slovenly manner, so nothing happens...)]"
-								:"[npc.Name] [npc.verb(find)] [npc.herself] [style.colourMinorGood(no longer speaking in a slovenly manner)]!")
+								?"[style.colourDisabled([npc.Name] уже не говорит в неряшливой манере, поэтому ничего не происходит...)]"
+								:"[npc.Name] [style.colourMinorGood(юольше не говорит в неряшливой манере)]!")
 						+ "</p>");
 		}
 	},;
@@ -460,13 +460,13 @@ public enum PersonalityTrait {
 			if(gameplayInformation!=null && !gameplayInformation.isEmpty()) {
 				sb.append("<br/>"+UtilText.parse(character, gameplayInformation));
 			} else {
-				sb.append("<br/>[style.italicsDisabled(No current in-game effects...)]");
+				sb.append("<br/>[style.italicsDisabled(На данный момент не влияет на игру...)]");
 			}
 		}
 		
 		if(withMutuallyExclusiveInformation) {
 			if(!this.getMutuallyExclusiveSettings().isEmpty()) {
-				sb.append("<br/>[style.colourBad(Mutually exclusive)] with ");
+				sb.append("<br/>[style.colourBad(Взаимоисключающе)] с ");
 				List<String> names = new ArrayList<>();
 				for(PersonalityTrait trait : this.getMutuallyExclusiveSettings()) {
 					names.add("<span style='color:"+trait.getColour().toWebHexString()+";'>"+trait.getName()+"</span>");
