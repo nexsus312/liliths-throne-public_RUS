@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.lilithsthrone.game.character.GameCharacter;
 
-/**
+/** Перевод не требуется
  * @since 0.4.1
  * @version 0.4.1
  * @author Innoxia
