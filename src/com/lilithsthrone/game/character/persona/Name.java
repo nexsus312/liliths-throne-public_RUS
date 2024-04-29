@@ -174,7 +174,7 @@ new NameTriplet("Зураб", "Зуро", "Зурабия"),
 new NameTriplet("Михаил", "Михо", "Михаилия"),
 new NameTriplet("Автандил", "Авто", "Автандили"),
 new NameTriplet("Нодар", "Нодо", "Нодари"),
-new NameTriplet("Торник", "Торно", "Торника"),
+new NameTriplet("Торник", "Торно", "Торника")
 	));
 	
 	private static List<NameTriplet> equine = (Util.newArrayListOfValues(
