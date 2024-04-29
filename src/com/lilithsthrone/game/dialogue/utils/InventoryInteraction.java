@@ -1,6 +1,6 @@
 package com.lilithsthrone.game.dialogue.utils;
 
-/**
+/** Перевод не требуется
  * @since 0.1.85
  * @version 0.1.86
  * @author Innoxia
