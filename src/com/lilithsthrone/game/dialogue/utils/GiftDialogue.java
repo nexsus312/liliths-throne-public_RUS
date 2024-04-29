@@ -35,19 +35,19 @@ public class GiftDialogue {
 		return GIFT_DIALOGUE;
 	}
 	
-	public static final DialogueNode GIFT_DIALOGUE = new DialogueNode("Choose Gift", "-", true) {
+	public static final DialogueNode GIFT_DIALOGUE = new DialogueNode("Выбрать подарок", "-", true) {
 		@Override
 		public String getContent() {
 			return UtilText.parse(receiver,
 					"<p>"
-						+ "The following items are suitable to be given as a gift to [npc.name]. Select the one that you'd like to give to [npc.herHim]."
+						+ "Следующие предметы подходят как подарок для [npc.name]. Выбири то что вы хотели бы подарить [npc.herHim]."
 					+ "</p>")
 					+RenderingEngine.ENGINE.getGiftDiv(receiver);
 		}
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new ResponseEffectsOnly("Back", "Return to the previous screen") {
+				return new ResponseEffectsOnly("Назад", "Вернуться на преведущий экран") {
 					@Override
 					public void effects() {
 						Main.game.restoreSavedContent(false);
