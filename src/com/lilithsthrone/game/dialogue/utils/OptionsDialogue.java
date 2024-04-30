@@ -902,9 +902,9 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 14) {
-				return new Response("Save preset",
-						"Store the current key bindings in a file. If you want to delete any saved presets, navigate to the 'res/keybinds' folder and delete the .txt files that you no longer want."
-								+ " (They will stop showing up in this list after a game restart.)",
+				return new Response("Сохранить предустановку",
+						"Сохраните текущие привязки клавиш в файле. Если вы хотите удалить сохраненные пресеты, перейдите в папку 'res/keybinds' и удалите ненужные файлы .txt."
+								+ " (Они перестанут отображаться в этом списке после перезапуска игры.)",
 						KEYBINDS) {
 					@Override
 					public void effects() {
@@ -967,13 +967,13 @@ public class OptionsDialogue {
 			StringBuilder sb = new StringBuilder();
 			
 			sb.append("<p>"
-						+ "<h5 style='text-align:center;'>Global gender names:</h5>"
+						+ "<h5 style='text-align:center;'>Глобальные имена полов:</h5>"
 						+ "<table align='center'>"
 							+ "<tr>"
-							+ "<th>Body Parts</th>"
-								+ "<th style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>Masculine</th>"
-								+ "<th style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Androgynous</th>"
-								+ "<th style='color:"+PresetColour.FEMININE.toWebHexString()+";'>Feminine</th>"
+							+ "<th>Части тела</th>"
+								+ "<th style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>Мужественный</th>"
+								+ "<th style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Неопределенный</th>"
+								+ "<th style='color:"+PresetColour.FEMININE.toWebHexString()+";'>Женственная</th>"
 							+ "</tr>");
 			
 			for(GenderNames gn : GenderNames.values()) {
@@ -984,12 +984,12 @@ public class OptionsDialogue {
 					+ "</p>"
 					
 					+ "<p>"
-						+ "<h5 style='text-align:center;'>Player-specific pronouns:</h5>"
+						+ "<h5 style='text-align:center;'>Особые местоимения игрока:</h5>"
 						+ "<table align='center'>"
 							+ "<tr>"
-								+ "<th>Pronoun</th>"
-								+ "<th style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>Masculine</th>"
-								+ "<th style='color:"+PresetColour.FEMININE.toWebHexString()+";'>Feminine</th>"
+								+ "<th>Местоимения</th>"
+								+ "<th style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>Мужественный</th>"
+								+ "<th style='color:"+PresetColour.FEMININE.toWebHexString()+";'>Женственная</th>"
 							+ "</tr>"
 							+ getPronounTableRow(GenderPronoun.NOUN)
 							+ getPronounTableRow(GenderPronoun.YOUNG_NOUN)
@@ -999,14 +999,14 @@ public class OptionsDialogue {
 							+ getPronounTableRow(GenderPronoun.POSSESSIVE_ALONE)
 						+ "</table>"
 					+ "</p>"
-					+ "<h5 style='text-align:center;'><span style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Androgynous bodies</span> (option 3)</h5>"
+					+ "<h5 style='text-align:center;'><span style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Неопределенные тела</span> (опция 3)</h5>"
 					+ "<p>"
-					+ "<b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>Feminine:</b> Treated as <b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>feminine</b>.<br/>"
-					+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Clothing feminine:</b> Treated according to clothing femininity."
-							+ " If clothing is neutral, treated as <b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>feminine</b>.<br/>"
-					+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Clothing masculine:</b> Treated according to clothing femininity."
-							+ " If clothing is neutral, treated as <b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>masculine</b>.<br/>"
-					+ "<b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>Masculine:</b> Treated as <b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>masculine</b>.<br/>"
+					+ "<b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>Жественная:</b> Относится как к <b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>женщине</b>.<br/>"
+					+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Женственная одежда:</b> Отношение связано с женственностью одежды."
+							+ " Если одежда нейтральная, относится как к <b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>женщине</b>.<br/>"
+					+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Мужественная одежда:</b> Отношение связано с жентсвенностью одежды."
+							+ " Если одежда нейтральная, относится как к <b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>мужчине</b>.<br/>"
+					+ "<b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>Мужественность:</b> Относится как к <b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>мужчине</b>.<br/>"
 					+ "</p>");
 			
 			return sb.toString();	
@@ -1015,7 +1015,7 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseEffectsOnly("Save", "Save all the pronouns that are currently displayed.") {
+				return new ResponseEffectsOnly("Сохранить", "Сохраните все местоимения, которые отображаются в данный момент.") {
 					@Override
 					public void effects() {
 						for(GenderNames gn : GenderNames.values()) {
@@ -1028,12 +1028,12 @@ public class OptionsDialogue {
 							Main.getProperties().genderPronounMale.put(gp, ((String) Main.mainController.getWebEngine().executeScript("document.getElementById('masculine_" + gp +"').value")).toLowerCase());
 						}
 						Main.saveProperties();
-						Main.game.flashMessage(PresetColour.GENERIC_GOOD, "Pronouns saved!");
+						Main.game.flashMessage(PresetColour.GENERIC_GOOD, "Местоимения сохранены!");
 					}
 				};
 				
 			} else if (index == 2) {
-				return new Response("Defaults", "Resets all pronouns to their default values.", OPTIONS_PRONOUNS){
+				return new Response("По умолчанию", "Сбрасывает все местоимения.", OPTIONS_PRONOUNS){
 					@Override
 					public void effects() {
 						for(GenderNames gn : GenderNames.values()) {
@@ -1052,7 +1052,7 @@ public class OptionsDialogue {
 				
 			} else if (index == 3) {
 				return new Response("<span style='color:"+Main.getProperties().androgynousIdentification.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(Main.getProperties().androgynousIdentification.getName())+"</span>",
-						"Cycle the way the game treats androgynous bodies as described above.", OPTIONS_PRONOUNS){
+						"Переключите способ которым игра относится к неопределенным телам описанным выше.", OPTIONS_PRONOUNS){
 					@Override
 					public void effects() {
 						switch(Main.getProperties().androgynousIdentification){
@@ -1077,7 +1077,7 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "Go back to the options menu.", OPTIONS);
+				return new Response("Назад", "Вернутся в меню настроек.", OPTIONS);
 				
 			} else {
 				return null;
@@ -1093,9 +1093,9 @@ public class OptionsDialogue {
 	private static String getGenderNameTableRow(GenderNames name) {
 		return "<tr>"
 					+ "<td>"
-						+ (name.isHasPenis()?"[style.colourGood(Penis)]":"[style.colourDisabled(Penis)]")
-						+ " " + (name.isHasVagina()?"[style.colourGood(Vagina)]":"[style.colourDisabled(Vagina)]")
-						+ " " + (name.isHasBreasts()?"[style.colourGood(Breasts)]":"[style.colourDisabled(Breasts)]")
+						+ (name.isHasPenis()?"[style.colourGood(Пенис)]":"[style.colourDisabled(Пенис)]")
+						+ " " + (name.isHasVagina()?"[style.colourGood(Вагина)]":"[style.colourDisabled(Вагина)]")
+						+ " " + (name.isHasBreasts()?"[style.colourGood(Груди)]":"[style.colourDisabled(Груди)]")
 					+ "</td>"
 					+ "<td style='min-width:160px;'>"
 						+"<form style='padding:0;margin:0;text-align:center;'><input type='text' id='GENDER_NAME_MASCULINE_" + name + "' value='"
@@ -1134,7 +1134,7 @@ public class OptionsDialogue {
 	}
 	
 	
-	public static final DialogueNode PATCH_NOTES = new DialogueNode("Patch Notes", "Patch notes", true) {
+	public static final DialogueNode PATCH_NOTES = new DialogueNode("Описание обновления", "Описание обновления", true) {
 		
 		@Override
 		public String getContent(){
@@ -1144,7 +1144,7 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Go back to the options menu.", MENU);
+				return new Response("Назад", "Вернутся в меню настроек.", MENU);
 				
 			}else {
 				return null;
@@ -1172,7 +1172,7 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Go back to the options menu.", MENU);
+				return new Response("Назад", "Вернутся в меню настроек.", MENU);
 				
 			}else {
 				return null;
@@ -1186,7 +1186,7 @@ public class OptionsDialogue {
 	};
 	
 	
-	public static final DialogueNode GENDER_PREFERENCE = new DialogueNode("Gender preferences", "", true) {
+	public static final DialogueNode GENDER_PREFERENCE = new DialogueNode("Половые предпочтения", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1194,12 +1194,12 @@ public class OptionsDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<div class='container-full-width'>"
-					+ "These options will determine the gender encounter rates of random NPCs."
-					+ " Some NPCs, such as random succubi attackers, have restrictions on their gender, but your preferences will be taken into account wherever possible.<br/>"
-					+ "<b>A visual representation of the encounter chances can be seen in the bars at the bottom of each section.</b>"
-					+ " (The different shades of each gender are solely for recognition in the bars, and don't mean anything other than that.)"
+					+ "Эти опции определяют частоту встреч случайных NPC по половому признаку."
+					+ " Некоторые NPC, например, случайные нападающие суккубы, имеют ограничения по полу, но ваши предпочтения будут учтены по мере возможности.<br/>"
+					+ "<b>Визуальное представление шансов на встречу можно увидеть в полосках внизу каждого раздела.</b>"
+					+ " (Различные оттенки каждого пола служат исключительно для распознавания в полосках и ничего кроме этого не значат.)"
 					+ "<br/>"
-					+ "A character is considered to have breasts if they are at least an AA-cup."
+					+ "Считается, что у персонажа есть грудь, если она не меньше чашечки АА."
 					+ "</div>");
 			
 			UtilText.nodeContentSB.append(getGenderPreferencesPanel(PronounType.MASCULINE));
@@ -1218,7 +1218,7 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			 if (index == 11) {
-				return new Response("Defaults", "Restore all gender preferences to their default values.", GENDER_PREFERENCE) {
+				return new Response("По умолчанию", "Восстановите все половые предпочтения до значений по умолчанию.", GENDER_PREFERENCE) {
 					@Override
 					public void effects() {
 						Main.getProperties().resetGenderPreferences();
@@ -1262,14 +1262,14 @@ public class OptionsDialogue {
 								+ "<div style='width:140px; float:left;'><b style='color:"+colour.getShades(8)[count]+";'>" +Util.capitaliseSentence(g.getName())+"</b></div>");
 				
 				for(ContentPreferenceValue preference : ContentPreferenceValue.values()) {
-					sb.append("<div id='"+preference+"_"+g+"' class='preference-button"+(Main.getProperties().genderPreferencesMap.get(g)==preference.getValue()?" selected":"")+"'>"+Util.capitaliseSentence(preference.getName())+"</div>");
+					sb.append("<div id='"+preference+"_"+g+"' class='preference-button"+(Main.getProperties().genderPreferencesMap.get(g)==preference.getValue()?" выбрано":"")+"'>"+Util.capitaliseSentence(preference.getName())+"</div>");
 				}
 								
 				sb.append("<p><br/>"
-								+ "<span style='color:"+colour.getShades(8)[count]+";'>" +Util.capitaliseSentence(g.getName())+"s</span> have "
-										+(g.getGenderName().isHasVagina()?"a [style.colourGood(vagina)]":"no [style.colourBad(vagina)]")+", "
-										+(g.getGenderName().isHasPenis()?"a [style.colourGood(penis)]":"no [style.colourBad(penis)]")+", and "
-										+ (g.getGenderName().isHasBreasts()?"[style.colourGood(breasts)]":"no [style.colourBad(breasts)]")+"."
+								+ "<span style='color:"+colour.getShades(8)[count]+";'>" +Util.capitaliseSentence(g.getName())+"s</span> имеет "
+										+(g.getGenderName().isHasVagina()?"[style.colourGood(вагину)]":"нет [style.colourBad(вагины)]")+", "
+										+(g.getGenderName().isHasPenis()?"[style.colourGood(пенис)]":"нет [style.colourBad(пениса)]")+", и "
+										+ (g.getGenderName().isHasBreasts()?"[style.colourGood(груди)]":"нет [style.colourBad(грудей)]")+"."
 								+ "</p>"
 							+ "</div>"
 						+ "</div>"
@@ -1310,7 +1310,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode ORIENTATION_PREFERENCE = new DialogueNode("Orientation preferences", "", true) {
+	public static final DialogueNode ORIENTATION_PREFERENCE = new DialogueNode("Предпочтения по ориентациям", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1318,10 +1318,10 @@ public class OptionsDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<div class='container-full-width'>"
-					+ "These options will determine the sexual orientation encounter rates of random NPCs."
-					+ " Note that the race and femininity of NPCs can have an influence on their orientation, and that some NPCs have pre-determined orientations, but your preferences will be taken into account wherever possible.</br>"
-					+ "<b>A visual representation of the encounter chances can be seen in the bars at the bottom.</b>"
-					+ " (The different shades of each orientation are solely for recognition in the bars, and don't mean anything other than that.)"
+					+ "Эти опции определяют частоту встречи сексуальной ориентации случайных NPC."
+					+ " Обратите внимание, что раса и женственность NPC могут влиять на их ориентацию, а некоторые NPC имеют заранее определенную ориентацию, но ваши предпочтения будут учтены по мере возможности.</br>"
+					+ "<b>Визуальное представление шансов на встречу можно увидеть в столбиках внизу.</b>"
+					+ " (Различные оттенки каждой ориентации служат исключительно для распознавания в полосках и ничего кроме этого не значат.)"
 					+ "</div>"
 		
 					+ "<div class='container-full-width' style='text-align:center;'>");
@@ -1343,7 +1343,7 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 11) {
-				return new Response("Defaults", "Restore all orientation preferences to their default values.", ORIENTATION_PREFERENCE) {
+				return new Response("По умолчанию", "Восстановите все параметры ориентации до значений по умолчанию.", ORIENTATION_PREFERENCE) {
 					@Override
 					public void effects() {
 						Main.getProperties().resetOrientationPreferences();
@@ -1360,7 +1360,7 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode FETISH_PREFERENCE = new DialogueNode("Fetish preferences", "", true) {
+	public static final DialogueNode FETISH_PREFERENCE = new DialogueNode("Предпочтения по фетишам", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1368,9 +1368,9 @@ public class OptionsDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<div class='container-full-width'>"
-							+ "These options will determine the likelihood of random NPCs having these fetishes & preferences."
-							+ " Some races are more likely to get specific fetishes, but your preferences will be taken into account wherever possible.<br/>"
-							+ " Content settings will enable/disable related fetishes."
+							+ "Эти опции определяют вероятность того, что случайные NPC будут иметь эти фетиши и предпочтения."
+							+ " Некоторые расы более склонны к определенным фетишам, но ваши предпочтения будут учтены по мере возможности.<br/>"
+							+ " Настройки контента позволяют включать/выключать соответствующие фетиши."
 							+ "</div>"
 							
 							+ "<div class='container-full-width' style='text-align:center;'>");
@@ -1392,7 +1392,7 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 11) {
-				return new Response("Defaults", "Reset all fetish preferences to their default settings.", FETISH_PREFERENCE) {
+				return new Response("По умолчанию", "Сбросьте все фетиш-предпочтения к настройкам по умолчанию.", FETISH_PREFERENCE) {
 					@Override
 					public void effects() {
 						Main.getProperties().resetFetishPreferences();
@@ -1419,7 +1419,7 @@ public class OptionsDialogue {
 					+ "<div style='width:140px; float:left;'><b style='color:"+colour.toWebHexString()+";'>" +Util.capitaliseSentence(orient.getName())+"</b></div>");
 		
 		for(SexualOrientationPreference preference : SexualOrientationPreference.values()) {
-			sb.append("<div id='"+preference+"_"+orient+"' class='preference-button"+(Main.getProperties().orientationPreferencesMap.get(orient)==preference.getValue()?" selected":"")+"'>"
+			sb.append("<div id='"+preference+"_"+orient+"' class='preference-button"+(Main.getProperties().orientationPreferencesMap.get(orient)==preference.getValue()?" выбрано":"")+"'>"
 							+Util.capitaliseSentence(preference.getName())
 						+"</div>");
 		}
@@ -1452,30 +1452,30 @@ public class OptionsDialogue {
 			String disabledMsg=null;
 			if(!fetish.isContentEnabled()) {
 				if (Fetish.FETISH_SIZE_QUEEN.equals(fetish)) {
-					disabledMsg = "Penetrative size-difference";
+					disabledMsg = "Разница в размерах при проникновении";
 				} else if (Fetish.FETISH_NON_CON_DOM.equals(fetish) || Fetish.FETISH_NON_CON_SUB.equals(fetish)) {
-					disabledMsg = "Non-consent";
+					disabledMsg = "Без согласия";
 				} else if (Fetish.FETISH_INCEST.equals(fetish)) {
-					disabledMsg = "Incest";
+					disabledMsg = "Инцест";
 				} else if (Fetish.FETISH_LACTATION_SELF.equals(fetish) || Fetish.FETISH_LACTATION_OTHERS.equals(fetish)) {
-					disabledMsg = "Lactation";
+					disabledMsg = "Лактация";
 				} else if (Fetish.FETISH_ANAL_RECEIVING.equals(fetish) || Fetish.FETISH_ANAL_GIVING.equals(fetish)) {
-					disabledMsg = "Anal Content";
+					disabledMsg = "Анальные действия";
 				} else if (Fetish.FETISH_FOOT_RECEIVING.equals(fetish) || Fetish.FETISH_FOOT_GIVING.equals(fetish)) {
-					disabledMsg = "Foot Content";
+					disabledMsg = "Фут-фетиш";
 				} else if (Fetish.FETISH_ARMPIT_RECEIVING.equals(fetish) || Fetish.FETISH_ARMPIT_GIVING.equals(fetish)) {
-					disabledMsg = "Armpit Content";
+					disabledMsg = "Действия с подмышками";
 				} else {
-					disabledMsg = "Unspecified Content";
+					disabledMsg = "Неопределенное содержание";
 				}
 			}
 			if(disabledMsg!=null) {
 				// Disabled fetishes to default, the fetish won't be a valid option for the generator anyway
 				Main.getProperties().fetishPreferencesMap.put(fetish, fetish.getFetishPreferenceDefault().getValue());
-				sb.append("<div style='display:inline-block;'><span class='option-disabled'>Fetish forcibly disabled due to "+disabledMsg+" setting!</span></div>");
+				sb.append("<div style='display:inline-block;'><span class='option-disabled'>Фетиш принудительно выключен из-за "+disabledMsg+" настройки!</span></div>");
 				break;
 			} else {
-				sb.append("<div id='"+preference+"_"+Fetish.getIdFromFetish(fetish)+"' class='preference-button"+(Main.getProperties().fetishPreferencesMap.get(fetish)==preference.getValue()?" selected":"")+"'"
+				sb.append("<div id='"+preference+"_"+Fetish.getIdFromFetish(fetish)+"' class='preference-button"+(Main.getProperties().fetishPreferencesMap.get(fetish)==preference.getValue()?" выбрано":"")+"'"
 						+ " style='width:70px;'"
 						+ ">"
 							+Util.capitaliseSentence(preference.getName())
@@ -1543,7 +1543,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode AGE_PREFERENCE = new DialogueNode("Age preferences", "", true) {
+	public static final DialogueNode AGE_PREFERENCE = new DialogueNode("Предпочтения по возрасту", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1551,9 +1551,9 @@ public class OptionsDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<div class='container-full-width'>"
-					+ "These options will determine the age encounter rates of random NPCs, based on their femininity."
-					+ " Some NPCs, such as demons and harpies, may appear to be younger than they actually are, but your preferences will be taken into account wherever possible.<br/>"
-					+ "<b>A visual representation of the age chances can be seen in the bars at the bottom of each section.</b>"
+					+ "Эти опции определяют возраст случайных NPC в зависимости от их женственности."
+					+ " Некоторые NPC, такие как демоны и гарпии, могут казаться моложе, чем они есть на самом деле, но ваши предпочтения будут учтены по мере возможности.<br/>"
+					+ "<b>Визуальное представление возрастных шансов можно увидеть в виде полос в нижней части каждого раздела.</b>"
 					+ "</div>");
 			
 			UtilText.nodeContentSB.append(getAgePreferencesPanel(PronounType.MASCULINE));
@@ -1572,7 +1572,7 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 11) {
-				return new Response("Defaults", "Restore all age preferences to their default values.", AGE_PREFERENCE) {
+				return new Response("По умолчанию", "Восстановите все возрастные предпочтения до значений по умолчанию.", AGE_PREFERENCE) {
 					@Override
 					public void effects() {
 						Main.getProperties().resetAgePreferences();
@@ -1605,7 +1605,7 @@ public class OptionsDialogue {
 			
 			for(ContentPreferenceValue preference : ContentPreferenceValue.values()) {
 				sb.append(
-						"<div id='"+type+"_"+preference+"_"+ageCat+"' class='preference-button"+(Main.getProperties().agePreferencesMap.get(type).get(ageCat)==preference.getValue()?" selected":"")+"'>"
+						"<div id='"+type+"_"+preference+"_"+ageCat+"' class='preference-button"+(Main.getProperties().agePreferencesMap.get(type).get(ageCat)==preference.getValue()?" выбрано":"")+"'>"
 								+Util.capitaliseSentence(preference.getName())
 						+"</div>");
 			}
