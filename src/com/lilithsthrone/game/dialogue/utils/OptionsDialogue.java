@@ -330,7 +330,7 @@ public class OptionsDialogue {
 	public static String overwriteConfirmationName = "";
 	public static String deleteConfirmationName = "";
 	
-	public static final DialogueNode SAVE_LOAD = new DialogueNode("Сохранения", "", true) {
+	public static final DialogueNode SAVE_LOAD = new DialogueNode("Save game files", "", true) {
 
 		@Override
 		public String getContent() {
@@ -438,7 +438,7 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode IMPORT_EXPORT = new DialogueNode("Экспорт персонажа", "", true) {
+	public static final DialogueNode IMPORT_EXPORT = new DialogueNode("Export character", "", true) {
 	
 		@Override
 		public String getContent() {
@@ -1134,7 +1134,7 @@ public class OptionsDialogue {
 	}
 	
 	
-	public static final DialogueNode PATCH_NOTES = new DialogueNode("Описание обновления", "Описание обновления", true) {
+	public static final DialogueNode PATCH_NOTES = new DialogueNode("Patch Notes", "Patch Notes", true) {
 		
 		@Override
 		public String getContent(){
@@ -1186,7 +1186,7 @@ public class OptionsDialogue {
 	};
 	
 	
-	public static final DialogueNode GENDER_PREFERENCE = new DialogueNode("Половые предпочтения", "", true) {
+	public static final DialogueNode GENDER_PREFERENCE = new DialogueNode("Gender preferences", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1310,7 +1310,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode ORIENTATION_PREFERENCE = new DialogueNode("Предпочтения по ориентациям", "", true) {
+	public static final DialogueNode ORIENTATION_PREFERENCE = new DialogueNode("Orientation preferences", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1360,7 +1360,7 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode FETISH_PREFERENCE = new DialogueNode("Предпочтения по фетишам", "", true) {
+	public static final DialogueNode FETISH_PREFERENCE = new DialogueNode("Fetish preferences", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1543,7 +1543,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode AGE_PREFERENCE = new DialogueNode("Предпочтения по возрасту", "", true) {
+	public static final DialogueNode AGE_PREFERENCE = new DialogueNode("Age preferences", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1655,7 +1655,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode FURRY_PREFERENCE = new DialogueNode("Предпочтения по фурри", "", true) {
+	public static final DialogueNode FURRY_PREFERENCE = new DialogueNode("Furry preferences", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1938,7 +1938,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 
-	public static final DialogueNode UNIT_PREFERENCE = new DialogueNode("Единицы измерения", "", true) {
+	public static final DialogueNode UNIT_PREFERENCE = new DialogueNode("Unit preferences", "", true) {
 
 		@Override
 		public String getHeaderContent() {
@@ -2190,7 +2190,7 @@ public class OptionsDialogue {
 	}
 	
 	
-	public static final DialogueNode CREDITS = new DialogueNode("Титры", "", true) {
+	public static final DialogueNode CREDITS = new DialogueNode("Credits", "", true) {
 		
 		@Override
 		public String getContent(){
@@ -2427,7 +2427,7 @@ public class OptionsDialogue {
 		return null;
 	}
 	
-	public static final DialogueNode MISCELLANEOUS = new DialogueNode("Настройки контента (Прочее)", "", true) {
+	public static final DialogueNode MISCELLANEOUS = new DialogueNode("Content Options (Misc.)", "", true) {
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
@@ -2503,7 +2503,7 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode GAMEPLAY = new DialogueNode("Настройки контента (Геймплей)", "", true) {
+	public static final DialogueNode GAMEPLAY = new DialogueNode("Content Options (Gameplay)", "", true) {
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
@@ -2673,7 +2673,7 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode SEX = new DialogueNode("Настройки контента (Секс & Фетиши)", "", true) {
+	public static final DialogueNode SEX = new DialogueNode("Content Options (Sex & Fetishes)", "", true) {
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
