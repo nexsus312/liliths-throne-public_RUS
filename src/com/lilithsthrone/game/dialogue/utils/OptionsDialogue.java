@@ -3031,7 +3031,7 @@ public class OptionsDialogue {
 					"TRAP_PENIS_SIZE_PREFERENCE",
 					PresetColour.BASE_PINK_LIGHT,
 					Util.capitaliseSentence(Gender.N_P_TRAP.getName())+" размер пениса",
-					"Размер пениса случайно сгенерированного "+Gender.N_P_TRAP.getName()+". 100% - это неизменный размер. Размер яичек и выработка спермы также будут изменяться пропорционально этому параметру.",
+					"Размер пениса случайно сгенерированного "+Gender.N_P_TRAP.getName()". 100% - это неизменный размер. Размер яичек и выработка спермы также будут изменяться пропорционально этому параметру.",
 					(100+Main.getProperties().trapPenisSizePreference)+"%",
 					Main.getProperties().trapPenisSizePreference,
 					-90,
