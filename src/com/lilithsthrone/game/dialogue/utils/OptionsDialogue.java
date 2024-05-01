@@ -2781,7 +2781,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(getContentPreferenceDiv("MUSK",
 					PresetColour.BASE_YELLOW_LIGHT,
 					"Мускус",
-					"Когда выключено, в некоторых сценах содержание мускуса будет уменьшено или полностью исключено, а эффект статуса `отмечен мускусом` будет отключен".,
+					"Когда выключено, в некоторых сценах содержание мускуса будет уменьшено или полностью исключено, а эффект статуса `отмечен мускусом` будет отключен.",
 					Main.getProperties().hasValue(PropertyValue.muskContent)));
 			
 			UtilText.nodeContentSB.append(getContentPreferenceDiv("FURRY_TAIL_PENETRATION",
