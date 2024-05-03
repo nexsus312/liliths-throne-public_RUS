@@ -93,7 +93,6 @@ public class OptionsDialogue {
 					+ "</p>"
 					+ "<p style='text-align:center'>"
 						+ "<b>Пожалуйста, используйте мой блог или github, чтобы получить последнюю официальную версию Lilith's Throne!</b>"
-						+ "<b>Данная версия игры модифицирована для поддержки Русского языка!!! Все права принадлежат правообладателям, проект распостраняется в соотвествии с лицензией.</b>"
 					+ "</p>"
 					+ getJavaVersionInformation()
 					+ (Toolkit.getDefaultToolkit().getScreenSize().getHeight()<800
