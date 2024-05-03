@@ -13,7 +13,7 @@ import com.lilithsthrone.main.Main;
  */
 public class SubmissionEncounterDialogue {
 
-	public static final DialogueNode FIND_ITEM = new DialogueNode("Rubbish Pile", "", true) {
+	public static final DialogueNode FIND_ITEM = new DialogueNode("Куча мусора", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -30,7 +30,7 @@ public class SubmissionEncounterDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Take", "Add the " + AbstractEncounter.getRandomItem().getName() + " to your inventory.", Main.game.getDefaultDialogue(false)){
+				return new Response("Взять", "Добавить " + AbstractEncounter.getRandomItem().getName() + " в инвентарь.", Main.game.getDefaultDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(Main.game.getPlayer().addItem((AbstractItem) AbstractEncounter.getRandomItem(), true, true));
@@ -38,7 +38,7 @@ public class SubmissionEncounterDialogue {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Leave", "Leave the " + AbstractEncounter.getRandomItem().getName() + " on the floor.", Main.game.getDefaultDialogue(false));
+				return new Response("Оставить", "Оставить " + AbstractEncounter.getRandomItem().getName() + " на полу.", Main.game.getDefaultDialogue(false));
 				
 			} else {
 				return null;
