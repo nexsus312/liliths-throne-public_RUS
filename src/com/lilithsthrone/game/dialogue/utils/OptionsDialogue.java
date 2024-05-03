@@ -80,24 +80,25 @@ public class OptionsDialogue {
 		public String getContent(){
 			return "<h1 class='special-text' style='font-size:48px; line-height:52px; text-align:center;'>"+Main.GAME_NAME+"</h1>"
 					+ (Main.game.isSillyMode()
-						?"<p class='special-text' style='text-align:center; margin:0 0; padding:0 0;'><i>Or, I can't believe I fell into a magic mirror and entered a world in which my aunt is a demon?!</i></p>"
+						?"<p class='special-text' style='text-align:center; margin:0 0; padding:0 0;'><i>Или я не могу поверить, что упал в волшебное зеркало и попал в мир, где моя тетя - демон?!</i></p>"
 						:"")
-					+ "<h5 class='special-text' style='text-align:center;'>Created by "+Main.AUTHOR+"</h5>"
+					+ "<h5 class='special-text' style='text-align:center;'>Создано: "+Main.AUTHOR+"</h5>"
 					+ "<br/>"
 					+ "<p>"
-						+ "This game is a text-based erotic RPG, and contains a lot of graphic sexual content. You must agree to the game's disclaimer before playing this game!"
+						+ "Эта игра представляет собой текстовую эротическую ролевую игру и содержит большое количество графического сексуального контента. Прежде чем играть в эту игру, вы должны согласиться с отказом от ответственности!"
 					+ "</p>"
 					+"<p>"
-						+ "You can visit my blog (https://lilithsthrone.blogspot.co.uk) to check on development progress (use the 'Blog' button below to open the blog in your default browser)."
-						+ " [style.italicsMinorBad(<b>Note:</b> Intrusive age verification is being rolled out on blogspot, so I will likely create a new blog soon.)]"
+						+ "Вы можете посетить блог разработчика: (https://lilithsthrone.blogspot.co.uk) чтобы увидеть прогресс разработки (используйте 'Блог' кнопку для открытия браузера)."
+						+ " [style.italicsMinorBad(<b>Заметка:</b> На blogspot внедряется интрузивная проверка возраста, поэтому я, скорее всего, скоро создам новый блог.)]"
 					+ "</p>"
 					+ "<p style='text-align:center'>"
-						+ "<b>Please use either my blog or github to get the latest official version of Lilith's Throne!</b>"
+						+ "<b>Пожалуйста, используйте мой блог или github, чтобы получить последнюю официальную версию Lilith's Throne!</b>"
+						+ "<b>Данная версия игры модифицирована для поддержки Русского языка!!! Все права принадлежат правообладателям, проект распостраняется в соотвествии с лицензией.</b>"
 					+ "</p>"
 					+ getJavaVersionInformation()
 					+ (Toolkit.getDefaultToolkit().getScreenSize().getHeight()<800
 							?"<p style='text-align:center; color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>"
-								+ "If the game's resolution isn't fitting to your screen, press the keys: 'Windows' + 'Up Arrow' to maximise!"
+								+ "Если разрешение игры не соответствует вашему экрану, нажмите клавиши: 'Windows' + 'Стрелка вверх' для увеличения!"
 							+ "</p>"
 							:"")
 					+ "<br/>"
@@ -121,7 +122,7 @@ public class OptionsDialogue {
 									:"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Confirm</b>"),
 							"Start a new game"
 								+(Main.game.isStarted()
-									?"<br/><br/>[style.italicsMinorBad(Remember to save your game first!)]</b>"
+									?"<br/><br/>[style.italicsMinorBad(Не забудьте сначала сохранить игру!)]</b>"
 									:"")){
 						@Override
 						public void effects() {
@@ -150,7 +151,7 @@ public class OptionsDialogue {
 							 "New Game",
 							 "Start a new game."
 								+(Main.game.isStarted()
-									?"<br/><br/>[style.italicsMinorBad(Remember to save your game first!)]"
+									?"<br/><br/>[style.italicsMinorBad(Не забудьте сначала сохранить игру!)]"
 									:""),
 								MENU){
 							@Override
