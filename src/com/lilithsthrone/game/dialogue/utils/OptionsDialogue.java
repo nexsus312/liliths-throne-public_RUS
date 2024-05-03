@@ -205,7 +205,7 @@ public class OptionsDialogue {
 				};
 
 			} else if (index == 7) {
-				return new Response("Настройки контента", "Настройте что вы хотели бы видеть в игре.", MISCELLANEOUS){
+				return new Response("Предпочтения", "Настройте что вы бы хотели видеть в игре.", MISCELLANEOUS){
 					@Override
 					public void effects() {
 						confirmNewGame=false;
@@ -213,7 +213,7 @@ public class OptionsDialogue {
 				};
 			
 			} else if (index == 8) {
-				return new Response("Примечания к патчу", "Просмотрите примечания к патчу для этой версии.", PATCH_NOTES);
+				return new Response("Изменения", "История обновлений.", PATCH_NOTES);
 			
 			} else if (index == 9) {
 				return new Response("Титры", "Просмотрите экран титров игры.", CREDITS);
@@ -703,10 +703,10 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 6) {
-				return new Response("Местоимения полов", "Настройте все половые местоимения и имена.", OPTIONS_PRONOUNS);
+				return new Response("Местоимения", "Настройте все половые местоимения и имена.", OPTIONS_PRONOUNS);
 				
 			} else if (index == 7) {
-				return new Response("Предпочтительные единицы", "Установите желаемые единицы измерения.", UNIT_PREFERENCE);
+				return new Response("Ед. Измерения", "Установите желаемые единицы измерения.", UNIT_PREFERENCE);
 			} else if (index == 8) {
 				return new Response("Сложность: "+Main.getProperties().difficultyLevel.getName(), "Переключите сложность игры.", OPTIONS){
 					@Override
@@ -1000,9 +1000,9 @@ public class OptionsDialogue {
 					+ "<h5 style='text-align:center;'><span style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Неопределенные тела</span> (опция 3)</h5>"
 					+ "<p>"
 					+ "<b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>Жественная:</b> Относится как к <b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>женщине</b>.<br/>"
-					+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Женственная одежда:</b> Отношение связано с женственностью одежды."
+					+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Жен. одежда:</b> Отношение связано с женственностью одежды."
 							+ " Если одежда нейтральная, относится как к <b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>женщине</b>.<br/>"
-					+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Мужественная одежда:</b> Отношение связано с жентсвенностью одежды."
+					+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Муж. одежда:</b> Отношение связано с жентсвенностью одежды."
 							+ " Если одежда нейтральная, относится как к <b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>мужчине</b>.<br/>"
 					+ "<b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>Мужественность:</b> Относится как к <b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>мужчине</b>.<br/>"
 					+ "</p>");
