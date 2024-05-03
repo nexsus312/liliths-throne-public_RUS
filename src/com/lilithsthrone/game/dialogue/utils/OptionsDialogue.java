@@ -258,7 +258,7 @@ public class OptionsDialogue {
 					
 				} else {
 					if(Main.isLoadGameAvailable(Main.getProperties().lastSaveLocation)) {
-						return new ResponseEffectsOnly("Продолжить", "Продолжайте играть с момента вашего последнего сохранения."){
+						return new ResponseEffectsOnly("Продолжить", "Продолжите играть с момента вашего последнего сохранения."){
 							@Override
 							public void effects() {
 								Main.loadGame(Main.getProperties().lastSaveLocation);
@@ -1184,7 +1184,7 @@ public class OptionsDialogue {
 	};
 	
 	
-	public static final DialogueNode GENDER_PREFERENCE = new DialogueNode("Половые предпочтения", "", true) {
+	public static final DialogueNode GENDER_PREFERENCE = new DialogueNode("Пол", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1308,7 +1308,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode ORIENTATION_PREFERENCE = new DialogueNode("Предпочтения по ориентациям", "", true) {
+	public static final DialogueNode ORIENTATION_PREFERENCE = new DialogueNode("Ориентации", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1358,7 +1358,7 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode FETISH_PREFERENCE = new DialogueNode("Предпочтения по фетишам", "", true) {
+	public static final DialogueNode FETISH_PREFERENCE = new DialogueNode("Фетиши", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1541,7 +1541,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode AGE_PREFERENCE = new DialogueNode("Предпочтения по возрасту", "", true) {
+	public static final DialogueNode AGE_PREFERENCE = new DialogueNode("Возраст", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1653,7 +1653,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode FURRY_PREFERENCE = new DialogueNode("Предпочтения по фурри", "", true) {
+	public static final DialogueNode FURRY_PREFERENCE = new DialogueNode("Фурри", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -2472,8 +2472,8 @@ public class OptionsDialogue {
 					Main.getProperties().hasValue(PropertyValue.sharedEncyclopedia)));
 			UtilText.nodeContentSB.append(getContentPreferenceDiv("WEATHER_INTERRUPTION",
 					PresetColour.GENERIC_ARCANE,
-					"Штормовые прерывания",
-					"Когда включено, магический шторм прервет диалог чтобы сказать вам о том что шторм начался.",
+					"Прирывание при шторме",
+					"Когда включено, при начале шторма появится предупреждающий диалог.",
 					Main.getProperties().hasValue(PropertyValue.weatherInterruptions)));
 			UtilText.nodeContentSB.append(getContentPreferenceDiv("DIALOGUE_COPY",
 					PresetColour.BASE_BLUE_STEEL,
@@ -2509,7 +2509,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(getContentPreferenceDiv("ENCHANTMENT_LIMITS",
 					PresetColour.GENERIC_ARCANE,
 					"Вместимость зачарований",
-					"Когда включено, персонаж имеет определенное ограничение на максимальное количество зачарований, которое зависит от уровня и навыков. Когда отключено, зачаровывать можно до бесконечности (пока есть ресурс), использование не реккомендуется.",
+					"Когда включено, персонаж имеет определенное ограничение на максимальное количество зачарований, которое зависит от уровня и навыков. Когда отключено, зачаровывать можно до бесконечности (пока есть ресурс). (Отключение сравнимо с включением читов, делает игру слишком легкой.)",
 					Main.getProperties().hasValue(PropertyValue.enchantmentLimits)));
 			UtilText.nodeContentSB.append(getContentPreferenceDiv("BAD_END",
 					PresetColour.GENERIC_TERRIBLE,
@@ -2584,7 +2584,7 @@ public class OptionsDialogue {
 					0,
 					100));
 			
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_GREEN, "Принудительные расовые ограничения трансформаций", "Это позволит вам установить максимальный предел фурри, в которую NPC будет насильно превращать вас."));
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_GREEN, "Принудительные расовые ограничения трансформаций", "Это позволит вам установить максимальный предел фурри-трасформаций который ограничит NPC при попытках превратить вас."));
 			for (FurryPreference fp : Util.newArrayListOfValues(FurryPreference.REDUCED,
 					FurryPreference.MINIMUM,
 					FurryPreference.HUMAN,
@@ -2631,7 +2631,7 @@ public class OptionsDialogue {
 					100));
 			
 			
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.FETISH, "Тенденця принудительных фетишей",
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.FETISH, "Тенденция принудительных фетишей",
 					"Это позволит вам переопределить вкусы NPC и контролировать тенденцию принудительных фетишей к верхушке или низу."));
 			for (ForcedFetishTendency fft : Util.newArrayListOfValues(ForcedFetishTendency.NEUTRAL,
 					ForcedFetishTendency.BOTTOM,
@@ -2699,7 +2699,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(getContentPreferenceDiv("VOLUNTARY_NTR",
 					PresetColour.GENERIC_MINOR_BAD,
 					"Добровольный NTR",
-					"Добавляет опции в которых враги могут иметь секс с вашими компаньенами для избегания боя.",
+					"Добавляет опции в которых враги могут иметь секс с вашими компаньёнами для избегания боя.",
 					Main.getProperties().hasValue(PropertyValue.voluntaryNTR)));
 			
 			UtilText.nodeContentSB.append(getContentPreferenceDiv("INVOLUNTARY_NTR",
@@ -2929,7 +2929,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(getContentPreferenceDiv("HAIR_ASS",
 					PresetColour.BASE_PURPLE_DARK,
 					"Волосы на заднице",
-					"Включает описание волос на заднице и связаного контента..",
+					"Включает описание волос на заднице и связаного контента.",
 					Main.getProperties().hasValue(PropertyValue.assHairContent)));
 			
 			UtilText.nodeContentSB.append(getContentPreferenceDiv("FEMININE_BEARD",
@@ -2952,8 +2952,8 @@ public class OptionsDialogue {
 			
 			UtilText.nodeContentSB.append(getContentPreferenceDiv("LIP_LISP",
 					PresetColour.BASE_GREEN_DARK,
-					"Запинка больших губ",
-					"Переключает, будут ли персонажи с очень большими губами говорить с запинкой.",
+					"Шепелявость больших губ",
+					"Переключает, будут ли персонажи с очень большими губами шепелявить.",
 					Main.getProperties().hasValue(PropertyValue.lipLispContent)));
 			
 			UtilText.nodeContentSB.append(getBreastsContentPreferenceVariableDiv(
@@ -2984,7 +2984,7 @@ public class OptionsDialogue {
 					"PREGNANCY_LACTATION",
 					PresetColour.BASE_YELLOW,
 					"Средняя лактация при беременности",
-					"Устанавливает <b>сренее</b> увеличение лактации персонажей от каждой беременности. Настоящее увеличение лактации будет в пределах "
+					"Устанавливает <b>среднее</b> увеличение лактации персонажей от каждой беременности. Настоящее увеличение лактации будет в пределах "
 							+Units.fluid(Main.getProperties().pregnancyLactationIncreaseVariance)+" этого значения.",
 					Main.getProperties().pregnancyLactationIncrease == 0
 							?"[style.boldDisabled(Выключено)]"
