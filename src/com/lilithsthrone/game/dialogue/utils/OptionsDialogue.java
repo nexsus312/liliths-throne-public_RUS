@@ -117,9 +117,9 @@ public class OptionsDialogue {
 				 if(confirmNewGame || !Main.game.isStarted()) {
 					return new ResponseEffectsOnly(
 							(!Main.game.isStarted()
-									?"New Game"
-									:"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Confirm</b>"),
-							"Start a new game"
+									?"Новая игра"
+									:"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Подтвердить</b>"),
+							"Начать новую игру."
 								+(Main.game.isStarted()
 									?"<br/><br/>[style.italicsMinorBad(Не забудьте сначала сохранить игру!)]</b>"
 									:"")){
@@ -147,8 +147,8 @@ public class OptionsDialogue {
 					
 				 } else {
 					 return new Response(
-							 "New Game",
-							 "Start a new game."
+							 "Новая игра",
+							 "Начать новую игру."
 								+(Main.game.isStarted()
 									?"<br/><br/>[style.italicsMinorBad(Не забудьте сначала сохранить игру!)]"
 									:""),
