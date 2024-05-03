@@ -85,9 +85,9 @@ public class Main extends Application {
 	public static Stage primaryStage;
 	
 	public static final String AUTHOR = "Innoxia";
-	public static final String GAME_NAME = "Lilith's Throne";
+	public static final String GAME_NAME = "Трон Лилит";
 	public static final String VERSION_NUMBER = "0.4.9.9"; // Remember to update pom.xml!
-	public static final String VERSION_DESCRIPTION = "Alpha";
+	public static final String VERSION_DESCRIPTION = "Альфа";
 
 	public static boolean quickSaved = false;
 	
