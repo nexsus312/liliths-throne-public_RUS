@@ -1451,21 +1451,21 @@ public class OptionsDialogue {
 			String disabledMsg=null;
 			if(!fetish.isContentEnabled()) {
 				if (Fetish.FETISH_SIZE_QUEEN.equals(fetish)) {
-					disabledMsg = "Penetrative size-difference";
+					disabledMsg = "Разница в размерах при проникновении";
 				} else if (Fetish.FETISH_NON_CON_DOM.equals(fetish) || Fetish.FETISH_NON_CON_SUB.equals(fetish)) {
-					disabledMsg = "Non-consent";
+					disabledMsg = "Без согласия";
 				} else if (Fetish.FETISH_INCEST.equals(fetish)) {
-					disabledMsg = "Incest";
+					disabledMsg = "Инцест";
 				} else if (Fetish.FETISH_LACTATION_SELF.equals(fetish) || Fetish.FETISH_LACTATION_OTHERS.equals(fetish)) {
-					disabledMsg = "Lactation";
+					disabledMsg = "Лактация";
 				} else if (Fetish.FETISH_ANAL_RECEIVING.equals(fetish) || Fetish.FETISH_ANAL_GIVING.equals(fetish)) {
-					disabledMsg = "Anal Content";
+					disabledMsg = "Анальные действия";
 				} else if (Fetish.FETISH_FOOT_RECEIVING.equals(fetish) || Fetish.FETISH_FOOT_GIVING.equals(fetish)) {
-					disabledMsg = "Foot Content";
+					disabledMsg = "Фут-фетиш";
 				} else if (Fetish.FETISH_ARMPIT_RECEIVING.equals(fetish) || Fetish.FETISH_ARMPIT_GIVING.equals(fetish)) {
-					disabledMsg = "Armpit Content";
+					disabledMsg = "Действия с подмышками";
 				} else {
-					disabledMsg = "Unspecified Content";
+					disabledMsg = "Неопределенное содержание";
 				}
 			}
 			if(disabledMsg!=null) {
@@ -1726,17 +1726,17 @@ public class OptionsDialogue {
 							+ "</div>")
 					+(Main.getProperties().taurFurryLevel==1
 						?"<div id='TAUR_FURRY_LIMIT_"+1+"' class='normal-button selected' style='width:31%; margin:1%; text-align:center; float:right; color:"+FurryPreference.HUMAN.getColour().toWebHexString()+";'>"
-							+ "Human"
+							+ "Человек"
 							+ "</div>"
 						:"<div id='TAUR_FURRY_LIMIT_"+1+"' class='normal-button' style='width:31%; margin:1%; text-align:center; float:right;'>"
-							+ "[style.colourDisabled(Human)]"
+							+ "[style.colourDisabled(Человек)]"
 							+ "</div>")
 					+(Main.getProperties().taurFurryLevel==0
 						?"<div id='TAUR_FURRY_LIMIT_"+0+"' class='normal-button selected' style='width:31%; margin:1%; text-align:center; float:right; color:"+PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+";'>"
-							+ "Untouched"
+							+ "Нетронутый"
 							+ "</div>"
 						:"<div id='TAUR_FURRY_LIMIT_"+0+"' class='normal-button' style='width:31%; margin:1%; text-align:center; float:right;'>"
-							+ "[style.colourDisabled(Untouched)]"
+							+ "[style.colourDisabled(Нетронутый)]"
 							+ "</div>")
 					
 					+(Main.getProperties().taurFurryLevel==5
@@ -2042,18 +2042,18 @@ public class OptionsDialogue {
 		if(enabled) {
 			contentSB.append(
 					"<div class='normal-button selected' style='width:25%; margin-right:4%; text-align:center; float:right;'>"
-							+ "[style.boldGood(ON)]"
+							+ "[style.boldGood(Вкл)]"
 						+ "</div>"
 					+ "<div id='"+id+"_OFF' class='normal-button' style='width:25%; margin-right:4%; text-align:center; float:right;'>"
-						+ "[style.colourDisabled(OFF)]"
+						+ "[style.colourDisabled(Выкл)]"
 					+ "</div>");
 		} else {
 			contentSB.append(
 					"<div id='"+id+"_ON' class='normal-button' style='width:25%; margin-right:4%; text-align:center; float:right;'>"
-						+ "[style.colourDisabled(OFF)]"
+						+ "[style.colourDisabled(Вкл)]"
 					+ "</div>"
 					+"<div class='normal-button selected' style='width:25%; margin-right:4%; text-align:center; float:right;'>"
-						+ "[style.boldBad(OFF)]"
+						+ "[style.boldBad(Выкл)]"
 					+ "</div>");
 		}
 
@@ -2963,12 +2963,12 @@ public class OptionsDialogue {
 					"Средний рост груди при беременности",
 					"Устанавливает <b>средний</b> размер роста чашечки который будет получать персонаж от каждой беременности. Настоящий рост груди будет в пределах "+Util.intToString(Main.getProperties().pregnancyBreastGrowthVariance)+" размера этого значения.",
 					Main.getProperties().pregnancyBreastGrowth == 0
-							?"[style.boldDisabled(Disabled)]"
-							:Main.getProperties().pregnancyBreastGrowth+" cup"+(Main.getProperties().pregnancyBreastGrowth != 1?"":""),
+							?"[style.boldDisabled(Выключено)]"
+							:Main.getProperties().pregnancyBreastGrowth+" чашка"+(Main.getProperties().pregnancyBreastGrowth != 1?"":""),
 					Main.getProperties().pregnancyBreastGrowth, 0, 10,
 					Main.getProperties().pregnancyUdderGrowth == 0
-							?"[style.boldDisabled(Disabled)]"
-							:Main.getProperties().pregnancyUdderGrowth+" cup"+(Main.getProperties().pregnancyUdderGrowth != 1?"":""),
+							?"[style.boldDisabled(Выключено)]"
+							:Main.getProperties().pregnancyUdderGrowth+" чашка"+(Main.getProperties().pregnancyUdderGrowth != 1?"":""),
 					Main.getProperties().pregnancyUdderGrowth, 0, 10));
 			
 			UtilText.nodeContentSB.append(getBreastsContentPreferenceVariableDiv(
@@ -2976,9 +2976,9 @@ public class OptionsDialogue {
 					PresetColour.BASE_PINK_LIGHT,
 					"Ограничение роста груди при беременности",
 					"Установите максимальный предел размера чашечек, до которого может вырасти грудь персонажей после беременностей.",
-					CupSize.getCupSizeFromInt(Main.getProperties().pregnancyBreastGrowthLimit).getCupSizeName()+"-cup",
+					CupSize.getCupSizeFromInt(Main.getProperties().pregnancyBreastGrowthLimit).getCupSizeName()+"-чашка",
 					Main.getProperties().pregnancyBreastGrowthLimit, 0, 100,
-					CupSize.getCupSizeFromInt(Main.getProperties().pregnancyUdderGrowthLimit).getCupSizeName()+"-cup",
+					CupSize.getCupSizeFromInt(Main.getProperties().pregnancyUdderGrowthLimit).getCupSizeName()+"-чашка",
 					Main.getProperties().pregnancyUdderGrowthLimit, 0, 100));
 			
 			UtilText.nodeContentSB.append(getBreastsContentPreferenceVariableDiv(
@@ -3029,7 +3029,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(getContentPreferenceVariableDiv(
 					"TRAP_PENIS_SIZE_PREFERENCE",
 					PresetColour.BASE_PINK_LIGHT,
-					Util.capitaliseSentence(Gender.N_P_TRAP.getName())+" penis size",
+					Util.capitaliseSentence(Gender.N_P_TRAP.getName())+" размер пениса",
 					"Размер пениса случайно сгенерированного "+Gender.N_P_TRAP.getName()+". 100% - это неизменный размер. Размер яичек и выработка спермы также будут изменяться пропорционально этому параметру.",
 					(100+Main.getProperties().trapPenisSizePreference)+"%",
 					Main.getProperties().trapPenisSizePreference,
