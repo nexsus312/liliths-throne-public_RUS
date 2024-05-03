@@ -228,10 +228,10 @@ public class OptionsDialogue {
 				};
 			
 			} else if (index == 12) {
-				return new ResponseEffectsOnly("Github", "Открывает страницу:<br/><br/><i>https://github.com/Innoxia/liliths-throne-public</i><br/><br/><b>Внешне в вашем браузере по умолчанию.</b>"){
+				return new ResponseEffectsOnly("Github(RU)", "Открывает страницу:<br/><br/><i>https://github.com/nexsus312/liliths-throne-public_RUS</i><br/><br/><b>Внешне в вашем браузере по умолчанию.</b>"){
 					@Override
 					public void effects() {
-						Util.openLinkInDefaultBrowser("https://github.com/Innoxia/liliths-throne-public");
+						Util.openLinkInDefaultBrowser("https://github.com/nexsus312/liliths-throne-public_RUS");
 						confirmNewGame=false;
 					}
 				};
