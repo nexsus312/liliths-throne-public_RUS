@@ -82,7 +82,7 @@ public class OptionsDialogue {
 					+ (Main.game.isSillyMode()
 						?"<p class='special-text' style='text-align:center; margin:0 0; padding:0 0;'><i>Или я не могу поверить, что упал в волшебное зеркало и попал в мир, где моя тетя - демон?!</i></p>"
 						:"")
-					+ "<h5 class='special-text' style='text-align:center;'>Создано: "+Main.AUTHOR+"</h5>"
+					+ "<h5 class='special-text' style='text-align:center;'>Разработано: "+Main.AUTHOR+"</h5>"
 					+ "<br/>"
 					+ "<p>"
 						+ "Эта игра представляет собой текстовую эротическую ролевую игру и содержит большое количество графического сексуального контента. Прежде чем играть в эту игру, вы должны согласиться с отказом от ответственности!"
@@ -91,7 +91,7 @@ public class OptionsDialogue {
 						+ " [style.italicsMinorBad(<b>ВНИМАНИЕ:</b> Данная версия модифицирована для поддержки Русского языка, проект распостраняется на бесплатной основе, все права принадлежат правообладателям.)]"
 					+ "</p>"
 					+ "<p style='text-align:center'>"
-						+ "<b>Пожалуйста, используйте мой блог или github, чтобы получить последнюю официальную версию Lilith's Throne!</b>"
+						+ "<b>Если вы хотите получить поледнюю нерусифицированную версию Lilith's Throne, вы можете посетить блог или Github разработчика!</b>"
 					+ "</p>"
 					+ getJavaVersionInformation()
 					+ (Toolkit.getDefaultToolkit().getScreenSize().getHeight()<800
@@ -1184,7 +1184,7 @@ public class OptionsDialogue {
 	};
 	
 	
-	public static final DialogueNode GENDER_PREFERENCE = new DialogueNode("Пол", "", true) {
+	public static final DialogueNode GENDER_PREFERENCE = new DialogueNode("Предпочтения по полам", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1308,7 +1308,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode ORIENTATION_PREFERENCE = new DialogueNode("Ориентации", "", true) {
+	public static final DialogueNode ORIENTATION_PREFERENCE = new DialogueNode("Предпочтения по ориентациям", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -1358,7 +1358,7 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode FETISH_PREFERENCE = new DialogueNode("Фетиши", "", true) {
+	public static final DialogueNode FETISH_PREFERENCE = new DialogueNode("Предпочтения по фетишам", "", true) {
 		
 		@Override
 		public String getHeaderContent(){
@@ -2212,7 +2212,7 @@ public class OptionsDialogue {
 			}
 
 			UtilText.nodeContentSB.append("<br/>"
-					+ "Contributors:</br>" // In alphabetical order:
+					+ "Внесли вклад в разработку:</br>" // In alphabetical order:
 					+ "<b style='color:#21bfc5;'>AceXP</b></br>"
 					+ "<b style='color:#21bfc5;'>DJ Addi</b></br>"
 					+ "<b style='color:#21bfc5;'>DSG</b></br>"
@@ -2228,17 +2228,17 @@ public class OptionsDialogue {
 					+ "<b style='color:#21bfc5;'>Tukaima</b></br>");
 			
 			UtilText.nodeContentSB.append("<br/>"
-						+ "Special thanks to:<br/>"
+						+ "Особое спасибо:<br/>"
 						+ "<b>Sensei</b>,<br/>"
 						+ "<b style='color:#fa0063;'>loveless</b>, <b style='color:#c790b2;'>Blue999</b>, and <b style='color:#ec9538;'>DesuDemona</b><br/>"
-						+ "<b style='color:#21bec4;'>Github & wiki contributors</b><br/>"
-						+ "<b style='color:#e06e5f;'>Everyone who's financially supported me</b>,<br/>"
-						+ "<b>Bug reporters</b>,<br/>"
-						+ "and<br/>"
-						+ "<b>Everyone for playing Lilith's Throne!</b>"
+						+ "<b style='color:#21bec4;'>Участникам Github & Вики</b><br/>"
+						+ "<b style='color:#e06e5f;'>Всем кто финансово поддерживал меня</b>,<br/>"
+						+ "<b>Авторам отчетов об ошибках</b>,<br/>"
+						+ "м<br/>"
+						+ "<b>Всем за игру в Трон Лилит!</b>"
 					+ "</p>"
 					+ "<br/>"
-					+ "<h5 style='text-align:center; color:"+PresetColour.RARITY_LEGENDARY.toWebHexString()+";'>Legendary Patrons</h5>"
+					+ "<h5 style='text-align:center; color:"+PresetColour.RARITY_LEGENDARY.toWebHexString()+";'>Легендарные Покровители</h5>"
 					+ "<p style='text-align:center;'>");
 			
 			for(CreditsSlot cs : Main.credits) {
@@ -2283,7 +2283,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(
 					"</p>"
 					+ "<br/>"
-					+ "<h5 style='text-align:center; color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>Epic Patrons</h5>"
+					+ "<h5 style='text-align:center; color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>Эпические Покровители</h5>"
 					+ "<p style='text-align:center;'>");
 			
 			for(CreditsSlot cs : Main.credits) {
@@ -2314,7 +2314,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(
 					"</p>"
 					+ "<br/>"
-					+ "<h5 style='text-align:center; color:"+Subspecies.DEMON.getColour(null).toWebHexString()+";'>Demonic backers</h5>"
+					+ "<h5 style='text-align:center; color:"+Subspecies.DEMON.getColour(null).toWebHexString()+";'>Демонические Покровители</h5>"
 					+ "<p style='text-align:center;'>");
 			
 			for(CreditsSlot cs : Main.credits) {
@@ -2396,29 +2396,29 @@ public class OptionsDialogue {
 			};
 		} else if (index == 6) {
 			if (Main.game.getCurrentDialogueNode().equals(GENDER_PREFERENCE)) {
-				return new Response("Половые предпочтения", "Вы уже смотрите на настройки предпочтений полов!", null);
+				return new Response("Пол", "Вы уже смотрите на настройки предпочтений полов!", null);
 			}
-			return new Response("Половые предпочтения", "Установите предпочитаемые появления полов.", GENDER_PREFERENCE);
+			return new Response("Пол", "Установите предпочитаемые появления полов.", GENDER_PREFERENCE);
 		} else if (index == 7) {
 			if (Main.game.getCurrentDialogueNode().equals(ORIENTATION_PREFERENCE)) {
-				return new Response("Предпочтения по ориентации", "Вы уже смотрите на настройки предпочтений ориентации!", null);
+				return new Response("Ориентации", "Вы уже смотрите на настройки предпочтений ориентации!", null);
 			}
-			return new Response("Предпочтения по ориентации", "Установите предпочитаемые появления ориентаций.", ORIENTATION_PREFERENCE);
+			return new Response("Ориентации", "Установите предпочитаемые появления ориентаций.", ORIENTATION_PREFERENCE);
 		} else if (index == 8) {
 			if (Main.game.getCurrentDialogueNode().equals(AGE_PREFERENCE)) {
-				return new Response("Предпочтения по возрасту", "Вы уже смотрите на предпочтения по возрасту!", null);
+				return new Response("Возраст", "Вы уже смотрите на предпочтения по возрасту!", null);
 			}
-			return new Response("Предпочтения по возрасту", "Установите предпочитаемый возраст появления NPC.", AGE_PREFERENCE);
+			return new Response("Возраст", "Установите предпочитаемый возраст появления NPC.", AGE_PREFERENCE);
 		} else if (index == 9) {
 			if (Main.game.getCurrentDialogueNode().equals(FURRY_PREFERENCE)) {
-				return new Response("Предпочтения по фурри", "Вы уже смотрите на предпочтения по фурри!", null);
+				return new Response("Фурри", "Вы уже смотрите на предпочтения по фурри!", null);
 			}
-			return new Response("Предпочтения по фурри", "Установите предпочитаемый уровень фурри для появления.", FURRY_PREFERENCE);
+			return new Response("Фурри", "Установите предпочитаемый уровень фурри для появления.", FURRY_PREFERENCE);
 		} else if (index == 10) {
 			if (Main.game.getCurrentDialogueNode().equals(FETISH_PREFERENCE)) {
-				return new Response("Предпочтения по фетишам", "Вы уже смотрите на предпочтения по фетишам!", null);
+				return new Response("Фетиши", "Вы уже смотрите на предпочтения по фетишам!", null);
 			}
-			return new Response("Предпочтения по фетишам", "Установите предпочитения по встречаемым фетишам.", FETISH_PREFERENCE);
+			return new Response("Фетиши", "Установите предпочитения по встречаемым фетишам.", FETISH_PREFERENCE);
 		} else if (index == 0) {
 			return new Response("Назад", "Вернуться в главное меню.", MENU);
 		}
