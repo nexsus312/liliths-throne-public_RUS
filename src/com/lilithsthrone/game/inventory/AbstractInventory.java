@@ -11,7 +11,7 @@ import java.util.function.Function;
 
 /**
  * AbstractInventory serves to deduplicate code between the handling of Item, Clothing and Weapon in CharacterInventory.
- *
+ * Перевод не требуется
  * Package-privateness is a feature in that case.
  * @param <T>
  */
