@@ -41,28 +41,28 @@ public class MiscActions {
 		@Override
 		public String getActionTitle() {
 			if(!isOppositeDom() || isCharacterImmune()) {
-				return "[style.colourDisabled(Level drain: "
+				return "[style.colourDisabled(Вытягивание уровня: "
 						+(Main.sex.playerLevelDrain
-							?"ON)]"
-							:"OFF)]");
+							?"Вкл)]"
+							:"Выкл)]");
 			}
-			return "[style.colourSex(Level drain:)] "
+			return "[style.colourSex(Вытягивание уровня:)] "
 					+(Main.sex.playerLevelDrain
-						?"[style.colourMinorGood(ON)]"
-						:"[style.colourMinorBad(OFF)]");
+						?"[style.colourMinorGood(Вкл)]"
+						:"[style.colourMinorBad(Выкл)]");
 		}
 		@Override
 		public String getActionDescription() {
 			return UtilText.parse(Main.sex.getCharacterOrgasming(),
-					"'"+Util.capitaliseSentence(Perk.ORGASMIC_LEVEL_DRAIN.getName(Main.game.getPlayer()))+"' perk effect:<br/>"
-							+ "Toggle whether or not you're going to drain [npc.namePos] level when [npc.she] orgasms."
+					"'"+Util.capitaliseSentence(Perk.ORGASMIC_LEVEL_DRAIN.getName(Main.game.getPlayer()))+"' эффект перка:<br/>"
+							+ "Переключите, будете ли вы откачивать уровень [npc.namePos] при оргазме [npc.she]."
 							+(!isOppositeDom()
-								?" [style.italicsMinorBad(You can only drain opposite partners (sub/dom)!)]"
-								:" You can only use this ability to drain opposite partners (sub/dom).")
+								?" [style.italicsMinorBad(Вы можете вытягивать только противоположных партнеров (покор./дом.)!)]"
+								:" Вы можете вытягивать только противоположных партнеров (покор./дом.).")
 							+(isCharacterImmune()
 								?(Main.sex.getCharacterOrgasming().isImmuneToLevelDrain()
-									?"<br/>[style.italicsTerrible([npc.Name] cannot have [npc.her] level drained!)]"
-									:"<br/>[style.italicsTerrible(You cannot level drain during a bad end!)]")
+									?"<br/>[style.italicsTerrible(У [npc.Name] не может быть откачен [npc.her] уровень!)]"
+									:"<br/>[style.italicsTerrible(Вы не можете вытягивать уровень во время плохого конца!)]")
 								:""));
 		}
 		@Override
