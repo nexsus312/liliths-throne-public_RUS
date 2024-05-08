@@ -462,7 +462,7 @@ public interface SexActionInterface {
 		if(this.isSadisticAction()) {
 			if(!characterTargeted.getFetishDesire(Fetish.FETISH_MASOCHIST).isPositive() && !characterTargeted.isDoll()) {
 				sb.append("<p style='text-align:center'>"
-							+ "[style.colourBad([npc2.Name] [npc2.verb(find)] this sadistic action to be a huge turn-off!)]"
+							+ "[style.colourBad([npc2.Name] [npc2.verb(find)] это садистское действие крайне неприятным!)]"
 							+ characterTargeted.incrementLust(-15, false)
 						+"</p>");
 			}
@@ -1268,9 +1268,9 @@ public interface SexActionInterface {
 	default String getArousalHitWarning() {
 		if(this.isSadisticAction()) {
 			if(!Main.sex.getCharacterTargetedForSexAction(this).getFetishDesire(Fetish.FETISH_MASOCHIST).isPositive()) {
-				return "<br/>[style.colourBad(As [npc2.name] doesn't have a positive desire towards the '"+Fetish.FETISH_MASOCHIST.getName(Main.sex.getCharacterTargetedForSexAction(this))+"' fetish, [npc2.she] will find this action to be a huge turn-off!)]";
+				return "<br/>[style.colourBad(Поскольку [npc2.name] не испытывает положительного желания по отношению к '"+Fetish.FETISH_MASOCHIST.getName(Main.sex.getCharacterTargetedForSexAction(this))+"' фетишу, [npc2.she] сочтет это действие крайне неприятным!)]";
 			} else {
-				return "<br/>[style.colourSex(As [npc2.name] has a positive desire towards the '"+Fetish.FETISH_MASOCHIST.getName(Main.sex.getCharacterTargetedForSexAction(this))+"' fetish, [npc2.she] finds such sadistic actions to be a turn-on!)]";
+				return "<br/>[style.colourSex(Поскольку [npc2.name] имеет положительное отношение к '"+Fetish.FETISH_MASOCHIST.getName(Main.sex.getCharacterTargetedForSexAction(this))+"' фетишу, [npc2.she] находит такие садистские действия возбуждающими!)]";
 			}
 		}
 		return "";
@@ -1526,14 +1526,14 @@ public interface SexActionInterface {
 						for(AbstractFetish f : fetishesRequired){
 							if(Main.game.getPlayer().hasFetish(f)) {
 								SB.append("<br/>"
-										+"<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>Associated Fetish</span>"
-										+ " (<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>owned</span>): "
+										+"<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>Связанный фетиш</span>"
+										+ " (<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>есть</span>): "
 										+ Util.capitaliseSentence(f.getName(Main.game.getPlayer())));
 								
 							} else {
 								SB.append("<br/>"
-										+"<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>Associated Fetish</span>"
-										+ " (<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>not owned</span>): "
+										+"<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>Связанный фетиш</span>"
+										+ " (<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>нет</span>): "
 										+ Util.capitaliseSentence(f.getName(Main.game.getPlayer())));
 							}
 						}
@@ -1542,13 +1542,13 @@ public interface SexActionInterface {
 					if(corruptionBypass!=null) {
 						if(isCorruptionWithinRange()) {
 							SB.append("<br/>"
-									+"<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>Associated Corruption</span>"
-									+ " (<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>within range</span>): "
+									+"<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>Связанная совращеность</span>"
+									+ " (<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>достигнута</span>): "
 									+ Util.capitaliseSentence(corruptionBypass.getName()));
 						} else {
 							SB.append("<br/>"
-									+"<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>Associated Corruption</span>"
-									+ " (<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>out of range</span>): "
+									+"<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>Связанная совращеность</span>"
+									+ " (<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>не достигнута</span>): "
 									+ Util.capitaliseSentence(corruptionBypass.getName()));
 						}
 					}
@@ -1557,7 +1557,7 @@ public interface SexActionInterface {
 						if(Main.sex.getCharacterTargetedForSexAction(SexActionInterface.this).isSizeDifferenceShorterThan(Main.sex.getCharacterPerformingAction())
 								|| Main.sex.getCharacterTargetedForSexAction(SexActionInterface.this).isSizeDifferenceTallerThan(Main.sex.getCharacterPerformingAction())) {
 							SB.append("<br/>"
-									+"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Size-difference is blocking swap!</span>");
+									+"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Разница в размерах не дает поменятся местами!</span>");
 						}
 					}
 					
