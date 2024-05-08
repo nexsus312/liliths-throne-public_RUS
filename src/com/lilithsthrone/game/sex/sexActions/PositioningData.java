@@ -7,7 +7,7 @@ import com.lilithsthrone.game.sex.positions.slots.SexSlot;
 
 /**
  * For use in position request SexActions.
- * 
+ * Не требует перевода
  * @since 0.3.1
  * @version 0.3.1
  * @author Innoxia
