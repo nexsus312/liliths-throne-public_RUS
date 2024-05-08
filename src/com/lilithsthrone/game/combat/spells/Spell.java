@@ -55,7 +55,7 @@ public enum Spell {
 			DamageType.FIRE,
 			false,
 			"Огненный шар",
-			"огненный шар",
+			"fireball",
 			"Вызывает шар магического пламени, который можно запустить в цель.",
 			30,
 			DamageVariance.LOW,
@@ -319,14 +319,14 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"By my power, shall glaciers melt, and a thousand suns be extinguished! Oh, fury of the stars, I call upon thee to shield your [npc.master]!",
-													"Know now that the flames of hell itself obey my every command, and from the fiery chasm of the dimension of flame, I summon forth the power to shield me from all harm!",
-													"By fire and fury, I unleash the infernal flames of the sun itself! Come now, arcane inferno, shield your [npc.master] from all that dare harm [npc.herHim]!"),
-											"With a swipe of your [pc.arm], you summon a protective cloak of arcane fire around yourself!",
-											"With a swipe of your [pc.arm], you summon a protective cloak of arcane fire around [npc.name]!",
-											"With a swipe of [npc.her] [npc.arm], [npc.name] summons a protective cloak of arcane fire around [npc.herself]!",
-											"With a swipe of [npc.her] [npc.arm], [npc.name] summons a protective cloak of arcane fire around you!",
-											"With a swipe of [npc1.her] [npc1.arm], [npc1.name] summons a protective cloak of arcane fire around [npc2.name]!"));
+													"От моей силы растают ледники и погаснут тысячи солнц! О, ярость звезд, я призываю тебя защитить своего [npc.master]!",
+													"Знайте, что само адское пламя повинуется каждому моему приказу, а из огненной бездны измерения пламени я призываю силу, способную защитить меня от любого вреда!",
+													"Огнем и яростью я высвобождаю инфернальное пламя самого солнца! Приди же, магия инферно, защити своего [npc.master] от всех, кто посмеет причинить вред [npc.herHim]!"),
+											"Взмахом руки вы вызываете вокруг себя защитный плащ из магического огня!",
+											"Взмахом руки вы вызываете защитный плащ из магического огня вокруг [npc.name]!",
+											"Взмахнув [npc.her] [npc.arm], [npc.name] вызывает защитный плащ из магического огня вокруг [npc.herself]!",
+											"Взмахнув [npc.her] [npc.arm], [npc.name] вызывает вокруг себя защитный плащ из магического огня!",
+											"Взмахнув [npc1.her] [npc1.arm], [npc1.name] вызывает защитный плащ из магического огня вокруг [npc2.name]!"));
 			
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 			
@@ -351,9 +351,9 @@ public enum Spell {
 			SpellType.SUMMON,
 			DamageType.FIRE,
 			true,
-			"Elemental Fire",
+			"Огненный элементаль",
 			"elemental_fire",
-			"Summon forth your elemental in a physical form by binding them to the school of Fire.",
+			"Вызовите своего элементаля в физической форме, связав его со школой Огня.",
 			0,
 			DamageVariance.LOW,
 			200,
@@ -363,37 +363,37 @@ public enum Spell {
 					SpellUpgrade.ELEMENTAL_FIRE_2,
 					SpellUpgrade.ELEMENTAL_FIRE_3A,
 					SpellUpgrade.ELEMENTAL_FIRE_3B),
-			null, Util.newArrayListOfValues("Summons [style.colourArcane(Elemental)] in form of [style.colourSchoolFire(Fire)]")) {
+			null, Util.newArrayListOfValues("Вызывает [style.colourArcane(Элементаля)] в форме [style.colourSchoolFire(Огня)]")) {
 		@Override
 		public Value<Boolean, String> getSpellCastOutOfCombatDescription(GameCharacter owner, GameCharacter target) {
 			if(!owner.hasSpell(this)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.do]n't know this spell, so cannot cast it!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name] не знает этого заклинания, поэтому не может его произнести!"));
 				
 			} else if(owner.isCaptive()) {
-				return new Value<>(false, UtilText.parse(owner, "Spells cannot be cast while in captivity!"));
+				return new Value<>(false, UtilText.parse(owner, "Заклинания нельзя произносить, находясь в плену!"));
 				
 			} else if(Main.game.isInCombat()) {
-				return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+				return new Value<>(false, UtilText.parse(owner, "Во время боя заклинания можно произносить только в качестве боевого движения!"));
 				
 			} else if(!Main.game.isSavedDialogueNeutral()
 					&& (Main.game.getCurrentDialogueNode()!=SpellManagement.CHARACTER_SPELLS_FIRE?false:SpellManagement.getDialogueReturn().getDialogueNodeType()!=DialogueNodeType.OCCUPANT_MANAGEMENT)) {
-				return new Value<>(false, "Spells can only be cast in a neutral scene!");
+				return new Value<>(false, "Заклинания можно произносить только в нейтральной сцене!");
 				
 			} else if(owner.getMana()<this.getModifiedCost(owner) && !owner.isSpellSchoolSpecialAbilityUnlocked(SpellSchool.FIRE)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.verb(need)] at least <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)] in order to cast this spell!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name] нужно как минимум <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(ауры)] чтобы произнести это заклинание!"));
 				
 			} else {
-				String description = owner.isPlayer()?"Summon your elemental by binding it to the school of Fire!":"Get [npc.name] to summon [npc.her] elemental by binding it to the school of Fire!";
-				String cost = " This will cost <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)]!";
+				String description = owner.isPlayer()?"Призовите своего элементаля, связав его со школой Огня!":"Попросите [npc.name] призвать [npc.her] элементаля, привязав его к школе Огня!";
+				String cost = " Это будет стоить <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(ауры)]!";
 				if(owner.getMana()<this.getModifiedCost(owner)) {
-					cost = " This will cost <b>"+Math.round((owner.getMana()-this.getModifiedCost(owner))*-0.25f)+"</b> [style.boldHealth("+Attribute.HEALTH_MAXIMUM.getName()+")]!";
+					cost = " Это будет стоить <b>"+Math.round((owner.getMana()-this.getModifiedCost(owner))*-0.25f)+"</b> [style.boldHealth("+Attribute.HEALTH_MAXIMUM.getName()+")]!";
 				}
 				return new Value<>(true, UtilText.parse(owner, description+"<br/>"+cost));
 			}
 		}
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summons your elemental in the form of fire.";
+			return "Призывает вашего элементаля в виде огня.";
 		}
 		@Override
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
@@ -420,13 +420,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 									?Util.randomItemFrom(
 									Util.newArrayListOfValues(
-										"[npc.speech(By the ancient rites of flame, I summon forth hell and fury incarnate! Answer your [npc.master]'s call, [npc2.name], and, by the incineration of a million dimensions, be bound to my will!)] ",
-										"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! I call upon the dimension of flame itself, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-										"[npc.speech(Let fire consume, and the inferno within me be unleashed! Flame and fury, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+										"[npc.speech(Древними обрядами пламени я вызываю воплощение ада и ярости! Ответь на призыв своего [npc.master], [npc2.name], и, испепелив миллион измерений, подчинись моей воле!)] ",
+										"[npc.speech(Пусть силы, запертые во мне на тысячу лет, теперь вырвутся на свободу! Я призываю само измерение пламени и, заключив наш вечный договор, вызываю тебя, [npc2.name]!)] ",
+										"[npc.speech(Пусть огонь поглощает, а ад внутри меня разгорается! Пламя и ярость, ваш [npc.master] зовет! Повинуйся и будь призван, [npc2.name]!)] "))
 									:"")
 								+(caster.isPlayer()
-									?"With a flash of light and a burst of flames, you bind your elemental, [npc2.name], to the school of Fire!"
-									:"With a flash of light and a burst of flames, [npc1.name] binds [npc1.her] elemental, [npc2.name], to the school of Fire!")));
+									?"Вспышкой света и вспышкой пламени вы привязываете своего элементаля, [npc2.name], к школе Огня!"
+									:"Вспышкой света и вспышкой пламени [npc1.name] привязывает [npc1.her] элементаля, [npc2.name], к школе Огня!")));
 				
 			} else {
 				//caster.addCompanion(caster.getElemental());
@@ -434,13 +434,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 										?Util.randomItemFrom(
 										Util.newArrayListOfValues(
-											"[npc.speech(By the ancient rites of flame, I summon forth hell and fury incarnate! Answer your [npc.master]'s call, [npc2.name], and, by the incineration of a million dimensions, be bound to my will!)] ",
-											"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! I call upon the dimension of flame itself, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-											"[npc.speech(Let fire consume, and the inferno within me be unleashed! Flame and fury, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+											"[npc.speech(Древними обрядами пламени я вызываю воплощение ада и ярости! Ответь на призыв своего [npc.master], [npc2.name], и, испепелив миллион измерений, подчинись моей воле!)] ",
+											"[npc.speech(Пусть силы, запертые во мне на тысячу лет, теперь вырвутся на свободу! Я призываю само измерение пламени и, заключив наш вечный договор, вызываю тебя, [npc2.name]!)] ",
+											"[npc.speech(Пусть огонь поглощает, а ад внутри меня разгорается! Пламя и ярость, ваш [npc.master] зовет! Повинуйся и будь призван, [npc2.name]!)] "))
 										:"")
 								+(caster.isPlayer()
-									?"With a flash of light and a burst of flames, you summon forth your elemental, [npc2.name], by binding [npc2.herHim] to the school of Fire!"
-									:"With a flash of light and a burst of flames, [npc1.name] summons forth [npc1.her] elemental, [npc2.name], by binding [npc2.herHim] to the school of Fire!")));
+									?"Вспышкой света и вспышкой пламени вы вызываете своего элементаля, [npc2.name], привязав [npc2.herHim] к школе Огня!"
+									:"Вспышкой света и вспышкой пламени [npc1.name] призывает [npc1.her] элементаля, [npc2.name], связывая [npc2.herHim] со школой Огня!")));
 				
 				if(Main.game.isInCombat()) {
 					caster.getElemental().setLocation(caster, false);
@@ -465,7 +465,7 @@ public enum Spell {
 			SpellType.OFFENSIVE,
 			DamageType.ICE,
 			false,
-			"Ice Shard",
+			"Ледяной осколок",
 			"ice_shard",
 			"Summons a shard of ice that can be launched at a target.",
 			25,
