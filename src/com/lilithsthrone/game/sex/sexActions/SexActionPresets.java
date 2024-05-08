@@ -86,7 +86,7 @@ import com.lilithsthrone.game.sex.sexActions.baseActionsSelf.SelfTongueVagina;
 import com.lilithsthrone.utils.Util;
 import com.lilithsthrone.utils.Util.Value;
 
-/**
+/** Не требует перевода
  * @since 0.1.97
  * @version 0.3.3
  * @author Innoxia
