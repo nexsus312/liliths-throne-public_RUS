@@ -42,18 +42,18 @@ public class SexActionUtility {
 		
 		@Override
 		public String getActionTitle() {
-			return "Do nothing";
+			return "Ничего не делать";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Don't make a move.";
+			return "Не двигаться.";
 		}
 		
 		@Override
 		public String getDescription() {
 			if(Main.sex.isMasturbation()) {
-				return "You remain still, not making a move...";
+				return "Вы остаетесь неподвижны, не делая никаких действий...";
 			}
 			
 			if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction())==SexSlotGeneric.MISC_WATCHING) {
@@ -62,46 +62,46 @@ public class SexActionUtility {
 				if(characters.size()>=2) {
 					return UtilText.parse(characters,
 							UtilText.returnStringAtRandom(
-							"You remain in position, watching [npc.name] and [npc2.name] have sex before you.",
-							"Staying quite still, you watch [npc.name] and [npc2.name] having fun in front of you.",
-							"You carry on watching [npc.name] and [npc2.name], while doing nothing yourself."));
+							"Вы остаетесь на месте, наблюдая, как [npc.name] и [npc2.name] занимаются сексом перед вами.",
+							"Оставаясь на месте, вы наблюдаете за тем, как [npc.name] и [npc2.name] веселятся перед вами.",
+							"Вы продолжаете наблюдать за [npc.name] и [npc2.name], а сами ничего не делаете."));
 				}
 			}
 			
 			switch(Main.sex.getSexPace(Main.game.getPlayer())) {
 				case DOM_GENTLE:
 					return UtilText.returnStringAtRandom(
-							"You remain in position, gently pressing yourself against [npc.name], but not making any sort of move on [npc.herHim].",
-							"Staying quite still, you press yourself up against [npc.name], waiting for [npc.herHim] to make the next move.",
-							"You gently press yourself against [npc.name], content to let [npc.herHim] make the next move.");
+							"Вы остаетесь на месте, нежно прижимаясь к [npc.name], но не делая никаких движений в сторону [npc.herHim].",
+							"Оставаясь на месте, вы нежно прижимаетесь к [npc.name], ожидая, когда [npc.herHim] сделает следующий шаг.",
+							"Вы нежно прижимаетесь к [npc.name], позволяя [npc.herHim] сделать следующий шаг.");
 				case DOM_NORMAL:
 					return UtilText.returnStringAtRandom(
-							"You remain in position, pressing yourself against [npc.name], but not making any sort of move on [npc.herHim].",
-							"Staying quite still, you press yourself up against [npc.name], waiting for [npc.herHim] to make the next move.",
-							"You press yourself against [npc.name], content to let [npc.herHim] make the next move.");
+							"Вы остаетесь на месте, прижимаясь к [npc.name], но не делая никаких движений в сторону [npc.herHim].",
+							"Оставаясь на месте, вы прижимаетесь к [npc.name], ожидая, когда [npc.herHim] сделает следующий шаг.",
+							"Вы прижимаетесь к [npc.name], довольствуясь тем, что позволили [npc.herHim] сделать следующий шаг.");
 				case DOM_ROUGH:
 					return UtilText.returnStringAtRandom(
-							"You remain in position, grinding yourself against [npc.name], but not making any sort of move on [npc.herHim].",
-							"Staying quite still, you grind yourself up against [npc.name], waiting for [npc.herHim] to make the next move.",
-							"You grind yourself against [npc.name], content to let [npc.herHim] make the next move.");
+							"Вы остаетесь на месте, теребя себя об [npc.name], но не делая никаких движений в сторону [npc.herHim].",
+							"Оставаясь на месте, вы терлись о [npc.name], ожидая, когда [npc.herHim] сделает следующий шаг.",
+							"Вы теребите себя об [npc.name], довольствуясь тем, что позволили [npc.herHim] сделать следующий шаг.");
 				case SUB_EAGER:
 					return UtilText.returnStringAtRandom(
-							"You remain in position, pressing yourself against [npc.name], but not making any sort of move on [npc.herHim].",
-							"Staying quite still, you press yourself up against [npc.name], waiting for [npc.herHim] to make the next move.",
-							"You press yourself against [npc.name], content to let [npc.herHim] make the next move.");
+							"Вы остаетесь на месте, прижимаясь к [npc.name], но не делая никаких движений в сторону [npc.herHim].",
+							"Оставаясь на месте, вы прижимаетесь к [npc.name], ожидая, когда [npc.herHim] сделает следующий шаг.",
+							"Вы прижимаетесь к [npc.name], довольствуясь тем, что позволили [npc.herHim] сделать следующий шаг.");
 				case SUB_NORMAL:
 					return UtilText.returnStringAtRandom(
-							"You remain in position, pressing yourself against [npc.name], but not making any sort of move on [npc.herHim].",
-							"Staying quite still, you press yourself up against [npc.name], waiting for [npc.herHim] to make the next move.",
-							"You press yourself against [npc.name], content to let [npc.herHim] make the next move.");
+							"Вы остаетесь на месте, прижимаясь к [npc.name], но не делая никаких движений в сторону [npc.herHim].",
+							"Оставаясь на месте, вы прижимаетесь к [npc.name], ожидая, когда [npc.herHim] сделает следующий шаг.",
+							"Вы прижимаетесь к [npc.name], довольствуясь тем, что позволили [npc.herHim] сделать следующий шаг.");
 				case SUB_RESISTING:
 					return UtilText.returnStringAtRandom(
-							"You continue struggling against [npc.name], refusing to make any sort of move on [npc.herHim].",
-							"Struggling and [pc.sobbing], you try to wriggle out of [npc.namePos] grasp, dreading what [npc.her] next move might be.",
-							"You try to push [npc.name] away from you, [pc.sobbing] and struggling in distress as you refuse to submit.");
+							"Вы продолжаете бороться с [npc.name], не желая предпринимать никаких действий против [npc.herHim].",
+							"Борясь и [pc.sobbing], вы пытаетесь вырваться из хватки [npc.namePos], с ужасом ожидая, каким может быть следующий шаг [npc.her].",
+							"Вы пытаетесь оттолкнуть [npc.name] от себя, [pc.sobbing] и боретесь в страхе, отказываясь подчиниться.");
 			}
 
-			return "You remain in position, content to simply wait and see what [npc.name] does next.";
+			return "Вы остаетесь на месте, вы просто ждете и смотрите что [npc.name] будет делать дальше.";
 		}
 	};
 	
@@ -118,12 +118,12 @@ public class SexActionUtility {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Calm down";
+			return "Успокоиться";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Focus on calming yourself down, which lowers your arousal.";
+			return "Сосредоточьтесь на том, чтобы успокоить себя, что снизит ваше возбуждение.";
 		}
 
 		@Override
@@ -136,36 +136,36 @@ public class SexActionUtility {
 			switch(Main.sex.getSexPace(Main.game.getPlayer())) {
 				case DOM_GENTLE:
 					return UtilText.returnStringAtRandom(
-							Main.sex.isMasturbation()?"":"You take a moment to focus on something other than [npc.name], calming yourself down in the process.",
-							"Closing your [pc.eyes], you take a deep breath, calming yourself down and lowering your arousal.",
-							"Taking a deep breath, you focus on calming yourself down a little.");
+							Main.sex.isMasturbation()?"":"На мгновение вы сосредотачиваетесь на чем-то другом, а не на [npc.name], успокаивая себя в процессе.",
+							"Закрыв [pc.eyes], вы делаете глубокий вдох, успокаивая себя и снижая возбуждение.",
+							"Глубоко вздохнув, вы стараетесь немного успокоиться.");
 				case DOM_NORMAL:
 					return UtilText.returnStringAtRandom(
-							Main.sex.isMasturbation()?"":"You take a moment to focus on something other than [npc.name], calming yourself down in the process.",
-							"Closing your [pc.eyes], you take a deep breath, calming yourself down and lowering your arousal.",
-							"Taking a deep breath, you focus on calming yourself down a little.");
+							Main.sex.isMasturbation()?"":"На мгновение вы сосредотачиваетесь на чем-то другом, а не на [npc.name], успокаивая себя в процессе.",
+							"Закрыв [pc.eyes], вы делаете глубокий вдох, успокаивая себя и снижая возбуждение.",
+							"Глубоко вздохнув, вы стараетесь немного успокоиться.");
 				case DOM_ROUGH:
 					return UtilText.returnStringAtRandom(
-							Main.sex.isMasturbation()?"":"You take a moment to focus on something other than [npc.name], calming yourself down in the process.",
-							"Closing your [pc.eyes], you take a deep breath, calming yourself down and lowering your arousal.",
-							"Taking a deep breath, you focus on calming yourself down a little.");
+							Main.sex.isMasturbation()?"":"На мгновение вы сосредотачиваетесь на чем-то другом, а не на [npc.name], успокаивая себя в процессе.",
+							"Закрыв [pc.eyes], вы делаете глубокий вдох, успокаивая себя и снижая возбуждение.",
+							"Глубоко вздохнув, вы стараетесь немного успокоиться.");
 				case SUB_EAGER:
 					return UtilText.returnStringAtRandom(
-							Main.sex.isMasturbation()?"":"You take a moment to focus on something other than [npc.name], calming yourself down in the process.",
-							"Closing your [pc.eyes], you take a deep breath, calming yourself down and lowering your arousal.",
-							"Taking a deep breath, you focus on calming yourself down a little.");
+							Main.sex.isMasturbation()?"":"На мгновение вы сосредотачиваетесь на чем-то другом, а не на [npc.name], успокаивая себя в процессе.",
+							"Закрыв [pc.eyes], вы делаете глубокий вдох, успокаивая себя и снижая возбуждение.",
+							"Глубоко вздохнув, вы стараетесь немного успокоиться.");
 				case SUB_NORMAL:
 					return UtilText.returnStringAtRandom(
-							Main.sex.isMasturbation()?"":"You take a moment to focus on something other than [npc.name], calming yourself down in the process.",
-							"Closing your [pc.eyes], you take a deep breath, calming yourself down and lowering your arousal.",
-							"Taking a deep breath, you focus on calming yourself down a little.");
+							Main.sex.isMasturbation()?"":"На мгновение вы сосредотачиваетесь на чем-то другом, а не на [npc.name], успокаивая себя в процессе.",
+							"Закрыв [pc.eyes], вы делаете глубокий вдох, успокаивая себя и снижая возбуждение.",
+							"Глубоко вздохнув, вы стараетесь немного успокоиться.");
 				case SUB_RESISTING:
 					return UtilText.returnStringAtRandom(
-							Main.sex.isMasturbation()?"":"Still weakly struggling against [npc.name], you try to calm yourself down a little, reminding yourself that this will all be over soon.",
-							"Scrunching your [pc.eyes] shut, you try to take a deep breath, pretending that this isn't happening as you seek to calm yourself down.",
-							Main.sex.isMasturbation()?"":"Taking a deep breath, you try to calm down a little, before continuing to struggle against [npc.name].");
+							Main.sex.isMasturbation()?"":"Все еще слабо сопротивляясь [npc.name], вы пытаетесь немного успокоиться, напоминая себе, что все это скоро закончится.",
+							"Зажмурив глаза, вы пытаетесь сделать глубокий вдох и притвориться, что ничего не происходит, пытаясь успокоиться.",
+							Main.sex.isMasturbation()?"":"Сделав глубокий вдох, вы пытаетесь немного успокоиться, прежде чем продолжить борьбу с [npc.name].");
 				default:
-					return Main.sex.isMasturbation()?"":"You try to focus on something other than the [npc.race] you're currently having sex with. By doing so, you manage to calm yourself down a little, reducing your arousal.";
+					return Main.sex.isMasturbation()?"":"Вы пытаетесь сосредоточиться на чем-то другом, а не на [npc.race], с которой вы сейчас занимаетесь сексом. Таким образом вам удается немного успокоиться и снизить возбуждение.";
 			}
 		}
 	};
@@ -183,17 +183,17 @@ public class SexActionUtility {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Do nothing";
+			return "Ничего не делать";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Decide to do nothing.";
+			return "Решите ничего не делать.";
 		}
 
 		@Override
 		public String getDescription() {
-			return "[npc.Name] doesn't make a move.";
+			return "[npc.Name] не делает никаких движений.";
 		}
 	};
 	
@@ -220,7 +220,7 @@ public class SexActionUtility {
 		
 		@Override
 		public String getDescription() {
-			return "[npc.Name] lets out [npc.a_moan+].";
+			return "[npc.Name] выпускает [npc.a_moan+].";
 		}
 	};
 
@@ -237,11 +237,11 @@ public class SexActionUtility {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Use item";
+			return "Использовать предмет";
 		}
 		@Override
 		public String getActionDescription() {
-			return "See what items you could use.";
+			return "Посмотрите, какие предметы вы можете использовать.";
 		}
 		@Override
 		public String getDescription() {
@@ -276,9 +276,9 @@ public class SexActionUtility {
 		@Override
 		public String getActionTitle() {
 			if(getSexClothingBeingUsed()!=null) {
-				return "Equip "+getSexClothingBeingUsed().getKey().getName();
+				return "Одеть "+getSexClothingBeingUsed().getKey().getName();
 			}
-			return "Equip clothing";
+			return "Одевает одежду";
 		}
 		@Override
 		public String getActionDescription() {
@@ -323,9 +323,9 @@ public class SexActionUtility {
 		@Override
 		public String getActionTitle() {
 			if(getSexClothingBeingUsed()!=null) {
-				return "Equip "+getSexClothingBeingUsed().getKey().getName();
+				return "Одеть "+getSexClothingBeingUsed().getKey().getName();
 			}
-			return "Equip clothing";
+			return "Одевает одежду";
 		}
 		@Override
 		public String getActionDescription() {
@@ -362,9 +362,9 @@ public class SexActionUtility {
 		@Override
 		public String getActionTitle() {
 			if(getSexItemBeingUsed()!=null) {
-				return "Use "+getSexItemBeingUsed().getKey().getName();
+				return "Использовать "+getSexItemBeingUsed().getKey().getName();
 			}
-			return "Use item";
+			return "Использовать предмет";
 		}
 		@Override
 		public String getActionDescription() {
@@ -417,12 +417,12 @@ public class SexActionUtility {
 		@Override
 		public String getActionTitle() {
 			AbstractItemType item = Main.sex.getItemUseInformation().getValue().getValue().getItemType();
-			return "Accept "+item.getName(false);
+			return "Принять "+item.getName(false);
 		}
 		@Override
 		public String getActionDescription() {
 			AbstractItemType item = Main.sex.getItemUseInformation().getValue().getValue().getItemType();
-			return Util.capitaliseSentence(item.getUseName())+" the "+item.getName(false)+" "+UtilText.parse(Main.sex.getItemUseInformation().getKey(), " [npc.name] is offering you.");
+			return Util.capitaliseSentence(item.getUseName())+" "+item.getName(false)+" "+UtilText.parse(Main.sex.getItemUseInformation().getKey(), " [npc.name] предлагает вам.");
 		}
 		@Override
 		public String getDescription() {
@@ -453,19 +453,19 @@ public class SexActionUtility {
 		@Override
 		public String getActionTitle() {
 			AbstractItemType item = Main.sex.getItemUseInformation().getValue().getValue().getItemType();
-			return "Refuse "+item.getName(false);
+			return "Отказаться "+item.getName(false);
 		}
 		@Override
 		public String getActionDescription() {
 			AbstractItemType item = Main.sex.getItemUseInformation().getValue().getValue().getItemType();
-			return "Refuse to "+item.getUseName()+" the "+item.getName(false)+" "+UtilText.parse(Main.sex.getItemUseInformation().getKey(), " [npc.name] is offering you.");
+			return "Отказаться "+item.getUseName()+" "+item.getName(false)+" "+UtilText.parse(Main.sex.getItemUseInformation().getKey(), " [npc.name] предлагает вам.");
 		}
 		@Override
 		public String getDescription() {
 			AbstractItemType item = Main.sex.getItemUseInformation().getValue().getValue().getItemType();
 			return UtilText.parse(Main.sex.getItemUseInformation().getKey(),
-					"You refuse to take the "+item.getName(false)+" from [npc.name]."
-					+ " Letting out a disappointed whine, [npc.she] puts "+(item.isPlural()?"them":"it")+" back into [npc.her] inventory...");
+					"Вы отказываетесь принять "+item.getName(false)+" от [npc.name]."
+					+ " Выпустив разочарованное мычание, [npc.she] засовывает "+(item.isPlural()?"их":"его")+" обратно в [npc.her] инвентарь...");
 		}
 		@Override
 		public void applyEffects() {
@@ -491,7 +491,7 @@ public class SexActionUtility {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Manage clothing";
+			return "Управлять одеждой";
 		}
 
 		@Override
@@ -518,7 +518,7 @@ public class SexActionUtility {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Manage clothing";
+			return "Управлять одеждой";
 		}
 
 		@Override
@@ -545,7 +545,7 @@ public class SexActionUtility {
 		}
 		@Override
 		public String getActionTitle() {
-			return "New Position";
+			return "Новая позиция";
 		}
 
 		@Override
