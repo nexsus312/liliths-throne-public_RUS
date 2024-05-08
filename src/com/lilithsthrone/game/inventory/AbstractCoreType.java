@@ -3,10 +3,10 @@ package com.lilithsthrone.game.inventory;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
+/** Перевод не требуется
  * @since 0.1.0
  * @version 0.3.7.7
- * @author Innoxia
+ * @author Innoxia 
  */
 public class AbstractCoreType {
 	
