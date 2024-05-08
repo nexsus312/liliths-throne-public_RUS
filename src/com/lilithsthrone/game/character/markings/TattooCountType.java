@@ -9,25 +9,25 @@ import com.lilithsthrone.utils.Util;
  */
 public enum TattooCountType {
 
-	NUMBERS("numbers") {
+	NUMBERS("цифры") {
 		@Override
 		public String convertInt(int input) {
 			return String.valueOf(input);
 		}
 	},
-	TALLY("tally markings") {
+	TALLY("метки подсчета") {
 		@Override
 		public String convertInt(int input) {
 			return Util.intToTally(input, 50);
 		}
 	},
-	NUMERALS("Roman numerals") {
+	NUMERALS("Римские цифры") {
 		@Override
 		public String convertInt(int input) {
 			return Util.intToNumerals(input);
 		}
 	},
-	WRITTEN("written out") {
+	WRITTEN("написано") {
 		@Override
 		public String convertInt(int input) {
 			return Util.capitaliseSentence(Util.intToString(input));
