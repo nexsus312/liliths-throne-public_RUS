@@ -5,7 +5,7 @@ import com.lilithsthrone.game.character.body.CoverableArea;
 import com.lilithsthrone.game.inventory.InventorySlot;
 import com.lilithsthrone.main.Main;
 
-/**
+/** Не требует перевода
  * @since 0.2.7
  * @version 0.4
  * @author Innoxia
