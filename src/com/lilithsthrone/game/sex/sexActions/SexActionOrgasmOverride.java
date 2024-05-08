@@ -1,6 +1,6 @@
 package com.lilithsthrone.game.sex.sexActions;
 
-/**
+/** Не требует перевода
  * @since 0.3
  * @version 0.3.1
  * @author Innoxia
