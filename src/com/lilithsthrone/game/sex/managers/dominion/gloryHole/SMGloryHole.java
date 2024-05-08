@@ -146,8 +146,8 @@ public class SMGloryHole extends SexManagerDefault {
 	@Override
 	public String getPublicSexStartingDescription() {
 		return "<p style='color:"+PresetColour.BASE_ORANGE.toWebHexString()+"; font-style:italic; text-align:center;'>"
-					+ "As you let out [pc.a_moan+], several of the people in the toilets turn around to see what's happening."
-					+ " Seeing the door to your stall left wide open, and with you about to get started on servicing the cocks before you, a few of them step up and prepare to watch..."
+					+ "Когда вы выпускаете [pc.a_moan+], несколько человек в туалетах оборачиваются, чтобы посмотреть, что происходит."
+					+ " Увидев, что дверь в вашу кабинку оставлена открытой, и вы собираетесь приступить к обслуживанию стоящих перед вами членов, несколько из них подходят и готовятся наблюдать..."
 				+ "</p>";
 	}
 
@@ -162,19 +162,19 @@ public class SMGloryHole extends SexManagerDefault {
 			
 			return "<p style='color:"+PresetColour.BASE_ORANGE.toWebHexString()+"; font-style:italic; text-align:center;'>"
 						+ UtilText.returnStringAtRandom(
-							"The people who've gathered to watch your lewd display laugh and cheer as they look on.",
-							"You hear someone in the crowd wolf-whistling as they watch you servicing the glory holes.",
-							"A pair of zebra-boy bouncers shove their way through the crowd, but instead of putting a stop to your fun, they join in with the crowd in laughing and commenting on your performance.",
-							"You hear the crowd that's gathered to watch you commenting on your performance.",
-							"Cheering and laughing, the crowd of onlookers watch as you continue servicing the cocks before you.",
-							"You glance across to see several members of the crowd touching themselves as they watch you service the glory holes.",
-							"The crowd cheers you on as you carry on servicing the glory holes.",
-							"The crowd laughs and cheers as you carry on acting like a desperate slut in front of them.",
-							"Several members of the crowd shout and cheer as you carry on servicing the glory holes.",
-							Util.capitaliseSentence(UtilText.generateSingularDeterminer(subspecies.getSingularFemaleName(null)))+" "+subspecies.getSingularFemaleName(null)+" steps forwards,"
-									+ " stroking her exposed cock as she suddenly cums all over the floor in front of you.",
-							Util.capitaliseSentence(UtilText.generateSingularDeterminer(subspecies.getSingularMaleName(null)))+" "+subspecies.getSingularMaleName(null)+" steps forwards,"
-									+ " stroking his exposed cock as he suddenly cums all over the floor in front of you.")
+							"Люди, собравшиеся посмотреть на вашу развратную демонстрацию, хохочут и подбадривают вас.",
+							"Вы слышите, как кто-то в толпе волком свистит, наблюдая за тем, как вы обслуживаете отверстия в кабинке.",
+							"Пара мальчиков-зебр протискивается сквозь толпу, но вместо того, чтобы остановить ваше веселье, они присоединяются к толпе, посмеиваясь и комментируя ваше выступление.",
+							"Вы слышите, как толпа, собравшаяся посмотреть на вас, комментирует ваше выступление.",
+							"Толпа зрителей со смехом наблюдает за тем, как вы продолжаете обслуживать стоящие перед вами члены.",
+							"Оглянувшись, вы видите, как несколько членов толпы трогают себя, наблюдая за тем, как вы обслуживаете отверстия в кабинке.",
+							"Толпа подбадривает вас, когда вы продолжаете обслуживать отверстия в кабинке.",
+							"Толпа смеется и аплодирует, а вы продолжаете вести себя перед ними как отчаянная шлюха.",
+							"Несколько человек из толпы кричат и подбадривают вас, пока вы продолжаете обслуживать отверстия в кабинке.",
+							Util.capitaliseSentence(UtilText.generateSingularDeterminer(subspecies.getSingularFemaleName(null)))+" "+subspecies.getSingularFemaleName(null)+" шагает вперед,"
+									+ " поглаживая ее обнаженный член, когда она внезапно кончает на пол прямо перед вами.",
+							Util.capitaliseSentence(UtilText.generateSingularDeterminer(subspecies.getSingularMaleName(null)))+" "+subspecies.getSingularMaleName(null)+" шагает вперед,"
+									+ " поглаживая его обнаженный член, когда он внезапно кончает на пол прямо перед вами.")
 					+"</p>";
 		}
 		
