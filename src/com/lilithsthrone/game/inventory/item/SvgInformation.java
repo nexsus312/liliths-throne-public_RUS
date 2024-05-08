@@ -2,7 +2,7 @@ package com.lilithsthrone.game.inventory.item;
 
 import java.util.Map;
 
-/**
+/** Не требует перевода
  * @since 0.4
  * @version 0.4.0
  * @author Innoxia
