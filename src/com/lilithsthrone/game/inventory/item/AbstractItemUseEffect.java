@@ -5,7 +5,7 @@ import java.util.List;
 import com.lilithsthrone.game.character.GameCharacter;
 import com.lilithsthrone.game.inventory.enchanting.ItemEffect;
 
-/**
+/** Не требует перевода
  * @since 0.3.1
  * @version 0.3.1
  * @author Innoxia
