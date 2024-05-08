@@ -1,6 +1,6 @@
 package com.lilithsthrone.game.inventory;
 
-/**
+/** Перевод не нужен
  * @since 0.1.65
  * @version 0.3.4.5
  * @author Innoxia
