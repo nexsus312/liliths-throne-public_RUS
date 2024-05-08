@@ -15,7 +15,7 @@ import com.lilithsthrone.game.inventory.weapon.AbstractWeapon;
 import com.lilithsthrone.game.inventory.weapon.AbstractWeaponType;
 import com.lilithsthrone.main.Main;
 
-/**
+/** Не требует перевода
  * @since 0.2.5
  * @version 0.2.5
  * @author Innoxia
