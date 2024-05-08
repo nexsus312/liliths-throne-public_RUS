@@ -10,7 +10,7 @@ import com.lilithsthrone.game.sex.positions.SexPosition;
 import com.lilithsthrone.game.sex.positions.slots.SexSlot;
 import com.lilithsthrone.utils.Util;
 
-/**
+/** Не требует перевода
  * @since 0.2.8
  * @version 0.3.4
  * @author Innoxia
