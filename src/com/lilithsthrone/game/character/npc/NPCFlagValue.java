@@ -3,7 +3,7 @@ package com.lilithsthrone.game.character.npc;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
+/** Перевод не требуется
  * @since 0.1.89
  * @version 0.4
  * @author Innoxia
