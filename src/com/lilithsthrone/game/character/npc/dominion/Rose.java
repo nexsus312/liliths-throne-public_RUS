@@ -72,10 +72,10 @@ public class Rose extends NPC {
 	}
 	
 	public Rose(boolean isImported) {
-		super(isImported, new NameTriplet("Rose"), "Thorne",
-				"Rose is Lilaya's slave, and is the only other member of her household that you've ever seen."
-						+ " A partial cat-girl, Rose is treated with extreme fondness by Lilaya, and appears to be the only other person Lilaya has any regular contact with."
-						+ " Their relationship strays into something more than a master-slave arrangement, and Rose and Lilaya can often be seen hugging and whispering to one another.",
+		super(isImported, new NameTriplet("Роза"), "Шип",
+				"Роза - рабыня Лилайи, и это единственный член ее семьи, которого вы когда-либо видели."
+						+ " Роза - частично девочка-кошка, и Лилая относится к ней с особой любовью, и, похоже, это единственный человек, с которым Лилая регулярно общается."
+						+ " Их отношения перерастают в нечто большее, чем соглашение между хозяином и рабом, и Розу и Лилайю часто можно увидеть обнимающимися и шепчущимися друг с другом.",
 				18, Month.MARCH, 5,
 				10, Gender.F_V_B_FEMALE, Subspecies.CAT_MORPH, RaceStage.PARTIAL_FULL,
 				new CharacterInventory(10), WorldType.LILAYAS_HOUSE_FIRST_FLOOR, PlaceType.LILAYA_HOME_ROOM_ROSE, true);
@@ -312,22 +312,22 @@ public class Rose extends NPC {
 		this.equipClothing();
 	}
 	
-	public static final DialogueNode END_HAND_SEX = new DialogueNode("Recover", "Both you and Rose and exhausted from your hand-holding session.", true) {
+	public static final DialogueNode END_HAND_SEX = new DialogueNode("Выдохнуть", "Вы с Розой очень устали после сеанса держания за руки.", true) {
 		
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "Rose staggers over and retrieves her little feather-duster, casting a sultry look back your way before biting her lip and hurrying off to another part of the house, no doubt to recover from your extreme hand-holding session."
+						+ "Роуз, пошатываясь, возвращает свою маленькую метелку для пыли из перьев и бросает на вас знойный взгляд, после чего закусывает губу и спешит в другую часть дома, несомненно, чтобы прийти в себя после вашего экстремального сеанса держания за руки."
 					+ "</p>"
 					+ "<p>"
-						+ "With an exhausted sigh, you collapse down onto the room's bed, your thoughts dwelling on the amazing experience you've just had."
+						+ "Обессиленно вздохнув, вы опускаетесь на кровать в комнате и думаете о том, какой потрясающий опыт вы только что получили."
 					+ "</p>";
 		}
 		
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "You've finally recovered from your intense hand-holding session with Rose.", RoomPlayer.ROOM){
+				return new Response("Продолжить", "Вы наконец-то оправились от напряженного сеанса держания за руки с Розой.", RoomPlayer.ROOM){
 					@Override
 					public void effects() {
 						Main.game.getNpc(Rose.class).setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_LAB, false);
