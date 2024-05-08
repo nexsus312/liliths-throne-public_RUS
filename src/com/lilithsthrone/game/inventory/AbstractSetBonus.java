@@ -14,7 +14,7 @@ import com.lilithsthrone.game.character.effects.StatusEffect;
 import com.lilithsthrone.game.inventory.clothing.AbstractClothing;
 import com.lilithsthrone.game.inventory.weapon.AbstractWeapon;
 
-/**
+/** Перевод не требуется
  * @since 0.3.8.2
  * @version 0.3.8.2
  * @author Innoxia
