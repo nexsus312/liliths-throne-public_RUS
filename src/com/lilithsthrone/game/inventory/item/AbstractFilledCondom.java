@@ -223,15 +223,15 @@ public class AbstractFilledCondom extends AbstractItem implements XMLSaving {
 		
 		if(getCumProvider()!=null) {
 			descriptionsList.add(UtilText.parse(getCumProvider(),
-					"Contains [units.fluid("+getMillilitresStored()+")] of <span style='color:"+getCumProvider().getFemininity().getColour().toWebHexString()+";'>[npc.namePos]</span> [style.colourCum("+cum.getFluid().getName(getCumProvider())+")]"));
+					"Содержит [units.fluid("+getMillilitresStored()+")] <span style='color:"+getCumProvider().getFemininity().getColour().toWebHexString()+";'>[npc.namePos]</span> [style.colourCum("+cum.getFluid().getName(getCumProvider())+")]"));
 		} else {
-			descriptionsList.add("Contains [units.fluid("+getMillilitresStored()+")] of [style.colourCum(cum)]");
+			descriptionsList.add("Содержит [units.fluid("+getMillilitresStored()+")] [style.colourCum(cum)]");
 		}
 		
 		descriptionsList.add("It tastes of <span style='color:"+cum.getFluid().getFlavour().getColour().toWebHexString()+";'>"+cum.getFluid().getFlavour().getName()+"</span>");
 		if(!cum.getFluid().getFluidModifiers().isEmpty()) {
 			StringBuilder modifiersSB = new StringBuilder();
-			modifiersSB.append("It is ");
+			modifiersSB.append("Это ");
 			List<String> modList = new ArrayList<>();
 			for(FluidModifier mod : cum.getFluid().getFluidModifiers()) {
 				modList.add("<span style='color:"+mod.getColour().toWebHexString()+";'>"+mod.getName()+"</span>");
@@ -274,11 +274,11 @@ public class AbstractFilledCondom extends AbstractItem implements XMLSaving {
 	@Override
 	public String getUnableToBeUsedDescription(GameCharacter user, GameCharacter target) {
 		if(!target.isPlayer() && target.isUnique() && !target.isSlave()) {
-			return UtilText.parse(target, "As [npc.nameIsFull] a non-slave unique character, you cannot use used condoms on [npc.herHim]...");
+			return UtilText.parse(target, "Так как [npc.nameIsFull] уникальный персонаж не являющийся рабом, вы не можете использовать презерватив на [npc.herHim]...");
 		}
-		return "You can't think of a use for this. Maybe it's best to throw it away...<br/>"
-				+ "(You require either the '[style.colourFetish("+Fetish.FETISH_CUM_ADDICT.getName(user)+")]' fetish"
-						+ " or to have at least a <b style='color:"+CorruptionLevel.THREE_DIRTY.getColour().toWebHexString()+";'>"+CorruptionLevel.THREE_DIRTY.getName()+"</b> level of corruption in order to use this!)";
+		return "Вы не можете придумать, как его использовать. Может, лучше выбросить его...<br/>"
+				+ "(Вам требуется либо '[style.colourFetish("+Fetish.FETISH_CUM_ADDICT.getName(user)+")]' фетиш"
+						+ " или иметь как минимум <b style='color:"+CorruptionLevel.THREE_DIRTY.getColour().toWebHexString()+";'>"+CorruptionLevel.THREE_DIRTY.getName()+"</b> уровень развращения для использования этого!)";
 	}
 
 }
