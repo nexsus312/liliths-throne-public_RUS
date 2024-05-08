@@ -2,7 +2,7 @@ package com.lilithsthrone.game.inventory.enchanting;
 
 /**
  * Container class for TF effects
- *
+ * Не требует перевода
  * @since 0.3.6.4
  * @version 0.3.6.4
  * @author Stadler76
