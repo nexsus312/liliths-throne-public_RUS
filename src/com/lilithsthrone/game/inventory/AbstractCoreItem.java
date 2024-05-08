@@ -20,7 +20,7 @@ import com.lilithsthrone.utils.Util;
 import com.lilithsthrone.utils.XMLSaving;
 import com.lilithsthrone.utils.colours.Colour;
 
-/**
+/** Перевод не требуется
  * @since 0.1.0
  * @version 0.3.9
  * @author Innoxia
