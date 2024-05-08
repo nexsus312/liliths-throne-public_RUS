@@ -89,7 +89,7 @@ import com.lilithsthrone.utils.Util.Value;
 
 /**
  * Handles the loading and id generation of SexActions from both internal and external files.
- * 
+ *  Не требует перевода
  * @since 0.4.1
  * @version 0.4.1
  * @author Innoxia
