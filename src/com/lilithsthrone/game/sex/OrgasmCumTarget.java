@@ -10,37 +10,37 @@ import com.lilithsthrone.game.dialogue.utils.UtilText;
 public enum OrgasmCumTarget {
 
 	// Specials:
-	LILAYA_PANTIES("into Lilaya's panties", false),
+	LILAYA_PANTIES("в трусики Лилайи", false),
 	
-	WALL("up the wall", false) {
+	WALL("на стену", false) {
 		@Override
 		public String getName() {
-			return UtilText.parse("up the [pc.wall]");
+			return UtilText.parse("на [pc.wall]");
 		}
 	},
-	FLOOR("onto floor", false),
+	FLOOR("на пол", false),
 	
-	INSIDE("inside", true),
-	INSIDE_SWITCH_DOUBLE("inside (double)", true),
+	INSIDE("внутрь", true),
+	INSIDE_SWITCH_DOUBLE("внутрь (двойной)", true),
 	
-	ARMPITS("over armpit", true),
-	ASS("over ass", true),
-	GROIN("over groin", true),
-	BREASTS("onto breasts", true),
-	FACE("over face", true),
-	HAIR("into hair", true),
-	STOMACH("onto stomach", true),
-	LEGS("onto legs", true),
-	FEET("onto feet", true),
-	BACK("over back", true),
+	ARMPITS("на подмышку", true),
+	ASS("на задницу", true),
+	GROIN("на промежность", true),
+	BREASTS("на грудь", true),
+	FACE("на лицо", true),
+	HAIR("на волосы", true),
+	STOMACH("на живот", true),
+	LEGS("на ноги", true),
+	FEET("на ступни", true),
+	BACK("на спину", true),
 	
-	SELF_GROIN("onto self groin", false),
-	SELF_STOMACH("onto self stomach", false),
-	SELF_LEGS("onto self legs", false),
-	SELF_FEET("onto self feet", false),
-	SELF_BREASTS("onto self breasts", false),
-	SELF_HANDS("onto self hands", false),
-	SELF_FACE("onto self face", false);
+	SELF_GROIN("на свою промежность", false),
+	SELF_STOMACH("на свой живот", false),
+	SELF_LEGS("на свои ноги", false),
+	SELF_FEET("на свои ступни", false),
+	SELF_BREASTS("на свои груди", false),
+	SELF_HANDS("на свои руки", false),
+	SELF_FACE("на свое лицо", false);
 	
 	private String name;
 	private boolean requiresPartner;
