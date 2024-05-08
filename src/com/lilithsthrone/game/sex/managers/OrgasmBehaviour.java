@@ -1,6 +1,6 @@
 package com.lilithsthrone.game.sex.managers;
 
-/**
+/** Не требует перевода
  * @since 0.3.4
  * @version 0.4.1
  * @author Innoxia
