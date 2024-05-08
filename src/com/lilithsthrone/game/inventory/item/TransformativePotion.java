@@ -7,7 +7,7 @@ import com.lilithsthrone.game.inventory.enchanting.PossibleItemEffect;
 
 /**
  * Container class for TF potions
- *
+ * Не требует перевода
  * @since 0.3.6.4
  * @version 0.3.6.4
  * @author Stadler76
