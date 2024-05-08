@@ -9,13 +9,13 @@ import com.lilithsthrone.utils.colours.BaseColour;
  */
 public enum SexPace {
 	
-	SUB_RESISTING(false, "resisting", BaseColour.CRIMSON),
-	SUB_NORMAL(false, "normal", BaseColour.PINK),
-	SUB_EAGER(false, "eager", BaseColour.PINK_DEEP),
+	SUB_RESISTING(false, "сопротивляясь", BaseColour.CRIMSON),
+	SUB_NORMAL(false, "нормально", BaseColour.PINK),
+	SUB_EAGER(false, "подчиняясь", BaseColour.PINK_DEEP),
 	
-	DOM_GENTLE(true, "gentle", BaseColour.PINK_LIGHT),
-	DOM_NORMAL(true, "normal", BaseColour.PINK),
-	DOM_ROUGH(true, "rough", BaseColour.CRIMSON);
+	DOM_GENTLE(true, "нежно", BaseColour.PINK_LIGHT),
+	DOM_NORMAL(true, "нормально", BaseColour.PINK),
+	DOM_ROUGH(true, "жестко", BaseColour.CRIMSON);
 	
 	private boolean isDom;
 	private String name;
