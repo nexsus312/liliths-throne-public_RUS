@@ -7,7 +7,7 @@ import com.lilithsthrone.game.inventory.clothing.AbstractClothingType;
 import com.lilithsthrone.utils.Util;
 import com.lilithsthrone.utils.colours.Colour;
 
-/**
+/** Перевод не требуется
  * @since 0.3.1
  * @version 0.3.7.7
  * @author Innoxia
