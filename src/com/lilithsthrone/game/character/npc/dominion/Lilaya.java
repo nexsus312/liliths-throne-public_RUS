@@ -90,11 +90,11 @@ public class Lilaya extends NPC {
 	}
 	
 	public Lilaya(boolean isImported) {
-		super(isImported, new NameTriplet("Lilaya"), "Lyssiethmartusarri",
-				"Along with your twin cousins, your aunt Lily was the only family you'd ever known."
-						+ " Although she still exists in this world, she isn't your aunt any more, and in this reality, she's a half-demon called 'Lilaya'."
-						+ " Whereas your old aunt was a researcher at the city museum, Lilaya is a privately-funded researcher of the arcane."
-						+ " Due to her demonic appearance and the fact that she's the daughter of the Lilin Lyssieth, people usually regard Lilaya with a mixture of fear and respect.",
+		super(isImported, new NameTriplet("Лилайя"), "Лиссиетмартусарри",
+				"Наряду с кузинами-близнецами ваша тетя Лили была единственной семьей, которую вы когда-либо знали."
+						+ " Хотя она все еще существует в этом мире, она больше не твоя тетя, и в этой реальности она - полудемон по имени Лилайя."
+						+ " Если ваша тетушка была научным сотрудником городского музея, то Лилайя - частный исследователь магии."
+						+ " Из-за ее демонической внешности и того, что она - дочь Лилин Лиссиет, люди обычно относятся к Лилайе со страхом и уважением.",
 				48, Month.DECEMBER, 28,
 				25,
 				Gender.F_V_B_FEMALE, Subspecies.DEMON, RaceStage.PARTIAL_FULL,
@@ -466,21 +466,21 @@ public class Lilaya extends NPC {
 				itemOwner.removeItem(item);
 				return new Value<>(false,
 						"<p>"
-							+ "Producing a "+item.getColour(0).getName()+" "+item.getName(false, false)+" from your inventory, you pop it out of its plastic wrapper before bringing it up to Lilaya's mouth."
-							+ " Seeing what it is you're trying to get her to swallow, she furrows her eyebrows and smacks the pill out of your [pc.hand], sending it flying off under one of the lab tables."
-							+ " In a sharp tone, she admonishes you, "
+							+ "Доставая "+item.getColour(0).getName()+" "+item.getName(false, false)+" из вашего инвентаря, вы достаете его из пластиковой упаковки и подносите ко рту Лилайи.."
+							+ " Увидев, что вы пытаетесь заставить ее проглотить, она нахмурила брови и выбила таблетку у вас из рук, отправив ее под один из лабораторных столов."
+							+ " Резким тоном она делает вам замечание, "
 							+ (this.hasPenis()
-									?" [lilaya.speech(I don't care if you're trying to make my cum more virile! I'm <i>not</i> swallowing anything that would make me more fertile!)]"
-									:" [lilaya.speech(I'm <i>not</i> swallowing anything that would make me more fertile! You're <i>not</i> going to cum inside of me anyway, so why would you even try that?!)]")
+									?" [lilaya.speech(Мне плевать, что ты пытаешься сделать мою сперму более фертильной! Я <i>не</i> буду глотать то что сделает меня более плодовитой!)]"
+									:" [lilaya.speech(Я <i>не</i> буду глотать то что сделает еще более плодовитой! Ты всеравно <i>не</i> кончишь в меня, так что зачем даже пытаться?!)]")
 						+ "</p>");
 				
 			} else {
 				itemOwner.useItem(item, this, false);
 				return new Value<>(true,
 						"<p>"
-							+ "Producing a "+item.getName(false, false)+" from your inventory, you pop it out of its plastic wrapper before pushing it into Lilaya's mouth."
-							+ " She lets out a delighted moan as she happily swallows the little "+ item.getColour(0).getName() +" pill,"
-								+ " [lilaya.speechNoEffects(~Mmm!~ That's right, make my demonic womb nice and fertile! I don't hate getting pregnant anymore...)]"
+							+ "Доставая "+item.getName(false, false)+" вытащив его из пластиковой упаковки, вы засовываете его в рот Лилайе."
+							+ " Она издала восхищенный стон, с удовольствием проглотив маленькую "+ item.getColour(0).getName() +" таблетку,"
+								+ " [lilaya.speechNoEffects(~Ммм!~ Именно так, позволь моей демонической матке стать более плодородной и чувствительной! Я больше не ненавижу беременность...)]"
 						+ "</p>");
 			}
 		}
@@ -497,17 +497,17 @@ public class Lilaya extends NPC {
 			if(att==Attribute.FERTILITY && value>0) {
 				sb.append(UtilText.parse(this,
 						"<p>"
-							+ "[lilaya.speech(Wait... That made me more fertile?! What were you thinking?!)]"
-							+ " Lilaya angrily exclaims, before letting out a deep sigh and muttering,"
-							+ " [lilaya.speech(Whatever... It's not like it's ever going to make a difference...)]"
+							+ "[lilaya.speech(Подожди... Это сделало меня более плодовитой?! О чем ты думаешь?!)]"
+							+ " Лилайя сердито воскликнула, а затем глубоко вздохнула и пробормотала,"
+							+ " [lilaya.speech(Неважно... Вряд ли это что-то изменит...)]"
 						+ "</p>"));
 				
 			} else if(att==Attribute.FERTILITY && value<0) {
 				sb.append(UtilText.parse(this,
 						"<p>"
-							+ "[lilaya.speech(Wait... That made me less fertile?! Thank you, [pc.name]!)]"
-							+ " Lilaya happily exclaims, before sighing,"
-							+ " [lilaya.speech(It's not like it's ever going to make a difference anyway, but the thought is nice...)]"
+							+ "[lilaya.speech(Подожди... Это сделало меня менее плодовитой?! Спасибо, [pc.name]!)]"
+							+ " Радостно воскликнула Лилайя, а затем вздохнула,"
+							+ " [lilaya.speech(Вряд ли это что-то изменит, но сама мысль приятна...)]"
 						+ "</p>"));
 			}
 		}
@@ -525,17 +525,17 @@ public class Lilaya extends NPC {
 			if(att==Attribute.FERTILITY && value>0) {
 				sb.append(UtilText.parse(this,
 						"<p>"
-							+ "[lilaya.speech(Wait... That made me more fertile?! What were you thinking?!)]"
-							+ " Lilaya angrily exclaims, before letting out a deep sigh and muttering,"
-							+ " [lilaya.speech(Whatever... It's not like it's ever going to make a difference...)]"
+							+ "[lilaya.speech(Подожди... Это сделало меня более плодовитой?! О чем ты думаешь?!)]"
+							+ " Лилайя сердито воскликнула, а затем глубоко вздохнула и пробормотала,"
+							+ " [lilaya.speech(Неважно... Вряд ли это что-то изменит...)]"
 						+ "</p>"));
 				
 			} else if(att==Attribute.FERTILITY && value<0) {
 				sb.append(UtilText.parse(this,
 						"<p>"
-							+ "[lilaya.speech(Wait... That made me less fertile?! Thank you, [pc.name]!)]"
-							+ " Lilaya happily exclaims, before sighing,"
-							+ " [lilaya.speech(It's not like it's ever going to make a difference anyway, but the thought is nice...)]"
+							+ "[lilaya.speech(Подожди... Это сделало меня менее плодовитой?! Спасибо, [pc.name]!)]"
+							+ " Радостно воскликнула Лилайя, а затем вздохнула,"
+							+ " [lilaya.speech(Вряд ли это что-то изменит, но сама мысль приятна...)]"
 						+ "</p>"));
 			}
 		}
@@ -557,16 +557,16 @@ public class Lilaya extends NPC {
 	public String getDirtyTalkNoPenetration(GameCharacter target, boolean isPlayerDom){
 		List<String> speech = new ArrayList<>();
 
-		speech.add("Fuck, why do demons always have to feel so horny?! All I ever think about is fucking you or Rose!");
-		speech.add("I'm sure I can collect some valuable data from this...");
+		speech.add("Блядь, почему демоны всегда так возбуждены?! Я только и думаю, как бы трахнуть тебя или Розу!");
+		speech.add("Я уверена, что смогу собрать из этого ценные данные...");
 		
 		if(Main.game.isIncestEnabled()) {
 			if(Main.game.getDialogueFlags().hasFlag("innoxia_child_of_lyssieth")) {
-				speech.add("Horny for your new half-sister, hmm?");
-				speech.add("There's nothing wrong with demonic siblings fucking one another...");
+				speech.add("Ты возбужден из-за своей новой тети, да?");
+				speech.add("Нет ничего плохого в том, что демонические братья и сестры трахают друг друга...");
 			} else {
-				speech.add("I wonder if you ever did this with your real aunt?");
-				speech.add("Wait, you still see me as your aunt, right? I guess I can go along with that...");
+				speech.add("Интересно, вы когда-нибудь делали это со своей настоящей тетей?");
+				speech.add("Подожди, ты ведь все еще считаешь меня своей тетей? Думаю, я могу с этим согласиться...");
 			}
 		}
 		
