@@ -54,9 +54,9 @@ public enum Spell {
 			SpellType.OFFENSIVE,
 			DamageType.FIRE,
 			false,
-			"Fireball",
-			"fireball",
-			"Summons a ball of arcane flames that can be launched at a target.",
+			"Огненный шар",
+			"огненный шар",
+			"Вызывает шар магического пламени, который можно запустить в цель.",
 			30,
 			DamageVariance.LOW,
 			75,
@@ -102,17 +102,17 @@ public enum Spell {
 
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"By the fires of eternity, I release this seal upon the maelstrom within! Come forth, flames of destruction!",
-													"From beyond the veil of flames, I hear the arcane's call! Through me, now is hell unleashed!",
-													"May the dark void shatter the ancient seals which keep the fires of hell itself at bay! Go forth, flaming fury!"),
-											"Summoning a swirling vortex of arcane fire around your [pc.arm], you focus its raw power into a ball of roiling flames before launching it at yourself!",
-											"Summoning a swirling vortex of arcane fire around your [pc.arm], you focus its raw power into a ball of roiling flames before launching it at [npc.name]!",
+													"Огнем вечности я снимаю эту печать с водоворота внутри! Выходи, пламя разрушения!",
+													"За завесой пламени я слышу зов магии! Через меня теперь разверзнется ад!",
+													"Пусть темная пустота разрушит древние печати, сдерживающие пламя самого ада! Вперед, пылающая ярость!"),
+											"Вызывая вихрь магического огня вокруг своей [pc.arm], вы концентрируете его сырую силу в шар бушующего пламени, а затем запускаете его в себя!",
+											"Вызывая вихрь магического огня вокруг своей [pc.arm], вы концентрируете его сырую силу в шар бушующего пламени, а затем запускаете его в [npc.name]!",
 											"",
-											"Summoning a swirling vortex of arcane fire around [npc.her] [npc.arm], [npc.she] focuses its raw power into a ball of roiling flames before launching it directly at you!",
-											"Summoning a swirling vortex of arcane fire around [npc1.her] [npc1.arm], [npc1.name] focuses its raw power into a ball of roiling flames before launching it directly at [npc2.name]!")
+											"Вызвав вокруг [npc.her] [npc.arm] вихрь магического огня, [npc.she] фокусирует его сырую силу в шар бушующего пламени, а затем запускает его прямо в вас!",
+											"Вызвав вокруг [npc1.her] [npc1.arm] клубящийся вихрь магического огня, [npc1.name] концентрирует свою силу в шар бушующего пламени, а затем запускает его прямо в [npc2.name]!")
 								);
 			if(caster.hasSpellUpgrade(SpellUpgrade.FIREBALL_2)) {
-				descriptionSB.append(" The fireball instantly splits in two after being cast!");
+				descriptionSB.append(" Огненный шар мгновенно разделяется на две части после создания!");
 			}
 			
 			descriptionSB.append(getDamageDescription(caster, target, damage, isHit, isCritical));
@@ -133,14 +133,14 @@ public enum Spell {
 					
 					if(secondaryTarget.equals(target)) {
 						descriptionSB.append("<br/>"
-								+"The second Fireball swerves around to hit "+UtilText.parse(target,"[npc.name]")+" for a second time!");
+								+"Второй огненный шар разворачивается, чтобы поразить "+UtilText.parse(target,"[npc.name]")+" во второй раз!");
 						
 						descriptionSB.append(getDamageDescription(caster, target, damage, isHit, isCritical));
 						descriptionSB.append(applyDamage(caster, target, damage));
 						
 					} else {
 						descriptionSB.append("<br/>"
-								+"The second Fireball swerves around to hit "+(secondaryTarget.isPlayer()?"you":UtilText.parse(secondaryTarget,"[npc.name]"))+"!");
+								+"Второй огненный шар разворачивается, чтобы поразить "+(secondaryTarget.isPlayer()?"вы":UtilText.parse(secondaryTarget,"[npc.name]"))+"!");
 						
 						descriptionSB.append(getDamageDescription(caster, secondaryTarget, damage, isHit, isCritical));
 						descriptionSB.append(applyDamage(caster, secondaryTarget, damage));
@@ -162,9 +162,9 @@ public enum Spell {
 			SpellType.OFFENSIVE_STATUS_EFFECT,
 			DamageType.FIRE,
 			false,
-			"Flash",
-			"flash",
-			"Creates a blinding flash of light which dazzles the target.",
+			"Вспышка",
+			"вспышка",
+			"Создает ослепительную вспышку света, которая ослепляет цель.",
 			0,
 			DamageVariance.LOW,
 			50,
@@ -174,7 +174,7 @@ public enum Spell {
 					SpellUpgrade.FLASH_2,
 					SpellUpgrade.FLASH_3),
 			null,
-			Util.newArrayListOfValues("[style.colourExcellent(Dazzles)] the target for [style.colourTerrible(-1)] [style.colourActionPoints(action points)]!")) {
+			Util.newArrayListOfValues("[style.colourExcellent(Ослепляет)] цель за [style.colourTerrible(-1)] [style.colourActionPoints(очко действия)]!")) {
 		
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -197,9 +197,9 @@ public enum Spell {
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
 			if(caster!=null && caster.hasSpellUpgrade(SpellUpgrade.FLASH_1)) {
-				return "Dazzles for [style.colourTerrible(-2)] action points!";
+				return "Ослепляет за [style.colourTerrible(-2)] очка действий!";
 			}
-			return "Dazzles for [style.colourTerrible(-1)] action points!";
+			return "Ослепляет за [style.colourTerrible(-1)] очкj действий!";
 		}
 		
 		@Override
@@ -214,17 +214,17 @@ public enum Spell {
 
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Locked away for a thousand years, the powers lying dormant within me have awoken! Now, bear witness to the blinding fury of a universe being born!",
-													"The light of a million stars are as nothing to the power that I now unleash! May my arcane seals be broken, and blind all who dare stand before me!",
-													"By fury of sun, and gaze of moon, may the heavens themselves bear witness to the power that I now unleash! Gaze upon the end of worlds, and despair!"),
-											"With a flick of your wrist, you summon a blinding flash of light right in front of your own face!",
-											"With a flick of your wrist, you summon a blinding flash of light right in front of [npc.namePos] face!",
+													"Запертые на тысячу лет, силы, дремлющие во мне, пробудились! Станьте свидетелем ослепительной ярости рождающейся вселенной!",
+													"Свет миллионов звезд ничто по сравнению с силой, которую я сейчас высвобождаю! Да разрушатся мои магические печати и ослепят всех, кто осмелится предстать передо мной!",
+													"Ярость солнца и взгляд луны - пусть сами небеса свидетельствуют о силе, которую я сейчас высвобождаю! Смотрите на конец миров и отчаивайтесь!"),
+											"Одним движением руки вы вызываете ослепительную вспышку света прямо перед своим лицом!",
+											"Одним движением руки вы вызываете ослепительную вспышку света прямо перед лицом [npc.namePos]!",
 											"",
-											"With a flick of [npc.her] wrist, [npc.name] summons a blinding flash of light right in front of your face!",
-											"With a flick of [npc1.her] wrist, [npc1.name] summons a blinding flash of light right in front of [npc2.namePos] face!")
+											"Взмахнув рукой, [npc.name] вызывает ослепительную вспышку света прямо перед вашим лицом!",
+											"Взмахнув запястьем, [npc1.name] вызывает ослепительную вспышку света прямо перед лицом [npc2.namePos]!")
 								);
 			if(caster.hasSpellUpgrade(SpellUpgrade.FLASH_2)) {
-				descriptionSB.append(" A secondary flash of light arcs away from the first, seeking out another target!");
+				descriptionSB.append(" Вторичная вспышка света отходит от первой и ищет другую цель!");
 			}
 
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
@@ -240,11 +240,11 @@ public enum Spell {
 					
 					if(secondaryTarget.equals(target)) {
 						descriptionSB.append("<br/>"
-								+"The second Flash fails to find another target, and quickly fizzles out...");
+								+"Вторая вспышка не находит цели и быстро гаснет...");
 						
 					} else {
 						descriptionSB.append("<br/>"
-								+"The second Flash shoots out in front of "+UtilText.parse(secondaryTarget,"[npc.namePos] face, dazzling [npc.herHim] as well!"));
+								+"Вторая вспышка выстреливает перед лицом "+UtilText.parse(secondaryTarget,"[npc.namePos], ослепляя [npc.herHim]!"));
 
 						descriptionSB.append(getDamageDescription(caster, secondaryTarget, 0, isHit, isCritical));
 						applyStatusEffects(caster, secondaryTarget, isCritical);
@@ -255,7 +255,7 @@ public enum Spell {
 				
 			} else {
 				descriptionSB.append("<p style='text-align:center;'>"
-						+ "[style.italicsBad(The flash misses!)]"
+						+ "[style.italicsBad(Вспышка промахивается!)]"
 						+ "</p>");
 			}
 			
@@ -270,9 +270,9 @@ public enum Spell {
 			SpellType.DEFENSIVE_STATUS_EFFECT,
 			DamageType.FIRE,
 			true,
-			"Cloak of Flames",
+			"Плащ пламени",
 			"cloak_of_flames",
-			"Shrouds the target in a protective cloak of arcane flames, granting them improved fire and ice resistance.",
+			"Окутывает цель защитным плащом из магического пламени, наделяя ее повышенной устойчивостью к огню и льду.",
 			0,
 			DamageVariance.LOW,
 			50,
@@ -284,7 +284,7 @@ public enum Spell {
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.RESISTANCE_FIRE, 5),
 					new Value<>(Attribute.RESISTANCE_ICE, 10)),
-			Util.newArrayListOfValues("Lasts for [style.colourGood(3 turns)]")) {
+			Util.newArrayListOfValues("Действует в течение [style.colourGood(3 ходов)]")) {
 
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -304,7 +304,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Grants the target a protective cloak of flames.";
+			return "Наделяет цель защитным плащом из пламени.";
 		}
 		
 		@Override
