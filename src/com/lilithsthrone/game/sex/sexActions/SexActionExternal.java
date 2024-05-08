@@ -26,7 +26,7 @@ import com.lilithsthrone.utils.Util;
 
 /**
  * This class creates SexActions from external xml files.
- * 
+ * Не требует перевода
  * @since 0.4.1
  * @version 0.4.1
  * @author Innoxia
