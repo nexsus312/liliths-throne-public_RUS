@@ -12,23 +12,23 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum LubricationType {
 	
-	SALIVA("saliva", "saliva", false, PresetColour.BASE_BLUE_LIGHT),
+	SALIVA("слюна", "слюна", false, PresetColour.BASE_BLUE_LIGHT),
 	
-	MILK("[npc.milk]", "milk", false, PresetColour.MILK),
+	MILK("[npc.milk]", "молоко", false, PresetColour.MILK),
 	
-	PRECUM("precum", "precum", false, PresetColour.CUM),
+	PRECUM("эакулят", "эакулят", false, PresetColour.CUM),
 	
-	CUM("[npc.cum]", "cum", false, PresetColour.CUM),
+	CUM("[npc.cum]", "сперма", false, PresetColour.CUM),
 	
-	GIRLCUM("girlcum", "girlcum", false, PresetColour.GIRLCUM),
+	GIRLCUM("конча", "конча", false, PresetColour.GIRLCUM),
 	
-	ANAL_LUBE("anal lubricant", "anal lubricant", false, PresetColour.BASE_BLUE_LIGHT), // This is only present if the anus has been transformed to be 'wetter' than usual
+	ANAL_LUBE("анальная смазка", "анальная смазка", false, PresetColour.BASE_BLUE_LIGHT), // This is only present if the anus has been transformed to be 'wetter' than usual
 
-	SLIME("slime", "slime", false, PresetColour.RACE_SLIME),
+	SLIME("слизь", "слизь", false, PresetColour.RACE_SLIME),
 	
-	WATER("water", "water", false, PresetColour.BASE_AQUA),
+	WATER("вода", "вода", false, PresetColour.BASE_AQUA),
 	
-	OTHER("lubrication", "lubrication", false, PresetColour.BASE_BLUE_LIGHT);
+	OTHER("смазка", "смазка", false, PresetColour.BASE_BLUE_LIGHT);
 	
 	private String name;
 	private String nullOwnerName;
