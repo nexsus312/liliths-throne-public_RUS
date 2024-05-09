@@ -163,7 +163,7 @@ public enum Spell {
 			DamageType.FIRE,
 			false,
 			"Вспышка",
-			"вспышка",
+			"flash",
 			"Создает ослепительную вспышку света, которая ослепляет цель.",
 			0,
 			DamageVariance.LOW,
