@@ -467,7 +467,7 @@ public enum Spell {
 			false,
 			"Ледяной осколок",
 			"ice_shard",
-			"Summons a shard of ice that can be launched at a target.",
+			"Вызывает осколок льда, который можно запустить в цель.",
 			25,
 			DamageVariance.LOW,
 			35,
@@ -507,20 +507,20 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Witness now, the terror of the starless void! By hail of ice, and fury of the blizzard, let my arcane power be unleashed!",
-													"The seals within me have been broken, and by my power, now will the universe itself freeze! Hail, sleet, and ice, hear my call, and come forth!",
-													"From beyond the frozen void, now is my power unleashed! Crossing the boundary from the frozen realm of chaos, let my power be manifest!"),
-											"Summoning a swirling vortex of water from the moisture in the air, you focus your energy on freezing it in place, creating a shard of ice that you then launch at yourself!",
-											"Summoning a swirling vortex of water from the moisture in the air, you focus your energy on freezing it in place, creating a shard of ice that you then launch at [npc.name]!",
+													"Станьте свидетелем ужаса беззвездной пустоты! Ледяной град и ярость вьюги высвобождают мою магическую силу!",
+													"Печати внутри меня были сломаны, и благодаря моей силе теперь замерзнет сама Вселенная! Град, снег и лед, услышьте мой зов и выходите!",
+													"Из застывшей пустоты вырвалась моя сила! Пересекая границу застывшего царства хаоса, позвольте моей силе проявиться!"),
+											"Вызывая вихрь воды из влаги в воздухе, вы сосредотачиваете свою энергию на том, чтобы заморозить его на месте, создавая осколок льда, который вы затем запускаете в себя!",
+											"Вызвав вихрь воды из влаги в воздухе, вы направляете свою энергию на то, чтобы заморозить его на месте, создавая осколок льда, который вы затем запускаете в [npc.name]!",
 											"",
-											"Summoning a swirling vortex of water from the moisture in the air, [npc1.name] focuses [npc1.her] energy on freezing it in place, creating a shard of ice that [npc.she] then launches at you!",
-											"Summoning a swirling vortex of water from the moisture in the air, [npc1.name] focuses [npc1.her] energy on freezing it in place, creating a shard of ice that [npc.she] then launches at [npc2.name]!")
+											"Вызвав вихрь воды из влаги в воздухе, [npc1.name] направляет [npc1.her] энергию на замораживание его на месте, создавая осколок льда, который [npc.she] затем запускает в вас!",
+											"Вызвав вихрь воды из влаги в воздухе, [npc1.name] направляет [npc1.her] энергию на замораживание его на месте, создавая осколок льда, который [npc.she] затем запускает в [npc2.name]!")
 								);
 			
 			if(isHit && isCritical && caster.hasSpellUpgrade(SpellUpgrade.ICE_SHARD_2)) {
-				descriptionSB.append(" The freezing fog detonates as the Ice Shard travels through it");
+				descriptionSB.append(" Замораживающий туман детонирует, когда Осколок льда проходит сквозь него");
 				if(caster.hasSpellUpgrade(SpellUpgrade.ICE_SHARD_3)) {
-					descriptionSB.append(", entombing everything in the immediate vicinity in a thin layer of ice!");
+					descriptionSB.append(", покрывая все в непосредственной близости от себя тонким слоем льда!");
 				} else {
 					descriptionSB.append("!");
 				}
@@ -546,7 +546,7 @@ public enum Spell {
 		}
 		
 		public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-	    	return Util.newArrayListOfValues("Target has the 'freezing fog' status effect.");
+	    	return Util.newArrayListOfValues("На цель наложен эффект состояния «Замораживающий туман».");
 	    }
 		
 		//Differs from normal version; spells have special crit requirements.
@@ -560,9 +560,9 @@ public enum Spell {
 			SpellType.OFFENSIVE_STATUS_EFFECT,
 			DamageType.ICE,
 			false,
-			"Rain Cloud",
+			"Облако дождя",
 			"rain_cloud",
-			"Summons a small cloud of arcane-enchanted rain above the target's head, which saps their ability to cast spells.",
+			"Вызывает над головой цели небольшое облако заколдованного дождя, которое лишает ее способности произносить заклинания.",
 			0,
 			DamageVariance.LOW,
 			33,
@@ -572,7 +572,7 @@ public enum Spell {
 					SpellUpgrade.RAIN_CLOUD_2,
 					SpellUpgrade.RAIN_CLOUD_3),
 			Util.newHashMapOfValues(
-					new Value<>(Attribute.SPELL_COST_MODIFIER, -25)), Util.newArrayListOfValues("Lasts for [style.colourGood(3 turns)]")) {
+					new Value<>(Attribute.SPELL_COST_MODIFIER, -25)), Util.newArrayListOfValues("Длится [style.colourGood(3 хода)]")) {
 		
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -595,7 +595,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summons a raincloud above the target.";
+			return "Вызывает над целью дождевое облако.";
 		}
 		
 		@Override
@@ -607,12 +607,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(//TODO chuuni three from here
-													"May the heavens burst, and floods sweep the Earth! By the powers manifest within me, I tear open the skies, and deliver unto you your watery grave!"),
-											"With an upwards thrust of your [pc.arm], you summon forth a cloud of rain above your own head!",
-											"With an upwards thrust of your [pc.arm], you summon forth a cloud of rain above [npc.namePos] head!",
+													"Пусть разверзнутся небеса, и наводнения захлестнут землю! Силой, явленной во мне, я разрываю небеса и доставляю тебе твою водную могилу!"),
+											"Взмахнув рукой вверх, вы вызываете тучу дождя над своей головой!",
+											"Взмахом руки вверх, вы вызываете облако дождя над головой [npc.namePos]!",
 											"",
-											"With an upwards thrust of [npc.her] [npc.arm], [npc.name] summons forth a cloud of rain above your head!",
-											"With an upwards thrust of [npc1.her] [npc1.arm], [npc1.name] summons forth a cloud of rain above [npc2.namePos] head!"));
+											"Взмахнув [npc.her] [npc.arm] вверх, [npc.name] вызывает тучу дождя над вашей головой!",
+											"Взмахнув [npc1.her] [npc1.arm] вверх, [npc1.name] вызывает тучу дождя над головой [npc2.namePos]!"));
 
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 			
@@ -640,9 +640,9 @@ public enum Spell {
 			SpellType.DEFENSIVE_HEAL,
 			DamageType.ICE,
 			true,
-			"Soothing Waters",
+			"Успокаивающие воды",
 			"soothing_waters",
-			"Summons an orb of soothing arcane-infused water, which restores the "+Attribute.HEALTH_MAXIMUM.getName()+" of anyone who drinks it.",
+			"Призывает сферу с успокаивающей водой, пропитанной магией, которая восстанавливает "+Attribute.HEALTH_MAXIMUM.getName()+" любого кто выпьет ее.",
 			0,
 			DamageVariance.LOW,
 			100,
@@ -653,7 +653,7 @@ public enum Spell {
 					SpellUpgrade.SOOTHING_WATERS_1,
 					SpellUpgrade.SOOTHING_WATERS_2,
 					SpellUpgrade.SOOTHING_WATERS_3),
-			null, Util.newArrayListOfValues("[style.boldGood(Restores)] 20% [style.boldHealth("+Attribute.HEALTH_MAXIMUM.getName()+")]")) {
+			null, Util.newArrayListOfValues("[style.boldGood(Восстанавливает)] 20% [style.boldHealth("+Attribute.HEALTH_MAXIMUM.getName()+")]")) {
 		@Override
 		public Map<Integer, List<TreeEntry<SpellSchool, SpellUpgrade>>> getSpellUpgradeTree() {
 			return Spell.soothingWatersUpgradeTree;
@@ -661,29 +661,29 @@ public enum Spell {
 		@Override
 		public Value<Boolean, String> getSpellCastOutOfCombatDescription(GameCharacter owner, GameCharacter target) {
 			if(!owner.hasSpell(this)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.do]n't know this spell, so cannot cast it!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name] не знает этого заклинания, поэтому не может его произнести!"));
 				
 			} else if(owner.isCaptive()) {
-				return new Value<>(false, UtilText.parse(owner, "Spells cannot be cast while in captivity!"));
+				return new Value<>(false, UtilText.parse(owner, "Заклинания нельзя произносить, находясь в плену!"));
 				
 			} else if(Main.game.isInCombat()) {
-				return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+				return new Value<>(false, UtilText.parse(owner, "Во время боя заклинания можно произносить только как боевое движение!"));
 				
 			} else if(!Main.game.isSavedDialogueNeutral()
 					&& (Main.game.getCurrentDialogueNode()!=SpellManagement.CHARACTER_SPELLS_WATER?false:SpellManagement.getDialogueReturn().getDialogueNodeType()!=DialogueNodeType.OCCUPANT_MANAGEMENT)) {
-				return new Value<>(false, "Spells can only be cast in a neutral scene!");
+				return new Value<>(false, "Заклинания можно произносить только в нейтральной сцене!");
 				
 			} else if(owner.getMana()<this.getModifiedCost(owner)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.verb(need)] at least <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)] in order to cast this spell!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name] нужно как минимум <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(ауры)] чтобы произнести это заклинание!"));
 				
 			} else {
-				String description = owner.isPlayer()?"Cast Soothing Waters":"Get [npc.name] to cast Soothing Waters";
+				String description = owner.isPlayer()?"Использовать Успокаивающие воды":"Заставить [npc.name] произнести заклинание Успокаивающие воды";
 				if(owner==target) {
-					description+=" on [npc.herself]!";
+					description+=" на [npc.herself]!";
 				} else {
-					description+=" on [npc2.name]!";
+					description+=" на [npc2.name]!";
 				}
-				String cost = " This will cost <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)]!";
+				String cost = " Это будет стоить <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(ауры)]!";
 				return new Value<>(true, UtilText.parse(owner, target, description+"<br/>"+cost));
 			}
 		}
@@ -693,7 +693,7 @@ public enum Spell {
 		}
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Heals the target.";
+			return "Исцеляет цель.";
 		}
 		@Override
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
@@ -704,15 +704,15 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"By stream and brook, river and sea, I call upon the eternal currents that know no end! I cast my power unto thee, and bring forth the fountain of eternal life!"),
-											"With a gentle swish of your [pc.hand], you summon forth an orb of healing water, which you quickly drink.",
-											"With a gentle swish of your [pc.hand], you summon forth an orb of healing water, which you send to [npc.name] to drink.",
-											"With a gentle swish of [npc.her] [npc.hand], [npc.name] summons forth an orb of healing water, which [npc.she] quickly drinks.",
-											"With a gentle swish of [npc.her] [npc.hand], [npc.name] summons forth an orb of healing water, which [npc.she] sends to you to drink.",
-											"With a gentle swish of [npc.her] [npc.hand], [npc.name] summons forth an orb of healing water, which [npc.she] sends to [npc2.name]to drink."));
+													"Потоком и ручьем, рекой и морем я взываю к вечным течениям, не знающим конца! Я передаю тебе свою силу и приношу источник вечной жизни!"),
+											"Легким движением руки вы вызываете сферу с целебной водой, которую быстро выпиваете.",
+											"Легким движением руки вы вызываете сферу с целебной водой, которую отправляете пить [npc.name].",
+											"Легким движением [npc.her] [npc.hand] [npc.name] вызывает сферу с целебной водой, которую [npc.she] быстро выпивает.",
+											"Легким движением [npc.her] [npc.hand] [npc.name] вызывает сферу с целебной водой, которую [npc.she] посылает вам, чтобы вы выпили.",
+											"Легким движением [npc.her] [npc.hand] [npc.name] вызывает сферу с целебной водой, которую [npc.she] посылает [npc2.name] выпить."));
 
 			if(caster.hasSpellUpgrade(SpellUpgrade.SOOTHING_WATERS_3) ) {
-				descriptionSB.append(" Smaller globes of water split off from the primary orb!");
+				descriptionSB.append(" От основной сферы откололись маленькие шарики воды!");
 			}
 			
 			// If attack hits, apply damage and effects:
@@ -721,8 +721,8 @@ public enum Spell {
 					descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 
 					descriptionSB.append("<br/>"
-								+ "The orb of water heals "+UtilText.parse(target,"[npc.name]")+" for a total of "
-									+(int)(target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.4f)+" "+Attribute.HEALTH_MAXIMUM.getColouredName("b")+" and "
+								+ "Сфера воды исцеляет "+UtilText.parse(target,"[npc.name]")+" в сумме "
+									+(int)(target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.4f)+" "+Attribute.HEALTH_MAXIMUM.getColouredName("b")+" и "
 									+(int)(target.getAttributeValue(Attribute.MANA_MAXIMUM)*0.2f)+" "+Attribute.MANA_MAXIMUM.getColouredName("b")+"!");
 					descriptionSB.append(applyDamage(caster, target, -target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.4f));
 					target.incrementMana(target.getAttributeValue(Attribute.MANA_MAXIMUM)*0.2f);
@@ -835,11 +835,11 @@ public enum Spell {
 				return new Value<>(false, UtilText.parse(owner, "Spells cannot be cast while in captivity!"));
 				
 			} else if(Main.game.isInCombat()) {
-				return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+				return new Value<>(false, UtilText.parse(owner, "Во время боя заклинания можно произносить только как боевое движение!"));
 				
 			} else if(!Main.game.isSavedDialogueNeutral()
 					&& (Main.game.getCurrentDialogueNode()!=SpellManagement.CHARACTER_SPELLS_WATER?false:SpellManagement.getDialogueReturn().getDialogueNodeType()!=DialogueNodeType.OCCUPANT_MANAGEMENT)) {
-				return new Value<>(false, "Spells can only be cast in a neutral scene!");
+				return new Value<>(false, "Заклинания можно произносить только в нейтральной сцене!");
 				
 			} else if(owner.getMana()<this.getModifiedCost(owner)) {
 				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.verb(need)] at least <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)] in order to cast this spell!"));
@@ -1183,11 +1183,11 @@ public enum Spell {
 				return new Value<>(false, UtilText.parse(owner, "Spells cannot be cast while in captivity!"));
 				
 			} else if(Main.game.isInCombat()) {
-				return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+				return new Value<>(false, UtilText.parse(owner, "Во время боя заклинания можно произносить только как боевое движение!"));
 				
 			} else if(!Main.game.isSavedDialogueNeutral()
 					&& (Main.game.getCurrentDialogueNode()!=SpellManagement.CHARACTER_SPELLS_AIR?false:SpellManagement.getDialogueReturn().getDialogueNodeType()!=DialogueNodeType.OCCUPANT_MANAGEMENT)) {
-				return new Value<>(false, "Spells can only be cast in a neutral scene!");
+				return new Value<>(false, "Заклинания можно произносить только в нейтральной сцене!");
 				
 			} else if(owner.getMana()<this.getModifiedCost(owner)) {
 				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.verb(need)] at least <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)] in order to cast this spell!"));
@@ -1532,11 +1532,11 @@ public enum Spell {
 				return new Value<>(false, UtilText.parse(owner, "Spells cannot be cast while in captivity!"));
 				
 			} else if(Main.game.isInCombat()) {
-				return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+				return new Value<>(false, UtilText.parse(owner, "Во время боя заклинания можно произносить только как боевое движение!"));
 				
 			} else if(!Main.game.isSavedDialogueNeutral()
 					&& (Main.game.getCurrentDialogueNode()!=SpellManagement.CHARACTER_SPELLS_EARTH?false:SpellManagement.getDialogueReturn().getDialogueNodeType()!=DialogueNodeType.OCCUPANT_MANAGEMENT)) {
-				return new Value<>(false, "Spells can only be cast in a neutral scene!");
+				return new Value<>(false, "Заклинания можно произносить только в нейтральной сцене!");
 				
 			} else if(owner.getMana()<this.getModifiedCost(owner)) {
 				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.verb(need)] at least <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)] in order to cast this spell!"));
@@ -2403,11 +2403,11 @@ public enum Spell {
 				return new Value<>(false, UtilText.parse(owner, "Spells cannot be cast while in captivity!"));
 				
 			} else if(Main.game.isInCombat()) {
-				return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+				return new Value<>(false, UtilText.parse(owner, "Во время боя заклинания можно произносить только как боевое движение!"));
 				
 			} else if(!Main.game.isSavedDialogueNeutral()
 					&& (Main.game.getCurrentDialogueNode()!=SpellManagement.CHARACTER_SPELLS_ARCANE?false:SpellManagement.getDialogueReturn().getDialogueNodeType()!=DialogueNodeType.OCCUPANT_MANAGEMENT)) {
-				return new Value<>(false, "Spells can only be cast in a neutral scene!");
+				return new Value<>(false, "Заклинания можно произносить только в нейтральной сцене!");
 				
 			} else if(owner.getMana()<this.getModifiedCost(owner)) {
 				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.verb(need)] at least <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)] in order to cast this spell!"));
@@ -3735,7 +3735,7 @@ public enum Spell {
 			return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.do]n't know this spell, so cannot cast it!"));
 			
 		} else if(Main.game.isInCombat()) {
-			return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+			return new Value<>(false, UtilText.parse(owner, "Во время боя заклинания можно произносить только как боевое движение!"));
 		}
 		
 		return new Value<>(false, "This spell can only be cast during combat!");
