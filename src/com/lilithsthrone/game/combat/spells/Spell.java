@@ -842,17 +842,17 @@ public enum Spell {
 				return new Value<>(false, "Заклинания можно произносить только в нейтральной сцене!");
 				
 			} else if(owner.getMana()<this.getModifiedCost(owner)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.verb(need)] at least <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)] in order to cast this spell!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name] нужно как минимум <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(ауры)] чтобы произнести это заклинание!"));
 				
 			} else {
-				String description = owner.isPlayer()?"Summon your elemental by binding it to the school of Water!":"Get [npc.name] to summon [npc.her] elemental by binding it to the school of Water!";
-				String cost = " This will cost <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)]!";
+				String description = owner.isPlayer()?"Призовите своего элементаля, связав его со школой Воды!":"Заставьте [npc.name] призвать [npc.her] элементаля, привязав его к школе Воды!";
+				String cost = " Это будет стоить <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(ауры)]!";
 				return new Value<>(true, UtilText.parse(owner, description+"<br/>"+cost));
 			}
 		}
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summons your elemental in the form of water.";
+			return "Призывает вашего элементаля в форме воды.";
 		}
 		@Override
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
@@ -876,13 +876,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 										?Util.randomItemFrom(
 										Util.newArrayListOfValues(
-											"[npc.speech(By the ancient rite of sea and sky, I summon forth the eternal torrent! Answer your [npc.master]'s call, [npc2.name], and, by the drowning of a million dimensions, be bound to my will!)] ",
-											"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! May all waters be at my command, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-											"[npc.speech(Let the seas rise, and the tsunami within me be unleashed! Flood and deluge, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+											"[npc.speech(Древним обрядом моря и неба я вызываю вечный поток! Ответь на призыв своего [npc.master], [npc2.name], и, утонув в миллионе измерений, будь связан с моей волей!)] ",
+											"[npc.speech(Да высвободятся силы, хранившиеся во мне тысячу лет! Пусть все воды будут в моей власти, и, заключив наш вечный договор, я вызываю тебя, [npc2.name]!)] ",
+											"[npc.speech(Пусть поднимутся моря, и цунами внутри меня разразится! Наводнение и потоп, ваш [npc.master] зовет! Повинуйся и будь призван, [npc2.name]!)] "))
 										:"")
 								+ (caster.isPlayer()
-									?"With a huge splash, you bind your elemental, [npc2.name], to the school of Water!"
-									:"With a huge splash, [npc1.name] binds [npc1.her] elemental, [npc2.name], to the school of Water!")));
+									?"С огромным всплеском вы привязываете своего элементаля, [npc2.name], к школе Воды!"
+									:"С огромным всплеском [npc1.name] привязывает [npc1.her] элементаля, [npc2.name], к школе Воды!")));
 				
 			} else {
 				//caster.addCompanion(caster.getElemental());
@@ -890,13 +890,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 										?Util.randomItemFrom(
 										Util.newArrayListOfValues(
-											"[npc.speech(By the ancient rite of sea and sky, I summon forth the eternal torrent! Answer your [npc.master]'s call, [npc2.name], and, by the drowning of a million dimensions, be bound to my will!)] ",
-											"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! May all waters be at my command, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-											"[npc.speech(Let the seas rise, and the tsunami within me be unleashed! Flood and deluge, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+											"[npc.speech(Древним обрядом моря и неба я вызываю вечный поток! Ответь на призыв своего [npc.master], [npc2.name], и, утонув в миллионе измерений, будь связан с моей волей!)] ",
+											"[npc.speech(Да высвободятся силы, хранившиеся во мне тысячу лет! Пусть все воды будут в моей власти, и, заключив наш вечный договор, я вызываю тебя, [npc2.name]!)] ",
+											"[npc.speech(Пусть поднимутся моря, и цунами внутри меня разразится! Наводнение и потоп, ваш [npc.master] зовет! Повинуйся и будь призван, [npc2.name]!)] "))
 										:"")
 								+ (caster.isPlayer()
-									?"With a huge splash, you summon forth your elemental, [npc2.name], by binding [npc2.herHim] to the school of Water!"
-									:"With a huge splash, [npc1.name] summons forth [npc1.her] elemental, [npc2.name], by binding [npc2.herHim] to the school of Water!")));
+									?"С огромным всплеском вы вызываете своего элементаля, [npc2.name], привязав [npc2.herHim] к школе Воды!"
+									:"С огромным всплеском [npc1.name] вызывает [npc1.her] элементаля, [npc2.name], связав [npc2.herHim] со школой Воды!")));
 				
 				if(Main.game.isInCombat()) {
 					caster.getElemental().setLocation(caster, false);
@@ -922,9 +922,9 @@ public enum Spell {
 			SpellType.OFFENSIVE_STATUS_EFFECT,
 			DamageType.POISON,
 			false,
-			"Poison Vapours",
+			"Ядовитые пары",
 			"poison_vapours",
-			"Summons a cloud of poisonous gas around a target.",
+			"Вызывает облако ядовитого газа вокруг цели.",
 			0,
 			DamageVariance.LOW,
 			50,
@@ -934,7 +934,7 @@ public enum Spell {
 					SpellUpgrade.POISON_VAPOURS_2,
 					SpellUpgrade.POISON_VAPOURS_3),
 			null,
-			Util.newArrayListOfValues("<b>25</b> [style.colourPoison(Poison Damage)] per turn for [style.colourGood(3 turns)]")) {
+			Util.newArrayListOfValues("<b>25</b> [style.colourPoison(Урона Ядом)] за ход на [style.colourGood(3 хода)]")) {
 
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -957,7 +957,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summons a poison cloud around the target.";
+			return "Вызывает вокруг цели облако яда.";
 		}
 		
 		@Override
