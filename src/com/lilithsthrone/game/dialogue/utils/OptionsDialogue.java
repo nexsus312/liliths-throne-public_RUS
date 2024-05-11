@@ -91,7 +91,7 @@ public class OptionsDialogue {
 						+ " [style.italicsMinorBad(<b>ВНИМАНИЕ:</b> Данная версия модифицирована для поддержки Русского языка, проект распостраняется на бесплатной основе, все права принадлежат правообладателям.)]"
 					+ "</p>"
 					+ "<p style='text-align:center'>"
-						+ "<b>Если вы хотите получить поледнюю нерусифицированную версию Lilith's Throne, вы можете посетить блог или Github разработчика!</b>"
+						+ "<b>Если вы хотите получить поcледнюю нерусифицированную версию Lilith's Throne, вы можете посетить блог или Github разработчика!</b>"
 					+ "</p>"
 					+ getJavaVersionInformation()
 					+ (Toolkit.getDefaultToolkit().getScreenSize().getHeight()<800
