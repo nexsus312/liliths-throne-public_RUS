@@ -1,6 +1,6 @@
 package com.lilithsthrone.game.combat;
 
-/**
+/** Перевод не требуется
  * @since 0.1.0
  * @version 0.2.11
  * @author Innoxia
