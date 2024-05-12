@@ -48,33 +48,33 @@ public enum Quest {
 	MAIN_PROLOGUE(QuestType.MAIN, 1, 5) {
 		@Override
 		public String getName() {
-			return "Survive the Evening";
+			return "Пережить вечер";
 		}
 		@Override
 		public String getDescription() {
-			return "You promised your aunt Lily that you'd attend the opening of her museum's new exhibit. You need to survive the boredom of the evening ahead.";
+			return "Вы обещали своей тете Лили посетить открытие новой экспозиции в ее музее. Вам нужно пережить скуку предстоящего вечера.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Your evening at the museum turned out to be far more eventful than you'd have liked."
-					+ " A mysterious demon named Lilith tricked you into being pulled through a magical portal and into a parallel universe."
-					+ " After waking up in the middle of an unfamiliar street, you were saved from a dire situation by the half-demon 'Lilaya'."
-					+ " She seems to be this universe's version of your aunt Lily, and, in return for agreeing to help her with her experiments, she's allowed you to stay at her home.";
+			return "Ваш вечер в музее оказался гораздо более насыщенным событиями, чем вам хотелось бы."
+					+ " Таинственный демон по имени Лилит обманом заманил вас через магический портал в параллельную вселенную."
+					+ " Очнувшись посреди незнакомой улицы, вы были спасены из тяжелой ситуации полудемоном `Лилайей`."
+					+ " Похоже, она - версия вашей тети Лили в этой вселенной, и в обмен на согласие помогать ей в экспериментах она разрешила вам пожить в ее доме.";
 		}
 	},
 
 	MAIN_1_A_LILAYAS_TESTS(QuestType.MAIN, 1, 10) {
 		@Override
 		public String getName() {
-			return "Lilaya's Tests";
+			return "Тесты Лилайи";
 		}
 		@Override
 		public String getDescription() {
-			return "You can find Lilaya in her lab at any time, where she'll be ready to continue running her tests on you. Maybe she can find a way to send you back home?";
+			return "В любой момент вы можете найти Лилайю в ее лаборатории, где она будет готова продолжить проводить над вами свои опыты. Может быть, она найдет способ отправить вас обратно домой?";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya ran some more tests on you, but she's unable to progress with her research without the help of her old colleague, Arthur.";
+			return "Лилайя провела еще несколько тестов на тебе, но она не может продвинуться в своих исследованиях без помощи своего старого коллеги, Артура.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -85,17 +85,17 @@ public enum Quest {
 	MAIN_1_B_DEMON_HOME(QuestType.MAIN, 1, 10) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; Demon Home";
+			return "Поиски Артура; Дом демонов";
 		}
 		@Override
 		public String getDescription() {
-			return "Lilaya has informed you that her old colleague, Arthur, would know more about the type of magic used in the portal."
-					+ " However, she seems to have an intense dislike of him, and you've ended up being tasked to go and get him to apologise to Lilaya before she'll allow him to" + " come and work with her."
-					+ " Arthur lives in an apartment building called 'Sawlty Towers', in the district of the city known as 'Demon Home', so you can find him there.";
+			return "Лилайя сообщила вам, что ее старый коллега, Артур, может знать больше о типе магии, используемой в портале."
+					+ " Однако, похоже, она испытывает к нему сильную неприязнь, и вам поручено заставить его извиниться перед Лилайей, прежде чем она позволит ему" + " прийти и работать с ней."
+					+ " Артур живет в многоквартирном доме под названием «Солти Тауэрс», в районе города, известном как «Дом демонов», так что вы можете найти его там.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "When you arrived at Arthur's home, you found that Dominion's Enforcers had arrested him on suspicion of plotting against Lilith." + " After his arrest, he was taken to the Enforcer's HQ.";
+			return "Прибыв в дом Артура, вы обнаружили, что энфорсеры Доминиона арестовали его по подозрению в заговоре против Лилит." + " После ареста его отвезли в штаб-квартиру энфорсеров.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -106,17 +106,17 @@ public enum Quest {
 	MAIN_1_C_WOLFS_DEN(QuestType.MAIN, 3, 20) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; The Wolf's Den";
+			return "Поиски Артура; Волчье логово";
 		}
 		@Override
 		public String getDescription() {
-			return "Arthur has been arrested by Dominion's Enforcers, and has been taken to the Enforcer's HQ."
-					+ " It looks like you'll have to inquire further there and find out a way to save Arthur.";
+			return "Артур был арестован энфорсерами Доминиона и доставлен их штаб-квартиру."
+					+ " Похоже, вам придется навести там справки и найти способ спасти Артура.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You were forced to confront the Enforcer Inspector, Brax."
-					+ " Thankfully, you were able to deal with him, but you then found out that Arthur has been sold into slavery!";
+			return "Вы были вынуждены противостоять инспектору энфорсеров по имени Бракс"
+					+ " К счастью, вам удалось справиться с ним, но затем вы узнали, что Артур был продан в рабство!";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -128,16 +128,16 @@ public enum Quest {
 	MAIN_1_D_SLAVERY(QuestType.MAIN, 3, 10) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; Sold into Slavery";
+			return "В поисках Артура; Продан в рабство";
 		}
 		@Override
 		public String getDescription() {
-			return "After defeating Brax, you found out that Arthur was sold into slavery to a trader called Scarlett."
-					+ " You'll have to travel to Slaver Alley, find Scarlett, and find a way to free Arthur.";
+			return "Победив Бракса, вы узнали, что Артур был продан в рабство торговцу по имени Скарлетт."
+					+ " Вам предстоит отправиться на Аллею рабов, найти Скарлетт и узнать об Артуре.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You found the harpy Scarlett in Slaver Alley, who turned out to be one of the rudest people you've ever met.";
+			return "В переулке работорговцев вы нашли гарпию Скарлетт, которая оказалась одним из самых грубых людей, которых вы когда-либо встречали.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
