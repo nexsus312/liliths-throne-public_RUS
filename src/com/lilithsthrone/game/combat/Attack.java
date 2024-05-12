@@ -18,16 +18,16 @@ import com.lilithsthrone.main.Main;
  */
 public enum Attack {
 	
-	NONE("none"),
-	MAIN("main"),
-	OFFHAND("offhand"),
-	DUAL("dual strike"),
-	SEDUCTION("seduction"),
-	SPELL("spell"),
-	SPECIAL_ATTACK("special attack"),
-	USE_ITEM("use item"),
-	ESCAPE("escape"),
-	WAIT("wait");
+	NONE("ничего"),
+	MAIN("основной"),
+	OFFHAND("дополнительный"),
+	DUAL("двойной удар"),
+	SEDUCTION("соблазнение"),
+	SPELL("заклинание"),
+	SPECIAL_ATTACK("специальная атака"),
+	USE_ITEM("использовать предмет"),
+	ESCAPE("побег"),
+	WAIT("ожидание");
 
 	private String name;
 
