@@ -495,17 +495,17 @@ public enum Quest {
 	MAIN_3_D_TO_THEMISCYRA(QuestType.MAIN, 1, 25) {
 		@Override
 		public String getName() {
-			return "To Themiscyra";
+			return "Путь в Фемискиру";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You agreed to travel to Themiscyra with Meraxis and find out whether or not the town is being threatened by Lunette's army.";
+			return "Вы согласились отправиться в Фемискиру вместе с Мераксис и выяснить, угрожает ли городу армия Лунетты.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You travelled to Themiscyra with Meraxis, but upon reaching the town, you discovered that it was being destroyed by Lunette's army!";
+			return "Вы отправились в Фемискиру вместе с Мераксис, но, добравшись до города, обнаружили, что он разрушен армией Лунетты!";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -518,17 +518,17 @@ public enum Quest {
 	MAIN_3_E_THEMISCYRA_ATTACK(QuestType.MAIN, 1, 250) {
 		@Override
 		public String getName() {
-			return "Save the Queen";
+			return "Спасти королеву";
 		}
 		@Override
 		public String getDescription() {
-			return "Separated from Meraxis, you've teamed up with an Amazon cow-girl named Aurokaris."
-					+ " You need to travel through Themiscyra and find both Meraxis and Ursa, the queen of the Amazons, who should be at the palace.";
+			return "Отделившись от Мераксис, вы объединились с амазонкой девочкой-коровкой по имени Аурокарис."
+					+ " Вам нужно отправиться в путешествие по Фемискире и найти Мераксис и Урсу, королеву амазонок, которая должна находиться во дворце.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Alongside Aurokaris, you travelled through Themiscyra and found both Meraxis and Ursa at the plaza before the palace."
-					+ " After encountering Lunexis, the leader of Lunette's army, Meraxis teleported the five of you back to Elis's town hall, where Minotallys was finally convinced that Lunette is a threat to Elis.";
+			return "Вместе с Аурокарисис вы прошли через Фемискиру и нашли Мераксис и Урсу на площади перед дворцом."
+					+ " После встречи с Лунексис, лидером армии Лунетты, Мераксис телепортировала вас пятерых обратно в ратушу Элис, где Миноталлис окончательно убедилась что Лунетта представляет угрозу для Элис.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -544,16 +544,16 @@ public enum Quest {
 	MAIN_3_F_PREPARING_ELIS(QuestType.MAIN, 1, 25) {
 		@Override
 		public String getName() {
-			return "Some Help from SWORD";
+			return "Помощь от «МЕЧ»";
 		}
 		@Override
 		public String getDescription() {
-			return "With Lunette planning to attack Elis at some point in the near future, you've told Minotallys that you'll help to get the town's defences in order."
-					+ " You need to travel to the Enforcer station in Elis and ask the group of SWORD Enforcers for their assistance.";
+			return "Поскольку Лунетта планирует напасть на Элис в ближайшем будущем, вы сказали Миноталлис, что поможете привести оборону города в порядок."
+					+ " Вам нужно отправиться на станцию энфорсеров в Элис и попросить помощи у группы энфорсеров «МЕЧ».";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You travelled to the Enforcer station in Elis and asked the group of SWORD Enforcers to help with getting the town's defences in order.";
+			return "Вы отправились на станцию энфорсеров в Элис и попросили группу энфорсеров «МЕЧ», помочь привести оборону города в порядок.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -564,17 +564,17 @@ public enum Quest {
 	MAIN_3_G_SWORD_SCAPEGOAT(QuestType.MAIN, 1, 25) {
 		@Override
 		public String getName() {
-			return "SWORD's Scapegoat";
+			return "Козел отпущения МЕЧа";
 		}
 		@Override
 		public String getDescription() {
-			return "The SWORD Enforcers told you that in order for them to help you, you first need to help them."
-					+ " You're to tag along on an operation to stop an elder lilin's daughter so that you can get them out of trouble if they're recognised."
-					+ " You need to meet them in the Enforcer station on a Tuesday evening, after [units.time(17)], to start the operation.";
+			return "«МЕЧ» энфорсеры сказали что сначала вы должны помочь им."
+					+ " Вам предстоит участвовать в операции по остановке дочери старшей лилин, если их узнают, вы должны будете помочь им."
+					+ " Вы должны встретиться с ними на станции энфорсеров во вторник вечером, после [units.time(17)], чтобы начать операцию.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You met with the SWORD Enforcers on a Tuesday afternoon so that you could tag along on an operation to stop an elder lilin's daughter.";
+			return "Во вторник днем вы встретились с сотрудниками МЕЧа, чтобы принять участие в операции по задержанию дочери старшей лилин.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -585,17 +585,17 @@ public enum Quest {
 	MAIN_3_H_SWORD_MISSION(QuestType.MAIN, 25, 250) {
 		@Override
 		public String getName() {
-			return "Stop the Succubus";
+			return "Остановить суккуба";
 		}
 		@Override
 		public String getDescription() {
-			return "You need to stay with the SWORD Enforcers as they clear the succubus's headquarters."
-					+ " You don't need to fight, but the Enforcers might appreciate it if you gave them some assistance.";
+			return "Вам нужно оставаться с энфорсерам МЕЧа, пока они зачищают штаб-квартиру суккубов."
+					+ " Вам не нужно сражаться, но энфорсеры могут быть благодарны, если вы окажете им помощь.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You worked with the SWORD Enforcers to clear the succubus's headquarters."
-					+ " Although she managed to escape, you've put a decisive end to her illegal enslavement activities.";
+			return "Вы работали с энфорсерами МЕЧа, чтобы очистить штаб-квартиру суккубов."
+					+ " Хотя ей удалось сбежать, вы положили решительный конец ее незаконной деятельности по порабощению.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -606,12 +606,12 @@ public enum Quest {
 	MAIN_3_I_ARION_REPORT(QuestType.MAIN, 1, 25) {//TODO
 		@Override
 		public String getName() {
-			return "Report to Minotallys";
+			return "Сообщить Миноталлис";
 		}
 		@Override
 		public String getDescription() {
-			return "[style.italicsBad(This is as far as the main quest goes for now! It will be updated soon!)]"
-					+ "<br/>Now that the SWORD Enforcers are working on preparing the town's defences, you need to head back to the town hall to report this to Minotallys.";
+			return "[style.italicsBad(На данный момент это конец основного квеста, ждем обновлений!)]"
+					+ "<br/>Теперь, когда энфорсеры МЕЧа работают над подготовкой обороны города, вам нужно вернуться в ратушу, чтобы сообщить об этом Миноталлис.";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -640,51 +640,51 @@ public enum Quest {
 	SIDE_UTIL_COMPLETE(QuestType.SIDE, 1, 0) {
 		@Override
 		public String getName() {
-			return "Quest Complete!";
+			return "Задание Выполнено!";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Quest complete!";
+			return "Задание выполнено!";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Quest complete!";
+			return "Задание выполнено!";
 		}
 	},
 	
 	SIDE_DISCOVER_ALL_ITEMS(QuestType.SIDE, 1, 100) {
 		@Override
 		public String getName() {
-			return "Completionist";
+			return "Коллекционер";
 		}
 
 		@Override
 		public String getDescription() {
-			return "There are a lot of curious items in this new world. You wonder if you can find them all...";
+			return "В этом новом мире есть много любопытных предметов. Вам интересно, сможете ли вы найти их все...";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You have discovered every item there is to find!";
+			return "Вы обнаружили все предметы, которые только можно найти!";
 		}
 	},
 
 	SIDE_DISCOVER_ALL_RACES(QuestType.SIDE, 1, 100) {
 		@Override
 		public String getName() {
-			return "Completionist";
+			return "Коллекционер";
 		}
 
 		@Override
 		public String getDescription() {
-			return "There seem to be a lot of strange new races in this world. You wonder if you can discover them all...";
+			return "Кажется, в этом мире появилось множество новых странных рас. Вам интересно, сможете ли вы открыть их все...";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You have discovered every race there is to find!.";
+			return "Вы открыли все расы, которые только можно найти!.";
 		}
 	},
 	
@@ -694,19 +694,19 @@ public enum Quest {
 	SIDE_ENCHANTMENTS_LILAYA_HELP(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Ask Lilaya for help";
+			return "Попросите Лилайю о помощи";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You recently felt a strange force entering your body, and although it doesn't seem to have had any obvious effect, you should probably have it checked out."
-					+ " Lilaya is sure to know more, so perhaps you should go and talk to her about it.";
+			return "Недавно вы почувствовали, как в ваше тело проникает странная сила, и хотя она, похоже, не оказала никакого явного воздействия, вам, вероятно, следует пройти обследование."
+					+ " Лилайя наверняка знает больше, так что, возможно, вам стоит пойти и поговорить с ней об этом.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya informed you that you're able to collect 'essences' from other people's arcane aura."
-					+ " She seemed a little worried that you're able to do this, as apparently it's normally only Lilin who are able to gather essences in this fashion...";
+			return "Лилайя сообщила вам, что вы способны собирать «эссенции» из чужой магической ауры."
+					+ " Кажется, она немного обеспокоена тем, что вы способны на это, ведь обычно только Лилин могут собирать эссенции таким образом...";
 		}
 	},
 
@@ -715,34 +715,34 @@ public enum Quest {
 	SIDE_PREGNANCY_CONSULT_LILAYA(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Lilaya knows best";
+			return "Лилайя знает лучше";
 		}
 
 		@Override
 		public String getDescription() {
-			return "There's no way... You're pregnant? You're <b>pregnant</b>! Surely Lilaya will know what to do?!";
+			return "Не может быть... Вы беременны? Вы <b>беременны</b>! Конечно, Лилайя знает, что делать?!";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya managed to calm you down, and reassured you that pregnancy in this world isn't as big a deal as it was back home.";
+			return "Лилайе удалось успокоить вас и заверить, что беременность в этом мире - не такая уж большая проблема, как дома.";
 		}
 	},
 	
 	SIDE_PREGNANCY_LILAYA_THE_MIDWIFE(QuestType.SIDE, 1, 20) {
 		@Override
 		public String getName() {
-			return "Lilaya the midwife";
+			return "Акушерка Лилайя";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Lilaya said that she'd be able to help you give birth whenever you're ready. You're going to need to wait until your belly has finished growing, then you can go and see Lilaya to give birth.";
+			return "Лилайя сказала, что сможет помочь вам родить, когда вы будете готовы. Вам нужно будет подождать, пока ваш живот закончит расти, и тогда вы сможете пойти к Лилайе, чтобы родить.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya helped you give birth. She said that if ever you get pregnant again, she can always help out.";
+			return "Лилайя помогла вам родить. Она сказала, что если вы снова забеременеете, она всегда сможет вам помочь.";
 		}
 	},
 	
@@ -751,15 +751,15 @@ public enum Quest {
 	SIDE_INCUBATION_WAITING(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Living Incubator";
+			return "Живой инкубатор";
 		}
 		@Override
 		public String getDescription() {
-			return "There's no doubt about it; you've had a clutch of eggs implanted inside of your body! There's nothing else for you to do except wait for them to mature and then lay them...";
+			return "Нет никаких сомнений: в ваше тело имплантировали кладку яиц! Вам ничего не остается, кроме как ждать, пока они созреют, а затем отложить их...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You waited for the eggs implanted inside of your body to mature, and then successfully laid and hatched them!";
+			return "Вы ждали, пока созреют яйца, имплантированные в ваше тело, а затем успешно отложили и вылупили их!";
 		}
 	},
 	
@@ -783,17 +783,17 @@ public enum Quest {
 	SIDE_SLAVER_NEED_RECOMMENDATION(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Letter of recommendation";
+			return "Рекомендательное письмо";
 		}
 
 		@Override
 		public String getDescription() {
-			return "After asking how to obtain a slaver license at the Slavery Administration building, you discovered that you'll need a letter of recommendation first. Lilaya should be able to help with that.";
+			return "Поинтересовавшись, как получить лицензию рабовладельца в здании управления рабством, вы узнали, что сначала вам понадобится рекомендательное письмо. Лилайя должна помочь с этим.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya gave you a letter of recommendation, and what's more, she also offered to let you house your slaves in her mansion.";
+			return "Лилайя дала вам рекомендательное письмо и, более того, предложила поселить ваших рабов в своем особняке.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -804,17 +804,17 @@ public enum Quest {
 	SIDE_SLAVER_RECOMMENDATION_OBTAINED(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Present letter";
+			return "Предъявите письмо";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Now that you've obtained a letter of recommendation from Lilaya, you should go back to the Slavery Administration building in Slaver Alley and present it to [finch.name].";
+			return "Теперь, когда вы получили рекомендательное письмо от Лилайи, вам следует вернуться в здание администрации рабства на аллее рабов и вручить его [finch.name].";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You presented the letter of recommendation to [finch.name], and after paying the fee, you obtained a slaver license!";
+			return "Вы представили рекомендательное письмо [finch.name] и после уплаты пошлины вы получали лицензию рабовладельца!";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -827,17 +827,17 @@ public enum Quest {
 	SIDE_ACCOMMODATION_NEED_LILAYAS_PERMISSION(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Lilaya the Landlady";
+			return "Хозяйка Лилайя";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Lilaya's mansion is full of empty rooms which could be put to use as guest accommodation. You should ask her if you could use them to house your friends and family.";
+			return "В особняке Лилайи полно пустых комнат, которые можно использовать как жилье для гостей. Спросите у нее, не могли бы вы использовать их для размещения своих друзей и родственников.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya gave you permission to use the empty rooms to house your friends and family, on the condition that you pay for the expenses that are incurred.";
+			return "Лилайя разрешила вам использовать пустующие комнаты для размещения друзей и родственников, но при условии, что вы будете оплачивать все расходы.";
 		}
 	},
 
@@ -846,15 +846,15 @@ public enum Quest {
 	SIDE_DOLL_STORAGE_ASK_FOR_SPACE(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Where do the dolls go?";
+			return "Куда деть кукол?";
 		}
 		@Override
 		public String getDescription() {
-			return "Although Lilaya's mansion is full of empty rooms in which dolls could be stored, you'd better ask her for permission before bringing any home...";
+			return "Хотя в особняке Лилайи полно пустых комнат, в которых можно хранить кукол, лучше спросить у нее разрешения, прежде чем принести их домой...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya gave you permission to use the empty rooms to store any dolls you buy.";
+			return "Лилайя разрешила вам использовать пустые комнаты для хранения кукол, которых вы купите.";
 		}
 	},
 	
@@ -863,38 +863,38 @@ public enum Quest {
 	SIDE_HYPNO_WATCH_VICKY(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Order at Arcane Arts";
+			return "Заказ в «Магические искусства»";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Arthur informed you that he was instructed by Zaranix to find an arcane method of changing a person's sexual orientation."
-					+ " While he reassured you that he had no intention of ever using such an item himself, Arthur did express an interest in completing his research,"
-						+ " and asked you to fetch a special order from the store 'Arcane Arts' in the Shopping Arcade.";
+			return "Артур сообщил вам, что Зараникс поручил ему найти магический метод изменения сексуальной ориентации человека."
+					+ " Хотя он заверил вас, что не намерен сам использовать такой предмет, Артур выразил заинтересованность в завершении исследования,"
+						+ " и попросил вас принести специальный заказ из магазина «Магические искусства» в Торговой галерее.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You retrieved the package from Arcane Arts, and brought it back to Arthur.";
+			return "Вы забрали пакет из «Магические искусства» и принесли его Артуру.";
 		}
 	},
 	
 	SIDE_HYPNO_WATCH_TEST_SUBJECT(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Test subject";
+			return "Подопытный";
 		}
 
 		@Override
 		public String getDescription() {
-			return "After Lilaya followed Arthur's instructions to enchant the watch, she asked if it would be possible to test it on you...";
+			return "После того как Лилайя, следуя инструкциям Артура, зачаровала часы, она спросила, можно ли испытать их на вас...";
 //					+ " You could either offer yourself, or, if you own any slaves, offer one of those to Arthur instead.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "The Hypno-Watch appeared to work, although Lilaya stopped the test before it had a permanent effect."
-					+ " She warned that it will have a strong corruptive effect upon the mind of the whoever is targeted, and disenchanted it for good measure, before handing it over to you.";
+			return "Гипночасы, похоже, сработали, хотя Лилайя прекратила испытание до того, как оно возымело постоянный эффект."
+					+ " Она предупредила, что они будуи оказывать сильное развращающее воздействие на разум того, на кого нацелены, и, прежде чем передать их вам, хорошенько расколдовала их.";
 		}
 	},
 	
@@ -902,36 +902,36 @@ public enum Quest {
 	LIGHTNING_SPELL_1_PAYMENT(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "The Price Of Power";
+			return "Цена силы";
 		}
 		@Override
 		public String getDescription() {
-			return "After showing Arthur the arcane lightning globe which you found in the Enforcer warehouse, you were told that it would be possible to learn the secrets of the lightning spells within it."
-					+ " Although the resulting spells will be more powerful than what the globe is capable of,"
-						+ " Arthur has explained to you that such an extraction will not only require an immense amount of arcane essences, but will also permanently remove the globe's innate spells."
-					+ "<br/>When you're willing and able to do so, give Arthur the arcane lightning globe and let him extract 500 arcane essences from your aura.";
+			return "Показав Артуру шар молний, который вы нашли в хранилище энфорсеров, вы получили ответ, что сможете узнать секреты заклинаний молний, заключенных в нем."
+					+ " Хотя получаемые заклинания будут более мощными, чем те, на которые способен шар,"
+						+ " Артур объяснил вам, что такое извлечение не только потребует огромного количества магических эссенций, но и навсегда лишит шар присущих ему заклинаний."
+					+ "<br/>Когда вы будете готовы, дайте Артуру шар магической молнии и позвольте ему извлечь из вашей ауры 500 магических эссенций.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You gave Arthur the arcane lightning globe which you found in the Enforcer warehouse, and also let him extract 500 arcane essences from your aura."
-					+ " In exchange, you've been promised that a powerful arcane lightning spell shall soon be yours.";
+			return "Вы отдали Артуру шар магической молнии, который нашли на складе энфорсеров, а также позволили ему извлечь из вашей ауры 500 магических эссенций."
+					+ " В обмен на это вам обещано, что скоро вы получите мощное заклинание магической молнии.";
 		}
 	},
 	
 	LIGHTNING_SPELL_2_WAITING(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Lightning Extraction";
+			return "Извлечение молнии";
 		}
 		@Override
 		public String getDescription() {
-			return "Arthur informed you that it will take some time to extract the secrets of the arcane lightning from within the globe."
-					+ " You'll have to return to him after two weeks to find out what the results of his research are...";
+			return "Артур сообщил вам, что потребуется некоторое время, чтобы извлечь секреты магической молнии из шара."
+					+ " Вам придется вернуться к нему через две недели, чтобы узнать о результатах его исследований...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Arthur excitedly informed you that he'd not only been able to extract the secrets of two arcane lightning spells from the globe,"
-					+ " but that he'd also been able to transfer its remaining power into a smaller crystal, which he's had fitted onto a ring for you.";
+			return "Артур с восторгом сообщил вам, что ему не только удалось извлечь из глобуса секреты двух заклинаний молний,"
+					+ " он также смог перевести его оставшуюся силу в кристалл меньшего размера, который он прикрепил к кольцу для вас.";
 		}
 	},
 	
