@@ -1429,17 +1429,17 @@ public enum Quest {
 	BUYING_BRAX_DELIVER_LIPSTICK(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "At the wolf's door";
+			return "У волчьей двери";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Now that you've secured the box of 'A Hundred Kisses', all that's left to do is deliver it to Candi in exchange for ownership of [brax.name].";
+			return "Теперь, когда вы получили коробку с «Сотней поцелуев», осталось только доставить ее Кэнди в обмен на право собственности на [brax.name].";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You handed over the box of 'A Hundred Kisses' to Candi, and finally gained your prize; ownership of [brax.name].";
+			return "Вы передали Кэнди коробку с «Сотней поцелуев» и наконец-то получили свой приз - право собственности на [brax.name].";
 		}
 	},
 
@@ -1449,126 +1449,126 @@ public enum Quest {
 	VENGAR_START(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Rat Warrens";
+			return "Крысиные норы";
 		}
 		@Override
 		public String getDescription() {
-			return "You agreed to help Axel deal with Vengar, who's apparently the leader of Submission's largest and most dangerous gang. You could head directly to his hideout, the 'Rat Warrens', or first go and ask Claire for help.";
+			return "Вы согласились помочь Акселю разобраться с Венгаром, который, судя по всему, является лидером самой крупной и опасной банды Покорности. Вы можете отправиться прямо в его убежище, «Крысиные норы», или сначала обратиться за помощью к Клэр.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "By using the password Axel gave to you, you were able to gain entry to Vengar's hideout; the Rat Warrens.";
+			return "Используя пароль, который дал вам Аксель, вы смогли проникнуть в убежище Венгара - в Крысиные норы.";
 		}
 	},
 	
 	VENGAR_ONE(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Meeting Vengar";
+			return "Встреча с Венгаром";
 		}
 		@Override
 		public String getDescription() {
-			return "In order to find Vengar, you need to locate the main hall and be there between the hours of "+Units.time(LocalDateTime.of(1, 1, 1, 6, 0))+" and "+Units.time(LocalDateTime.of(1, 1, 1, 22, 0))+".";
+			return "Чтобы найти Венгара, вам нужно найти главный зал и быть там между часами "+Units.time(LocalDateTime.of(1, 1, 1, 6, 0))+" и "+Units.time(LocalDateTime.of(1, 1, 1, 22, 0))+".";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You found Vengar sitting on a throne in the main hall, and after approaching him, you were given the choice to either join his gang, or be set upon by his rat-girl bodyguards.";
+			return "Вы обнаружили Венгара, сидящего на троне в главном зале, и, подойдя к нему, получили выбор: либо присоединиться к его банде, либо сразиться с его телохранителями девочками-крысами.";
 		}
 	},
 	
 	VENGAR_TWO_CONFLICT(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Conflict";
+			return "Конфликт";
 		}
 		@Override
 		public String getDescription() {
-			return "Having chosen to challenge Vengar, you now need to defeat him in combat in order to assert dominance over his gang.";
+			return "Решив бросить вызов Венгару, вы должны победить его в бою, чтобы утвердить свое господство над его бандой.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You managed to defeat Vengar, but before you could take any further action, SWORD started their raid on the Rat Warrens.";
+			return "Вам удалось победить Венгара, но прежде чем вы смогли предпринять какие-либо дальнейшие действия, «МЕЧ» начали свой рейд на Крысиные норы.";
 		}
 	},
 	
 	VENGAR_TWO_COOPERATION(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Axel's submission";
+			return "Покорность Акселя";
 		}
 		@Override
 		public String getDescription() {
-			return "Vengar revealed that he's been wanting to focus on his legitimate rum distillery business for some time, but he can't just leave Axel alone without losing respect from his gang."
-					+ " In exchange for an end to the extortion, you agreed to persuade Axel to come and show his submission to Vengar.";
+			return "Венгар рассказал, что уже давно хочет сосредоточиться на своем законном бизнесе по производству рома, но не может просто оставить Акселя в покое, чтобы не потерять уважение со стороны своей банды."
+					+ " В обмен на прекращение вымогательства вы согласились уговорить Акселя прийти и продемонстрировать свою покорность Венгару.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You managed to convince Axel to go to the Rat Warrens and show his submission to Vengar."
-					+ " Accompanying him there, you were able to provide some input and influence what happened to the alligator-boy.";
+			return "Вам удалось убедить Акселя отправиться в Крысиные болота и продемонстрировать Венгару свою покорность."
+					+ " Сопровождая его туда, вы смогли внести свой вклад и повлиять на то, что случилось с мальчиком-аллигатором.";
 		}
 	},
 	
 	VENGAR_TWO_ENFORCERS(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Raid";
+			return "Рейд";
 		}
 		@Override
 		public String getDescription() {
-			return "Having confirmed that Vengar is in the Rat Warrens, you've activated the resonance stone, signalling to the waiting SWORD Enforcers to start their raid.";
+			return "Убедившись, что Венгар находится в Крысиных болотах, вы активировали резонансный камень, давая сигнал ожидающим энфорсерам МЕЧа начать свой рейд.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "The SWORD Enforcers successfully raided the Rat Warrens, and were able to apprehend Vengar.";
+			return "Энфорсеры МЕЧа совершили успешный рейд в Крысиные норы и смогли задержать Венгара.";
 		}
 	},
 	
 	VENGAR_THREE_COOPERATION_END(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Vengar's End";
+			return "Конец Венгара";
 		}
 		@Override
 		public String getDescription() {
-			return "Now that [axel.name] has shown [axel.her] submission to Vengar, all that's left to do is head back to the Gambling Den...";
+			return "Теперь, когда [axel.name] продемонстрировал [axel.her] покорность Венгару, остается только вернуться в казино «Берлога»...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "After [axel.name] had shown [axel.her] submission to Vengar, a group of SWORD Enforcers turned up to raid the Rat Warrens and arrest the rat-boy!";
+			return "После того как [axel.name] продемонстрировал [axel.her] покорность Венгару, группа энфорсеров МЕЧа явилась на рейд в Крысиные Ущелья и арестовала мальчика-крысу!";
 		}
 	},
 
 	VENGAR_THREE_END(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Return to Axel";
+			return "Вернуться к Акселю";
 		}
 		@Override
 		public String getDescription() {
-			return "Now that Vengar has been dealt with, you need to return to Axel and let him know what happened.";
+			return "Теперь, когда с Венгаром разобрались, вам нужно вернуться к Акселю и сообщить ему о случившемся.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You returned to Axel and told him what the situation will be from now on.";
+			return "Вы вернулись к Акселю и рассказали ему, как будет обстоять дело впредь.";
 		}
 	},
 	
 	VENGAR_OPTIONAL_CLAIRE(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Claire's Help";
+			return "Помощь Клэр";
 		}
 		@Override
 		public String getDescription() {
-			return "Deciding that it would be best to let Claire know of the situation, you asked her if there was anything the Enforcers could do to help."
-					+ " Apparently, a SWORD team is already prepared to raid the Rat Warrens, but they need to know Vengar is inside before launching their assault."
-					+ " Claire gave you a resonance stone to activate if you want them to back you up once inside.";
+			return "Решив, что лучше всего будет сообщить о ситуации Клэр, вы спросили ее, не могут ли энфорсеры чем-то помочь."
+					+ " Судя по всему, команда МЕЧа уже готова к налету на Крысиные норы, но прежде чем начать атаку, им нужно знать, что Венгар находится внутри."
+					+ " Клэр дала вам резонансный камень, который нужно активировать, если вы хотите, чтобы они поддержали вас, когда окажетесь внутри.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Deciding that it would be best to let Claire know of the situation, you asked her if there was anything the Enforcers could do to help."
-					+ " Apparently, a SWORD team is already prepared to raid the Rat Warrens, but they need to know Vengar is inside before launching their assault."
-					+ " Claire gave you a resonance stone to activate if you want them to back you up once inside.";
+			return "Решив, что лучше всего будет сообщить о ситуации Клэр, вы спросили ее, не могут ли энфорсеры чем-то помочь."
+					+ " Судя по всему, команда МЕЧа уже готова к налету на Крысиные норы, но прежде чем начать атаку, им нужно знать, что Венгар находится внутри."
+					+ " Клэр дала вам резонансный камень, который нужно активировать, если вы хотите, чтобы они поддержали вас, когда окажетесь внутри.";
 		}
 	},
 
@@ -1577,11 +1577,11 @@ public enum Quest {
 	WES_FAIL(QuestType.SIDE, 1, 0) {
 		@Override
 		public String getName() {
-			return "Opportunity Missed";
+			return "Упущенная возможность";
 		}
 		@Override
 		public String getDescription() {
-			return "After you'd told Wesley that you had no intention of helping him with his investigation, the fox-boy disappeared, and you can be sure that he'll never try to seek out your help again...";
+			return "После того как вы сказали Уэсли, что не намерены помогать ему в расследовании, мальчик-лис исчез, и вы можете быть уверены, что он больше никогда не попытается обратиться к вам за помощью...";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -1592,90 +1592,90 @@ public enum Quest {
 	WES_START(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Help Needed";
+			return "Требуется помощь";
 		}
 		@Override
 		public String getDescription() {
-			return "While travelling through Dominion, you were approached by a mysterious undercover SWORD Enforcer who asked for your help."
-					+ " He'd like you to meet him outside of the Shopping Arcade's antiques shop between [units.time(13)]-[units.time(14)].";
+			return "Во время путешествия по Доминиону к вам обратился таинственный энфорсер МЕЧа под прикрытием, который попросил вас о помощи."
+					+ " Он хочет, чтобы вы встретились с ним возле антикварного магазина в торговом центре между [units.time(13)]-[units.time(14)].";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You agreed to help Wesley investigate his superior officer.";
+			return "Вы согласились помочь Уэсли расследовать дело его начальника.";
 		}
 	},
 
 	WES_1(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Finding Elle";
+			return "В поисках Элль";
 		}
 		@Override
 		public String getDescription() {
-			return "Wes told you that his superior officer, [elle.name] (or 'Elle' for short), takes night vision goggles with her while taking suspiciously long lunches on Wednesdays, and always comes back with wet shoes."
-					+ " You need to find her and record any incriminating evidence on the arcane recording device Wes gave to you..."
-					+ "<br/>She takes [style.colourOrange(unusually long lunch breaks)]."
-					+ "<br/>She only does this on a [style.colourOrange(Wednesday)]."
-					+ "<br/>She takes a set of [style.colourOrange(night vision goggles)] with her."
-					+ "<br/>Afterwards, her [style.colourOrange(shoes are often wet)] and sometimes have trace amounts of some kind of [style.colourOrange(glowing residue on them)]."
-					+ "<br/>[style.italicsMinorGood(For a hint on where to go, ask Lilaya about it.)]";
+			return "Уэс рассказал вам, что его старший офицер, [elle.name] (или сокращенно «Элль»), берет с собой очки ночного видения, отправляясь на подозрительно длинные обеды по средам, и всегда возвращается с мокрыми ботинками."
+					+ " Вам нужно найти ее и записать все улики на магическое записывающее устройство, которое дал вам Уэс..."
+					+ "<br/>Она берет [style.colourOrange(необычно длинные перерывы на обед)]."
+					+ "<br/>Она делает это только по [style.colourOrange(Средам)]."
+					+ "<br/>Она берет набор [style.colourOrange(очков ночного видения)] с собой."
+					+ "<br/>После этого ее [style.colourOrange(обувь часто мокрая)] и иногда содержат следы некоторых видов [style.colourOrange(светящихся остатков на них)]."
+					+ "<br/>[style.italicsMinorGood(Вы можете получить помощь у Лилайи.)]";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Having deduced that Elle was doing her shady business down in the Bat Caverns, you managed to collect evidence of her selling weapons to a dangerous criminal gang.";
+			return "Выяснив, что Элль ведет свои теневые дела в Пещерах летучих мышей, вам удалось собрать доказательства того, что она продавала оружие опасной преступной группировке.";
 		}
 	},
 
 	WES_2(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Using the Evidence";
+			return "Использование доказательств";
 		}
 		@Override
 		public String getDescription() {
-			return "With your arcane recording device now containing incriminating evidence of Elle's corruption, you're left with two possible choices of what to do with it."
-					+ " You could hand it in as an anonymous tip to either Claire or Candi, or if you wanted to betray Wes and side with Elle,"
-						+ " you could wait outside the Enforcer HQ between [units.time(16)]-[units.time(18)] and reveal everything to the [elle.race] as she leaves work.";
+			return "Теперь, когда ваше магическое записывающее устройство содержит уличающие доказательства коррупции Элль, у вас есть два варианта, что с ним делать."
+					+ " Вы можете передать его в качестве анонимной наводки Клэр или Кэнди, или, если хотите, предать Уэса и встать на сторону Эль,"
+						+ " Вы можете подождать у штаб-квартиры энфорсеров между [units.time(16)] и [units.time(18)] и раскрыть все [elle.race], когда она уйдет с работы.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You made use of the evidence which you collected in order to bring an end to this whole business with Wes and Elle.";
+			return "Вы воспользовались собранными вами уликами, чтобы положить конец всей этой истории с Уэсом и Элль.";
 		}
 	},
 
 	WES_3_WES(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Sided with Wes";
+			return "На стороне Уэса";
 		}
 		@Override
 		public String getDescription() {
-			return "You decided to do as Wes asked and hand in the incriminating evidence as an anonymous tip to the Enforcers."
-					+ " You should wait at least one week for things to be settled, then ask to see Wes up in the Enforcer HQ between [units.time(9)]-[units.time(17)].";
+			return "Вы решили выполнить просьбу Уэса и передать улики энфорсерам в качестве анонимной наводки."
+					+ " Вам следует подождать хотя бы неделю, пока все уляжется, а затем попросить о встрече с Уэсом в штаб-квартире энфорсеров между [units.time(9)]-[units.time(17)].";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You sided with Wes, and after anonymously handing in the incriminating evidence, you met the fox-boy in the Enforcer HQ to discover that he's been promoted to take Elle's job."
-					+ " With his new authority, he's granted you access to the Enforcer HQ's requisitions area as a reward for your help."
-					+ " You can also now freely visit Wes in the Enforcer HQ between the hours of [units.time(9)]-[units.time(17)].";
+			return "Вы встали на сторону Уэса и, анонимно передав улики, встретились с мальчиком-лисом в штаб-квартире энфорсеров, чтобы узнать, что он получил повышение и занял место Элль."
+					+ " В награду за помощь он предоставил вам доступ в отдел заявок штаба энфорсеров."
+					+ " Теперь вы можете свободно посещать Уэса в штаб-квартире энфорсеров в часы [units.time(9)]-[units.time(17)].";
 		}
 	},
 
 	WES_3_ELLE(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Sided with Elle";
+			return "На стороне Элль";
 		}
 		@Override
 		public String getDescription() {
-			return "You decided to betray Wes and reveal everything to Elle."
-					+ " Thankful for your unexpected support, the [elle.race] promised to reward you if you return to the Enforcer HQ after at least a week has passed...";
+			return "Ты решил предать Уэса и раскрыть все Эль."
+					+ " Благодарная за неожиданную поддержку, [elle.race] пообещала вознаградить вас, если вы вернетесь в штаб-квартиру энфорсеров по истечении хотя бы недели...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You sided with Elle, and after returning to meet with her at the Enforcer HQ, you discovered that Wes has been enslaved."
-					+ " Thankful for your support, the [elle.race] has granted you access to the Enforcer HQ's requisitions area."
-					+ " You can also now freely visit Elle (and Wes) in the Enforcer HQ between the hours of [units.time(9)]-[units.time(17)].";
+			return "Вы встали на сторону Элль и, вернувшись на встречу с ней в штаб-квартиру энфорсеров, обнаружили, что Уэс попал в рабство."
+					+ " В благодарность за вашу поддержку [elle.race] предоставила вам доступ в отдел заявок штаба энфорсеров."
+					+ " Теперь вы можете свободно посещать Элль (и Уэса) в штаб-квартире Энфорсера в часы [units.time(9)]-[units.time(17)].";
 		}
 	},
 
@@ -1687,15 +1687,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Hit The Lever!";
+			return "Жми на рычаг!";
 		}
 		@Override
 		public String getDescription() {
-			return "You found a strange handle in the Bat Caverns. Who knows what it's for or what it does.";
+			return "В пещерах летучих мышей вы нашли странную рукоятку. Кто знает, для чего она нужна или что она делает.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You pulled the handle against your better judgement.";
+			return "Вы потянули за ручку вопреки здравому смыслу.";
 		}
 	},
 
@@ -1704,15 +1704,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Pull Handle, Receive Mystery";
+			return "Тяни рычаг, узнай секрет";
 		}
 		@Override
 		public String getDescription() {
-			return "The strange handle asked for some kind of password that you don't have. Perhaps a bit of searching in the vicinity will reveal some clues.";
+			return "Странный рычаг запросил какой-то пароль, которого у вас нет. Возможно, поиски поблизости позволят найти какие-то подсказки.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You found half of a journal page that mentioned that the password is two words. You could only decipher one word, the other got torn away.";
+			return "Вы нашли половину страницы журнала, на которой говорилось, что пароль состоит из двух слов. Вы смогли расшифровать только одно слово, второе было оторвано.";
 		}
 	},
 
@@ -1721,15 +1721,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Fill In The Blank";
+			return "Заполнить пробел";
 		}
 		@Override
 		public String getDescription() {
-			return "The other half of the password must be on the other half of the journal page. Perhaps it can still be found nearby.";
+			return "Вторая половина пароля должна быть на другой половине страницы журнала. Возможно, ее еще можно найти поблизости.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You found both halves of the password, together they make the phrase 'RUAT CAELUM'";
+			return "Вы нашли обе половины пароля, вместе они составляют фразу «RUAT CAELUM».";
 		}
 	},
 
@@ -1738,15 +1738,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Open Says Me";
+			return "Сезам, откройся!";
 		}
 		@Override
 		public String getDescription() {
-			return "With the completed password, you can now give the handle's challenge another try.";
+			return "Теперь, когда пароль известен, вы можете попробовать дернуть рычаг еще раз.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You discovered that the handle was actually attached to a door that led to a hidden cave splitting off from the Bat Caverns.";
+			return "Вы обнаружили, что рычаг был прикреплен к двери, которая вела в скрытую пещеру, отходящую от пещер летучих мышей.";
 		}
 	},
 
@@ -1755,15 +1755,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Going Spelunking";
+			return "Погружение в спелеологию";
 		}
 		@Override
 		public String getDescription() {
-			return "No telling what the hidden cave is for or where it goes. Perhaps you can find some answers inside.";
+			return "Неизвестно, для чего нужна эта скрытая пещера и куда она ведет. Возможно, вы сможете найти в ней ответы.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You found out that the hidden cave was a hideout for a long gone rebel group. From the looks of things, they didn't win.";
+			return "Вы узнали, что скрытая пещера была убежищем давно исчезнувшей группы повстанцев. Судя по всему, они не победили.";
 		}
 	},
 
@@ -1772,15 +1772,15 @@ public enum Quest {
 			100) {
 		@Override
 		public String getName() {
-			return "Getting Away With It";
+			return "Выйти сухим из воды";
 		}
 		@Override
 		public String getDescription() {
-			return "Time to make your escape, preferably before this cave collapses in on itself.";
+			return "Пора бежать, желательно до того, как эта пещера обрушится...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You managed to get out in one piece. Whatever else that cave held is now buried forever.";
+			return "Вам удалось выбраться целым и невредимым. Все остальное, что хранилось в этой пещере, теперь похоронено навсегда.";
 		}
 	},
 
@@ -1789,11 +1789,11 @@ public enum Quest {
 			0) {
 		@Override
 		public String getName() {
-			return "Cold Feet";
+			return "Холодные ноги";
 		}
 		@Override
 		public String getDescription() {
-			return "You managed to get out in one piece, but whatever secrets that cave held are now buried forever.";
+			return "Вам удалось выбраться целым и невредимым, но все секреты, которые хранила эта пещера, теперь похоронены навсегда.";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -1806,15 +1806,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Breaking Bombs";
+			return "Во все взрывные";
 		}
 		@Override
 		public String getDescription() {
-			return "The firebombs you got from the mysterious cave could come in handy in a fight. You'll need to find someone who can either make or acquire more.";
+			return "Огненные бомбы, которые вы добыли в таинственной пещере, могут пригодиться в бою. Вам нужно найти того, кто сможет их сделать или продать.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Roxy has agreed to look into getting more firebombs for you.";
+			return "Рокси согласилась поискать для вас новые зажигательные бомбы.";
 		}
 	},
 
@@ -1823,15 +1823,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Fire From The Rats";
+			return "Огонь от крыс";
 		}
 		@Override
 		public String getDescription() {
-			return "It will take Roxy two days to get a new supply of firebombs going. You should return to her then.";
+			return "Рокси понадобится два дня, чтобы собрать новый запас зажигательных бомб. Тогда вам следует вернуться к ней.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Somehow, Roxy didn't swindle you and you've gotten yourself a supply of firebombs.";
+			return "Каким-то образом Рокси не обманула вас, и вы раздобыли запас зажигательных бомб.";
 		}
 	},
 
@@ -1840,11 +1840,11 @@ public enum Quest {
 			0) {
 		@Override
 		public String getName() {
-			return "Roxy's Reluctance";
+			return "Нежелание Рокси";
 		}
 		@Override
 		public String getDescription() {
-			return "Without an example to give to Roxy, she either couldn't understand or didn't want to be bothered with trying to replicate the firebombs you found...";
+			return "Без образца, который можно было бы принести Рокси, она либо не поняла, либо не захотела возиться с попытками повторить найденные вами зажигательные бомбы...";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -1859,15 +1859,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "Gathering Materials";
+			return "Сбор материалов";
 		}
 		@Override
 		public String getDescription() {
-			return "You've learned what Eisek needs to fix up his stall, as well as what he would like on a new sign. Now you just need to gather some materials from the merchants around town for a nice surprise. Maybe there's one that deals in fabric?";
+			return "Вы узнали, что нужно Эйсеку для ремонта его ларька, а также что он хотел бы видеть на новой вывеске. Теперь вам осталось собрать материалы у торговцев в городе, чтобы сделать приятный сюрприз. Может быть, здесь есть тот, кто торгует тканями?";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You've ordered a new sign and some bolts of cloth from Monica.";
+			return "Вы заказали у Моники новую вывеску и несколько кусков ткани.";
 		}
 	},
 	
@@ -1876,15 +1876,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "Need an Awning Here";
+			return "Нужен тент";
 		}
 		@Override
 		public String getDescription() {
-			return "While you're waiting for Monica to finish your order, you need to find some wooden poles for the awning. Perhaps the local smithy could modify the haft of a polearm could be modified somehow?";
+			return "Пока Моника оформляет заказ, вам стоит поискать деревянные столбы для навеса. В местной кузнице, возможно, смогут модифицировать соединение.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You've placed an order with Imsu and Hale for some modified axe hafts.";
+			return "Вы разместили заказ в компании «Имсу и Хейл» на модифицированные соединения.";
 		}
 	},
 	
@@ -1893,15 +1893,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "It's All Coming Together";
+			return "Все сходится";
 		}
 		@Override
 		public String getDescription() {
-			return "You should check back in with Hale in a day and Monica in three days to see if your order is ready yet.";
+			return "Вам следует зайти к Хейлу через день, а к Монике - через три дня, чтобы узнать, готов ли ваш заказ.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You've gathered all the materials.";
+			return "Вы собрали все материалы.";
 		}
 	},
 	
@@ -1910,15 +1910,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "Putting it all together";
+			return "Собираем все воединоr";
 		}
 		@Override
 		public String getDescription() {
-			return "You have what you need to improve Eisek's stall. Tell him about it the next time you see him.";
+			return "У вас есть все необходимое, чтобы улучшить стойку Айзека. Расскажите ему об этом, когда увидите его в следующий раз.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "As far as you could tell, Eisek was overjoyed at what you've done for him and his stall looks better than ever.";
+			return "Насколько вы могли судить, Айзек был очень рад тому, что вы для него сделали, и его ларек выглядит лучше, чем когда-либо.";
 		}
 	},
 	
@@ -1927,16 +1927,16 @@ public enum Quest {
 			25) {
 		@Override
 		public String getName() {
-			return "One against Many";
+			return "Все против одного";
 		}
 		@Override
 		public String getDescription() {
-			return "Eisek explained why there was a mob hounding him, but he doesn't know much about them. If you want to make sure they don't come back, you'll have to find them and confront them."
-					+ "<br/>As they seemed to be comprised of locals, maybe a search around town will do the trick.";
+			return "Айзек объяснил, почему его преследует толпа, но он мало что о них знает. Если вы хотите быть уверены, что они не вернутся, вам придется найти их и встретиться с ними лицом к лицу."
+					+ "<br/>Поскольку, судя по всему, они состояли из местных жителей, возможно, поиск по городу поможет.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Through a bit of luck and the mob putting up a big colourful poster, you've found and entered their meeting place.";
+			return "Благодаря удаче и тому, что толпа вывесила большой красочный плакат, вы нашли место их встречи.";
 		}
 	},
 	
@@ -1945,28 +1945,28 @@ public enum Quest {
 			100) {
 		@Override
 		public String getName() {
-			return "Leave the Dragon Alone!";
+			return "Оставьте дракона в покое!";
 		}
 		@Override
 		public String getDescription() {
-			return "You've found where the mob has been meeting. Time to handle them!";
+			return "Вы нашли место, где собиралась толпа. Пора с ними разобраться!";
 		}
 		@Override
 		public String getCompletedDescription() {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("dsg_elis_eisek_mob_quest_intimidate"))) {
-			    return "You decided to try and convince the mob to leave Eisek alone with your intimidating physique.";
+			    return "Вы решили попытаться убедить толпу оставить Айзека в покое своим устрашающим телосложением.";
 			} else if (Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("dsg_elis_eisek_mob_quest_intimidate_arcane"))) {
-			    return "You decided to try and convince the mob to leave Eisek alone with your arcane prowess.";
+			    return "Вы решили попытаться убедить толпу оставить Айзека в покое с помощью своего магического мастерства.";
 			} else if (Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("dsg_elis_eisek_mob_quest_persuade"))) {
 			    if(!Main.game.isSillyModeEnabled()) {
-			    	return "You convinced the mob to leave Eisek alone with a heartfelt speech.";
+			    	return "Вы убедили толпу оставить Айзека в покое, произнеся проникновенную речь.";
 			    } else {
-			    	return "You destroyed the mob's arguments with FACTS and LOGIC.";
+			    	return "Вы уничтожили аргументы толпы с помощью ФАКТОВ и ЛОГИКИ.";
 			    }
 			} else if (Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("dsg_elis_eisek_mob_quest_seduce"))) {
-			    return "You convinced the mob to leave Eisek alone by using your mastery of lust magic to fuel an orgy.";
+			    return "Вы убедили толпу оставить Айзека в покое, используя свое мастерство в магии похоти для разжигания оргии.";
 			} else {
-			    return "You weren't able to convince the mob to leave Eisek alone.";
+			    return "Вы не смогли убедить толпу оставить Айзека в покое.";
 			}
 		}
 	},
@@ -1976,15 +1976,15 @@ public enum Quest {
 			0) {
 		@Override
 		public String getName() {
-			return "Tossed Out";
+			return "Туда его!";
 		}
 		@Override
 		public String getDescription() {
-			return "You weren't able to convince the mob to leave Eisek alone. You should return to him with the bad news now that you weren't able to handle the mob.";
+			return "Вы не смогли убедить толпу оставить Айзека в покое. Вам следует вернуться к нему с плохими новостями, раз уж вы не смогли справиться с толпой.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You weren't able to convince the mob to leave Eisek alone.";
+			return "Вы не смогли убедить толпу оставить Айзека в покое.";
 		}
 	},
 	
@@ -1993,7 +1993,7 @@ public enum Quest {
 			0) {
 		@Override
 		public String getName() {
-			return "Bad News";
+			return "Плохие новости";
 		}
 		@Override
 		public String getDescription() {
@@ -2001,7 +2001,7 @@ public enum Quest {
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Although he tried to hide it, Eisek seemed upset that the mob is still somewhere out there plotting against him.";
+			return "Хотя он и пытался скрыть это, Айзек, похоже, был расстроен тем, что толпа все еще где-то там, в заговоре против него.";
 		}
 	},
 	
@@ -2010,15 +2010,15 @@ public enum Quest {
 			250) {
 		@Override
 		public String getName() {
-			return "Good News";
+			return "Хорошие новости";
 		}
 		@Override
 		public String getDescription() {
-			return "You should return to Eisek with the good news now that you've handled the mob.";
+			return "Вам следует вернуться к Айзеку с хорошими новостями, раз уж вы разобрались с толпой.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Although he tried to hide it, Eisek seemed pretty happy that the mob will now leave him alone. You even got some rare Dragonfruit.";
+			return "Хотя Айзек и пытался скрыть это, он выглядел очень довольным тем, что теперь толпа оставит его в покое. Вы даже получили несколько редких плодов дракона.";
 		}
 	},
 	
@@ -2027,15 +2027,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "Strange Crowd";
+			return "Странная толпа";
 		}
 		@Override
 		public String getDescription() {
-			return "You encountered a different sort of mob that was weirdly obsessed with Eisek. It ultimately came to nothing but you've decided to see what these strange people were all about.";
+			return "Вы столкнулись с толпой другого рода, которая была странно одержима Айзеком. В итоге все закончилось ничем, но вы решили узнать, чем занимаются эти странные люди.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You've entered some sort of basement where they've gathered.";
+			return "Вы попали в какой-то подвал, где они собрались.";
 		}
 	},
 	
@@ -2044,15 +2044,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "Darkest Dungeon";
+			return "Темнейшее подземелье";
 		}
 		@Override
 		public String getDescription() {
-			return "You've followed the basement dwellers back to their basement and decided to have a look inside. Unfortunately they didn't appreciate your trespassing very much and have blocked off the way you came.";
+			return "Вы проследили за обитателями подвала и решили заглянуть внутрь. К сожалению, они не очень-то оценили ваше вторжение и заблокировали путь, по которому вы пришли.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You're nearly at the exit, only one obstacle remains...";
+			return "Вы почти у выхода, осталось только одно препятствие...";
 		}
 	},
 	
@@ -2061,15 +2061,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "Dungeon Cleared";
+			return "Подземелье очищено";
 		}
 		@Override
 		public String getDescription() {
-			return "Having defeated the leader of this strange group, all that's left for you to leave.";
+			return "Победив лидера этой странной группы, вам остается только уйти.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You've successfully escaped the dungeon and shown a bunch of nerds who is the boss.";
+			return "Вы успешно выбрались из подземелья и показали кучке задротов, кто здесь хозяин.";
 		}
 	},
 	
@@ -2078,27 +2078,27 @@ public enum Quest {
 	OGLIX_BEER_BARRELS_1(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Kheiron's Barrels";
+			return "Бочки Хейрона";
 		}
 		@Override
 		public String getDescription() {
-			return "Having agreed to help Oglix expand her selection of beer-bitches, you've been tasked with travelling to the tavern, 'The Centaur's Sword', and asking the owner, Kheiron, for any spare barrels he might have."
-					+ " If he refuses to help, Golix instructed you to tell the centaur that 'Golix says to be a good horsie'.";
+			return "Согласившись помочь Огликс расширить выбор пивных сучек, вы должны отправиться в таверну «Меч кентавра» и попросить у ее владельца Хейрона свободные бочки."
+					+ " Если он откажется помочь, Голикс велел вам передать кентавру, что «Голикс велел быть хорошей лошадкой».";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Thanks to the special phrase 'Golix says to be a good horsie', you managed to convince Kheiron to send four spare barrels to Oglix's tavern.";
+			return "Благодаря специальной фразе «Голикс велел быть хорошей лошадкой» вам удалось убедить Хейрона отправить четыре запасных бочонка в таверну Огликса.";
 		}
 	},
 	
 	OGLIX_BEER_BARRELS_2(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Good Horsie Report";
+			return "Доклад хорошей лошадки";
 		}
 		@Override
 		public String getDescription() {
-			return "Having secured Kheiron's assistance, you now need to return to Oglix and inform her that Kheiron chose to be 'a good horsie' for Golix.";
+			return "Заручившись помощью Хейрона, вам теперь нужно вернуться к Огликс и сообщить ей, что Хейрон решил стать «хорошей лошадкой» для Голикса.";
 		}
 		@Override
 		public String getCompletedDescription() {
