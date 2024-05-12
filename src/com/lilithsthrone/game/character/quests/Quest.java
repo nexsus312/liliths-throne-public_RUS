@@ -148,17 +148,17 @@ public enum Quest {
 	MAIN_1_E_REPORT_TO_HELENA(QuestType.MAIN, 3, 30) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; Find Helena";
+			return "В поисках Артура; Найти Елену";
 		}
 		@Override
 		public String getDescription() {
-			return "After finding Scarlett in Slaver Alley, you discovered that she's no longer in possession of Arthur."
-					+ " Before she'll tell you anything about it, she wants you to go to the Harpy Nests and report to her matriarch, Helena, that her business is a complete failure";
+			return "Найдя Скарлетт на Аллее рабов, вы обнаружили, что она больше не владеет Артуром."
+					+ " Прежде чем она расскажет вам подробности, она хочет, чтобы вы отправились в гнезда гарпий и доложили матриарху, Елене, что ее бизнес потерпел полное фиаско.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You reported Scarlett's problems to her matriarch, Helena."
-					+ " She didn't seem to have much sympathy for Scarlett, and quickly flew off to go and talk to her in person.";
+			return "Вы сообщили о проблемах Скарлетт ее матриарху, Елене."
+					+ " Похоже, она не испытывала особого сочувствия к Скарлетт и быстро улетела, чтобы поговорить с ней лично.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -170,15 +170,15 @@ public enum Quest {
 	MAIN_1_F_SCARLETTS_FATE(QuestType.MAIN, 3, 30) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; Scarlett's fate";
+			return "Поиски Артура; судьба Скарлетт";
 		}
 		@Override
 		public String getDescription() {
-			return "You need to travel back to Scarlett's shop to find out what's become of her. Hopefully Helena wasn't too hard on her, and she'll be willing to tell you what happened to Arthur now...";
+			return "Вам нужно вернуться в магазин Скарлетт, чтобы узнать, что с ней стало. Надеюсь, Елена не была слишком жестока с ней, и она сможет рассказать вам, что случилось с Артуром...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You travelled back to Scarlett's shop, only to discover that Helena has enslaved her!";
+			return "Вы вернулись в магазин Скарлетт, но обнаружили, что Елена поработила ее!";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -195,16 +195,16 @@ public enum Quest {
 	MAIN_1_G_SLAVERY(QuestType.MAIN, 3, 30) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; Slavery";
+			return "Поиски Артура; Рабство";
 		}
 		@Override
 		public String getDescription() {
-			return "Helena is willing to sell Scarlett to you, which seems to be the only way you'll get the information you need."
-					+ " You'll need to have a slaver license in order to buy Scarlett.";
+			return "Елена готова продать вам Скарлетт, и это, похоже, единственный способ получить нужную информацию."
+					+ " Чтобы купить Скарлетт, вам понадобится лицензия рабовладельца.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Helena sold Scarlett to you, which allowed you to order Scarlett to tell you what happened to Arthur.";
+			return "Елена продала вам Скарлетт, что позволило вам приказать Скарлетт рассказать, что случилось с Артуром.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -244,16 +244,16 @@ public enum Quest {
 	MAIN_1_H_THE_GREAT_ESCAPE(QuestType.MAIN, 10, 200) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; The Great Escape";
+			return "Поиски Артура; Великий побег";
 		}
 		@Override
 		public String getDescription() {
-			return "It turns out that Arthur was sold to an extremely dangerous demon called Zaranix, who lives in Demon Home."
-					+ " You'll need to travel to demon home and rescue Arthur!";
+			return "Оказывается, Артур был продан чрезвычайно опасному демону по имени Зараникс, который живет в Доме демонов."
+					+ " Вам предстоит отправиться в дом демона и спасти Артура!";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "After defeating Zaranix, you saved Arthur and brought him back to Lilaya's home.";
+			return "Победив Зараникса, вы спасли Артура и вернули его в дом Лилайи.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -265,19 +265,19 @@ public enum Quest {
 	MAIN_1_I_ARTHURS_TALE(QuestType.MAIN, 1, 30) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; Conclusion";
+			return "Поиски Артура; Заключение";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Now that you've rescued Arthur from the clutches of Zaranix, you should travel back to Lilaya's home and get the full story of what happened from him.";
+			return "Теперь, когда вы спасли Артура из лап Зараникса, вам следует вернуться в дом Лилайи и узнать о том что с ним произошло.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Arthur explained how he was dabbling in the forbidden art of teleportation spells."
-					+ " Through one of his agents, Zaranix found out about this, and had no difficulty in getting Arthur enslaved for treason."
-					+ " Now that you've rescued him, he's keen to repay the favour by finding out how to send you back home.";
+			return "Артур объяснил, что занимается запретным искусством телепортационных заклинаний."
+					+ " Через одного из своих агентов Зараникс узнал об этом, и ему не составило труда обратить Артура в рабство за измену."
+					+ " Теперь, когда вы спасли его, он хочет отплатить вам за услугу, выяснив, как отправить вас обратно домой.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -290,16 +290,16 @@ public enum Quest {
 	MAIN_1_J_ARTHURS_ROOM(QuestType.MAIN, 1, 30) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; A room of his own";
+			return "Поиски Артура; Собственная комната";
 		}
 		@Override
 		public String getDescription() {
-			return "Lilaya really doesn't want Arthur in her lab, and has tasked you to help Rose find a suitable room for him to stay in.<br/>"
-					+ "<i>Go into one of the empty rooms in Lilaya's House, and through the room management window, upgrade it to 'Arthur's Room'.</i>";
+			return "Лилайя очень не хочет видеть Артура в своей лаборатории и поручила вам помочь Розе найти подходящую комнату для его проживания.<br/>"
+					+ "<i>Зайдите в одну из пустых комнат в доме Лилайи и через окно управления комнатой улучшите ее до «Комнаты Артура».</i>";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You located a suitable room for Arthur, and, with Rose's help, moved a significant amount of arcane instrumentation into his new lab-cum-bedroom.";
+			return "Вы нашли подходящую комнату для Артура и, с помощью Розы, перенесли значительное количество колдовских приборов в его новую лабораторию-спальню.";
 		}
 	},
 	
@@ -307,18 +307,18 @@ public enum Quest {
 	MAIN_2_A_INTO_THE_DEPTHS(QuestType.MAIN, 1, 10) {
 		@Override
 		public String getName() {
-			return "Into Submission";
+			return "В подземный город Покорности";
 		}
 		@Override
 		public String getDescription() {
-			return "Arthur was able to explain the mechanism by which you were transported into this new world, but he seemed to hold back on some of the details."
-					+ " He said that he'd explain everything fully once he knew for certain what was going on, but in order for that to happen, he'll need to talk to one of the seven elder Lilin."
-					+ " After much arguing, Lilaya agreed to convince her mother to help, but you'll have to be the one to deliver the message.<br/>"
-					+ "<i>Travel down into the undercity of Submission and seek an audience with Lilaya's mother, Lyssieth.</i>";
+			return "Артур смог объяснить механизм, с помощью которого вы были перенесены в этот новый мир, но, кажется, он умолчал о некоторых деталях."
+					+ " Он сказал, что объяснит все до конца, как только точно узнает, что происходит, но для этого ему нужно будет поговорить с одной из семи старших Лилин."
+					+ " После долгих споров Лилайя согласилась убедить свою мать помочь, но передавать сообщение придется вам.<br/>"
+					+ "<i>Спуститесь в подземный город Покорности и попросите аудиенции у матери Лилайи, Лиссиет.</i>";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Acting on Arthur's advice, you ventured down into Submission and discovered the location of Lyssieth's palace.";
+			return "По совету Артура вы спустились в Покорность и обнаружили, где находится дворец Лисиет.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -329,18 +329,18 @@ public enum Quest {
 	MAIN_2_B_SIRENS_CALL(QuestType.MAIN, 25, 300) {
 		@Override
 		public String getName() {
-			return "The Siren's Call";
+			return "Зов сирены";
 		}
 		@Override
 		public String getDescription() {
-			return "The guards at the gate to Lyssieth's palace told you that she's not receiving any visitors at the moment."
-					+ " The only way to gain an audience with her would be to take care of her troublesome daughter; 'The Dark Siren'."
-					+ " She's currently living in a stone fortress in one of the central tunnels here in Submission, from which she sends out gangs of imps to terrorise innocent citizens.</br>"
-					+ "If you're able to enslave her, either through combat or trickery, you'll have earned an audience with Lyssieth.";
+			return "Стражники у ворот дворца Лисиет сказали вам, что сейчас она не принимает гостей."
+					+ " Единственный способ добиться ее аудиенции - позаботиться о ее проблемной дочери, «Темной сирене»."
+					+ " Сейчас она живет в каменной крепости в одном из центральных туннелей Покорности, откуда посылает банды импов терроризировать невинных жителей.</br>"
+					+ "Если вам удастся поработить ее в прямом бою или используя хитрость, вы заслужите аудиенцию у Лисиет.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You managed to enslave Lyssieth's troublesome daughter, and so earned an audience with her!";
+			return "Вы сумели поработить проблемную дочь Лиссиет и заслужили аудиенцию!";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -371,18 +371,18 @@ public enum Quest {
 	MAIN_2_C_SIRENS_FALL(QuestType.MAIN, 1, 10) {
 		@Override
 		public String getName() {
-			return "The Siren's Fall";
+			return "Падение сирены";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Return to Lyssieth's palace and report to the guards that you've enslaved 'The Dark Siren'."
-					+ " This should be enough to grant you an audience with Lyssieth.";
+			return "Вернитесь во дворец Лисиет и доложите стражникам, что вы поработили «Темную сирену»."
+					+ " Этого должно быть достаточно, чтобы вы получили аудиенцию у Лисиет.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "For enslaving 'The Dark Siren', the guards at the gate to Lyssieth's palace gave you permission to enter and seek out an audience with her.";
+			return "За то, что вы поработили «Темную сирену», стражники у ворот дворца Лисиет дали вам разрешение войти и получить аудиенцию.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -398,17 +398,17 @@ public enum Quest {
 	MAIN_2_D_MEETING_A_LILIN(QuestType.MAIN, 1, 100) {
 		@Override
 		public String getName() {
-			return "Meeting a Lilin";
+			return "Встреча с Лилин";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Travel to Lyssieth's throne room and try to finally get some answers about why you're here and how you can return to your old world.";
+			return "Отправляйтесь в тронный зал Лисиет и попытайтесь наконец получить ответы на вопросы о том, почему вы здесь и как можно вернуться в свой прежний мир.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Lyssieth revealed that this world is in fact your own, and that Lilith transformed it into a different reality when she was released from the mirror.";
+			return "Лиссиет рассказала, что этот мир на самом деле ваш собственный, и что Лилит превратила его в другую реальность, когда вышла из зеркала.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -428,18 +428,18 @@ public enum Quest {
 	MAIN_3_ELIS(QuestType.MAIN, 1, 25) {
 		@Override
 		public String getName() {
-			return "Destination Elis";
+			return "Пункт назначения Элис";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Lyssieth told you that in order to defeat the elder lilin pegataur, Lunette, you'll need to obtain the help of Minotallys; the lilin who rules the town of Elis."
-					+ " Meraxis additionally mentioned enlisting the aid of the youko, but that can wait until after you've arrived in Elis itself.";
+			return "Лиссиет рассказала вам, что для того, чтобы победить старшую лилин-пегатаур Лунетт, вам нужно заручиться помощью Миноталлис - лилин, которая правит городом Элис."
+					+ " Мераксис также упоминала о помощи юко, но это может подождать до прибытия в Элис.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Lyssieth told you that in order to defeat the elder lilin pegataur, Lunette, you'll need to obtain the help of Minotallys; the lilin who rules the town of Elis."
-					+ " To this end, you left Dominion for the first time...";
+			return "Лиссиет рассказала вам, что для того, чтобы победить старшую лилин-пегатаур Лунетт, вам нужно заручиться помощью Миноталлис - лилин, которая правит городом Элис."
+					+ " С этой целью вы впервые покинули Доминион...";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -450,18 +450,18 @@ public enum Quest {
 	MAIN_3_B_MEETING_MERAXIS(QuestType.MAIN, 1, 25) {
 		@Override
 		public String getName() {
-			return "To The Red Dragon";
+			return "К красному дракону";
 		}
 
 		@Override
 		public String getDescription() {
-			return "As you left Dominion, you were approached by Meraxis, who told you to meet her in the tavern 'The Red Dragon' at Elis, which is apparently near to the town's eastern gate."
-					+ " Meraxis also said that she'll set up a meeting with Minotallys when you arrive, and that she'll have secured accommodation for you.";
+			return "Когда вы покидали Доминион, к вам обратилась Мераксис, которая сказала, чтобы вы встретились с ней в таверне «Красный дракон» в Элис, который, судя по всему, находится недалеко от восточных ворот города."
+					+ " Мераксис также сказала, что договорится о встрече с Миноталлис, когда вы прибудете, и что она обеспечит вас жильем.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You met Meraxis in 'The Red Dragon' tavern, where she's managed to secure accommodation for you in the form of a rented room on the tavern's first floor.";
+			return "Вы встретили Мераксис в таверне «Красный дракон», где ей удалось найти для вас жилье в виде арендованной комнаты на втором этаже таверны.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -472,19 +472,19 @@ public enum Quest {
 	MAIN_3_C_MEETING_MINOTALLYS(QuestType.MAIN, 1, 25) {
 		@Override
 		public String getName() {
-			return "Meeting Minotallys";
+			return "Встреча с Миноталлис";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Meraxis has arranged for you to meet with Minotallys concerning the threat of Lunette to the town of Elis."
-					+ " Tell Meraxis that you're ready for the meeting at any time between [units.time(9)]-[units.time(18)].";
+			return "Мераксис организовала для вас встречу с Миноталлис по поводу угрозы, которую Лунетт представляет для города Элис."
+					+ " Сообщите Мераксис, что вы готовы к встрече в любое время между [units.time(9)]-[units.time(18)].";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You and Meraxis travelled to Elis's town hall to meet Minotallys, where you also met with her personal assistant, Arion."
-					+ " Minotallys is in a state of denial about the current state of affairs in the Foloi Fields, and stated that she would only consider taking action if the town of Themiscyra was somehow being threatened.";
+			return "Вы с Мераксис отправились в ратушу Элис на встречу с Миноталлис, где также встретились с ее личным помощником Арионом."
+					+ " Миноталлис отрицает текущее положение дел на Фолойских полях и заявила, что будет действовать только в том случае, если город Фемискира окажется под угрозой.";
 		}
 		@Override
 		public void applySkipQuestEffects() {
