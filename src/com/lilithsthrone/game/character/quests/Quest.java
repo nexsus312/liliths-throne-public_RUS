@@ -942,66 +942,66 @@ public enum Quest {
 	HARPY_PACIFICATION_ONE(QuestType.SIDE, 6, 25) {
 		@Override
 		public String getName() {
-			return "Nests in chaos";
+			return "Гнезда в хаосе";
 		}
 
 		@Override
 		public String getDescription() {
-			return "The Enforcer informed you that the Harpy Nests are extremely dangerous at the moment."
-					+ " Upon further questioning, you discovered that there's a hefty reward for the person who's able to calm the three main matriarchs down.";
+			return "Инфорсер сообщил вам, что гнезда гарпий сейчас очень опасны."
+					+ " После дальнейших расспросов вы узнали, что того, кто сумеет успокоить трех главных матриархов, ждет крупная награда.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You've managed to assume control of one of the harpy nests!";
+			return "Вам удалось вернуть контроль одному гнезду гарпий!";
 		}
 	},
 	HARPY_PACIFICATION_TWO(QuestType.SIDE, 6, 25) {
 		@Override
 		public String getName() {
-			return "One down, two to go";
+			return "Минус одно, два осталось";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You've managed to reign in one of the matriarchs, but there are still two more to go!";
+			return "Вам удалось подчинить себе одну из матриархов, но осталось еще две!";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You've managed to assume control of two of the harpy nests!";
+			return "Вам удалось вернуть контроль над двумя гнездами гарпий!";
 		}
 	},
 	HARPY_PACIFICATION_THREE(QuestType.SIDE, 6, 25) {
 		@Override
 		public String getName() {
-			return "One matriarch left";
+			return "Осталась одна матриарх";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You've managed to reign in two of the matriarchs, but there's still one more to go!";
+			return "Вам удалось подчинить себе двух матриархов, но осталась еще одна!";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You've managed to assume control of all three of the major harpy nests!";
+			return "Вам удалось вернуть контроль всем трем крупных гнездам гарпий!";
 		}
 	},
 	HARPY_PACIFICATION_REWARD(QuestType.SIDE, 6, 50) {
 		@Override
 		public String getName() {
-			return "Harpy "+(Main.game.getPlayer().isFeminine()?"queen":"king");
+			return "Гарпия "+(Main.game.getPlayer().isFeminine()?"королева":"король");
 		}
 
 		@Override
 		public String getDescription() {
-			return "Return to the Enforcer post to report your success.";
+			return "Вернитесь на пост энфорсеров, чтобы сообщить о своем успехе.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "After informing the Enforcers that you've pacified all three of the major harpy nests, they resumed their regular patrols, resulting in the Harpy Nests being safe to travel through!";
+			return "После того как вы сообщили энфорсерам, что умиротворили все три крупных гнезда гарпий, они возобновили регулярное патрулирование, и теперь по гнездам гарпий можно путешествовать!";
 		}
 	},
 	
@@ -1012,176 +1012,176 @@ public enum Quest {
 	SLIME_QUEEN_ONE(QuestType.SIDE, 10, 25) {
 		@Override
 		public String getName() {
-			return "Troublesome Slimes";
+			return "Проблемные слизни";
 		}
 
 		@Override
 		public String getDescription() {
-			return "When you first arrived in Submission, an Enforcer named Claire informed you of an ongoing situation in the tunnels."
-					+ " Apparently, there are an increasing number of Slimes who are attacking innocent travellers and transforming them into more Slimes."
-					+ " If you're able to offer any information on where these aggressive Slimes are coming from, you could earn a five-thousand flame reward."
+			return "Когда вы только прибыли в Покорность, энфорсер по имени Клэр сообщила вам о ситуации, сложившейся в туннелях."
+					+ " Судя по всему, растет число слизней, которые нападают на невинных путешественников и превращают их в новых слизней."
+					+ " Если вы сможете предоставить какую-либо информацию о том, откуда берутся эти агрессивные слизни, вы сможете получить вознаграждение в размере пяти тысяч пламен."
 					+ "<br/>"
-					+ "<p style='text-align:center;'><i>You'll need to defeat a slime in <b>Submission's tunnels</b> to find out more.</i></p>";
+					+ "<p style='text-align:center;'><i>Вам нужно победить слизней в <b>туннелях Покорности</b> чтобы узнать больше подробностей.</i></p>";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "One of the Slimes that you encountered in the tunnels told you that they'd been given orders to transform people by a certain 'Slime Queen'.";
+			return "Один из слизней, с которым вы столкнулись в туннелях, рассказал вам, что приказ превращать людей им дала некая «Королева слизи».";
 		}
 	},
 	
 	SLIME_QUEEN_TWO(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Report Back";
+			return "Отчитаться";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You should report back to one of Submission's Enforcer Posts with this information regarding a 'Slime Queen'.";
+			return "Вам необходимо передать информацию о «Королеве слизи» в один из постов энфорсеров в Покорности.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "The Enforcer that you reported to told you that they'd heard rumours of a Slime Queen before, but no trace of any such thing has ever been found in Submission."
-					+ " They suggested that you could take a look down in the Bat Caverns, and offered you a further twenty-thousand flames if you could find this Queen and put an end to her scheming.";
+			return "Энфорсер, к которому вы обратились, сказал вам, что до них доходили слухи о Королеве слизи, но в Покорности не было найдено никаких следов этого существа."
+					+ " Они предложили вам посетить пещеры летучих мышей и пообещали дополнительно 20 тысяч пламени, если вы сможете отыскать эту королеву и положить конец её проискам.";
 		}
 	},
 	
 	SLIME_QUEEN_THREE(QuestType.SIDE, 15, 25) {
 		@Override
 		public String getName() {
-			return "Finding the Slime Queen";
+			return "Поиск королевы слизней";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Travel down into the Bat Caverns and search for the rumoured Slime Queen.";
+			return "Спуститесь в пещеры летучих мышей и разыщите королеву слизней, о которой ходят слухи.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "In the middle of Slime Lake, you discovered the Slime Queen's lair!";
+			return "В центре озера слизи вы обнаружили логово Королевы слизней!";
 		}
 	},
 	
 	SLIME_QUEEN_FOUR(QuestType.SIDE, 20, 50) {
 		@Override
 		public String getName() {
-			return "Confront the Queen";
+			return "Противостояние королеве";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Travel up the tower and find the Slime Queen.";
+			return "Поднимитесь на башню и найдите королеву слизней.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You found the Slime Queen at the top of the tower.";
+			return "Вы нашли Королеву слизней на вершине башни.";
 		}
 	},
 	
 	SLIME_QUEEN_FIVE_SUBMIT(QuestType.SIDE, 1, 25) {
 		@Override
 		public String getName() {
-			return "Help the Queen";
+			return "Помочь королеве";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You decided to help the Slime Queen with her plans of transforming Submission's population into slimes.";
+			return "Вы решили помочь Королеве слизи в ее планах по превращению населения Покорности в слизней.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You decided to help the Slime Queen with her plans, and agreed to trick the Enforcers into believing that she's no longer a threat!";
+			return "Вы решили помочь Королеве слизней в ее планах и согласились обмануть энфорсеров, чтобы они поверили, что она больше не представляет угрозы!";
 		}
 	},
 	
 	SLIME_QUEEN_SIX_SUBMIT(QuestType.SIDE, 1, 200) {
 		@Override
 		public String getName() {
-			return "Final Report";
+			return "Итоговый отчет";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Report back to Claire and tell her that the Slime Queen will no longer be a problem.";
+			return "Доложите Клэр, что королева слизней больше не будет проблемой.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You told Claire that the Slime Queen is no longer a threat, and received the twenty-thousand flame reward."
-				+ " With your Queen now safe from Enforcer investigation, it's only a matter of time before all of Submission is a Slime paradise!";
+			return "Вы сообщили Клэр, что королева слизней больше не представляет угрозы, и получили награду в двадцать тысяч пламени."
+				+ " Теперь ваша королева в безопасности от расследования энфорсеров, и это лишь вопрос времени, когда вся Покорность станет раем для слизней!";
 		}
 	},
 	
 	SLIME_QUEEN_FIVE_CONVINCE(QuestType.SIDE, 1, 25) {
 		@Override
 		public String getName() {
-			return "Convince the Queen";
+			return "Убедить королеву";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You decide to convince the Slime Queen to abandon her plans.";
+			return "Вы решаете убедить королеву слизней отказаться от своих планов.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You convinced Catherine to abandon her plan of transforming everyone in Submission into slimes.";
+			return "Вы убедили Кэтрин отказаться от плана превращения всех жителей Покорности в слизней.";
 		}
 	},
 	
 	SLIME_QUEEN_SIX_CONVINCE(QuestType.SIDE, 1, 200) {
 		@Override
 		public String getName() {
-			return "Final Report";
+			return "Итоговый отчет";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Report back to Claire and tell her that the Slime Queen will no longer be a problem.";
+			return "Доложите Клэр, что королева слизней больше не будет проблемой.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You told Claire that the Slime Queen is no longer a threat, and received the twenty-thousand flame reward.";
+			return "Вы сообщили Клэр, что королева слизней больше не представляет угрозы, и получили награду в двадцать тысяч пламени.";
 		}
 	},
 	
 	SLIME_QUEEN_FIVE_FORCE(QuestType.SIDE, 1, 25) {
 		@Override
 		public String getName() {
-			return "Force the Queen";
+			return "Принудить королеву";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Force the Slime Queen to abandon her plans.";
+			return "Заставьте королеву слизней отказаться от своих планов.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You forced Catherine to abandon her plan of transforming everyone in Submission into slimes.";
+			return "Вы заставили Кэтрин отказаться от плана превращения всех жителей Покорности в слизней.";
 		}
 	},
 	
 	SLIME_QUEEN_SIX_FORCE(QuestType.SIDE, 1, 200) {
 		@Override
 		public String getName() {
-			return "Final Report";
+			return "Итоговый отчет";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Report back to Claire and tell her that the Slime Queen will no longer be a problem.";
+			return "Доложите Клэр, что королева слизней больше не будет проблемой.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You told Claire that the Slime Queen is no longer a threat, and received the twenty-thousand flame reward.";
+			return "Вы сообщили Клэр, что королева слизней больше не представляет угрозы, и получили награду в двадцать тысяч пламени.";
 		}
 	},
 	
@@ -1191,41 +1191,41 @@ public enum Quest {
 	TELEPORTING_START(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Escape from the warehouse";
+			return "Побег со склада";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Having accidentally teleported into the 'SWORD' Enforcer division's storage warehouse, both you and Claire now need to avoid detection and make good your escape.";
+			return "Случайно телепортировавшись на склад подразделения энфорсеров «МЕЧ», вы с Клэр должны избежать обнаружения и совершить побег.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You and Claire managed to escape from SWORD's warehouse.";
+			return "Вам и Клэр удалось сбежать со склада МЕЧа";
 		}
 	},
 
 	TELEPORTING_CAUGHT(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Endure the stocks";
+			return "Выдержать испытания";
 		}
 
 		@Override
 		public String getDescription() {
 			if(Main.game.isNonConEnabled()) {
-				return "Having been defeated by the Enforcers inside SWORD's warehouse, you've been sentenced to be locked into the public use stocks at slaver alley. Endure this ordeal until Claire comes to rescue you...";
+				return "Потерпев поражение от энфорсеров на складе МЕЧа, вы были приговорены к заточению в колодках общего пользования на Аллее рабов. Выдержите это испытание, пока Клэр не придет вас спасти...";
 			} else {
-				return "Having been defeated by the Enforcers inside SWORD's warehouse, you've been locked into the cells at Enforcer Headquarters. You'll have to wait until Claire comes to rescue you...";
+				return "Потерпев поражение от энфорсеров на складе МЕЧа, вы оказались заперты в камере штаб-квартиры энфорсеров. Вам придется ждать, пока Клэр не придет, чтобы спасти вас...";
 			}
 		}
 
 		@Override
 		public String getCompletedDescription() {
 			if(Main.game.isNonConEnabled()) {
-				return "Having been defeated by the Enforcers inside SWORD's warehouse, you had to endure being locked into the public use stocks at slaver alley for several hours before Claire turned up to release you.";
+				return "Потерпев поражение от энфорсеров на складе МЕЧа, вам пришлось выдержать несколько часов заточния в колодках общего пользования, в переулке рабов, прежде чем появилась Клэр, чтобы освободить вас.";
 			} else {
-				return "Having been defeated by the Enforcers inside SWORD's warehouse, you had to endure being locked into the cells at Enforcer Headquarters for a couple of hours before Claire turned up to release you.";
+				return "Потерпев поражение от Энфорсеров на складе МЕЧа, вам пришлось несколько часов просидеть взаперти в камере штаб-квартиры Энфорсеров, прежде чем появилась Клэр и освободила вас.";
 			}
 		}
 	},
@@ -1236,103 +1236,103 @@ public enum Quest {
 	DADDY_START(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Meeting [daddy.name]";
+			return "Встречая [daddy.name]";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Rose has asked you to pay [daddy.name] a visit in order to convince [daddy.herHim] to leave Lilaya in peace."
-					+ " ([daddy.He] is only available at [daddy.his] apartment in Demon Home between "+Units.time(LocalTime.of(18, 00))+" and "+Units.time(LocalTime.of(21, 00))+".)";
+			return "Роза попросила вас посетить [daddy.name], чтобы убедить [daddy.herHim] оставить Лилайю в покое."
+					+ " ([daddy.He] можно встретить только в квартире дома демонов между "+Units.time(LocalTime.of(18, 00))+" и "+Units.time(LocalTime.of(21, 00))+".)";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "At Rose's behest, you met with [daddy.name] at [daddy.her] apartment in Demon Home.";
+			return "По просьбе Розы вы встретились с [daddy.name] в квартире дома демонов.";
 		}
 	},
 	
 	DADDY_MEETING(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Dinner with [daddy.name]";
+			return "Ужин с [daddy.name]";
 		}
 
 		@Override
 		public String getDescription() {
-			return "[daddy.Name] is insisting upon explaining [daddy.her] motives over dinner. You're going to have to either accept [daddy.her] offer, or bluntly refuse [daddy.herHim] and insist that [daddy.she] leave Lilaya alone.";
+			return "[daddy.Name] настаивает на объяснении мотивов за ужином. Вам придется либо принять [daddy.her] предложение, либо прямо отказать [daddy.herHim] и настоять на том, чтобы [daddy.she] оставил Лилайю в покое.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You gave [daddy.name] your answer in response to [daddy.her] request to take you out for dinner.";
+			return "Вы дали [daddy.name] свой ответ, в ответ на [daddy.her] просьбу пригласить вас на ужин.";
 		}
 	},
 	
 	DADDY_REFUSED(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "[daddy.Name] denied";
+			return "[daddy.Name] отказано";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You told [daddy.name] that you aren't at all interested in going out for a meal with [daddy.herHim], and that [daddy.sheIs] never to bother Lilaya again.";
+			return "Вы сказали [daddy.name] что вам совсем неинтересно пойти поесть с [daddy.herHim], и чтобы [daddy.sheIs] больше никогда не беспокоил Лилайю.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You told [daddy.name] that you aren't at all interested in going out for a meal with [daddy.herHim], and that [daddy.sheIs] never to bother Lilaya again.";
+			return "Вы сказали [daddy.name] что вы совсем не заинтересованы в том, чтобы пообедать с [daddy.herHim], и чтобы [daddy.sheIs] никогда больше не беспокоил Лилайю.";
 		}
 	},
 	
 	DADDY_REFUSED_2(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "[daddy.Name] denied";
+			return "[daddy.Name] отказано";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You told [daddy.name] that you aren't interested in convincing Lilaya to meet with [daddy.herHim], and that [daddy.she] should never bother your [lilaya.relation(pc)] again.";
+			return "Вы сказали [daddy.name] что вы не заинтересованы в том, чтобы убедить Лилайю встретиться с [daddy.herHim], и что [daddy.she] никогда не должен мешать вашим [lilaya.relation(pc)].";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You told [daddy.name] that you aren't interested in convincing Lilaya to meet with [daddy.herHim], and that [daddy.she] should never bother your [lilaya.relation(pc)] again.";
+			return "Вы сказали [daddy.name] что вы не заинтересованы в том, чтобы убедить Лилайю встретиться с [daddy.herHim], и что [daddy.she] никогда не должен мешать вашим [lilaya.relation(pc)].";
 		}
 	},
 	
 	DADDY_ACCEPTED(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Convincing Lilaya";
+			return "Убеждение Лилайи";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You agreed to convince Lilaya to meet with [daddy.name] for dinner, and to then help persuade her to ask Lyssieth to meet with [daddy.herHim].";
+			return "Вы согласились убедить Лилайю встретиться с [daddy.name] на ужин, а затем помочь убедить ее попросить Лисиет встретиться с [daddy.herHim].";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You convinced Lilaya to meet with [daddy.name] for dinner, on the condition that you go with her. ";
+			return "Вы убедили Лилайю встретиться с [daddy.name] на ужин, при условии, что вы пойдете с ней. ";
 		}
 	},
 	
 	DADDY_LILAYA_MEETING(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Lilaya's date with [daddy.name]";
+			return "Свидание Лилайи с [daddy.name]";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Lilaya has agreed to go out for dinner with [daddy.name], so now you just need to accompany her and make sure the evening goes smoothly.";
+			return "Лилайя согласилась пойти на ужин с [daddy.name], так что теперь вам остается только сопровождать ее и следить за тем, чтобы вечер прошел гладко.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You went with Lilaya to meet [daddy.name] for dinner, and while she had bad news for [daddy.herHim] regarding Lyssieth's romantic preferences, she did seem to like [daddy.herHim] well enough...";
+			return "Вы пошли с Лилайей на встречу с [daddy.name] для ужина, и хотя у нее были плохие новости для [daddy.herHim] Что касается романтических предпочтений Лисиет, то ей, похоже, [daddy.herHim] достаточно понравился...";
 		}
 	},
 	
@@ -1342,87 +1342,87 @@ public enum Quest {
 	BUYING_BRAX_START(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Perfume collection";
+			return "Коллекция парфюма";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Candi said that she'd consider selling [brax.name] to you, but before she gives you a definite answer, she wants you to go and fetch her order of perfume from the shop 'Succubi's Secrets' in the shopping arcade.";
+			return "Кэнди сказала, что рассмотрит возможность продажи [brax.name] вам, но прежде чем она даст вам определенный ответ, она хочет, чтобы вы сходили и забрали ее заказ духов из магазина «Секрет суккубы» в торговом центре.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You both paid for and collected Candi's order of perfume from Succubi's Secrets.";
+			return "Вы оплатили и забрали заказаные Кэнди духи из «Секрет суккубы».";
 		}
 	},
 	
 	BUYING_BRAX_DELIVER_PERFUME(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Perfume delivery";
+			return "Доставка парфюма";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Now that you've collected the bottles of perfume, you need to deliver them to Candi back at the Enforcer headquarters.";
+			return "Теперь, когда вы получили флаконы духов, вам нужно доставить их Кэнди в штаб-квартиру энфорсеров.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You delivered Candi's bottles of perfume to her.";
+			return "Вы доставили ей флаконы духов.";
 		}
 	},
 	
 	BUYING_BRAX_LOLLIPOPS(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Lollipop contraband";
+			return "Контрабанда леденцов";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Candi said she'd be willing to sell Brax to you, but she needs to think of how much [brax.sheIs] worth."
-					+ " She said that she'll have a price for you after you've fetched a box of contraband lollipops from the Harpy Nests' Enforcer checkpoint.";
+			return "Кэнди сказала, что готова продать вам Бракса, но ей нужно подумать, сколько [brax.sheIs] стоит."
+					+ " Она сказала, что у нее будет для вас цена после того, как вы принесете коробку контрабандных леденцов с КПП энфорсеров в Гнездах гарпий.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You retrieved the lollipops from the Harpy Nests' Enforcer checkpoint.";
+			return "Вы получили леденцы на КПП энфорсеров в Гнездах гарпий.";
 		}
 	},
 	
 	BUYING_BRAX_DELIVER_LOLLIPOPS(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Lollipops for Candi";
+			return "Леденцы для Кэнди";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Now that the box of contraband lollipops are in your possession, you need to return them to Candi back at the Enforcer headquarters.";
+			return "Теперь, когда коробка с контрабандными леденцами у вас в руках, вы должны вернуть их Кэнди в штаб-квартиру энфорсеров.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You delivered the box of contraband lollipops to Candi, who seemed to pay no attention to the warnings stamped all over it.";
+			return "Вы передали коробку с контрабандными леденцами Кэнди, которая, похоже, не обратила внимания на предупреждения которыми покрыта вся коробка.";
 		}
 	},
 	
 	BUYING_BRAX_LIPSTICK(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "A wolf's weight in lipstick";
+			return "Волчий вес в губной помаде";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Candi said that Brax is far too precious to be sold for mere flames, but she'd be willing to give [brax.herHim] to you in exchange for something just as valuable; a box of limited-edition lipsticks, branded as 'A Hundred Kisses'."
-					+ " Apparently, Candi has discovered the whereabouts of one of the only boxes left for sale, which is at a store in the shopping arcade called 'Ralph's Snacks'.";
+			return "Кэнди сказала, что Бракс слишком ценен, чтобы продавать его за деньги, но она готова отдать [brax.herHim] вам в обмен на нечто столь же ценное: коробку лимитированных помад под маркой «Сто поцелуев»."
+					+ " Судя по всему, Кэнди выяснила, где находится одна из последних коробок, оставшихся для продажи, - магазин в торговом центре под названием «Закуски Ральфа».";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You retrieved the box of 'A Hundred Kisses' from Ralph.";
+			return "Вы забрали у Ральфа коробку с «Сотней поцелуев».";
 		}
 	},
 	
