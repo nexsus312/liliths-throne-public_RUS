@@ -3,7 +3,7 @@ package com.lilithsthrone.game.character.quests;
 import com.lilithsthrone.utils.colours.Colour;
 import com.lilithsthrone.utils.colours.PresetColour;
 
-/**
+/** Перевод не нужен
  * @since 0.1.1
  * @version 0.1.69
  * @author Innoxia
