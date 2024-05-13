@@ -2,7 +2,7 @@ package com.lilithsthrone.game.character.quests;
 
 import com.lilithsthrone.utils.TreeNode;
 
-/**
+/** Перевод не нужен
  * @since 0.1.99
  * @version 0.4.9.1
  * @author Innoxia
