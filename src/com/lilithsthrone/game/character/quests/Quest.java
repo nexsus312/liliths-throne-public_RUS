@@ -2083,11 +2083,11 @@ public enum Quest {
 		@Override
 		public String getDescription() {
 			return "Согласившись помочь Огликс расширить выбор пивных сучек, вы должны отправиться в таверну «Меч кентавра» и попросить у ее владельца Хейрона свободные бочки."
-					+ " Если он откажется помочь, Голикс велел вам передать кентавру, что «Голикс велел быть хорошей лошадкой».";
+					+ " Если он откажется помочь, Огликс велела вам передать кентавру, что «Огликс велела быть хорошей лошадкой».";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Благодаря специальной фразе «Голикс велел быть хорошей лошадкой» вам удалось убедить Хейрона отправить четыре запасных бочонка в таверну Огликса.";
+			return "Благодаря специальной фразе «Голикс велела быть хорошей лошадкой» вам удалось убедить Хейрона отправить четыре запасных бочонка в таверну Огликс.";
 		}
 	},
 	
@@ -2098,13 +2098,13 @@ public enum Quest {
 		}
 		@Override
 		public String getDescription() {
-			return "Заручившись помощью Хейрона, вам теперь нужно вернуться к Огликс и сообщить ей, что Хейрон решил стать «хорошей лошадкой» для Голикса.";
+			return "Заручившись помощью Хейрона, вам теперь нужно вернуться к Огликс и сообщить ей, что Хейрон решил стать «хорошей лошадкой» для Огликс.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You returned to Oglix and informed her of your success."
-					+ " Having now secured four additional barrels in which to lock new beer-bitches, Oglix asked you to supply promising candidates from the nearby alleyways' criminal population."
-					+ " Additionally, she told you to sneak around the back of her tavern between [units.time(6)]-[units.time(7)] if you wanted to see what the phrase 'Golix says to be a good horsie' meant...";
+			return "Вы вернулись к Огликс и сообщили ей о своем успехе."
+					+ " Заполучив четыре дополнительных бочки, в которых можно запереть новых пивных сучек, Огликс попросила вас предоставить перспективные кандидатуры из криминального населения близлежащих переулков."
+					+ " Кроме того, она попросила вас пробраться в заднюю часть ее таверны между [units.time(6)]-[units.time(7)] Если вы хотели узнать, что означает фраза «Голикс велела быть хорошей лошадкой»...";
 		}
 	},
 
@@ -2114,29 +2114,29 @@ public enum Quest {
 	LUNEXIS_ESCAPE(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Free Lunexis";
+			return "Освободить Лунексис";
 		}
 		@Override
 		public String getDescription() {
-			return "Having surrendered to Lunexis and pledged to be her obedient cock-sleeve, you've been ordered by your new Mistress to assist her in escaping from captivity."
-					+ " Wanting to get her revenge on the one who teleported her to Elis, the centauress has devised a plan where you're to convince Meraxis to teleport the three of you back to Themiscyra."
-					+ " Once there, your Mistress will reward you by keeping you as one of her personal cock-sleeve slaves...";
+			return "Сдавшись Лунексис и пообещав быть ее послушным мастурбатором, вы получили приказ своей новой госпожи помочь ей сбежать из плена."
+					+ " Желая отомстить тому, кто телепортировал ее в Элис, кентавресса разработала план, согласно которому вы должны убедить Мераксис телепортировать вас троих обратно в Фемискиру."
+					+ " Там госпожа вознаградит тебя, оставив в качестве одного из своих личных рабов мастурбаторов...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You convinced Meraxis to teleport herself, along with you and Lunexis, back to Themiscyra."
-					+ " Once there, your deception was made clear, and although she tried to fight, Meraxis was soon subdued and used by your Mistress to win back the wavering loyalty of her centauress army.";
+			return "Вы убедили Мераксис телепортироваться вместе с вами и Лунексис обратно в Фемискиру."
+					+ " Обман стал явным, и хотя Мераксис пыталась бороться, вскоре она была покорена и использована вашей госпожой, чтобы вернуть колеблющуюся лояльность своей армии кентавров.";
 		}
 	},
 
 	LUNEXIS_ESCAPE_FAILED(QuestType.SIDE, 1, 0) {
 		@Override
 		public String getName() {
-			return "Lunexis Betrayed";
+			return "Предать Лунексис";
 		}
 		@Override
 		public String getDescription() {
-			return "Deciding to reveal everything to Meraxis, you betrayed Lunexis, and were banned from having any further contact with the demonic centauress.";
+			return "Решив раскрыть все Мераксис, вы предали Лунексис, и вам было запрещено впредь контактировать с демонической кентаврессой.";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -2150,117 +2150,117 @@ public enum Quest {
 	DOLL_FACTORY_1(QuestType.SIDE, 30, 10) {
 		@Override
 		public String getName() {
-			return "On Lovienne's Orders";
+			return "По приказу Ловиенны";
 		}
 		@Override
 		public String getDescription() {
-			return "Angelixx's diary revealed that the kidnapped refugees were being teleported to the shop 'Lovienne's Luxury' in Dominion."
-					+ " If you're to discover what's happened to Angelixx's victims, then you'll need to investigate this store...";
+			return "Из дневника Ангеликс стало известно, что похищенных беженцев телепортировали в магазин «Роскошь Ловиенны» в Доминионе."
+					+ " Если вы хотите узнать, что случилось с жертвами Ангеликс, вам нужно исследовать этот магазин...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You travelled to the shop 'Lovienne's Luxury' and attempted to discover if the refugees kidnapped by Angelixx were being taken there."
-					+ " Although you weren't able to discover anything, a woman approached you as you left and offered her help.";
+			return "Вы отправились в магазин «Роскошь Ловиенны» и попытались выяснить, здесь ли забирают беженцев, похищенных Ангеликс."
+					+ " Хотя вы ничего не смогли обнаружить, к вам подошла женщина, когда вы уходили, и предложила свою помощь.";
 		}
 	},
 	
 	DOLL_FACTORY_2(QuestType.SIDE, 30, 10) {
 		@Override
 		public String getName() {
-			return "Breaking and Entering";
+			return "Взлом и проникновение";
 		}
 		@Override
 		public String getDescription() {
-			return "The woman you met outside 'Lovienne's Luxury' knows a way into the rear of the premises, where she believes the kidnapped refugees are being held and used as slave labour."
-					+ " With no other way to gain entry and get to the bottom of what's happening in there, you agreed to her plan and said you'd meet her near to the shop between [units.time(1)]-[units.time(4)].";
+			return "Женщина, которую вы встретили возле «Роскоши Ловиенны», знает, как пройти в заднюю часть помещения, где, по ее мнению, держат похищенных беженцев и используют их в качестве рабского труда."
+					+ " Не имея другого способа проникнуть внутрь и разобраться в том, что там происходит, вы согласились с ее планом и сказали, что встретитесь с ней возле магазина между [units.time(1)]-[units.time(4)].";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You met the woman outside 'Lovienne's Luxury' and managed to break in to the rear of the premises without setting off the alarm system.";
+			return "Вы встретились с женщиной возле «Роскоши Ловиенны» и сумели проникнуть в заднюю часть помещения, не включив сигнализацию.";
 		}
 	},
 	
 	DOLL_FACTORY_3(QuestType.SIDE, 30, 10) {
 		@Override
 		public String getName() {
-			return "Getting to the Bottom";
+			return "Добраться до дна";
 		}
 		@Override
 		public String getDescription() {
-			return "The doll factory to the rear of 'Lovienne's Luxury' has turned out to be nothing but a facade."
-					+ " The real factory, and where you're sure to find the kidnapped refugees, has been revealed to be deep underground, so it's down you go...";
+			return "Кукольная фабрика, расположенная на заднем дворе «Роскоши Ловиенны», оказалась всего лишь фасадом."
+					+ " Оказалось, что настоящая фабрика, где вы наверняка найдете похищенных беженцев, находится глубоко под землей, так что вам предстоит спуститься вниз...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You travelled down the elevator to the real doll factory, where you witnessed Angelixx converting a captive into a sex doll.";
+			return "Вы спустились на лифте на настоящую фабрику кукол, где стали свидетелями того, как Ангеликса превращает пленницу в секс-куклу.";
 		}
 	},
 	
 	DOLL_FACTORY_4(QuestType.SIDE, 30, 10) {
 		@Override
 		public String getName() {
-			return "Gather Evidence";
+			return "Соберите улики";
 		}
 		@Override
 		public String getDescription() {
-			return "Nobody will believe what you've seen, so you're going to need to gather hard evidence of how Lovienne's dolls are created."
-					+ " Ledgers, machine schematics, or other such documents are sure to be found in an office somewhere...";
+			return "Никто не поверит в то, что вы видели, поэтому вам придется собрать неопровержимые доказательства того, как создаются куклы Ловиенн."
+					+ " Бухгалтерские книги, схемы машин и другие подобные документы обязательно найдутся где-нибудь в офисе...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You managed to gather hard evidence of how Lovienne's dolls are created.";
+			return "Вам удалось собрать неопровержимые доказательства того, как создаются куклы Ловиенн.";
 		}
 	},
 	
 	DOLL_FACTORY_5(QuestType.SIDE, 30, 10) {
 		@Override
 		public String getName() {
-			return "Up and Away";
+			return "Вверх и в даль";
 		}
 		@Override
 		public String getDescription() {
-			return "With hard evidence of Lovienne's dolls are created now in your possession, you need to escape from the factory...";
+			return "Теперь в вашем распоряжении неопровержимые доказательства создания кукол Ловиенн, и вам нужно сбежать с фабрики...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You managed to escape from the lower factory, but as you exited the elevator you were confronted by Angelixx herself, who offered you a deal...";
+			return "Вам удалось сбежать с нижнего завода, но при выходе из лифта вы столкнулись с самой Ангеликс, которая предложила вам сделку...";
 		}
 	},
 	
 	DOLL_FACTORY_6A(QuestType.SIDE, 30, 10) {
 		@Override
 		public String getName() {
-			return "Angelixx's Fall";
+			return "Падение Ангеликс";
 		}
 		@Override
 		public String getDescription() {
-			return "You refused to make a deal with Angelixx, and instead handed the evidence you'd gathered over to the woman."
-					+ " When word of what's going on in her shop is made public, Lovienne is likely to administer a severe punishment to Angelixx."
-					+ " Perhaps if you return to the shop during opening hours you'll find out what's to become of her...";
+			return "Вы отказались заключать сделку с Ангеликс и вместо этого передали собранные вами улики этой женщине."
+					+ " Когда информация о том, что происходит в ее магазине, станет достоянием общественности, Ловиенн, скорее всего, подвергнет Ангеликс суровому наказанию."
+					+ " Возможно, если вы вернетесь в магазин в часы работы, вы узнаете, что с ней стало...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You refused to make a deal with Angelixx, and instead handed the evidence you'd gathered over to the woman."
-					+ " Returning to 'Lovienne's Luxury' during opening hours, you discovered that the evidence of how sex dolls are created is not being taken seriously by members of the public."
-					+ " What's more, there's now a limited-edition succubus sex doll for sale, who's the spitting image of Angelixx...";
+			return "Вы отказались заключать сделку с Ангеликс и вместо этого передали собранные вами улики этой женщине."
+					+ " Вернувшись в «Роскошь Ловиенны» в часы работы, вы обнаружили, что представители общественности не воспринимают всерьез доказательства того, как создаются секс-куклы."
+					+ " Более того, в продажу поступила лимитированная секс-кукла суккуб, которая является точной копией Ангеликс...";
 		}
 	},
 	
 	DOLL_FACTORY_6B(QuestType.SIDE, 30, 10) {
 		@Override
 		public String getName() {
-			return "Angelixx's Associate";
+			return "Помощник Ангеликс";
 		}
 		@Override
 		public String getDescription() {
-			return "You betrayed the trust of the woman and handed her over to Angelixx, along with the evidence you'd gathered."
-					+ " The succubus offered you her thanks and told you to return to the shop during opening hours to get a special reward...";
+			return "Вы предали доверие женщины и передали ее Ангеликс вместе с собранными вами уликами."
+					+ " Суккуб поблагодарила вас и сказала, что вы должны вернуться в магазин в часы работы, чтобы получить особую награду...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You betrayed the trust of the woman and handed her over to Angelixx, along with the evidence you'd gathered."
-					+ " In return, Angelixx will convert your slaves to dolls in exchange for a small fee, or will instead pay you if you don't want them back."
-					+ " She also offered you her intimate company...";
+			return "Вы предали доверие женщины и передали ее Ангеликс вместе с собранными вами уликами."
+					+ " Взамен Ангеликс превратит ваших рабов в кукол за небольшую плату или заплатит вам, если вы не захотите их возвращать."
+					+ " Она также предложила вам интимную встречу...";
 		}
 	},
 	
@@ -2270,66 +2270,66 @@ public enum Quest {
 	RELATIONSHIP_NYAN_1_STOCK_ISSUES(QuestType.RELATIONSHIP, 1, 0) {
 		@Override
 		public String getName() {
-			return "Helping Nyan";
+			return "Помощь Ньян";
 		}
 		@Override
 		public String getDescription() {
-			return "Nyan explained that she's unable to sell any enchanted clothing due to the fact that her wholesale supplier has suddenly stopped communicating with her."
-					+ " Apparently, this supplier used to be on good terms with Nyan, and his uncharacteristic behaviour has caused the nervous cat-girl to suspect something terrible has happened to him.<br/>"
-					+ "Perhaps you could offer Nyan your help by finding out what's happened to this supplier?";
+			return "Ньян объяснила, что не может продавать зачарованную одежду из-за того, что ее оптовый поставщик внезапно перестал выходить с ней на связь."
+					+ " Судя по всему, этот поставщик раньше был в хороших отношениях с Ньян, и его нехарактерное поведение заставило нервную девушку-кошку заподозрить, что с ним случилось что-то ужасное.<br/>"
+					+ "Возможно, вы могли бы предложить Ньян свою помощь, выяснив, что случилось с этим поставщиком?";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You offered Nyan your help in finding out what's happened to her wholesale enchanted clothing supplier.";
+			return "Вы предложили Ньян свою помощь в выяснении того, что случилось с ее оптовым поставщиком зачарованной одежды.";
 		}
 	},
 	
 	RELATIONSHIP_NYAN_2_STOCK_ISSUES_AGREED_TO_HELP(QuestType.RELATIONSHIP, 1, 25) {
 		@Override
 		public String getName() {
-			return "Saving Kay";
+			return "Спасение Кей";
 		}
 		@Override
 		public String getDescription() {
-			return "Nyan told you that her supplier, [kay.nameFull], has his business set up in Dominion's warehouse district."
-					+ " You'll need to travel to the north-west of the city, find Kay's warehouse, and discover why he's suddenly cut off all communication with Nyan.";
+			return "Ньян рассказала вам, что ее поставщик, [kay.nameFull], открыл свое дело в складском районе Доминиона."
+					+ " Вам нужно отправиться на северо-запад города, найти склад Кея и выяснить, почему он внезапно прервал связь с Ньян.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You not only found Kay's warehouse, but were also able to discover that his business has been effectively seized by a pair of bullying bounty hunters.";
+			return "Вы не только нашли склад Кея, но и смогли выяснить, что его бизнес фактически захвачен парой задиристых охотников за головами.";
 		}
 	},
 	
 	RELATIONSHIP_NYAN_3_STOCK_ISSUES_DOBERMANNS(QuestType.RELATIONSHIP, 10, 100) {
 		@Override
 		public String getName() {
-			return "Bounty Hunter Bullies";
+			return "Задиры-охотники за головами";
 		}
 		@Override
 		public String getDescription() {
-			return "Wolfgang and Karl, a pair of bounty hunters hired by Kay to protect his warehouse, have turned on their employer and effectively seized full control of his business."
-					+ " One way or another, you're going to have to convince these dobermann bullies to leave Kay alone...";
+			return "Вольфганг и Карл, пара охотников за головами, нанятых Кеем для охраны его склада, ополчились на своего работодателя и фактически захватили полный контроль над его бизнесом."
+					+ " Так или иначе, вам придется убедить этих задир-доберманов оставить Кей в покое...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "By dealing with Wolfgang and Karl and sending them skulking off back to Slaver Alley's 'Bounty Hunter Lodge', you've both saved Kay's business and ensured that Nyan once again has access to a stock of enchanted clothing."
-					+ " Offering you his eternal thanks, Kay said that you're welcome to pay him a visit whenever you like.";
+			return "Разобравшись с Вольфгангом и Карлом и отправив их в «Логово охотников за головами» на Аллее рабов, вы одновременно спасли бизнес Кей и обеспечили Ньян доступ к запасам зачарованной одежды."
+					+ " Выразив вам свою вечную благодарность, Кей сказал, что вы можете нанести ему визит, когда пожелаете.";
 		}
 	},
 	
 	RELATIONSHIP_NYAN_4_STOCK_ISSUES_SUPPLIERS_BEATEN(QuestType.RELATIONSHIP, 1, 25) {
 		@Override
 		public String getName() {
-			return "Nyan's Reward";
+			return "Награда Ньян";
 		}
 		@Override
 		public String getDescription() {
-			return "Now that you've saved Kay's business, you should return to Nyan and inform her of what's happened.";
+			return "Теперь, когда вы спасли бизнес Кея, вам следует вернуться к Ньян и сообщить ей о случившемся.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "A very happy Nyan paid you your promised reward, and also offered to give you a lifetime 25% discount in her store."
-					+ " She also let slip that she's single, in a clumsy attempt to try and hit on you...";
+			return "Очень довольная Ньян выплатила вам обещанное вознаграждение, а также предложила пожизненную 25-процентную скидку в своем магазине."
+					+ " Она также сообщила, что одинока, в неуклюжей попытке подкатить к вам...";
 		}
 	},
 	
@@ -2338,13 +2338,13 @@ public enum Quest {
 	ROMANCE_HELENA_FAILED(QuestType.RELATIONSHIP, 1, 0) {
 		@Override
 		public String getName() {
-			return "Furious Matriarch";
+			return "Разъяренный матриарх";
 		}
 
 		@Override
 		public String getDescription() {
-			return "After you refused to sell Scarlett to Helena, the haughty harpy matriarch gave up on her plans to run a slavery business and stormed off back to her nest."
-					+ " With the way she ruthlessly insulted you before leaving, you can be sure that she's never going to want to see you again...";
+			return "После того как вы отказались продать Скарлетт Елене, надменная гарпия-матриарх отказалась от своих планов по организации рабского бизнеса и унеслась в свое гнездо."
+					+ " Учитывая то, как она безжалостно оскорбила вас перед уходом, вы можете быть уверены, что она больше никогда не захочет вас видеть...";
 		}
 
 		@Override
@@ -2356,189 +2356,189 @@ public enum Quest {
 	ROMANCE_HELENA_1_OFFER_HELP(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "Offer to help";
+			return "Предложить помощь";
 		}
 
 		@Override
 		public String getDescription() {
-			return "After asking Helena about her business, you discovered that she's barely managing to keep the place running."
-					+ " After expressing her desire to make some improvements to her shop, Helena revealed that she simply doesn't have the time nor inclination to do the work herself."
-					+ " Perhaps you could offer her your help?";
+			return "Расспросив Елену о ее бизнесе, вы обнаружили, что ей едва удается поддерживать заведение в рабочем состоянии."
+					+ " Высказав желание немного улучшить свой магазин, Елена обнаружила, что у нее просто нет ни времени, ни желания заниматься этим самостоятельно."
+					+ " Может быть, вы предложите ей свою помощь?";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You offered to help Helena make some improvements to her shop.";
+			return "Вы предложили Елене помочь ей сделать кое-какие улучшения в магазине.";
 		}
 	},
 
 	ROMANCE_HELENA_2_PURCHASE_PAINT(QuestType.RELATIONSHIP, 1, 25) {
 		@Override
 		public String getName() {
-			return "Purchase Paint";
+			return "Купить краску";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Helena revealed that the first thing she wants done is to have the entire exterior of her shop repainted."
-					+ " Having provided you with no money for expenses, the harpy is expecting you to travel to 'Argus's DIY Depot' and buy a can of 'Purple-star' branded golden paint."
-					+ " Once you've bought it, you need to return to Helena."
-					+ "<br/><i>('Argus's DIY Depot' can be found a fair way to the south of Slaver Alley, next to the canal.)</i>";
+			return "Елена рассказала, что первым делом она хочет перекрасить весь интерьер своего магазина."
+					+ " Не предоставив вам денег на расходы, гарпия ожидает, что вы отправитесь на склад «Сделай сам» Аргуса и купите банку золотой краски марки «Пурпурная звезда»."
+					+ " Купив ее, вы должны вернуться к Елене."
+					+ "<br/><i>(Склад «Сделай сам» Аргуса можно найти к югу от Аллеи рабов, рядом с каналом.)</i>";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You purchased the required paint from 'Argus's DIY Depot' and returned to Helena.";
+			return "Вы купили необходимую краску в «Депо Аргуса» и вернулись к Елене.";
 		}
 	},
 
 	ROMANCE_HELENA_3_A_EXTERIOR_DECORATOR(QuestType.RELATIONSHIP, 1, 10) {
 		@Override
 		public String getName() {
-			return "Exterior Decorator (1/3)";
+			return "Декоратор экстерьера (1/3)";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Having purchased the golden paint, you returned to Helena only to have her demand that you get started on repainting the exterior of her shop as soon as possible...";
+			return "Купив золотую краску, вы вернулись к Елене, но она потребовала, чтобы вы как можно скорее начали перекрашивать ее магазин...";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You stripped off all of the old paint from the front of Helena's store.";
+			return "Вы содрали всю старую краску с фасада магазина Елены.";
 		}
 	},
 
 	ROMANCE_HELENA_3_B_EXTERIOR_DECORATOR(QuestType.RELATIONSHIP, 1, 10) {
 		@Override
 		public String getName() {
-			return "Exterior Decorator (2/3)";
+			return "Декоратор экстерьера (2/3)";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You need to return to Helena's store during opening hours to see what your next task will be...";
+			return "Вам нужно вернуться в магазин Елены в часы работы, чтобы узнать, каким будет ваше следующее задание...";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You repainted the entire frontage of Helena's store, and additionally received a delivery of furniture from a succutaur named 'Natalya'.";
+			return "Вы перекрасили весь фасад магазина Елены, а также получили доставку мебели от суккутавра по имени «Наталья».";
 		}
 	},
 
 	ROMANCE_HELENA_3_C_EXTERIOR_DECORATOR(QuestType.RELATIONSHIP, 1, 10) {
 		@Override
 		public String getName() {
-			return "Exterior Decorator (3/3)";
+			return "Декоратор экстерьера (3/3)";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You need to return to Helena's store during opening hours to see what your next task will be...";
+			return "Вам нужно вернуться в магазин Елены в часы работы, чтобы узнать, каким будет ваше следующее задание...";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Under the harpy matriarch's supervision, you painted the words 'Helena's Boutique' in golden lettering above the door to her store.";
+			return "Под руководством матриарха гарпий вы нарисовали золотыми буквами надпись «Бутик Елены» над дверью ее магазина.";
 		}
 	},
 
 	ROMANCE_HELENA_4_SCARLETTS_RETURN(QuestType.RELATIONSHIP, 1, 100) {
 		@Override
 		public String getName() {
-			return "Scarlett's Return";
+			return "Возвращение Скарлетт";
 		}
 
 		@Override
 		public String getDescription() {
 			boolean slave = Main.game.getNpc(Scarlett.class).isSlave() || Main.game.getNpc(Scarlett.class).getHomeWorldLocation()==WorldType.EMPTY;
 			boolean playerOwner = Main.game.getNpc(Scarlett.class).isSlave() && Main.game.getNpc(Scarlett.class).getOwner().isPlayer();
-			return "Helena revealed to you her plan to rebrand her slave shop as a place where clients could order custom slaves."
-					+ " The person she has in mind to train these custom slaves is her old etiquette coach, who apparently is none other than Scarlett's sister."
+			return "Елена рассказала вам о своем плане по ребрендингу своего магазина рабов, где клиенты могли бы покупать рабов на заказ."
+					+ " Для обучения этих рабов она выбрала своего старого наставника по этикету, который, судя по всему, является не кем иным, как сестрой Скарлетт."
 					+ (slave
-						?" The condition she's given Helena is that she free her unruly sister from slavery, promise never to enslave her again, and then keep her employed..."
+						?" Елена поставила условие: она должна освободить непокорную сестру из рабства, пообещать никогда больше не порабощать ее, а затем держать ее на работе..."
 							+ "<br/>"
 							+(playerOwner
-								?"You're going to have to bring Scarlett to Helena and sell her back to her..."
-								:"You're going to have to find Scarlett and purchase her from whoever is her new owner. According to Helena, she's apparently been purchased by the owner of an antique shop somewhere in the Shopping Arcade.")
-						:" The condition she's given Helena is that she keep her unruly sister employed and promise never to enslave her again..."
+								?"Вам придется привезти Скарлетт к Елене и продать ее ей..."
+								:"Вам придется найти Скарлетт и выкупить ее у того, кто стал ее новым владельцем. По словам Елены, ее купил владелец антикварного магазина где-то в Торговом центре.")
+						:" Елена поставила условие: она должна держать свою непокорную сестру на работе и обещать никогда больше не порабощать ее..."
 							+ "<br/>"
-							+ "You're going to have to go up to Helena's nest, find Scarlett, and then tell her to return to Helena...");
+							+ "Вам придется подняться в гнездо Елены, найти Скарлетт, а затем сказать ей, чтобы она вернулась к Елене...");
 		}
 		
 		@Override
 		public String getCompletedDescription() {
-			return "According to the wishes of Helena's old etiquette coach, Scarlett will from now on be working as the harpy matriarch's personal assistant.";
+			return "Согласно пожеланиям старого тренера Елены по этикету, Скарлетт отныне будет работать личным помощником матриарха гарпий.";
 		}
 	},
 
 	ROMANCE_HELENA_5_SCARLETT_TRAINER(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "Harpy Helper";
+			return "Помощник гарпии";
 		}
 
 		@Override
 		public String getDescription() {
-			return "The two harpies left early to head off and visit Scarlett's sister. You need to return to Helena's store during opening hours to see what your next task will be...";
+			return "Две гарпии ушли пораньше, чтобы навестить сестру Скарлетт. Вам нужно вернуться в магазин Елены в часы работы, чтобы узнать, каким будет ваше следующее задание...";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You returned to Helena's store to discover that everything is set up and ready for the harpy matriarch to start accepting customers. Before that, however, you need to help her with a couple more things...";
+			return "Вы вернулись в магазин Елены и обнаружили, что все готово к тому, чтобы матриарх гарпий начала принимать покупателей. Однако перед этим вам нужно помочь ей еще с парой вещей...";
 		}
 	},
 
 	ROMANCE_HELENA_6_ADVERTISING(QuestType.RELATIONSHIP, 1, 15) {
 		@Override
 		public String getName() {
-			return "Advertising";
+			return "Размещение рекламы";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Having been given half a dozen enchanted posters showing off Helena's beauty, your task is to put them up at the entrance of Slaver Alley in order to help advertise her store.";
+			return "Получив полдюжины заколдованных плакатов, демонстрирующих красоту Елены, вы должны развесить их у входа на Аллею рабов, чтобы помочь рекламировать ее магазин.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You put up posters advertising 'Helena's Boutique' at the entrance to Slaver Alley.";
+			return "Вы вывешиваете плакаты с рекламой «Бутика Елены» у входа на Аллею рабов.";
 		}
 	},
 
 	ROMANCE_HELENA_7_GRAND_OPENING_PREPARATION(QuestType.RELATIONSHIP, 1, 15) {
 		@Override
 		public String getName() {
-			return "Preparing for the Grand Opening";
+			return "Подготовка к торжественному открытию";
 		}
 
 		@Override
 		public String getDescription() {
-			return "After putting up the posters, Scarlett appeared and lead you back to Helena's shop."
-					+ " Your new task is to get things ready for tomorrow's grand opening, which means working through the night...";
+			return "После того как вы развесили плакаты, появилась Скарлетт и привела вас обратно в магазин Елены."
+					+ " Ваша новая задача - подготовить все к завтрашнему торжественному открытию, а это значит, что придется работать всю ночь...";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You and Scarlett finished the preparations for the store's grand opening.";
+			return "Вы со Скарлетт закончили подготовку к торжественному открытию магазина.";
 		}
 	},
 
 	ROMANCE_HELENA_8_FINISH(QuestType.RELATIONSHIP, 1, 100) {
 		@Override
 		public String getName() {
-			return "Preparing Drinks";
+			return "Подготовка напитков";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Not wanting Scarlett to cause any trouble during the grand opening, Helena has tasked the two of you with staying in the back room and making drinks for the guests.";
+			return "Не желая, чтобы Скарлетт доставляла неприятности во время торжественного открытия, Елена поручила вам двоим оставаться в задней комнате и готовить напитки для гостей.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You and Scarlett stayed in the back room making drinks until the grand opening was over."
-					+ "  Finally showing some appreciation for your efforts, Helena told you that she'd be willing to let you take her on a date as your reward...";
+			return "Вы со Скарлетт оставались в задней комнате и готовили напитки, пока не закончилось торжественное открытие."
+					+ "  Наконец-то Елена оценила ваши усилия и сказала, что в качестве вознаграждения готова пригласить вас на свидание...";
 		}
 	},
 	
@@ -2547,11 +2547,11 @@ public enum Quest {
 	ROMANCE_NATALYA_FAILED_INTERVIEW(QuestType.RELATIONSHIP, 1, 0) {
 		@Override
 		public String getName() {
-			return "Interview Failed";
+			return "Интервью провалено";
 		}
 		@Override
 		public String getDescription() {
-			return "Having refused to do as Natalya asked during her interview, you were thrown out of Dominion Express and told never to return...";
+			return "Отказавшись выполнить просьбу Натальи во время интервью, вы были вышвырнуты из «Доминион Экспресс» и вам было сказано никогда не возвращаться...";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -2562,11 +2562,11 @@ public enum Quest {
 	ROMANCE_NATALYA_FAILED_CONTRACT(QuestType.RELATIONSHIP, 1, 0) {
 		@Override
 		public String getName() {
-			return "Contract Refused";
+			return "Отказ от контракта";
 		}
 		@Override
 		public String getDescription() {
-			return "Having refused to sign the contract which Natalya offered to you, you were thrown out of Dominion Express and told never to return...";
+			return "Отказавшись подписать контракт, который вам предложила Наталья, вы были вышвырнуты из «Доминион Экспресс» и вам было сказано никогда не возвращаться...";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -2577,122 +2577,122 @@ public enum Quest {
 	ROMANCE_NATALYA_1_INTERVIEW_START(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "Interviewed";
+			return "Интервью";
 		}
 		@Override
 		public String getDescription() {
-			return "Natalya, the Stable Mistress at the company Dominion Express, has offered you the opportunity to be interviewed for the position of 'filly'.";
+			return "Наталья, хозяйка конюшни в компании «Доминион Экспресс», предложила вам пройти собеседование на должность «кобылки».";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You accepted Natalya's offer of an interview for the position of 'filly' at Dominion Express.";
+			return "Вы приняли предложение Натальи пройти собеседование на должность кобылки в «Доминион Экспресс».";
 		}
 	},
 
 	ROMANCE_NATALYA_2_CONTRACT_SIGNED(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "Natalya's Filly";
+			return "Натальина кобылка";
 		}
 		@Override
 		public String getDescription() {
-			return "Having accepted the offer of an interview for the position of 'filly', you now need to successfully pass it and sign the contract.";
+			return "Приняв предложение о собеседовании на должность «кобылки», вы теперь должны успешно пройти его и подписать контракт.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You successfully passed Natalya's interview, and after you'd signed the contract, you were told that you now need to be transformed into [style.a_shemale] taur.";
+			return "Вы успешно прошли собеседование с Натальей, и после подписания контракта вам сообщили, что теперь вам нужно превратиться в [style.a_shemale] тавра.";
 		}
 	},
 	
 	ROMANCE_NATALYA_3_TRAINING_1(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "Filly Training";
+			return "Дрессировка кобылки";
 		}
 		@Override
 		public String getDescription() {
-			return "You were told by Natalya that the first part of your training will involve repeating your oral performance on one of the centaur slaves.";
+			return "Наталья сказала вам, что первая часть вашего обучения будет включать в себя повторение вашего орального выступления на одном из рабов-кентавров.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "After being transformed into [style.a_shemale] taur, you began your filly training by sucking the cock of one of Dominion Express's more unruly centaur slaves.";
+			return "После превращения в тавра [style.a_shemale] вы начали свое обучение с отсасывания члена у одного из самых непокорных рабов-кентавров Доминион Экспресс.";
 		}
 	},
 
 	ROMANCE_NATALYA_4_TRAINING_2(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "More Training";
+			return "Дополнительные тренировки";
 		}
 		@Override
 		public String getDescription() {
-			return "Once again, you were told by Natalya to return the following day to continue your training, which will involve learning to love giving rimjobs.";
+			return "И снова Наталья велела вам вернуться на следующий день, чтобы продолжить обучение, в ходе которого вы научитесь любить делать римминг.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "The second stage of your training involved wearing colourful lipstick and performing anilingus on Mistress Natalya.";
+			return "Второй этап вашего обучения включал в себя нанесение разноцветной помады и выполнение анилингуса госпоже Наталье.";
 		}
 	},
 
 	ROMANCE_NATALYA_5_TRAINING_3(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "Final Training";
+			return "Заключительная тренировка";
 		}
 		@Override
 		public String getDescription() {
-			return "Natalya instructed you to return the following day to finish your training, which will involve giving a rimjob to a centaur slave, and being mounted and anally fucked by both Natalya and the slave whose ass you service.";
+			return "Наталья велела вам вернуться на следующий день, чтобы закончить обучение, которое будет включать в себя римминг рабу-кентавру, а также вас оседлают и анально оттрахают как Наталья, так и раб, чью задницу вы обслуживаете.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "After performing anilingus on a centaur slave and then being mounted and anally fucked by them, Natalya declared that your filly training is complete.";
+			return "Вы сделали анилингус рабу-кентавру, а затем вас оседлали и анально оттрахали, Наталья заявила, что обучение вас как кобылки завершено.";
 		}
 	},
 
 	ROMANCE_MONICA_1_TO_THE_FARM(QuestType.RELATIONSHIP, 1, 10) {
 		@Override
 		public String getName() {
-			return "To The Farm";
+			return "На ферму";
 		}
 		@Override
 		public String getDescription() {
-			return "After you'd offered to help recover her personalised breast pump, Monica told you that it could be found at her old workplace; a farm located to the North-East of Elis named 'Evelyx's Dairy'."
-					+ " You'll have to go to this farm and ask for Monica's breast pump...";
+			return "После того как вы предложили помочь вернуть ее индивидуальный молокоотсос, Моника рассказала, что его можно найти на ее прежнем месте работы - на ферме, расположенной к северо-востоку от Элис под названием «Молочная Эвеликс»."
+					+ " Вам придется пойти на эту ферму и попросить у Моники молокоотсос...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Having found the farm which is Monica's old workplace, you asked for the cow-girl's personalised breast pump, and were granted a meeting with the farm's owner...";
+			return "Найдя ферму, где раньше работала Моника, вы попросили именной молокоотсос, и вам была назначена встреча с владельцем фермы...";
 		}
 	},
 
 	ROMANCE_MONICA_2_UNREASONABLE_DEMAND(QuestType.RELATIONSHIP, 1, 10) {
 		@Override
 		public String getName() {
-			return "An Unreasonable Demand";
+			return "Необоснованное требование";
 		}
 		@Override
 		public String getDescription() {
-			return "You managed to get a meeting with the farm's owner, Evelyx, who takes the form of an arrogant, greedy succubus."
-					+ " Although admitting that the breast pump was worthless, she's demanding that you either give her a huge sum of flames, or sign a suspicious contract, in exchange for it...";
+			return "Вам удалось добиться встречи с хозяйкой фермы, Эвеликс, которая принимает облик высокомерного и жадного суккуба."
+					+ " Признав, что молокоотсос ничего не стоит, она требует, чтобы вы отдали ей огромную сумму денег или подписали подозрительный контракт в обмен на него...";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You managed to obtain Monica's personalised breast pump from Evelyx.";
+			return "Вам удалось получить от Эвеликс индивидуальный молокоотсос Моники.";
 		}
 	},
 
 	ROMANCE_MONICA_3_THE_JOURNEY_HOME(QuestType.RELATIONSHIP, 1, 10) {
 		@Override
 		public String getName() {
-			return "The Journey Home";
+			return "Путь домой";
 		}
 		@Override
 		public String getDescription() {
-			return "Now that Monica's personalised breast pump is in your possession, all that's left to do is to return it to its rightful owner.";
+			return "Теперь, когда персонализированный молокоотсос Моники у вас в руках, осталось только вернуть его законной владелице.";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You returned Monica's personalised breast pump to her, much to her surprise and delight.";
+			return "Вы вернули Монике индивидуальный молокоотсос, к ее удивлению и восторгу.";
 		}
 	},
 	;
