@@ -11,7 +11,7 @@ public enum QuestLine {
 
 	// Main quests:
 
-	MAIN("Lilith's Throne", "You have completed all main quest content in this version!",
+	MAIN("Трон Лилит", "Вы выполнили все основные задания в этой версии!",
 			QuestType.MAIN,
 			QuestTree.mainQuestTree),
 
@@ -25,114 +25,114 @@ public enum QuestLine {
 //			QuestType.SIDE,
 //			Quest.SIDE_DISCOVER_ALL_RACES),
 
-	SIDE_ENCHANTMENT_DISCOVERY("Essences and Enchantments", "You now know how to use essences in order to create and modify enchanted items!",
+	SIDE_ENCHANTMENT_DISCOVERY("Эссенции и зачарования", "Теперь вы знаете, как использовать эссенции для создания и изменения зачарованных предметов!",
 			QuestType.SIDE,
 			QuestTree.enchantmentTree),
 
-	SIDE_FIRST_TIME_PREGNANCY("Knocked Up", "With Lilaya's help, you managed to complete your first pregnancy. Perhaps the first of many...",
+	SIDE_FIRST_TIME_PREGNANCY("Залет", "С помощью Лилайи вам удалось завершить свою первую беременность. Возможно, первую из многих...",
 			QuestType.SIDE,
 			QuestTree.pregnancyTree),
 
-	SIDE_FIRST_TIME_INCUBATION("Egged", "You successfully incubated, laid, and hatched the eggs which were planted inside of you!",
+	SIDE_FIRST_TIME_INCUBATION("Яйцеварка", "Вы успешно высидели, отложили и вылупили яица, которые были отложены внутри вас!",
 			QuestType.SIDE,
 			QuestTree.incubationTree),
 
-	SIDE_SLAVERY("Slaver", "Thanks to Lilaya's letter of recommendation, you managed to obtain a coveted slaver license!",
+	SIDE_SLAVERY("Рабовладелец", "Благодаря рекомендательному письму Лилайи вам удалось получить вожделенную лицензию рабовладельца!",
 			QuestType.SIDE,
 			QuestTree.slaveryTree),
 
-	SIDE_ACCOMMODATION("Bed & Board", "Lilaya happily gave you her permission to use the spare rooms to accommodate your friends and family, provided that you pay for the expenses that they incur...",
+	SIDE_ACCOMMODATION("Как дома", "Лилайя с радостью разрешила вам использовать свободные комнаты для размещения ваших друзей и родственников при условии, что вы будете оплачивать расходы, которые они понесут...",
 			QuestType.SIDE,
 			QuestTree.accommodationTree),
 
-	SIDE_DOLL_STORAGE("Doll Storage", "Lilaya told you that you can use any spare room in which to store any dolls you buy...",
+	SIDE_DOLL_STORAGE("Хранилище для кукол", "Лилайя сказала вам, что вы можете использовать любую свободную комнату для хранения купленных вами кукол...",
 			QuestType.SIDE,
 			QuestTree.dollStorageTree),
 
-	SIDE_HYPNO_WATCH("Arthur's Experiment", "You helped Arthur to complete his research into an orientation-changing Hypno-Watch, which is now in your possession!",
+	SIDE_HYPNO_WATCH("Эксперимент Артура", "Вы помогли Артуру завершить исследование Гипночасов, изменяющих ориентацию, которые теперь находятся в вашем распоряжении!",
 			QuestType.SIDE,
 			QuestTree.hypnoWatchTree),
 
-	SIDE_ARCANE_LIGHTNING("Arcane Lightning", "Arthur was able to extract the secrets of arcane lightning from the globe which you gave to him, allowing you to learn two incredibly powerful spells.",
+	SIDE_ARCANE_LIGHTNING("Магическая молния", "Артур смог извлечь секреты магической молнии из шара, который вы ему дали, что позволило вам выучить два невероятно мощных заклинания.",
 			QuestType.SIDE,
 			QuestTree.arcaneLightningTree),
 	
-	SIDE_HARPY_PACIFICATION("Angry Harpies", "You managed to calm down all three of the harpy matriarchs, resulting in the Harpy Nests being safe to travel through!",
+	SIDE_HARPY_PACIFICATION("Злые птички", "Вам удалось успокоить всех трех матриархов гарпий, в результате чего Гнезда гарпий стали безопасными для путешествий!",
 			QuestType.SIDE,
 			QuestTree.angryHarpyTree),
 
-	SIDE_SLIME_QUEEN("Slime Queen", "You dealt with the Slime Queen!",
+	SIDE_SLIME_QUEEN("Королева Слизней", "Вы справились с королевой слизней!",
 			QuestType.SIDE,
 			QuestTree.slimeQueenTree),
 
-	SIDE_TELEPORTATION("The Trouble with Teleporting", "After learning how to teleport, you managed to escape from the Enforcer warehouse.",
+	SIDE_TELEPORTATION("Проблемы с телепортацией", "Научившись телепортироваться, вы смогли сбежать со склада энфорсеров.",
 			QuestType.SIDE,
 			QuestTree.teleportingTree),
 
-	SIDE_DADDY("An Inquiring Incubus", "You dealt with the demon, [daddy.name], who was showing an interest in Lilaya.",
+	SIDE_DADDY("Любознательный инкуб", "Вы разобрались с демоном, [daddy.name], который проявлял интерес к Лилайе.",
 			QuestType.SIDE,
 			QuestTree.daddyTree),
 
-	SIDE_BUYING_BRAX("Acquiring a Wolf", "After she'd got you to perform a series of tedious tasks for her, Candi finally sold [brax.name] to you.",
+	SIDE_BUYING_BRAX("Обретение волка", "После того как она заставила вас выполнить для нее ряд утомительных заданий, Кэнди наконец продала вам [brax.name].",
 			QuestType.SIDE,
 			QuestTree.buyingBraxTree),
 
-	SIDE_VENGAR("Vengar's Tyranny", "You dealt with Vengar and made sure that Axel doesn't have to worry about him again.",
+	SIDE_VENGAR("Тирания Венгара", "Вы разобрались с Венгаром и позаботились о том, чтобы Аксель больше не волновался.",
 			QuestType.SIDE,
 			QuestTree.vengarTree),
 
 
-	SIDE_WES("The Rogue Enforcer", "You were able to successfully deal with the Enforcer Quartermaster.",
+	SIDE_WES("Энфорсер-изгой", "Вам удалось успешно справиться с главой энфорсеров.",
 			QuestType.SIDE,
 			QuestTree.wesTree),
         
-	SIDE_REBEL_BASE("Grave Robbing", "You managed to escape the abandoned rebel hideout.",
+	SIDE_REBEL_BASE("Разграбление могил", "Вам удалось сбежать из заброшенного убежища повстанцев.",
 		QuestType.SIDE,
 		QuestTree.rebelBaseTree),
 
-	SIDE_REBEL_BASE_FIREBOMBS("Spicy Meatballs", "You've gotten yourself a steady supply of Arcane Firebombs. At the usual premium, of course.",
+	SIDE_REBEL_BASE_FIREBOMBS("Пряные тефтели", "Вы получили постоянный запас магических огненных бомб.",
 		QuestType.SIDE,
 		QuestTree.rebelBaseFirebombTree),
 	
-	SIDE_EISEK_STALL("Fix 'Er Upper", "You've helped Eisek fix up his stall.",
+	SIDE_EISEK_STALL("Ремонт", "Вы помогли Айзеку отремонтировать его ларек.",
 		    QuestType.SIDE,
 		    QuestTree.eisekStallTree),
 	
-	SIDE_EISEK_MOB("Mob Mentality", "You've convinced the mob that was hounding Eisek to leave him alone.",
+	SIDE_EISEK_MOB("Менталитет толпы", "Вы убедили толпу, преследовавшую Айзека, оставить его в покое.",
 		    QuestType.SIDE,
 		    QuestTree.eisekMobTree),
 	
-	SIDE_EISEK_SILLYMODE("Dragon Enthusiasts", "You encountered a strange group of dragon obssessed weirdos and cleared their dungeon.",
+	SIDE_EISEK_SILLYMODE("Драконьи энтузиасты", "Вы столкнулись со странной группой одержимых драконами чудаков и зачистили их подземелье.",
 		    QuestType.SIDE,
 		    QuestTree.eisekSillyModeTree),
 
-	SIDE_OGLIX_BEER_BARRELS("Beer Bitch Bonanza", "You secured more barrels for Oglix, allowing you to send four criminals from the nearby alleyways to her to become new beer-bitches!",
+	SIDE_OGLIX_BEER_BARRELS("Бонанза Пивных сучек", "Вы приобрели для Огликс еще больше бочек, что позволило вам отправить к ней четырех преступниц из ближайших переулков, чтобы они стали новыми пивными сучками!",
 			QuestType.SIDE,
 			QuestTree.beerBarrelTree),
 
-	SIDE_LUNEXIS_ESCAPE("Serving Lunexis", "You obeyed your Mistress's orders and ensured that she was able to escape, thereby sealing your fate to become one of her personal cock-sleeves...",
+	SIDE_LUNEXIS_ESCAPE("Обслуживание Лунексис", "Вы послушались приказа своей госпожи и обеспечил ей побег, тем самым предопределив свою судьбу стать одним из ее мастурбаторов",
 			QuestType.SIDE,
 			QuestTree.lunexisEscapeTree),
 
-	SIDE_DOLL_FACTORY("Dealing With Dolls", "You uncovered the truth behind how the premium sex dolls for sale in 'Lovienne's Luxury' are created...",
+	SIDE_DOLL_FACTORY("Проблема с куклами", "Вы раскрыли правду о том, как создаются секс-куклы премиум-класса, продающиеся в «Роскошь Ловиенн»...",
 			QuestType.SIDE,
 			QuestTree.dollFactoryTree),
 	
 	// Romance quests:
 	
-	RELATIONSHIP_NYAN_HELP("Supplier Issues", "You helped Nyan solve the problem she was having with her suppliers.",
+	RELATIONSHIP_NYAN_HELP("Проблемы с поставщиком", "Вы помогли Ньян решить проблему, возникшую у нее с поставщиком.",
 			QuestType.RELATIONSHIP,
 			QuestTree.nyanTree),
 
-	ROMANCE_HELENA("Her Highness's Helper", "You successfully completed every task which Helena gave to you, and as a reward, you can both order custom slaves from her and take her on a date each Friday evening.",
+	ROMANCE_HELENA("Помощь Ее Высочеству", "Вы успешно выполнили все задания, которые дала вам Елена, и в награду можете заказывать у нее рабынь на заказ и ходить с ней на свидания каждую пятницу вечером.",
 			QuestType.RELATIONSHIP,
 			QuestTree.helenaTree),
 
-	ROMANCE_NATALYA("Filly Training", "Having completed Mistress Natalya's training, you are now a qualified filly and are expected to sexually service Dominion Express's centaur slaves.",
+	ROMANCE_NATALYA("Дрессировка кобылок", "Пройдя обучение у госпожи Натальи, вы стали квалифицированной кобылкой и должны сексуально обслуживать рабов-кентавров «Доминион Экспресс».",
 			QuestType.RELATIONSHIP,
 			QuestTree.natalyaTree),
 
-	ROMANCE_MONICA("Monica's Milker", "You successfully retrieved Monica's personalised Moo Milker, and as a result she is very grateful to you.",
+	ROMANCE_MONICA("Молочница Моника", "Вы успешно достали персональный молокоотсос Моники, и в результате она очень вам благодарна.",
 			QuestType.RELATIONSHIP,
 			QuestTree.monicaTree),
 	;
